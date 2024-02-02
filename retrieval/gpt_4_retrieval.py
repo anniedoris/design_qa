@@ -1,5 +1,4 @@
 from openai import OpenAI
-client = OpenAI(api_key="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")
 from time import sleep
 from itertools import cycle
 
