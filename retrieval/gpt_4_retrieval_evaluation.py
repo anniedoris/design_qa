@@ -3,8 +3,6 @@ import string
 from collections import Counter
 from openai import OpenAI
 from time import sleep
-from itertools import cycle
-import os
 import pandas as pd
 from tqdm import tqdm
 
@@ -78,12 +76,6 @@ def normalize_answer(s):
 
 
 def token_f1_score(prediction, ground_truth):
-    # if prediction is None or pd.isnull(prediction):
-    #     prediction = ""
-    # elif ground_truth is None or pd.isnull(ground_truth):
-    #     ground_truth = ""
-
-
     """
     Taken from the official evaluation script for v1.1 of the SQuAD dataset.
     """
@@ -119,9 +111,9 @@ if __name__ == '__main__':
     from config import OPENAI_API_KEY
     client = OpenAI(api_key=OPENAI_API_KEY)
 
-    # file_path = 'docs/FSAE_Rules_2024_V1 (2).pdf'
-    # file = upload_file(file_path)
-    # assistant = create_assistant(file)
+    file_path = 'docs/FSAE_Rules_2024_V1 (2).pdf'
+    file = upload_file(file_path)
+    assistant = create_assistant(file)
 
     questions_pd = pd.read_csv("docs/FSAE DesignSpecQA Benchmark - retrieval.csv")
     for index, row in tqdm(questions_pd.iterrows(), desc='generating responses', total=len(questions_pd)):
@@ -158,3 +150,6 @@ if __name__ == '__main__':
 
     # save the results
     questions_pd.to_csv("docs/FSAE DesignSpecQA Benchmark - retrieval.csv", index=False)
+
+    # print the average of the f1 scores
+    print(f"Average F1 Score: {questions_pd['f1 score'].mean()}")
