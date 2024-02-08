@@ -1,0 +1,127 @@
+,rule_num,rule_text
+0,V.1,"CONFIGURATION
+The vehicle must be open wheeled and open cockpit (a formula style body) with four wheels
+that are not in a straight line."
+1,V.1.1,"Open Wheel
+Open Wheel vehicles must satisfy all of the following criteria:
+a. The top 180° of the wheels/tires must be unobstructed when viewed from vertically
+above the wheel.
+b. The wheels/tires must be unobstructed when viewed from the side.
+c. No part of the vehicle may enter a keep out zone defined by two lines extending
+vertically from positions 75 mm in front of and 75 mm aft of, the outer diameter of the
+front and rear tires in the side view elevation of the vehicle, with tires steered straight
+ahead. This keep out zone will extend laterally from the outside plane of the wheel/tire
+to the inboard plane of the wheel/tire.
+75 mm 75 mm 75 mm 75 mm
+No Parts allowed
+in this Area
+View of this Surface
+must be unobstructed"
+2,V.1.2,"Wheelbase
+The vehicle must have a minimum wheelbase of 1525 mm"
+3,V.1.3,Vehicle Track
+4,V.1.3.1,"The track and center of gravity must combine to provide sufficient rollover stability. See
+IN.9.2"
+5,V.1.3.2,The smaller track of the vehicle (front or rear) must be no less than 75% of the larger track.
+6,V.1.4,Ground Clearance
+7,V.1.4.1,"Ground clearance must be sufficient to prevent any portion of the vehicle except the tires
+from touching the ground during dynamic events"
+8,V.1.4.2,"The distance to the ground below the Lower Side Impact Structure ( F.6.4.5, F.7.5.1 ) at its
+lowest point should be 75 mm or less"
+9,V.1.4.3,"Intentional or excessive ground contact of any portion of the vehicle other than the tires will
+forfeit a run or an entire dynamic event
+The intent is that sliding skirts or other devices that by design, fabrication or as a consequence
+of moving, contact the track surface are prohibited and any unintended contact with the
+ground which causes damage, or in the opinion of the Dynamic Event Officials could result in
+damage to the track, will result in forfeit of a run or an entire dynamic event"
+10,V.2,DRIVER
+11,V.2.1,Accommodation
+12,V.2.1.1,"The vehicle must be able to accommodate drivers of sizes ranging from 5th percentile female
+up to 95th percentile male.
+• Accommodation includes driver position, driver controls, and driver equipment.
+• Anthropometric data may be found on the FSAE Online Website."
+13,V.2.1.2,The driver’s head and hands must not contact the ground in any rollover attitude.
+14,V.2.2,"Visibility
+a. The driver must have sufficient visibility to the front and sides of the vehicle
+b. When seated in a normal driving position, the driver must have a minimum field of vision
+of 100° to both sides
+c. If mirrors are required for this rule, they must remain in place and adjusted to enable the
+required visibility throughout all dynamic events."
+15,V.3,SUSPENSION AND STEERING
+16,V.3.1,Suspension
+17,V.3.1.1,"The vehicle must have a fully operational suspension system with shock absorbers, front and
+rear, with usable minimum wheel travel of 50 mm, with a driver seated."
+18,V.3.1.2,"Officials may disqualify vehicles which do not represent a serious attempt at an operational
+suspension system, or which demonstrate handling inappropriate for an autocross circuit."
+19,V.3.1.3,"All suspension mounting points must be visible at Technical Inspection by direct view or by
+removing any covers."
+20,V.3.1.4,"Fasteners in the Suspension system are Critical Fasteners, see T.8.2"
+21,V.3.1.5,"All spherical rod ends and spherical bearings on the suspension and steering must be one of:
+• Mounted in double shear
+• Captured by having a screw/bolt head or washer with an outside diameter that is larger
+than spherical bearing housing inside diameter."
+22,V.3.2,Steering
+23,V.3.2.1,The Steering Wheel must be mechanically connected to the front wheels
+24,V.3.2.2,Electrically actuated steering of the front wheels is prohibited
+25,V.3.2.3,"Steering systems must use a rigid mechanical linkage capable of tension and compression
+loads for operation"
+26,V.3.2.4,"The steering system must have positive steering stops that prevent the steering linkages from
+locking up (the inversion of a four bar linkage at one of the pivots). The stops:
+a. Must prevent the wheels and tires from contacting suspension, bodywork, or Chassis
+during the track events
+b. May be placed on the uprights or on the rack"
+27,V.3.2.5,"Allowable steering system free play is limited to seven degrees (7°) total measured at the
+steering wheel."
+28,V.3.2.6,The steering rack must be mechanically attached to the Chassis F.5.14
+29,V.3.2.7,"Joints between all components attaching the Steering Wheel to the steering rack must be
+mechanical and be visible at Technical Inspection. Bonded joints without a mechanical backup
+are not permitted."
+30,V.3.2.8,"Fasteners in the steering system are Critical Fasteners, see T.8.2"
+31,V.3.2.9,Spherical rod ends and spherical bearings in the steering must meet V.3.1.5 above
+32,V.3.2.10,"Rear wheel steering may be used.
+a. Rear wheel steering must incorporate mechanical stops to limit the range of angular
+movement of the rear wheels to a maximum of six degrees (6°).
+b. The team must provide the ability for the steering angle range to be verified at Technical
+Inspection with a driver in the vehicle.
+c. Rear wheel steering may be electrically actuated."
+33,V.3.3,Steering Wheel
+34,V.3.3.1,"In any angular position, the Steering Wheel must meet T.1.4.4"
+35,V.3.3.2,The Steering Wheel must be attached to the column with a quick disconnect.
+36,V.3.3.3,"The driver must be able to operate the quick disconnect while in the normal driving position
+with gloves on."
+37,V.3.3.4,"The Steering Wheel must have a continuous perimeter that is near circular or near oval.
+The outer perimeter profile may have some straight sections, but no concave sections. “H”,
+“Figure 8”, or cutout wheels are not allowed."
+38,V.4,WHEELS AND TIRES
+39,V.4.1,"Wheel Size
+Wheels must be 203.2 mm (8.0 inches) or more in diameter."
+40,V.4.2,Wheel Attachment
+41,V.4.2.1,"Any wheel mounting system that uses a single retaining nut must incorporate a device to
+retain the nut and the wheel if the nut loosens.
+A second nut (jam nut) does not meet this requirement"
+42,V.4.2.2,"Teams using modified lug bolts or custom designs must provide proof that Good Engineering
+Practices have been followed in their design."
+43,V.4.2.3,"If used, aluminum wheel nuts must be hard anodized and in pristine condition."
+44,V.4.3,"Tires
+Vehicles may have two types of tires, Dry and Wet"
+45,V.4.3.1,"Dry Tires
+a. The tires on the vehicle when it is presented for Technical Inspection.
+b. May be any size or type, slicks or treaded."
+46,V.4.3.2,"Wet Tires
+Any size or type of treaded or grooved tire where:
+• The tread pattern or grooves were molded in by the tire manufacturer, or were cut by
+the tire manufacturer or appointed agent.
+Any grooves that have been cut must have documented proof that this rule was met
+• There is a minimum tread depth of 2.4 mm"
+47,V.4.3.3,"Tire Set
+a. All four Dry Tires and Wheels or all four Wet Tires and Wheels do not have to be
+identical.
+b. Once each tire set has been presented for Technical Inspection, any tire compound or
+size, or wheel type or size must not be changed."
+48,V.4.3.4,"Tire Pressure
+a. Tire Pressure must be in the range allowed by the manufacturer at all times.
+b. Tire Pressure may be inspected at any time"
+49,V.4.3.5,"Requirements for All Tires
+a. Teams must not perform any hand cutting, grooving or modification of the tires.
+b. Tire warmers are not allowed.
+c. No traction enhancers may be applied to the tires at any time onsite at the competition."

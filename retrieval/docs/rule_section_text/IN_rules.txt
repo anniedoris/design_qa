@@ -1,0 +1,353 @@
+IN - TECHNICAL INSPECTION
+The objective of Technical Inspection is to determine if the vehicle meets the Formula SAE
+Rules requirements and restrictions and if, considered as a whole, it satisfies the intent of the
+Rules.
+IN.1 INSPECTION REQUIREMENTS
+IN.1.1 Inspection Required
+Each vehicle must pass all applicable parts of Technical Inspection, receive Inspection
+Approval IN.13.1 and show the Inspection Sticker IN.13.2 before it may participate in any
+Dynamic event.
+IN.1.2 Technical Inspection Authority
+IN.1.2.1 The exact procedures and instruments used for inspection and testing are entirely at the
+discretion of the Chief Technical Inspector(s).
+IN.1.2.2 Decisions of the Chief Technical Inspector(s) and the Organizer concerning vehicle compliance
+are final.
+IN.1.3 Team Responsibility
+Teams must make sure that their vehicle, and the required equipment, obeys the Formula SAE
+Rules before Technical Inspection.
+IN.1.4 Reinspection
+Officials may Reinspect any vehicle at any time during the competition IN.15
+IN.2 INSPECTION CONDUCT
+IN.2.1 Vehicle Condition
+IN.2.1.1 Vehicles must be presented for Technical Inspection in finished condition, fully assembled,
+complete and ready to run.
+IN.2.1.2 Technical inspectors will not inspect any vehicle presented for inspection in an unfinished
+state.
+IN.2.2 Measurement
+IN.2.2.1 Allowable dimensions are absolute, and do not have any tolerance unless specifically stated.
+IN.2.2.2 Measurement tools and methods may vary.
+IN.2.2.3 No allowance is given for measurement accuracy or error.
+IN.2.3 Visible Access
+All items on the Technical Inspection Form must be clearly visible to the technical inspectors
+without using instruments such as endoscopes or mirrors.
+Methods to provide visible access include but are not limited to removable body panels, access
+panels, and other components
+IN.2.4 Inspection Items
+IN.2.4.1 Technical Inspection will examine all items included on the Technical Inspection Form to make
+sure the vehicle and other equipment obeys the Rules.
+IN.2.4.2 Technical Inspectors may examine any other items at their discretion
+Formula SAE® Rules 2024 © 2023 SAE International Page 109 of 140
+Version 1.0 1 Sep 2023
+IN.2.5 Correction
+If any part of a vehicle does not comply with the rules, or is otherwise a concern, the team
+must:
+• Correct the problem
+• Continue Inspection or have the vehicle Reinspected
+IN.2.6 Marked Items
+IN.2.6.1 Officials may mark, seal, or designate items or areas which have been inspected to document
+the inspection and reduce the chance of tampering
+IN.2.6.2 Damaged or lost marks or seals require Reinspection IN.15
+IN.3 INITIAL INSPECTION
+Bring these to Initial Inspection:
+• Technical Inspection Form
+• All Driver Equipment per VE.3 to be used by each driver
+• Fire Extinguishers (for paddock and vehicle) VE.2.3
+• Wet Tires V.4.3.2
+IN.4 ELECTRICAL TECHNICAL INSPECTION (EV ONLY)
+IN.4.1 Inspection Items
+Bring these to Electrical Technical Inspection:
+• Charger(s) for the Accumulator(s) EV.8.1
+• Accumulator Container Hand Cart EV.4.10
+• Spare Accumulator(s) (if applicable) EV.5.1.4
+• Electrical Systems Form (ESF) and Component Data Sheets EV.2
+• Copies of any submitted Rules Questions with the received answer GR.7
+The following basic tools in good condition:
+• Insulated cable shears
+• Insulated screw drivers
+• Multimeter with protected probe tips
+• Insulated tools, if screwed connections are used in the Tractive System
+• Face Shield
+• HV insulating gloves which are 12 months or less from their test date
+• Two HV insulating blankets of minimum 0.83 m² each
+• Safety glasses with side shields for all team members that might work on the Tractive
+System or Accumulator
+IN.4.2 Accumulator Inspection
+The Accumulator(s) and associated equipment (Hand Cart, Chargers, etc) may be inspected
+during Electrical Technical Inspection, or separately from the rest of Electrical Technical
+Inspection.
+Formula SAE® Rules 2024 © 2023 SAE International Page 110 of 140
+Version 1.0 1 Sep 2023
+IN.4.3 Accumulator Access
+IN.4.3.1 If the Accumulator Container(s) is not easily accessible during Electrical Tech Inspection,
+provide detailed pictures of the internals taken during assembly
+IN.4.3.2 Tech inspectors may require access to check any Accumulator(s) for rules compliance
+IN.4.4 Insulation Monitoring Device Test
+IN.4.4.1 The Insulation Monitoring Device will be tested by connecting a resistor between the Tractive
+System Measuring Points (EV.5.8), and several electrically conductive vehicle parts while the
+Tractive System is active
+IN.4.4.2 The test passes if the IMD shuts down the Tractive System in 30 seconds or less at a fault
+resistance of 50% below the response value corresponding to 250 Ohm / Volt
+IN.4.5 Insulation Measurement Test
+IN.4.5.1 The insulation resistance between the Tractive System and GLV System Ground will be
+measured.
+IN.4.5.2 The available measurement voltages are 250 V and 500 V. All vehicles with a maximum
+nominal operation voltage below 500 V will be measured with the next available voltage level.
+All teams with a system voltage of 500 V or more will be measured with 500 V.
+IN.4.5.3 To pass the Insulation Measurement Test the measured insulation resistance must be
+minimum 500 Ohm/Volt related to the maximum nominal Tractive System operation voltage.
+IN.4.6 Ready to Drive Sound
+The sound level will be measured with a free field microphone placed free from obstructions
+in a radius of 2 m around the vehicle against the criteria in EV.9.5
+IN.4.7 Electrical Inspection Completion
+IN.4.7.1 All or portions of the Tractive System, Charger and other components may be sealed IN.2.6
+IN.4.7.2 Additional monitoring to verify conformance to rules may be installed. Refer to the Event
+Website for further information.
+IN.4.7.3 Electric Vehicles must pass Electrical Technical Inspection and Mechanical Technical Inspection
+before the vehicle may attempt any further Inspections. See EV.11.3.2
+IN.5 DRIVER COCKPIT CHECKS
+The Clearance Checks and Egress Test may be performed separately or in conjunction with
+other parts of Technical Inspection
+IN.5.1 Driver Clearance
+Each driver in the normal driving position is checked for the three:
+• Helmet clearance F.5.6.3
+• Head Restraint positioning T.2.8.5
+• Harness fit and adjustment T.2.5, T.2.6, T.2.7
+IN.5.2 Egress Test
+IN.5.2.1 Each driver must be able to exit to the side of the vehicle in no more than 5 seconds.
+Formula SAE® Rules 2024 © 2023 SAE International Page 111 of 140
+Version 1.0 1 Sep 2023
+IN.5.2.2 The Egress Test will be conducted for each driver as follows:
+a. The driver must wear the specified Driver Equipment VE.3.2, VE.3.3
+b. Egress time begins with the driver in the fully seated position, with hands in driving
+position on the connected steering wheel.
+c. Egress test may have the driver touch the (IC) Cockpit Main Switch IC.9.4 (EV) Shutdown
+Button EV.7.10.4
+d. Egress time will stop when the driver has both feet on the pavement.
+IN.5.3 Driver Clearance and Egress Test Completion
+IN.5.3.1 To drive the vehicle, each team driver must:
+a. Meet the Driver Clearance requirements IN.5.1
+b. Successfully complete the Egress Test IN.5.2
+IN.5.3.2 A driver(s) must complete the Driver Cockpit Checks to pass Mechanical Inspection
+IN.6 DRIVER TEMPLATE INSPECTIONS
+The Driver Template Inspection will be conducted as part of the Mechanical Inspection
+IN.6.1 Conduct
+The Driver Template shown in F.5.6.4 will be positioned as given in F.5.6.5
+IN.6.2 Driver Template Clearance Criteria
+To pass Mechanical Technical Inspection, the Driver Template must meet the clearance
+specified in F.5.6.3
+IN.7 COCKPIT TEMPLATE INSPECTIONS
+The Cockpit Template Inspections will be conducted as part of the Mechanical Inspection
+IN.7.1 Conduct
+IN.7.1.1 The Cockpit Opening will be checked using the template and procedure given in T.1.1
+IN.7.1.2 The Internal Cross Section will be checked using the template and procedure given in T.1.2
+IN.7.2 Cockpit Template Criteria
+To pass Mechanical Technical Inspection, both Cockpit Templates must fit as described.
+IN.8 MECHANICAL TECHNICAL INSPECTION
+IN.8.1 Inspection Items
+The following items must be brought to Mechanical Technical Inspection:
+• Vehicle on Dry Tires V.4.3.1
+• Technical Inspection Form
+• Push Bar VE.2.2
+• Structural Equivalency Spreadsheet (SES) – electronic copy F.2.1
+• Monocoque Laminate Test Specimens (if applicable) F.4.3
+• The Impact Attenuator that was tested (if applicable) F.8.8.7
+• Accumulator Container samples (EV only) (if applicable) F.10.2.1.c, F.10.2.2.c
+Formula SAE® Rules 2024 © 2023 SAE International Page 112 of 140
+Version 1.0 1 Sep 2023
+• Electronic copies of any submitted Rules Questions with the received answer GR.7
+IN.8.2 Aerodynamic Devices Stability and Strength
+IN.8.2.1 Any Aerodynamic Devices may be checked by pushing on the device in any direction and at
+any point.
+The following is guidance, but actual conformance will be up to technical inspectors at the
+respective competitions. The intent is to reduce the likelihood of wings detaching
+IN.8.2.2 If any deflection is significant, then a force of approximately 200 N may be applied.
+a. Loaded deflection should not be more than 25 mm
+b. Any permanent deflection less than 5 mm
+IN.8.2.3 If any vehicle on track is observed to have large, uncontrolled movements of Aerodynamic
+Devices, then officials may Black Flag the vehicle for IN.15 Reinspection.
+IN.8.3 Monocoque Inspections
+IN.8.3.1 Dimensions of the Monocoque will be confirmed F.7.1.4
+IN.8.3.2 When the Front Hoop is integrally bonded or laminated to the monocoque F.7.4.3, provide:
+a. Documentation that shows dimensions on the tubes
+b. Pictures of the dimensioned tube being included in the layup
+IN.8.3.3 For items which cannot be verified by an inspector, the team must provide documentation,
+visual and/or written, that the requirements have been met.
+IN.8.3.4 A team found to be improperly presenting any evidence of the manufacturing process may be
+barred from competing with a monocoque.
+IN.8.4 Engine Inspection (IC Only)
+The organizer may measure or tear down engines to confirm conformance to the rules.
+IN.8.5 Mechanical Inspection Completion
+All vehicles must pass Mechanical Technical Inspection before a vehicle may attempt any
+further inspections.
+IN.9 TILT TEST
+IN.9.1 Tilt Test Requirements
+a. The vehicle must contain the maximum amount of fluids it may carry
+b. The tallest driver must be seated in the normal driving position
+c. Tilt tests may be conducted in one or the other, or both directions in order to pass
+d. (IC only) Engines fitted with mechanically actuated fuel pumps must be run to fill and
+pressure the system downstream of the High Pressure pump. See IC.6.2
+IN.9.2 Tilt Test Criteria
+IN.9.2.1 No fluid leakage of any type when the vehicle is tilted to a 45° angle to the horizontal
+IN.9.2.2 Vehicle does not roll when tilted at an angle of 60° to the horizontal, corresponding to 1.7 g.
+IN.9.3 Tilt Test Completion
+Tilt Tests must be passed before a vehicle may attempt any further inspections
+Formula SAE® Rules 2024 © 2023 SAE International Page 113 of 140
+Version 1.0 1 Sep 2023
+IN.10 NOISE AND SWITCH TEST (IC ONLY)
+IN.10.1 Sound Level Measurement
+IN.10.1.1 The sound level will be measured during a stationary test, with the vehicle gearbox in neutral
+at the defined Test Speed
+IN.10.1.2 Measurements will be made with a free field microphone placed:
+• free from obstructions
+• at the Exhaust Outlet vertical level IC.7.2.2
+• 0.5 m from the end of the Exhaust Outlet IC.7.2.2
+• at an angle of 45° with the outlet in the horizontal plane (see IN.10.2.2 below)
+IN.10.2 Special Configurations
+IN.10.2.1 Where the Exhaust has more than one Exhaust Outlet:
+a. The noise test is repeated for each outlet
+b. The highest sound level is used
+IN.10.2.2 Exhaust Outlets that are not parallel to the ground may be tested outside of the horizontal
+plane.
+IN.10.2.3 If the exhaust has any form of active tuning or throttling device or system, the exhaust must
+meet all requirements with the device or system in all positions.
+IN.10.2.4 When the exhaust has a manually adjustable tuning device(s):
+a. The position of the device must be visible to the officials for the noise test
+b. The device must be manually operable by the officials during the noise test
+c. The device must not be moved or modified after the noise test is passed
+IN.10.3 Industrial Engine
+An engine which, according to the manufacturers’ specifications and without the required
+restrictor, is capable of producing 5 hp per 100 cc or less.
+Submit a Rules Question to request approval of an Industrial Engine.
+IN.10.4 Test Speeds
+IN.10.4.1 Maximum Test Speed
+The engine speed that corresponds to an average piston speed of:
+a. Automotive / Motorcycle engines 914.4 m/min (3,000 ft/min)
+b. Industrial Engines 731.5 m/min (2,400 ft/min)
+The calculated speed will be rounded to the nearest 500 rpm.
+Test Speeds for typical engines are published on the FSAE Online website
+IN.10.4.2 Idle Test Speed
+a. Determined by the vehicle’s calibrated idle speed
+b. If the idle speed varies then the vehicle will be tested across the range of idle speeds
+determined by the team
+IN.10.4.3 The vehicle must be compliant at all engine speeds up to the maximum defined Test Speed.
+Formula SAE® Rules 2024 © 2023 SAE International Page 114 of 140
+Version 1.0 1 Sep 2023
+IN.10.5 Maximum Permitted Sound Level
+a. At idle 103 dBC, fast weighting
+b. At all other speeds 110 dBC, fast weighting
+IN.10.6 Noise Level Retesting
+IN.10.6.1 Noise levels may be monitored at any time
+IN.10.6.2 The Noise Test may be repeated at any time
+IN.10.7 Switch Function
+The function of one or more of the Primary Master Switch IC.9.3, Cockpit Main Switch IC.9.4,
+and/or BOTS T.3.3 will be verified during the Noise Test
+IN.10.8 Noise Test Completion
+Noise Tests must be passed before a vehicle may attempt any further inspections
+IN.11 RAIN TEST (EV ONLY)
+IN.11.1 Rain Test Requirements
+• Tractive System must be Active
+• The vehicle must not be in Ready to Drive mode (EV.7)
+• Any driven wheels must not touch the ground
+• A driver must not be seated in the vehicle
+IN.11.2 Rain Test Conduct
+The water spray will be rain like, not a direct high pressure water jet
+a. Spray water at the vehicle from any possible direction for 120 seconds
+b. Stop the water spray
+c. Observe the vehicle for 120 seconds
+IN.11.3 Rain Test Completion
+The test is passed if the Insulation Monitoring Device (EV.7.6) does not react during the entire
+240 seconds duration
+IN.12 BRAKE TEST
+IN.12.1 Objective
+The brake system will be dynamically tested and must demonstrate the capability of locking all
+four wheels when stopping the vehicle in a straight line at the end of an acceleration run
+specified by the brake inspectors
+IN.12.2 Brake Test Conduct (IC Only)
+IN.12.2.1 Brake Test procedure:
+a. Accelerate to speed (typically getting into 2nd gear) until reaching the designated area
+b. Apply the brakes with force sufficient to demonstrate full lockup of all four wheels
+IN.12.2.2 The Brake Test passes if:
+• All four wheels lock up
+• The engine stays running during the complete test
+Formula SAE® Rules 2024 © 2023 SAE International Page 115 of 140
+Version 1.0 1 Sep 2023
+IN.12.3 Brake Test Conduct (EV Only)
+IN.12.3.1 Brake Test procedure:
+a. Accelerate to speed until reaching the designated area
+b. Switch off the Tractive System
+c. Apply the brakes with force sufficient to demonstrate full lockup of all four wheels
+IN.12.3.2 The Brake Test passes if all four wheels lock while the Tractive System is shut down
+IN.12.3.3 The Tractive System Active Light may switch a short time after the vehicle has come to a
+complete stop as the reduction of the system voltage is not immediate. See EV.7.2.2.c
+IN.13 INSPECTION APPROVAL
+IN.13.1 Inspection Approval
+IN.13.1.1 When all parts of Technical Inspection are complete as shown on the Technical Inspection
+sheet, the vehicle receives Inspection Approval
+IN.13.1.2 The completed Inspection Sticker denotes the Inspection Approval
+IN.13.1.3 The Inspection Approval is contingent on the vehicle remaining in the required condition
+throughout the competition.
+IN.13.1.4 The Organizer, Chief Technical Inspector, or a designee may void Inspection Approval at any
+time for any reason
+IN.13.2 Inspection Sticker
+IN.13.2.1 Inspection Sticker(s) are issued following the completion of all or part of Technical Inspection
+IN.13.2.2 Inspection Sticker(s) must show in the location given in VE.1.4
+IN.13.3 Inspection Validity
+IN.13.3.1 Inspection Stickers may be removed from vehicles that are not in compliance with the Rules or
+are required to be Reinspected.
+IN.13.3.2 Inspection Approval is valid only for the duration of the specific Formula SAE competition
+during which the inspection is conducted.
+IN.14 MODIFICATIONS AND REPAIRS
+IN.14.1 Prior to Inspection Approval
+Once the vehicle has been presented for judging in the Cost or Design Events, or submitted for
+Technical Inspection, and until the vehicle has the full Inspection Approval, the only
+modifications permitted to the vehicle are those directed by the Inspector(s) and noted on the
+Inspection Form.
+IN.14.2 After Inspection Approval
+IN.14.2.1 The vehicle must maintain all required specifications (including but not limited to ride height,
+suspension travel, braking capacity (pad material/composition), sound level and wing location)
+throughout the competition.
+IN.14.2.2 Changes to fit the vehicle to different drivers are allowed. Permitted changes are:
+• Adjustment of the driver restraint system, Head Restraint, seat and pedal assembly
+• Substitution of the Head Restraint or seat insert
+• Adjustment of mirrors
+Formula SAE® Rules 2024 © 2023 SAE International Page 116 of 140
+Version 1.0 1 Sep 2023
+IN.14.2.3 Once the vehicle receives Inspection Approval, the ONLY modifications permitted to the
+vehicle are the following:
+• Adjustment of belts, chains and clutches
+• Adjustment of brake bias
+• Adjustment to engine / powertrain operating parameters, including fuel mixture and
+ignition timing, and any software calibration changes
+• Adjustment of the suspension
+• Changing springs, sway bars and shims in the suspension
+• Adjustment of Tire Pressure, subject to V.4.3.4
+• Adjustment of wing or wing element(s) angle, but not the location T.7.1
+• Replenishment of fluids
+• Replacement of worn tires or brake pads. Replacement tires and brake pads must be
+identical in material/composition/size to those presented and approved at Technical
+Inspection.
+• Changing of wheels and tires for weather conditions D.6
+• Recharging Low Voltage batteries
+• Recharging High Voltage Accumulators
+IN.14.3 Repairs or Changes After Inspection Approval
+The Inspection Approval may be voided for any reason including, but not limited to:
+a. Damage to the vehicle IN.13.1.3
+b. Changes beyond those allowed per IN.14.2 above
+IN.15 REINSPECTION
+IN.15.1 Requirement
+IN.15.1.1 Any vehicle may be Reinspected at any time for any reason
+IN.15.1.2 Reinspection must be completed to restore Inspection Approval, if voided
+IN.15.2 Conduct
+IN.15.2.1 The Technical Inspection process may be repeated in entirety or in part
+IN.15.2.2 Specific areas or items to be inspected are at the discretion of the Chief Technical Inspector
+IN.15.3 Result
+IN.15.3.1 With Voided Inspection Approval
+Successful completion of Reinspection will restore Inspection Approval IN.13.1
+IN.15.3.2 During Dynamic Events
+a. Issues found during Reinspection will void Inspection Approval
+b. Penalties may be applied to the Dynamic Events the vehicle has competed in
+Applied penalties may include additional time added to event(s), loss of one or more
+fastest runs, up to DQ, subject to official discretion.
+Formula SAE® Rules 2024 © 2023 SAE International Page 117 of 140
+Version 1.0 1 Sep 2023
+S - STATIC EVENTS 

@@ -1,0 +1,155 @@
+VE - VEHICLE AND DRIVER EQUIPMENT
+VE.1 VEHICLE IDENTIFICATION
+VE.1.1 Vehicle Number
+VE.1.1.1 The assigned vehicle number must appear on the vehicle as follows:
+a. Locations: in three places, on the front of the chassis and both sides
+b. Height: 150 mm minimum
+c. Font: Block numbers (sans serif characters without italic, outline, shadow, or cursive
+numbers)
+d. Stroke Width and Spacing between numbers: 18 mm minimum
+e. Color: White numbers on a black background OR black numbers on a white background
+f. Background: round, oval, square or rectangular
+g. Spacing: 25 mm minimum between the edge of the numbers and the edge of the
+background
+h. The numbers must not be obscured by parts of the vehicle
+VE.1.1.2 Additional letters or numerals must not show before or after the vehicle number
+VE.1.2 School Name
+Each vehicle must clearly display the school name.
+a. Abbreviations are allowed if unique and generally recognized
+b. The name must be in Roman characters minimum 50 mm high on both sides of the
+vehicle.
+c. The characters must be placed on a high contrast background in an easily visible location.
+d. The school name may also appear in non Roman characters, but the Roman character
+version must be uppermost on the sides.
+VE.1.3 SAE Logo
+The SAE International Logo must be displayed on the front and/or both sides of the vehicle in
+a prominent location.
+VE.1.4 Inspection Sticker
+The vehicle must have space for the Inspection Sticker(s) IN.13.2 that is:
+• A clear and unobstructed area, minimum 25 cm wide x 20 cm high
+• Located on the upper front surface of the nose along the vehicle centerline
+VE.1.5 Transponder / RFID Tag
+VE.1.5.1 Each vehicle must have a functional, properly mounted transponder and/or RFID tag of the
+specified type(s)
+VE.1.5.2 Refer to the Rules FAQ on the FSAE Online website for transponder and RFID tag information
+and mounting details
+VE.2 VEHICLE EQUIPMENT
+VE.2.1 Jacking Point
+VE.2.1.1 A Jacking Point must be provided at the rear of the vehicle
+Formula SAE® Rules 2024 © 2023 SAE International Page 74 of 140
+Version 1.0 1 Sep 2023
+VE.2.1.2 The Jacking Point must be:
+a. Capable of supporting the vehicle weight and of engaging the organizer Quick Jacks
+b. Visible to a person standing 1 m behind the vehicle
+c. Color: Orange
+d. Oriented laterally and perpendicular to the centerline of the vehicle
+e. Made from round, 25 - 30 mm OD aluminum or steel tube
+f. Exposed around the lower 180° of its circumference over a minimum length of 280 mm
+g. Access from the rear of the tube must be unobstructed for 300 mm or more of its length
+h. The height of the tube must allow 75 mm minimum clearance from the bottom of the
+tube to the ground
+i. When the vehicle is raised to where the bottom of the tube is 200 mm above ground, the
+wheels do not touch the ground when they are in full rebound
+VE.2.2 Push Bar
+Each vehicle must have a removable device which attaches to the rear of the vehicle that:
+a. Allows two people, standing erect behind the vehicle, to push the vehicle around the
+competition site
+b. Is capable of slowing and stopping the forward motion of the vehicle and pulling it
+rearwards
+VE.2.3 Fire Extinguisher
+VE.2.3.1 Each team must have two or more fire extinguishers.
+a. One extinguisher must readily be available in the team’s paddock area
+b. One extinguisher must accompany the vehicle when moved using the push bar
+A commercially available on board fire system may be used instead of the fire
+extinguisher that accompanies the vehicle
+VE.2.3.2 Hand held fire extinguishers must NOT be mounted on or in the vehicle
+VE.2.3.3 Each fire extinguisher must meet the following:
+a. Capacity: 0.9 kg (2 lbs)
+b. Working Medium: Dry chemical/dry powder. Aqueous Film Forming Foam (AFFF) and
+Halon extinguishers and systems are prohibited.
+c. Equipped with a manufacturer installed pressure/charge gauge.
+d. Minimum acceptable ratings:
+• USA, Canada & Brazil: 10BC or 1A 10BC
+• Europe: 34B or 5A 34B
+• Australia: 20BE or 1A 10BE
+e. Extinguishers of larger capacity (higher numerical ratings) are acceptable.
+VE.2.4 Electrical Equipment (EV Only)
+The following items must accompany the vehicle at all times:
+• Two pairs of High Voltage insulating gloves
+• A multimeter
+Formula SAE® Rules 2024 © 2023 SAE International Page 75 of 140
+Version 1.0 1 Sep 2023
+VE.2.5 Camera Mounts
+VE.2.5.1 The mounts for video/photographic cameras must be of a safe and secure design.
+VE.2.5.2 All camera installations must be approved at Technical Inspection.
+VE.2.5.3 Helmet mounted cameras and helmet camera mounts are prohibited.
+VE.2.5.4 The body of a camera or recording unit that weighs more than 0.25 kg must be secured at a
+minimum of two points on different sides of the camera body.
+VE.2.5.5 If a tether is used to restrain the camera, the tether length must be limited to prevent contact
+with the driver.
+VE.3 DRIVER EQUIPMENT
+VE.3.1 General
+VE.3.1.1 Any Driver Equipment:
+a. Must be in good condition with no tears, rips, open seams, areas of significant wear,
+abrasions or stains which might compromise performance.
+b. Must fit properly
+c. May be inspected at any time
+VE.3.1.2 Flame Resistant Material
+For this section some, but not all, of the approved materials are: Carbon X, Indura, Nomex,
+Polybenzimidazole (common name PBI) and Proban.
+VE.3.1.3 Synthetic Material – Prohibited
+Shirts, socks or other undergarments (not to be confused with flame resistant underwear)
+made from nylon or any other synthetic material which could melt when exposed to high heat
+are prohibited.
+VE.3.1.4 Officials may impound any non approved Driver Equipment until the end of the competition.
+VE.3.2 Helmet
+VE.3.2.1 The driver must wear a helmet which:
+a. Is closed face with an integral, immovable chin guard
+b. Contains an integrated visor/face shield supplied with the helmet
+c. Meets an approved standard
+d. Is properly labeled for that standard
+VE.3.2.2 Acceptable helmet standards are listed below. Any additional approved standards are shown
+on the Technical Inspection Form or the FAQ on the FSAE Online website.
+a. Snell K2010, K2015, K2020, M2010, M2015, M2020, SA2010, SAH2010, SA2015, SA2020
+b. SFI Specs 31.1/2010, 31.1/2015, 41.1/2010, 41.1/2015
+c. FIA Standards FIA 8860-2004, FIA 8860-2010, FIA 8860-2018, FIA 8859-2015
+VE.3.3 Driver Gear
+The driver must wear the following:
+VE.3.3.1 Driver Suit
+A one piece suit, made from a minimum of two layers of Flame Resistant Material that covers
+the body from the neck to the ankles and the wrists.
+Formula SAE® Rules 2024 © 2023 SAE International Page 76 of 140
+Version 1.0 1 Sep 2023
+Each suit must meet one or more of the following standards and be labeled as such:
+• SFI 3.2A/5 (or higher ex: /10, /15, /20)
+• SFI 3.4/5 (or higher ex: /10, /15, /20)
+• FIA Standard 1986
+• FIA Standard 8856-2000
+• FIA Standard 8856-2018
+VE.3.3.2 Underclothing
+All competitors should wear fire retardant underwear (long pants and long sleeve shirt) under
+their approved Driver Suit.
+VE.3.3.3 Balaclava
+A Balaclava (head sock) which covers the driver’s head, hair and neck, made from Flame
+Resistant Material
+VE.3.3.4 Socks
+Socks made from Flame Resistant Material that cover the bare skin between the driver’s suit
+and the Shoes.
+VE.3.3.5 Shoes
+Shoes or boots made from Flame Resistant Material that meet an approved standard and
+labeled as such:
+• SFI Spec 3.3
+• FIA Standard 8856-2000
+• FIA Standard 8856-2018
+VE.3.3.6 Gloves
+Gloves made from Flame Resistant Material.
+Gloves of all leather construction or fire retardant gloves constructed using leather palms with
+no insulating Flame Resistant Material underneath are not acceptable.
+VE.3.3.7 Arm Restraints
+a. Arm restraints must be worn in a way that the driver can release them and exit the
+vehicle unassisted regardless of the vehicle’s position.
+b. Arm restraints must be commercially manufactured. Arm restraints certified to SFI Spec
+3.3 and labeled as such meet this requirement.
+Formula SAE® Rules 2024 © 2023 SAE International Page 77 of 140
+Version 1.0 1 Sep 2023
+IC - INTERNAL COMBUSTION ENGINE VEHICLES 

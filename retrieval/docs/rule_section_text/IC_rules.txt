@@ -1,0 +1,447 @@
+IC - INTERNAL COMBUSTION ENGINE VEHICLES
+IC.1 GENERAL REQUIREMENTS
+IC.1.1 Engine Limitations
+IC.1.1.1 The engine(s) used to power the vehicle must:
+a. Be a piston engine(s) using a four stroke primary heat cycle
+b. Have a total combined displacement less than or equal to 710 cc per cycle.
+IC.1.1.2 Hybrid powertrains, such as those using electric motors running off stored energy, are
+prohibited.
+IC.1.1.3 All waste/rejected heat from the primary heat cycle may be used. The method of conversion is
+not limited to the four stroke cycle.
+IC.1.1.4 The engine may be modified within the restrictions of the rules.
+IC.1.2 Air Intake and Fuel System Location
+All parts of the engine air system and fuel control, delivery and storage systems (including the
+throttle or carburetor, and the complete air intake system, including the air cleaner and any
+air boxes) must lie inside the Tire Surface Envelope F.1.14
+IC.2 AIR INTAKE SYSTEM
+IC.2.1 General
+IC.2.2 Intake System Location
+IC.2.2.1 The Intake System must meet IC.1.2
+IC.2.2.2 Any portion of the air intake system that is less than 350 mm above the ground must be
+shielded from side or rear impacts by structure built per F.6.4 / F.7.5 as applicable.
+IC.2.3 Intake System Mounting
+IC.2.3.1 The intake manifold must be securely attached to the engine block or cylinder head with
+brackets and mechanical fasteners.
+• Hose clamps, plastic ties, or safety wires do not meet this requirement.
+• The use of rubber bushings or hose is acceptable for creating and sealing air passages,
+but is not a structural attachment.
+IC.2.3.2 Threaded fasteners used to secure and/or seal the intake manifold must have a Positive
+Locking Mechanism, see T.8.3.
+IC.2.3.3 Intake systems with significant mass or cantilever from the cylinder head must be supported
+to prevent stress to the intake system.
+a. Supports to the engine must be rigid.
+b. Supports to the Chassis must incorporate some isolation to allow for engine movement
+and chassis flex.
+IC.2.4 Intake System Restrictor
+IC.2.4.1 All airflow to the engine(s) must pass through a single circular restrictor placed in the intake
+system.
+Formula SAE® Rules 2024 © 2023 SAE International Page 78 of 140
+Version 1.0 1 Sep 2023
+IC.2.4.2 The only allowed sequence of components are the following:
+a. For naturally aspirated engines, the sequence must be: throttle body, restrictor, and
+engine.
+b. For turbocharged or supercharged engines, the sequence must be: restrictor,
+compressor, throttle body, engine.
+Pop-Off Valve (optional)
+Throttle Engine
+Body
+Restrictor Compressor
+Heat
+Exchanger
+Recirculation Valve (optional) (optional)
+IC.2.4.3 The maximum restrictor diameters at any time during the competition are:
+a. Gasoline fueled vehicles 20.0 mm
+b. E85 fueled vehicles 19.0 mm
+IC.2.4.4 The restrictor must be located to facilitate measurement during Technical Inspection
+IC.2.4.5 The circular restricting cross section must NOT be movable or flexible in any way
+IC.2.4.6 The restrictor must not be part of the movable portion of a barrel throttle body.
+IC.2.5 Turbochargers & Superchargers
+IC.2.5.1 The intake air may be cooled with an intercooler (a charge air cooler).
+a. It must be located downstream of the throttle body
+b. Only ambient air may be used to remove heat from the intercooler system
+c. Air to air and water to air intercoolers are permitted
+d. The coolant of a water to air intercooler system must meet T.5.4.1
+IC.2.5.2 If pop-off valves, recirculation valves, or heat exchangers (intercoolers) are used, they must be
+positioned in the intake system as shown in IC.2.4.2.b
+IC.2.5.3 Plenums must not be located anywhere upstream of the throttle body
+For the purpose of definition, a plenum is any tank or volume that is a significant enlargement
+of the normal intake runner system. Teams may submit their designs via a Rules Question for
+review prior to competition if the legality of their proposed system is in doubt.
+IC.2.5.4 The maximum allowable area of the inner diameter of the intake runner system between the
+restrictor and throttle body is 2825 mm2
+IC.2.6 Connections to Intake
+Any crankcase or engine lubrication vent lines routed to the intake system must be connected
+upstream of the intake system restrictor.
+Formula SAE® Rules 2024 © 2023 SAE International Page 79 of 140
+Version 1.0 1 Sep 2023
+IC.3 THROTTLE
+IC.3.1 General
+IC.3.1.1 The vehicle must have a carburetor or throttle body.
+a. The carburetor or throttle body may be of any size or design.
+b. Boosted applications must not use carburetors.
+IC.3.2 Throttle Actuation Method
+The throttle may be actuated:
+a. Mechanically by a cable or rod system IC.3.3
+b. By Electronic Throttle Control IC.4
+IC.3.3 Throttle Actuation – Mechanical
+IC.3.3.1 The throttle cable or rod must:
+a. Have smooth operation
+b. Have no possibility of binding or sticking
+c. Be minimum 50 mm from any exhaust system component and out of the exhaust stream
+d. Be protected from being bent or kinked by the driver’s foot when it is operated by the
+driver or when the driver enters or exits the vehicle
+IC.3.3.2 The throttle actuation system must use two or more return springs located at the throttle
+body.
+Throttle Position Sensors (TPS) are NOT acceptable as return springs
+IC.3.3.3 Failure of any component of the throttle system must not prevent the throttle returning to
+the closed position.
+IC.4 ELECTRONIC THROTTLE CONTROL
+This section IC.4 applies only when Electronic Throttle Control is used
+An Electronic Throttle Control (ETC) system may be used. This is a device or system which
+may change the engine throttle setting based on various inputs.
+IC.4.1 General Design
+IC.4.1.1 The electronic throttle must automatically close (return to idle) when power is removed.
+IC.4.1.2 The electronic throttle must use minimum two sources of energy capable of returning the
+throttle to the idle position.
+a. One of the sources may be the device (such as a DC motor) that normally actuates the
+throttle
+b. The other device(s) must be a throttle return spring that can return the throttle to the
+idle position if loss of actuator power occurs.
+c. Springs in the TPS are not acceptable throttle return springs
+IC.4.1.3 The ETC system may blip the throttle during downshifts when proven that unintended
+acceleration can be avoided. The functional analysis must be documented in the ETC Systems
+Form
+Formula SAE® Rules 2024 © 2023 SAE International Page 80 of 140
+Version 1.0 1 Sep 2023
+IC.4.2 Commercial ETC System
+IC.4.2.1 An ETC system that is commercially available, but does not comply with the regulations, may
+be used, if approved prior to the event.
+IC.4.2.2 To obtain approval, submit a Rules Question which includes:
+• Which ETC system the team is seeking approval to use.
+• The specific ETC rule(s) that the commercial system deviates from.
+• Sufficient technical details of these deviations to determine the acceptability of the
+commercial system.
+IC.4.3 Documentation
+IC.4.3.1 The ETC Notice of Intent:
+• Must be submitted to inform the organizer of the intent to run ETC
+• May be used to screen which teams are allowed to use ETC
+IC.4.3.2 The ETC Systems Form must be submitted in order to use ETC
+IC.4.3.3 Submit the ETC Notice of Intent and ETC Systems Form as given in section DR - Document
+Requirements
+IC.4.3.4 Late or non submission will prevent use of ETC, see DR.3.4.1
+IC.4.4 Throttle Position Sensor - TPS
+IC.4.4.1 The TPS must measure the position of the throttle or the throttle actuator.
+Throttle position is defined as percent of travel from fully closed to wide open where 0% is
+fully closed and 100% is fully open.
+IC.4.4.2 Two or more separate sensors must be used as TPSs. The TPSs may share the same supply and
+reference lines only if effects of supply and/or reference line voltage offsets can be detected.
+IC.4.4.3 Implausibility is defined as a deviation of more than 10% throttle position between the
+sensors or other failure as defined in Section IC.4. Use of values larger than 10% may be
+considered on a case by case basis and require justification in the ETC Systems Form
+IC.4.4.4 If an Implausibility occurs between the values of the two TPSs and persists for more than 100
+msec, the power to the electronic throttle must be immediately shut down.
+IC.4.4.5 If three sensors are used, then in the case of a TPS failure, any two TPSs that agree within 10%
+throttle position may be used to define the throttle position target and the 3rd TPS may be
+ignored.
+IC.4.4.6 Each TPS must be able to be checked during Technical Inspection by having one of:
+a. A separate detachable connector(s) for any TPS signal(s) to the main ECU without
+affecting any other connections
+b. An inline switchable breakout box available that allows disconnection of each TPS
+signal(s) to the main ECU without affecting any other connections
+IC.4.4.7 The TPS signals must be sent directly to the throttle controller using an analogue signal or via
+a digital data transmission bus such as CAN or FlexRay. Any failure of the TPSs or TPS wiring
+must be detectable by the controller and must be treated like Implausibility.
+IC.4.4.8 When an analogue signal is used, the TPSs will be considered to have failed when they achieve
+an open circuit or short circuit condition which generates a signal outside of the normal
+operating range, for example <0.5 V or >4.5 V.
+Formula SAE® Rules 2024 © 2023 SAE International Page 81 of 140
+Version 1.0 1 Sep 2023
+The circuitry used to evaluate the sensor must use pull down or pull up resistors to ensure
+that open circuit signals result in a failure being detected.
+IC.4.4.9 When any kind of digital data transmission is used to transmit the TPS signal,
+a. The ETC Systems Form must contain a detailed description of all the potential failure
+modes that can occur, the strategy that is used to detect these failures and the tests that
+have been conducted to prove that the detection strategy works.
+b. The failures to be considered must include but are not limited to the failure of the TPS,
+TPS signals being out of range, corruption of the message and loss of messages and the
+associated time outs.
+IC.4.5 Accelerator Pedal Position Sensor - APPS
+Refer to T.4.2 for specific requirements of the APPS
+IC.4.6 Brake System Encoder - BSE
+Refer to T.4.3 for specific requirements of the BSE
+IC.4.7 Throttle Plausibility Checks
+IC.4.7.1 Brakes and Throttle Position
+a. The power to the electronic throttle must be shut down if the mechanical brakes are
+actuated and the TPS signals that the throttle is open by more than a permitted amount
+for more than one second.
+b. An interval of one second is allowed for the throttle to close (return to idle). Failure to
+achieve this in the required interval must result in immediate shut down of fuel flow and
+the ignition system.
+c. The permitted relationship between BSE and TPS may be defined by the team using a
+table. This functionality must be demonstrated at Technical Inspection.
+IC.4.7.2 Throttle Position vs Target
+a. The power to the electronic throttle must be immediately shut down, if throttle position
+differs by more than 10% from the expected target TPS position for more than one
+second.
+b. An interval of one second is allowed for the difference to reduce to less than 10%, failure
+to achieve this in the required interval must result in immediate shut down of fuel flow
+and the ignition system.
+c. An error in TPS position and the resultant system shutdown must be demonstrated at
+Technical Inspection.
+Teams must have a method to demonstrate that the actions in IC.4.7.2.b above are met.
+System states displayed using calibration software must be accompanied by a detailed
+explanation of the control system.
+IC.4.7.3 The electronic throttle and fuel injector/ignition system shutdown must stay active until the
+TPS signals indicate the throttle is at or below the unpowered default position for one second
+or longer.
+IC.4.8 Brake System Plausibility Device - BSPD
+IC.4.8.1 A standalone nonprogrammable circuit must be used to monitor the electronic throttle
+control.
+The BSPD must be provided in addition to the Throttle Plausibility Checks IC.4.7
+Formula SAE® Rules 2024 © 2023 SAE International Page 82 of 140
+Version 1.0 1 Sep 2023
+IC.4.8.2 Signals from any sensors must be sent directly to the BSPD. Outputs from other modules may
+not be used in place of the raw sensor signals.
+IC.4.8.3 The BSPD must monitor for the following conditions:
+a. Both of the following for more than one second:
+• Demand for Hard Braking IC.4.6
+• Throttle more than 10% open IC.4.4
+b. Loss of signal from the braking sensor(s) for more than 100 msec
+c. Loss of signal from the throttle sensor(s) for more than 100 msec
+d. Removal of power from the BSPD circuit
+IC.4.8.4 When any of the above conditions exist, the BSPD must Open the Shutdown Circuit IC.9.2.2
+IC.4.8.5 The BSPD must only be reset by cycling the Primary Master Switch IC.9.3 OFF and ON
+IC.4.8.6 The BSPD must not reset when the Cockpit Main Switch IC.9.4 is turned OFF
+IC.4.8.7 The BSPD signals and function must be able to be checked during Technical Inspection by
+having one of:
+a. A separate set of detachable connectors for any signals from the braking sensor(s),
+throttle sensor(s) and removal of power to only the BSPD device.
+b. An inline switchable breakout box available that allows disconnection of the brake
+sensor(s), throttle sensor(s) individually and power to only the BSPD device.
+IC.5 FUEL AND FUEL SYSTEM
+IC.5.1 Fuel
+IC.5.1.1 Vehicles must be operated with the fuels provided by the organizer at the competition.
+IC.5.1.2 Fuels provided are expected to be Gasoline and E85. Consult the individual competition
+websites for fuel specifics and other information.
+IC.5.1.3 No agents other than the provided fuel and air may go into the combustion chamber.
+IC.5.2 Fuel System
+IC.5.2.1 The Fuel System must meet the following design criteria:
+a. The Fuel Tank is capable of being filled to capacity without manipulating the tank or the
+vehicle in any manner.
+b. During refueling on a level surface, the formation of air cavities or other effects that
+cause the fuel level observed at the sight tube to drop after movement or operation of
+the vehicle (other than due to consumption) are prevented.
+c. Spillage during refueling cannot contact the driver position, exhaust system, hot engine
+parts, or the ignition system.
+IC.5.2.2 The Fuel System location must meet IC.1.2 and F.9
+IC.5.2.3 A Firewall must separate the Fuel Tank from the driver, per T.1.8
+IC.5.3 Fuel Tank
+The part(s) of the fuel containment device that is in contact with the fuel.
+Formula SAE® Rules 2024 © 2023 SAE International Page 83 of 140
+Version 1.0 1 Sep 2023
+IC.5.3.1 Fuel Tanks made of a rigid material must:
+a. Be securely attached to the vehicle structure. The mounting method must not allow
+chassis flex to load the Fuel Tank.
+b. Not be used to carry any structural loads; from Roll Hoops, suspension, engine or
+gearbox mounts
+IC.5.3.2 Any Fuel Tank that is made from a flexible material, for example a bladder fuel cell or a bag
+tank:
+a. Must be enclosed inside a rigid fuel tank container which is securely attached to the
+vehicle structure.
+b. The Fuel Tank container may be load carrying
+IC.5.3.3 Any size Fuel Tank may be used.
+IC.5.3.4 The Fuel Tank, by design, must not have a variable capacity.
+IC.5.3.5 The Fuel System must have a provision for emptying the Fuel Tank if required.
+IC.5.4 Fuel Filler Neck & Sight Tube
+IC.5.4.1 All Fuel Tanks must have a Fuel Filler Neck which must be:
+a. Minimum 35 mm inner diameter at any point between the Fuel Tank and the Fuel Filler
+cap
+IC.5.4.2 The portion of the Fuel Filler Neck nearest to the Fuel Filler cap must be:
+a. Minimum 125 mm vertical height above the top level of the Fuel Tank
+b. Angled no more than 30° from the vertical
+IC.5.4.3 The Fuel Filler Neck must be accompanied by a clear fuel resistant sight tube for reading the
+fuel level which must be:
+a. Visible vertical height: 125 mm minimum
+b. Inside diameter: 6 mm minimum
+c. Above the top surface of the Fuel Tank
+IC.5.4.4 A clear Fuel Filler Neck tube may be used as a sight tube, subject to approval by a Rules
+Question or technical inspectors at the event.
+Vertical Angled
+Filler Neck Filler Neck
+Sight Tube
+ø35 mm min clear
+ø35 mm min clear
+IC.5.4.5 Fuel Level Line - A permanent, non movable fuel level line must be located between 12 mm
+and 25 mm below the top of the visible portion of the sight tube.
+Formula SAE® Rules 2024 © 2023 SAE International Page 84 of 140
+Version 1.0 1 Sep 2023
+nim
+mm
+521
+nim
+mm
+521
+This line will be used as the fill line for the Tilt Test, and before and after Endurance to measure
+the amount of fuel used during the Endurance Event.
+IC.5.4.6 The sight tube and fuel level line must be clearly visible to two individuals (one to fill the tank,
+the other to visually verify fill) without the need of assistance (artificial lighting, magnifiers,
+etc) or the need to remove any parts (body panels, etc).
+IC.5.4.7 The individual filling the tank must have complete direct access to the filler neck opening with
+a standard two gallon gas can assembly.
+The gas can is minimum 25 cm wide x 25 cm deep x 35 cm high, with a 25 cm spout at the top
+IC.5.4.8 The filler neck must have a fuel cap that can withstand severe vibrations or high pressures
+such as could occur during a vehicle rollover event
+IC.5.5 Fuel Tank Filling
+IC.5.5.1 Fueling / Refueling policies and procedures are at the discretion of the fuel crew and officials.
+IC.5.5.2 The tank will be filled to the fill line, or if a filling system is used, to the automatic stop point.
+IC.5.5.3 If, for any reason, the fuel level changes after the team have moved the vehicle, then no
+additional fuel will be added, unless fueling after Endurance, see D.13.2.5
+IC.5.6 Venting Systems
+IC.5.6.1 Venting systems for the fuel tank and fuel delivery system must not allow fuel to spill during
+hard cornering or acceleration.
+IC.5.6.2 All fuel vent lines must have a check valve to prevent fuel leakage when the tank is inverted.
+IC.5.6.3 All fuel vent lines must exit outside the bodywork.
+IC.5.7 Fuel Lines
+IC.5.7.1 Fuel lines must be securely attached to the vehicle and/or engine.
+IC.5.7.2 All fuel lines must be shielded from possible rotating equipment failure or collision damage.
+IC.5.7.3 Plastic fuel lines between the fuel tank and the engine (supply and return) are prohibited.
+IC.5.7.4 Any rubber fuel line or hose used must meet the following:
+a. The components over which the hose is clamped must have annular bulb or barbed
+fittings to retain the hose
+b. Clamps specifically designed for fuel lines must be used.
+These clamps have three features: a full 360° wrap, a nut and bolt system for tightening,
+and rolled edges to prevent the clamp cutting into the hose
+IC.5.7.5 Worm gear type hose clamps must not be used on any fuel line.
+IC.6 FUEL INJECTION
+IC.6.1 Low Pressure Injection (LPI)
+Low Pressure fuel injection systems are those functioning at a pressure below 10 Bar. Most
+Port Fuel Injected (PFI) fuel systems are low pressure.
+IC.6.1.1 Any Low Pressure flexible fuel lines must be one of:
+• Metal braided hose with threaded fittings (crimped on or reusable)
+• Reinforced rubber hose with some form of abrasion resistant protection
+IC.6.1.2 Fuel rail and mounting requirements:
+Formula SAE® Rules 2024 © 2023 SAE International Page 85 of 140
+Version 1.0 1 Sep 2023
+a. Unmodified OEM Fuel Rails are acceptable, regardless of material.
+b. Non OEM fuel rails made from plastic, carbon fiber or rapid prototyping flammable
+materials are prohibited.
+c. The fuel rail must be securely attached to the manifold, engine block or cylinder head
+with brackets and mechanical fasteners.
+Hose clamps, plastic ties, or safety wires do not meet this requirement.
+d. Threaded fasteners used to secure the fuel rail are Critical Fasteners, see T.8.2
+IC.6.2 High Pressure Injection (HPI) / Direct Injection (DI)
+IC.6.2.1 Definitions
+a. High Pressure fuel systems - those functioning at 10 Bar pressure or above
+b. Direct Injection fuel systems - where the injection occurs directly into the combustion
+system
+Direct Injection systems often utilize a low pressure electric fuel pump and high pressure
+mechanical “boost” pump driven off the engine.
+c. High Pressure Fuel Lines - those between the boost pump and injectors
+d. Low Pressure Fuel Lines - from the electric supply pump to the boost pump
+IC.6.2.2 All High Pressure Fuel Lines must:
+a. Be stainless steel rigid line or Aeroquip FC807 smooth bore PTFE hose with stainless steel
+reinforcement and visible Nomex tracer yarn. Equivalent products may be used with
+prior approval.
+b. Not incorporate elastomeric seals
+c. Be rigidly connected every 100 mm by mechanical fasteners to structural engine
+components such as cylinder heads or block
+IC.6.2.3 Any Low Pressure flexible Fuel Lines must be one of:
+• Metal braided hose with threaded fittings (crimped on or reusable)
+• Reinforced rubber hose with some form of abrasion resistant protection
+IC.6.2.4 Fuel rail mounting requirements:
+a. The fuel rail must be securely attached to the engine block or cylinder head with brackets
+and mechanical fasteners. Hose clamps, plastic ties, or safety wires do not meet this
+requirement.
+b. The fastening method must be sufficient to hold the fuel rail in place with the maximum
+regulated pressure acting on the injector internals and neglecting any assistance from
+cylinder pressure acting on the injector tip.
+c. Threaded fasteners used to secure the fuel rail are Critical Fasteners, see T.8.2
+IC.6.2.5 High Pressure Fuel Pump – must be rigidly mounted to structural engine components such as
+the cylinder head or engine block.
+IC.6.2.6 Pressure Regulator – must be fitted between the High Pressure and Low Pressure sides of the
+fuel system in parallel with the DI boost pump. The external regulator must be used even if
+the DI boost pump comes equipped with an internal regulator.
+Formula SAE® Rules 2024 © 2023 SAE International Page 86 of 140
+Version 1.0 1 Sep 2023
+IC.7 EXHAUST AND NOISE CONTROL
+IC.7.1 Exhaust Protection
+IC.7.1.1 The exhaust system must be separated from any of the following components by means given
+in T.1.6.3:
+a. Flammable materials, including the fuel and fuel system, the oil and oil system
+b. Thermally sensitive components, including brake lines, composite materials, and
+batteries
+IC.7.2 Exhaust Outlet
+IC.7.2.1 The exhaust must be routed to prevent the driver from fumes at any speed considering the
+draft of the vehicle
+IC.7.2.2 The Exhaust Outlet(s) must be:
+a. No more than 45 cm aft of the centerline of the rear axle
+b. No more than 60 cm above the ground.
+IC.7.2.3 Any exhaust components (headers, mufflers, etc.) that protrude from the side of the body in
+front of the Main Hoop must be shielded to prevent contact by persons approaching the
+vehicle or a driver exiting the vehicle
+IC.7.2.4 Fibrous/absorbent material, (such as header wrap), must not be used on the outside of an
+exhaust manifold or exhaust system.
+IC.7.3 Variable Exhaust
+IC.7.3.1 Adjustable tuning or throttling devices are permitted.
+IC.7.3.2 Manually adjustable tuning devices must require tools to change
+IC.7.3.3 Refer to IN.10.2 for additional requirements during the Noise Test
+IC.7.4 Connections to Exhaust
+Crankcase breathers that pass through the oil catch tank(s) to exhaust systems, or vacuum
+devices that connect directly to the exhaust system, are prohibited.
+IC.7.5 Noise Level and Testing
+IC.7.5.1 The vehicle must stay below the permitted sound level at all times IN.10.5
+IC.7.5.2 Sound level will be verified during Technical Inspection, refer to IN.10
+IC.8 ELECTRICAL
+IC.8.1 Starter
+Each vehicle must start the engine using an onboard starter at all times
+IC.8.2 Batteries
+Refer to T.9.2 for specific requirements of Low Voltage batteries
+IC.8.3 Voltage Limit
+IC.8.3.1 Voltage between any two electrical connections must be Low Voltage T.9.1.2
+IC.8.3.2 This voltage limit does not apply to the following systems:
+• High Voltage systems for ignition
+• High Voltage systems for injectors
+Formula SAE® Rules 2024 © 2023 SAE International Page 87 of 140
+Version 1.0 1 Sep 2023
+• Voltages internal to OEM charging systems designed for <60 V DC output.
+IC.9 SHUTDOWN SYSTEM
+IC.9.1 Shutdown Circuit
+IC.9.1.1 The Shutdown Circuit consists of the following components:
+a. Primary Master Switch IC.9.3
+b. Cockpit Main Switch IC.9.4
+c. (ETC Only) Brake System Plausibility Device (BSPD) IC.4.8
+d. Brake Overtravel Switch (BOTS) T.3.3
+e. Inertia Switch (if used) T.9.4
+IC.9.1.2 The team must be able to demonstrate all features and functions of the Shutdown Circuit and
+components at Technical Inspection
+IC.9.1.3 The international electrical symbol (a red spark on a white edged blue triangle) must be near
+OFF
+both the Primary Master Switch and Cockpit Main Switch.
+IC.9.2 Shutdown Circuit Operation
+IC.9.2.1 The Shutdown Circuit must Open upon operation of, or detection from any of the components
+listed in IC.9.1.1
+IC.9.2.2 When the Shutdown Circuit Opens, it must:
+a. Stop the engine
+b. Disconnect power to the:
+• Fuel Pump(s)
+• Ignition
+• (ETC only) Electronic Throttle IC.4.1.1
+IC.9.3 Primary Master Switch
+IC.9.3.1 Configuration and Location - The Primary Master Switch must meet T.9.3
+IC.9.3.2 Function - the Primary Master Switch must:
+a. Disconnect power to ALL electrical circuits, including the battery, alternator, lights, fuel
+pump(s), ignition and electrical controls.
+All battery current must flow through this switch
+b. Be direct acting, not act through a relay or logic.
+IC.9.4 Cockpit Main Switch
+IC.9.4.1 Configuration - The Cockpit Main Switch must:
+a. Be a push-pull or push-rotate emergency switch (pushing the button is the OFF position)
+b. Have a diameter of 24 mm minimum
+IC.9.4.2 Location – The Cockpit Main Switch must be:
+a. In easy reach of the driver when in a normal driving position wearing Harness
+b. Adjacent to the Steering Wheel
+c. Unobstructed by the Steering Wheel or any other part of the vehicle
+IC.9.4.3 Function - the Cockpit Main Switch may act through a relay
+Formula SAE® Rules 2024 © 2023 SAE International Page 88 of 140
+Version 1.0 1 Sep 2023
+EV - ELECTRIC VEHICLES 

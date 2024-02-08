@@ -1,0 +1,780 @@
+,rule_num,rule_text
+0,EV.1,DEFINITIONS
+1,EV.1.1,"Tractive System – TS
+Every part electrically connected to the Motor(s) and/or Accumulator(s)"
+2,EV.1.2,"Grounded Low Voltage - GLV
+Every electrical part that is not part of the Tractive System"
+3,EV.1.3,"Accumulator
+All the battery cells or super capacitors that store the electrical energy to be used by the
+Tractive System"
+4,EV.2,DOCUMENTATION
+5,EV.2.1,Electrical System Form - ESF
+6,EV.2.1.1,"Each team must submit an Electrical System Form (ESF) with a clearly structured
+documentation of the entire vehicle electrical system (including control and Tractive System).
+Submission and approval of the ESF does not mean that the vehicle will automatically pass
+Electrical Technical Inspection with the described items / parts."
+7,EV.2.1.2,The ESF may provide guidance or more details than the Formula SAE Rules.
+8,EV.2.1.3,Use the format provided and submit the ESF as given in section DR - Document Requirements
+9,EV.2.2,"Submission Penalties
+Penalties for the ESF are imposed as given in section DR - Document Requirements."
+10,EV.3,ELECTRICAL LIMITATIONS
+11,EV.3.1,Operation
+12,EV.3.1.1,Supplying power to the motor to drive the vehicle in reverse is prohibited
+13,EV.3.1.2,Drive by wire control of wheel torque is permitted
+14,EV.3.1.3,"Any algorithm or electronic control unit that can adjust the requested wheel torque may only
+decrease the total driver requested torque and must not increase it"
+15,EV.3.2,Energy Meter
+16,EV.3.2.1,"All Electric Vehicles must run with the Energy Meter provided by the organizer
+Refer to the FSAEOnline Website AD.2.2 for detail information on the Energy Meter"
+17,EV.3.2.2,The Energy Meter must be installed in an easily accessible location
+18,EV.3.2.3,All Tractive System power must flow through the Energy Meter
+19,EV.3.2.4,"Power and Voltage limits will be checked by the Energy Meter data
+Energy is calculated as the time integrated value of the measured voltage multiplied by the
+measured current logged by the Energy Meter."
+20,EV.3.3,Power and Voltage
+21,EV.3.3.1,The maximum power measured by the Energy Meter must not exceed 80 kW
+22,EV.3.3.2,"The maximum permitted voltage that may occur between any two points must not exceed
+600 V DC"
+23,EV.3.3.3,The powertrain must not regenerate energy when vehicle speed is between 0 and 5 km/hr
+24,EV.3.4,Violations
+25,EV.3.4.1,"A Violation occurs when one or two of these exist:
+a. Use of more than the specified maximum power EV.3.3.1
+b. Exceed the maximum voltage EV.3.3.2
+for one or both conditions:
+• Continuously for 100 ms or more
+• After a moving average over 500 ms is applied"
+26,EV.3.4.2,"Missing Energy Meter data due to the team’s fault, tampering, or attempting to tamper with
+the Energy Meter will be treated as a Violation."
+27,EV.3.4.3,"Tampering, or attempting to tamper with the Energy Meter or its data may result in
+Disqualification (DQ)"
+28,EV.3.5,Penalties
+29,EV.3.5.1,"Violations during the Acceleration, Skidpad, Autocross Events:
+a. Each run with one or more Violations will Disqualify (DQ) the best run of the team
+b. Multiple runs with Violations will DQ multiple runs, ex two runs with Violations DQ the
+two best runs"
+30,EV.3.5.2,"Violations during the Endurance event:
+• Each Violation: 60 second penalty D.14.2.1"
+31,EV.3.5.3,"Repeated Violations may void Inspection Approval or receive additional penalties up to and
+including Disqualification, subject to official discretion."
+32,EV.3.5.4,"The respective data of each run in which a team has a Violation and the resulting decision may
+be made public."
+33,EV.4,COMPONENTS
+34,EV.4.1,Motors
+35,EV.4.1.1,Only electrical motors are allowed. The number of motors is not limited.
+36,EV.4.1.2,Motors must meet T.5.3
+37,EV.4.1.3,"If used, Outboard Wheel Motors, where the motor, attendant cables and wiring do not meet
+F.11.1.3, must:
+a. Include an Interlock EV.7.8
+This Interlock(s) must Open the Shutdown Circuit EV.7.2.2 before failure of the Tractive
+System wiring when the wiring is damaged or the Wheel/Motor assembly is damaged or
+knocked off the vehicle.
+b. Reduce the length of the portions of wiring and other connections that do not meet
+F.11.1.3 to the extent possible"
+38,EV.4.2,"Motor Controller
+The Tractive System Motor(s) must be connected to the Accumulator through a Motor
+Controller. No direct connections between Motor(s) and Accumulator."
+39,EV.4.3,Accumulator Container
+40,EV.4.3.1,Accumulator Containers must meet F.10
+41,EV.4.3.2,"The Accumulator Container(s) must be removable from the vehicle while still remaining rules
+compliant"
+42,EV.4.3.3,"The Accumulator Container(s) must be completely closed at all times (when mounted to the
+vehicle and when removed from the vehicle) without the need to install extra protective
+covers"
+43,EV.4.3.4,"The Accumulator Container(s) may contain Holes or Openings
+a. Only the wiring harness, ventilation, cooling and fasteners may pass through holes in the
+Accumulator Container(s)
+b. Holes and Openings in the Accumulator Container must meet F.10.4
+c. External holes must meet EV.6.1"
+44,EV.4.3.5,"Any Accumulators that may vent an explosive gas must have a ventilation system or pressure
+relief valve to release the vented gas"
+45,EV.4.3.6,Completely sealed Accumulator Containers must have a pressure relief valve
+46,EV.4.3.7,"Pressure relief valves must not have line of sight to the driver, with the Firewall installed or
+removed"
+47,EV.4.3.8,"Each Accumulator Container must be labelled with the:
+a. School Name and Vehicle Number
+b. Symbol specified in ISO 7010-W012 (triangle with black lightning bolt on yellow
+background) with triangle side length of 100 mm minimum
+c. Text “Always Energized”
+d. Text “High Voltage” if the voltage meets T.9.1.1"
+48,EV.4.4,Grounded Low Voltage System
+49,EV.4.4.1,"The GLV System must be:
+a. A Low Voltage system that is Grounded to the Chassis
+b. Able to operate with Accumulator removed from the vehicle"
+50,EV.4.4.2,"The GLV System must include a Master Switch, see EV.7.9.1"
+51,EV.4.4.3,"A GLV Measuring Point (GLVMP) must be installed which is:
+a. Connected to GLV System Ground
+b. Next to the TSMP EV.5.8
+c. 4 mm shrouded banana jack
+d. Color: Black
+e. Marked “GND”"
+52,EV.4.4.4,Low Voltage Batteries must meet T.9.2
+53,EV.4.5,"Accelerator Pedal Position Sensor - APPS
+Refer to T.4.2 for specific requirements of the APPS"
+54,EV.4.6,"Brake System Encoder - BSE
+Refer to T.4.3 for specific requirements of the BSE"
+55,EV.4.7,APPS / Brake Pedal Plausibility Check
+56,EV.4.7.1,"Must monitor for the two conditions:
+• The mechanical brakes are engaged EV.4.6, T.3.2.4
+• The APPS signals more than 25% Pedal Travel EV.4.5"
+57,EV.4.7.2,"If the two conditions in EV.4.7.1 occur at the same time:
+a. Power to the Motor(s) must be immediately and completely shut down
+b. The Motor shut down must stay active until the APPS signals less than 5% Pedal Travel,
+with or without brake operation
+The team must be able to demonstrate these actions at Technical Inspection"
+58,EV.4.8,"Tractive System Part Positioning
+All parts belonging to the Tractive System must meet F.10.5.8"
+59,EV.4.9,Housings and Enclosures
+60,EV.4.9.1,"Every housing or enclosure containing parts of the Tractive System other than Motor
+housings, must be labelled with the:
+a. Symbol specified in ISO 7010-W012 (triangle with black lightning bolt on yellow
+background)
+b. Text “High Voltage” if the voltage meets T.9.1.1"
+61,EV.4.9.2,"If the material of the housing containing parts of the Tractive System is electrically conductive,
+it must have a low resistance connection to GLV System Ground, see EV.6.7"
+62,EV.4.10,Accumulator Hand Cart
+63,EV.4.10.1,Teams must have a Hand Cart to transport their Accumulator Container(s)
+64,EV.4.10.2,"The Hand Cart must be used when the Accumulator Container(s) are transported on the
+competition site EV.11.4.2 EV.11.5.1"
+65,EV.4.10.3,"The Hand Cart must:
+a. Be able to carry the load of the Accumulator Container(s) without tipping over
+b. Contain a minimum of two wheels
+c. Have a brake that must be:
+• Released only using a dead man type switch (where the brake is always on except
+when released by pushing and holding a handle) or by manually lifting part of the
+cart off the ground
+• Able to stop the Hand Cart with a fully loaded Accumulator Container"
+66,EV.4.10.4,Accumulator Container(s) must be securely attached to the Hand Cart
+67,EV.5,ENERGY STORAGE
+68,EV.5.1,Accumulator
+69,EV.5.1.1,"All cells or super capacitors which store the Tractive System energy are built into Accumulator
+Segments and must be enclosed in (an) Accumulator Container(s)."
+70,EV.5.1.2,"Each Accumulator Segment must contain:
+• Maximum static voltage of less than 120 V DC
+• Maximum energy of 6 MJ
+The contained energy of a stack is calculated by multiplying the maximum stack voltage with
+the nominal capacity of the used cell(s)."
+71,EV.5.1.3,"No further energy storage except for reasonably sized intermediate circuit capacitors are
+allowed after the Energy Meter EV.3.1
+to
+Accumulator
+Tractive
+Container(s) System
+Energy
+Meter"
+72,EV.5.1.4,"All Accumulator Segments and/or Accumulator Containers (including spares and replacement
+parts) must be identical to the design documented in the ESF and SES"
+73,EV.5.2,Electrical Configuration
+74,EV.5.2.1,All Tractive System components must be rated for the maximum Tractive System voltage
+75,EV.5.2.2,"If the Accumulator Container is made from an electrically conductive material:
+a. The poles of the Accumulator Segment(s) and/or cells must be isolated from the inner
+wall of the Accumulator Container with an insulating material that is rated for the
+maximum Tractive System voltage.
+b. All conductive surfaces on the outside of the Accumulator Container must have a low
+resistance connection to the GLV System Ground, see EV.6.7
+c. Any conductive penetrations, such as mounting hardware, must be protected against
+puncturing the insulating barrier."
+76,EV.5.2.3,"Each Accumulator Segment must be electrically insulated with suitable Nonflammable
+Material (F.1.18) (not air) for the two:
+a. Between the segments in the container
+b. On top of the segment
+The intent is to prevent arc flashes caused by inter segment contact or by parts/tools
+accidentally falling into the container during maintenance for example."
+77,EV.5.2.4,"Soldering electrical connections in the high current path is prohibited
+Soldering wires to cells for the voltage monitoring input of the AMS is allowed, these wires are
+not part of the high current path."
+78,EV.5.2.5,"Every wire used in an Accumulator Container, whether it is part of the GLV or Tractive System,
+must be rated to the maximum Tractive System voltage."
+79,EV.5.3,Maintenance Plugs
+80,EV.5.3.1,"Maintenance Plugs must allow electrical separation of the Accumulator Segments to meet:
+a. The separated Segments meet voltage and energy limits of EV.5.1.2
+b. The separation must affect both poles of the Segment"
+81,EV.5.3.2,"Maintenance Plugs must:
+a. Require the physical removal or separation of a component. Contactors or switches are
+not acceptable Maintenance Plugs
+b. Have access after opening the Accumulator Container and not necessary to move or
+remove any other components
+c. Not be physically possible to connect in any configuration other than the design intended
+configuration
+d. Not require tools to install or remove
+e. Include a positive locking feature which prevents the plug from unintentionally becoming
+loose
+f. Be nonconductive on surfaces that do not provide any electrical connection"
+82,EV.5.3.3,"When the Accumulator Containers are opened or Segments are removed, the Accumulator
+Segments must be separated by using the Maintenance Plugs. See EV.11.4.1"
+83,EV.5.4,Accumulator Isolation Relays - AIR
+84,EV.5.4.1,"Every Accumulator Container must contain minimum one fuse (EV.6.6) and two or more
+Accumulator Isolation Relays (AIR)"
+85,EV.5.4.2,"The Accumulator Isolation Relays must:
+a. Be a Normally Open type
+b. Open both poles of the Accumulator"
+86,EV.5.4.3,"When the AIRs are open, High Voltage T.9.1.1 must not be external of the Accumulator
+Container"
+87,EV.5.4.4,"The Accumulator Isolation Relays and any fuses must be separated from the rest of the
+Accumulator with an electrically insulated and Nonflammable Material (F.1.18)."
+88,EV.5.4.5,"A capacitor may be used to hold the AIRs closed for up to 250 ms after the Shutdown Circuit
+Opens EV.7.2.2"
+89,EV.5.5,"High Voltage Disconnect - HVD
+A High Voltage Disconnect (HVD) must be included to quickly disconnect one or both poles of
+the Accumulator EV.11.3.2"
+90,EV.5.5.1,"The High Voltage Disconnect (HVD) must be:
+a. A directly accessible element, fuse or connector
+b. More than 350 mm from the ground
+c. Easily visible when standing behind the vehicle
+d. Operable in 10 seconds or less by an untrained person
+e. Operable without removing any bodywork or obstruction or using tools
+f. Directly operated. Remote operation through a long handle, rope or wire is not
+acceptable.
+g. Clearly marked with ""HVD"""
+91,EV.5.5.2,An Interlock EV.7.8 must Open the Shutdown Circuit EV.7.2.2 when the HVD is removed
+92,EV.5.5.3,A dummy connector or similar may be used to restore isolation to meet EV.6.1.2
+93,EV.5.6,Precharge and Discharge Circuits
+94,EV.5.6.1,"The Accumulator must contain a Precharge Circuit. The Precharge Circuit must:
+a. Be able to charge the Intermediate Circuit to minimum 90% of the Accumulator voltage
+before closing the second AIR
+b. Be supplied from the Shutdown Circuit EV.7.1
+c. Not be fused"
+95,EV.5.6.2,"The Intermediate Circuit must precharge before closing the second AIR. The end of precharge
+must be controlled by one of the following two options:
+a. Feedback by monitoring the voltage in the Intermediate Circuit
+b. A conservative time defined by the longer of:
+• Twice the time to charge to 90%
+• The time to charge to 90% plus 500ms"
+96,EV.5.6.3,"The Tractive System must contain a Discharge Circuit. The Discharge Circuit must be:
+a. Wired in a way that it is always active when the Shutdown Circuit is open
+b. Able to discharge the Intermediate Circuit capacitors if the HVD has been opened
+c. Not be fused
+d. Designed to handle the maximum Tractive System voltage for minimum 15 seconds"
+97,EV.5.6.4,"Positive Temperature Coefficient (PTC) devices must not be used to limit current for the
+Precharge Circuit or Discharge Circuit"
+98,EV.5.6.5,The precharge relay must be a mechanical type relay
+99,EV.5.7,"Voltage Indicator
+Each Accumulator Container must have a prominent indicator when High Voltage T.9.1.1 is
+present at the vehicle side of the AIRs"
+100,EV.5.7.1,"The Voltage Indicator must always function, including when the Accumulator Container is
+disconnected or removed"
+101,EV.5.7.2,"The voltage being present at the connectors must directly control the Voltage Indicator using
+hard wired electronics with no software control."
+102,EV.5.7.3,The control signal which closes the AIRs must not control the Voltage Indicator
+103,EV.5.7.4,"The Voltage Indicator must:
+a. Be located where it is clearly visible when connecting/disconnecting the Accumulator
+Tractive System connections
+b. Be labeled “High Voltage Present”"
+104,EV.5.8,Tractive System Measuring Points - TSMP
+105,EV.5.8.1,"Two Tractive System Measuring Points (TSMP) must be installed in the vehicle which are:
+a. Connected to the positive and negative motor controller/inverter supply lines
+b. Next to the Master Switches EV.7.9
+c. Protected by a nonconductive housing that can be opened without tools
+d. Protected from being touched with bare hands / fingers once the housing is opened"
+106,EV.5.8.2,"Two TSMPs must be installed in the Charger EV.8.2 which are:
+a. Connected to the positive and negative Charger output lines
+b. Available during charging of any Accumulator(s)"
+107,EV.5.8.3,"The TSMPs must be:
+a. 4 mm shrouded banana jacks rated to an appropriate voltage level
+b. Color: Red
+c. Marked “HV+” and “HV-“"
+108,EV.5.8.4,"Each TSMP must be secured with a current limiting resistor.
+a. The resistor must be sized per the following:
+Maximum TS Voltage (Vmax) Resistor Value
+Vmax <= 200 V DC 5 kOhm
+200 V DC < Vmax <= 400 V DC 10 kOhm
+400 V DC < Vmax <= 600 V DC 15 kOhm
+b. Resistor continuous power rating must be more than the power dissipated across the
+TSMPs if they are shorted together
+c. Direct measurement of the value of the resistor must be possible during Electrical
+Technical Inspection."
+109,EV.5.8.5,Any TSMP must not contain additional Overcurrent Protection.
+110,EV.5.9,Tractive System Active Light - TSAL
+111,EV.5.9.1,"The vehicle must include a Tractive Systems Active Light (TSAL) that must:
+a. Illuminate when the GLV System is energized to indicate the status of the Tractive
+System
+b. Be directly controlled by the voltage present in the Tractive System using hard wired
+electronics. Software control is not permitted.
+c. Not perform any other functions."
+112,EV.5.9.2,The TSAL may be composed of multiple lights inside a single housing
+113,EV.5.9.3,"When the voltage outside the Accumulator Container(s) exceeds T.9.1.1, the TSAL must:
+a. Be Color: Red
+b. Flash with a frequency between 2 Hz and 5 Hz"
+114,EV.5.9.4,"When the voltage outside the Accumulator Container(s) is below T.9.1.1, the TSAL must:
+a. Be Color: Green
+b. Stay continuously illuminated"
+115,EV.5.9.5,"The TSAL mounting location must:
+a. Be near the Main Hoop at the highest point of the vehicle.
+b. Be inside the Rollover Protection Envelope F.1.13
+c. Be no lower than 150 mm from the highest point of the Main Hoop.
+d. Not allow contact with the driver’s helmet in any circumstances.
+e. Not be in proximity to other lights."
+116,EV.5.9.6,"The TSAL must be visible:
+a. From every horizontal direction, except small angles which are blocked by the Main Hoop
+b. From a point 1.6 m vertically from ground level, inside a 3 m horizontal radius from the
+TSAL
+c. In direct sunlight"
+117,EV.5.10,"Connectors
+Tractive System connectors outside of a housing must meet one of the two:
+• Contain an Interlock EV.7.8 which must Open the Shutdown Circuit EV.7.2.2
+• Be sealed at Tech Inspection IN.4.7.1"
+118,EV.6,ELECTRICAL SYSTEM
+119,EV.6.1,Covers
+120,EV.6.1.1,"Nonconductive material or covers must prevent inadvertent human contact with any Tractive
+System voltage.
+Covers must be secure and sufficiently rigid.
+Removable Bodywork is not suitable to enclose Tractive System connections."
+121,EV.6.1.2,"Contact with any Tractive System connections with a 100 mm long, 6 mm diameter insulated
+test probe must not be possible when the Tractive System enclosures are in place."
+122,EV.6.1.3,"Tractive System components and Accumulator Containers must be protected from moisture,
+rain or puddles.
+A rating of IP65 is recommended"
+123,EV.6.2,Insulation
+124,EV.6.2.1,"Insulation material must:
+a. Be appropriate for the expected surrounding temperatures
+b. Have a minimum temperature rating of 90°C"
+125,EV.6.2.2,"Insulating tape or paint may be part of the insulation, but must not be the only insulation."
+126,EV.6.3,Wiring
+127,EV.6.3.1,"All wires and terminals and other conductors used in the Tractive System must be sized for the
+continuous current they will conduct"
+128,EV.6.3.2,"All Tractive System wiring must:
+a. Be marked with wire gauge, temperature rating and insulation voltage rating.
+A serial number or a norm printed on the wire is sufficient if this serial number or norm is
+clearly bound to the wire characteristics for example by a data sheet.
+b. Have temperature rating more than or equal to 90°C"
+129,EV.6.3.3,"Tractive System wiring must be:
+a. Done to professional standards with sufficient strain relief
+b. Protected from loosening due to vibration
+c. Protected against damage by rotating and / or moving parts
+d. Located out of the way of possible snagging or damage"
+130,EV.6.3.4,"Any Tractive System wiring that runs outside of electrical enclosures:
+a. Must meet one of:
+• Enclosed in separate orange nonconductive conduit
+• Use an orange shielded cable.
+b. Must meet one of:
+• Run in a fully enclosed container. Bodywork is not an enclosure.
+• The conduit or shielded cable is securely anchored at each end to allow it to
+withstand a force of 200 N without straining the cable end crimp
+c. Any shielded cable must have the shield grounded."
+131,EV.6.3.5,Wiring that is not part of the Tractive System must not use orange wiring or conduit.
+132,EV.6.4,Connections
+133,EV.6.4.1,"All Tractive System connections must:
+a. Be designed to use intentional current paths through conductors designed for electrical
+current
+b. Not rely on steel bolts to be the primary conductor
+c. Not include compressible material such as plastic in the stack-up"
+134,EV.6.4.2,"If external, uninsulated heat sinks are used, they must be properly grounded to the GLV
+System Ground, see EV.6.7"
+135,EV.6.4.3,"Bolted electrical connections in the high current path of the Tractive System must include a
+positive locking feature to prevent unintentional loosening
+Lock washers or thread locking compounds (Loctite®) or adhesives are not acceptable.
+Bolts with nylon patches are allowed for blind connections into OEM components."
+136,EV.6.4.4,"Information about the electrical connections supporting the high current path must be
+available at Electrical Technical Inspection"
+137,EV.6.5,Voltage Separation
+138,EV.6.5.1,"Separation of Tractive System and GLV System:
+a. The entire Tractive System and GLV System must be completely galvanically separated.
+b. The border between Tractive and GLV System is the galvanic isolation between both
+systems. Therefore, some components, such as the Motor Controller, may be part of
+both systems."
+139,EV.6.5.2,"There must be no connection between the Chassis of the vehicle (or any other conductive
+surface that might be inadvertently touched by a person), and any part of any Tractive System
+circuits."
+140,EV.6.5.3,"Tractive System and GLV circuits must not run through the same conduit or connector, except
+as allowed in EV.7.8.4"
+141,EV.6.5.4,"GLV Systems other than the AIRs EV.5.4, parts of the Precharge and Discharge Circuits EV.5.6,
+HV DC/DC converters, the AMS EV.7.3, the IMD EV.7.6, parts of the TSAL EV.5.9.1 the Energy
+Meter EV.3.1 and cooling fans must not be inside the Accumulator Container."
+142,EV.6.5.5,"Where both Tractive System and GLV are included inside an enclosure, they must meet one of
+the two:
+a. Be separated by insulating barriers (in addition to the insulation on the wire) made of
+moisture resistant, UL recognized or equivalent insulating materials rated for 90° C or
+higher (such as Nomex based electrical insulation)
+b. Maintain the following spacing through air, or over a surface (similar to those defined in
+UL1741):
+U < 100 V DC 10 mm
+100 V DC < U < 200 V DC 20 mm
+U > 200 V DC 30 mm"
+143,EV.6.5.6,"Spacing must be clearly defined. Components and cables capable of movement must be
+positively restrained to maintain spacing."
+144,EV.6.5.7,"If Tractive System and GLV are on the same circuit board:
+a. They must be on separate, clearly defined and clearly marked areas of the board
+b. Required spacing related to the spacing between traces / board areas are as follows:
+Voltage Over Surface Thru Air (cut in board) Under Conformal Coating
+0-50 V DC 1.6 mm 1.6 mm 1 mm
+50-150 V DC 6.4 mm 3.2 mm 2 mm
+150-300 V DC 9.5 mm 6.4 mm 3 mm
+300-600 V DC 12.7 mm 9.5 mm 4 mm"
+145,EV.6.5.8,"Teams must be prepared to show spacing on team built equipment
+For inaccessible circuitry, spare boards or appropriate photographs must be available for
+inspection."
+146,EV.6.5.9,"All connections to external devices such as laptops from a Tractive System component must
+include galvanic isolation."
+147,EV.6.6,Overcurrent Protection
+148,EV.6.6.1,"All electrical systems (both Low Voltage and High Voltage) must have appropriate Overcurrent
+Protection/Fusing."
+149,EV.6.6.2,"Unless otherwise allowed in the Rules, all Overcurrent Protection devices must:
+a. Be rated for the highest voltage in the systems they protect.
+Overcurrent Protection devices used for DC must be rated for DC and must carry a DC
+rating equal to or more than the system voltage
+b. Have a continuous current rating less than or equal to the continuous current rating of
+any electrical component that it protects
+c. Have an interrupt current rating higher than the theoretical short circuit current of the
+system that it protects"
+150,EV.6.6.3,"Each parallel element of multiple parallel battery cells, capacitors, strings of battery cells,
+strings of capacitors, or conductors must have individual Overcurrent Protection."
+151,EV.6.6.4,"Any conductors (wires, busbars, etc) conducting the entire pack current must meet one of:
+a. Be appropriately sized for the total current that the individual Overcurrent Protection
+devices could transmit
+b. Contain additional Overcurrent Protection to protect the conductors"
+152,EV.6.6.5,"Battery packs with Low Voltage or non voltage rated fusible links for cell connections may be
+used when all three conditions are met:
+• An Overcurrent Protection device rated at less than or equal to one third the sum of the
+parallel fusible links and complying with EV.6.6.2.b above is connected in series.
+• The AMS can detect an open fusible link and will Open the Shutdown Circuit EV.7.2.2 if a
+fault is detected.
+• Fusible link current rating is specified in manufacturer’s data or suitable test data is
+provided."
+153,EV.6.6.6,"If conductor ampacity is reduced below the ampacity of the upstream Overcurrent Protection,
+the reduced conductor longer than 150 mm must have additional Overcurrent Protection.
+This additional Overcurrent Protection must be:
+a. 150 mm or less from the source end of the reduced conductor
+b. On both positive and negative conductors in the Tractive System
+c. On the positive conductor in the Grounded Low Voltage System"
+154,EV.6.6.7,"Cells with internal Overcurrent Protection may be used without external Overcurrent
+Protection if suitably rated.
+Most cell internal Overcurrent Protection devices are Low Voltage or non voltage rated and
+conditions of EV.6.6.5 above will apply."
+155,EV.6.7,Grounding
+156,EV.6.7.1,"Grounding is required for:
+a. Parts of the vehicle which are 100 mm or less from any Tractive System component
+b. The Tractive System Firewall T.1.9"
+157,EV.6.7.2,"Grounded parts of the vehicle must have a resistance to GLV System Ground less than the
+values specified below.
+a. Electrically conductive parts 300 mOhms (measured with a current of 1 A)
+Examples: parts made of steel, (anodized) aluminum, any other metal parts
+b. Parts which may become electrically conductive 5 Ohm
+Example: carbon fiber parts
+Carbon fiber parts may need special measures such as using copper mesh or similar to
+keep the ground resistance below 5 Ohms."
+158,EV.6.7.3,"Electrical conductivity of any part may be tested by checking any point which is likely to be
+conductive.
+Where no convenient conductive point is available, an area of coating may be removed."
+159,EV.7,SHUTDOWN SYSTEM
+160,EV.7.1,Shutdown Circuit
+161,EV.7.1.1,"The Shutdown Circuit consists of the following components, connected in series:
+a. Accumulator Management System (AMS) EV.7.3
+b. Insulation Monitoring Device (IMD) EV.7.6
+c. Brake System Plausibility Device (BSPD) EV.7.7
+d. Interlocks (as required) EV.7.8
+e. Master Switches (GLVMS, TSMS) EV.7.9
+f. Shutdown Buttons EV.7.10
+g. Brake Over Travel Switch (BOTS) T.3.3
+h. Inertia Switch T.9.4"
+162,EV.7.1.2,"The Shutdown Circuit must directly carry the current driving the Accumulator Isolation Relays
+(AIRs) and the Precharge Circuit Relay."
+163,EV.7.1.3,"The AMS, IMD, and BSPD parts of the Shutdown Circuit must be Normally Open"
+164,EV.7.1.4,"The AMS, IMD and BSPD must have completely independent circuits to Open the Shutdown
+Circuit.
+The design of the respective circuits must ensure that a failure cannot result in electrical
+power being fed back into the Shutdown Circuit."
+165,EV.7.1.5,"The Shutdown Buttons, BOTS, TSMS, GLVMS and Interlocks must directly carry the Shutdown
+Circuit current"
+166,EV.7.1.6,"The team must be able to demonstrate all features and functions of the Shutdown Circuit and
+components at Electrical Technical Inspection.
+Shutdown Bu ons
+BBrraakkee
+GLV System SSyysstteemm Insula on Iner a
+Monitoring
+PPllaauussiibbiilliittyy Device Switch cockpit le right
+DDeevviiccee
+LV A Mc ac nu am gu el mat eo nr t B Or va ek re TS HVD Interlock(s)
+System T Sr wa iv te chl Interlock le right
+Trac ve System
+GLV Fuse Master Switch
+Accumulator Container(s)
+GLV
+Ba ery
+Precharge
+GLV System Control
+Chassis
+TSMP TSMP
+GLVMP
+GND HV HV+
+AIR AIR
+Accumulator
+Fuse(s)
+Trac ve Trac ve
+System System
+Precharge"
+167,EV.7.2,Shutdown CircuitGL VO Sypsteemration
+168,EV.7.2.1,"The Shutdown Circuit must Open when any of the following exist:
+a. Operation of, or detection from any of the components listed in EV.7.1.1
+b. Any shutdown of the GLV System"
+169,EV.7.2.2,"When the Shutdown Circuit Opens:
+a. The Tractive System must Shutdown
+b. All Accumulator current flow must stop immediately EV.5.4.3
+metsyS
+VLG
+hctiwS
+retsaM
+Trac
+ve
+System
+Trac
+ve
+System
+c. The voltage in the Tractive System must be Low Voltage T.9.1.2 in five seconds or less
+d. The Motor(s) must spin free. Torque must not be applied to the Motor(s)"
+170,EV.7.2.3,"When the AMS, IMD or BSPD Open the Shutdown Circuit:
+a. The Tractive System must stay disabled until manually reset
+b. The Tractive System must be reset only by manual action of a person directly at the
+vehicle
+c. The driver must not be able to reactivate the Tractive System from inside the vehicle
+d. Operation of the Shutdown Buttons or TSMS must not reset the Shutdown Circuit"
+171,EV.7.2.4,"The driver may reset the Shutdown Circuit from the cockpit, subject to EV.7.2.3"
+172,EV.7.3,Accumulator Management System - AMS
+173,EV.7.3.1,"An Accumulator Management System must monitor the Accumulator(s) Voltage EV.7.4 and
+Temperature EV.7.5 when the:
+a. Tractive System is Active EV.11.5
+b. Accumulator is connected to a Charger EV.8.3"
+174,EV.7.3.2,"The AMS must have galvanic isolation at every segment to segment boundary, as approved in
+the ESF"
+175,EV.7.3.3,"Cell balancing is not permitted when the Shutdown Circuit is Open ( EV.7.2, EV.8.4 )"
+176,EV.7.3.4,"The AMS must monitor for:
+a. Voltage values outside the allowable range EV.7.4.2
+b. Voltage sense Overcurrent Protection device(s) blown or tripped
+c. Temperature values outside the allowable range EV.7.5.2
+d. Missing or interrupted voltage or temperature measurements
+e. A fault in the AMS"
+177,EV.7.3.5,"If the AMS detects one or more of the conditions of EV.7.3.4 above, the AMS must:
+a. Open the Shutdown Circuit EV.7.2.2
+b. Turn on the AMS Indicator Light. The light must stay on until the AMS is reset EV.7.2.3"
+178,EV.7.3.6,"The AMS Indicator Light must be:
+a. Color: Red
+b. Clearly visible to the seated driver in bright sunlight
+c. Clearly marked with the lettering “AMS”"
+179,EV.7.4,Accumulator Voltage
+180,EV.7.4.1,"The AMS must measure the cell voltage of every cell
+When single cells are directly connected in parallel, only one voltage measurement is needed"
+181,EV.7.4.2,"Cell Voltage levels must stay inside the allowed minimum and maximum cell voltage levels
+stated in the cell data sheet. Measurement accuracy must be considered."
+182,EV.7.4.3,"All voltage sense wires to the AMS must meet one of:
+a. Have Overcurrent Protection EV.7.4.4 below
+b. Meet requirements for no Overcurrent Protection listed in EV.7.4.5 below"
+183,EV.7.4.4,"When used, Overcurrent Protection for the AMS voltage sense wires must meet the following.
+a. The Overcurrent Protection must occur in the conductor, wire or PCB trace which is
+directly connected to the cell tab.
+b. The voltage rating of the Overcurrent Protection must be equal to or higher than the
+maximum segment voltage"
+184,EV.7.4.5,"Overcurrent Protection is not required on a voltage sense wire if all three of the following
+conditions are met:
+• AMS is a distributed AMS system (one cell measurement per board)
+• Sense wire length is less than 25 mm
+• AMS board has Overcurrent Protection"
+185,EV.7.5,Accumulator Temperature
+186,EV.7.5.1,The AMS must measure the temperatures of critical points of the Accumulator
+187,EV.7.5.2,"Temperatures (considering measurement accuracy) must stay below the lower of the two:
+• The maximum cell temperature limit stated in the cell data sheet
+• 60°C"
+188,EV.7.5.3,Cell temperatures must be measured at the negative terminal of the respective cell
+189,EV.7.5.4,"The temperature sensor used must be in direct contact with one of:
+• The negative terminal itself
+• The negative terminal busbar less than 10 mm away from the cell terminal"
+190,EV.7.5.5,"For lithium based cells,
+a. The temperature of a minimum of 20% of the cells must be monitored by the AMS
+b. The monitored cells must be equally distributed inside the Accumulator Container(s)
+Every cell temperature should be monitored"
+191,EV.7.5.6,"Multiple cells may be monitored with one temperature sensor, if EV.7.5 is met for all cells
+sensed by the sensor."
+192,EV.7.5.7,"Temperature sensors must have appropriate electrical isolation that meets one of the two:
+• Between the sensor and cell
+• In the sensing circuit
+The isolation must consider both GLV/TS isolation as well as common mode voltages between
+sense locations."
+193,EV.7.6,Insulation Monitoring Device - IMD
+194,EV.7.6.1,The vehicle must have an Insulation Monitoring Device (IMD) installed in the Tractive System
+195,EV.7.6.2,"The IMD must be a Bender ISOMETER® IR155-3203 or IR155-3204 (website) or an approved
+alternate equivalent IMD
+Refer to the Rules FAQ on the FSAE Online website for approved equivalent IMD"
+196,EV.7.6.3,"The response value of the IMD must be set to 500 Ohm / Volt or higher, related to the
+maximum Tractive System operation voltage."
+197,EV.7.6.4,"The IMD must monitor the Tractive System for:
+a. An isolation failure
+b. A failure in the IMD operation
+This must be done without the influence of any programmable logic."
+198,EV.7.6.5,"If the IMD detects one or more of the conditions of EV.7.6.4 above the IMD must:
+a. Open the Shutdown Circuit EV.7.2.2
+b. Turn on the IMD Indicator Light. The light must stay on until the IMD is reset EV.7.2.3"
+199,EV.7.6.6,"The IMD Indicator Light must be:
+a. Color: Red
+b. Clearly visible to the seated driver in bright sunlight
+c. Clearly marked with the lettering “IMD”"
+200,EV.7.7,Brake System Plausibility Device - BSPD
+201,EV.7.7.1,"The vehicle must have a standalone nonprogrammable circuit to check for simultaneous
+braking and high power output
+The BSPD must be provided in addition to the APPS / Brake Pedal Plausibility Check (EV.4.7)"
+202,EV.7.7.2,"The BSPD must Open the Shutdown Circuit EV.7.2.2 when the two of these exist:
+• Demand for Hard Braking EV.4.6
+• Motor/Accumulator current is at a level where 5 kW of electrical power in the DC circuit
+is delivered to the Motor(s) at the nominal battery voltage
+The BSPD may delay opening the shutdown circuit up to 0.5 sec to avoid false trips"
+203,EV.7.7.3,"The BSPD must Open the Shutdown Circuit EV.7.2.2 when there is an open or short circuit in
+any sensor input"
+204,EV.7.7.4,"The team must have a test to demonstrate BSPD operation at Electrical Technical Inspection.
+a. Power must not be sent to the Motor(s) of the vehicle during the test
+b. The test must prove the function of the complete BSPD in the vehicle, including the
+current sensor
+The suggested test would introduce a current by a separate wire from an external power
+supply simulating the Tractive System current while pressing the brake pedal"
+205,EV.7.8,Interlocks
+206,EV.7.8.1,"Interlocks must be incorporated where specified (refer to EV.4.1.3, EV.5.5.2, EV.5.10 )"
+207,EV.7.8.2,Additional Interlocks may be included in the Tractive System or components
+208,EV.7.8.3,"The Interlock is a wire or connection that must:
+a. Open the Shutdown Circuit EV.7.2.2 if the Interlock connection is broken or interrupted
+b. Not be in the low (ground) connection to the AIR coils of the Shutdown Circuit"
+209,EV.7.8.4,"Interlock circuits or connections do not require physical separation (EV.6.5) from Tractive
+System wiring or components"
+210,EV.7.9,Master Switches
+211,EV.7.9.1,"Each vehicle must have two Master Switches that must:
+a. Meet T.9.3 for Configuration and Location
+b. Be direct acting, not act through a relay or logic"
+212,EV.7.9.2,"The Grounded Low Voltage Master Switch (GLVMS) must:
+a. Completely stop all power to the GLV System EV.4.4
+b. Be in the center of a completely red circular area of > 50 mm in diameter
+c. Be labeled “LV”"
+213,EV.7.9.3,"The Tractive System Master Switch (TSMS) must:
+a. Open the Shutdown Circuit in the OFF position EV.7.2.2
+b. Be the last switch before the AIRs except for Precharge circuitry and Interlocks.
+c. Be in the center of a completely orange circular area of > 50 mm in diameter
+d. Be labeled “TS” and the symbol specified in ISO 7010-W012 (triangle with black
+lightning bolt on yellow background).
+e. Be fitted with a ""lockout/tagout"" capability in the OFF position EV.11.3.1"
+214,EV.7.10,Shutdown Buttons
+215,EV.7.10.1,Three Shutdown Buttons must be installed on the vehicle.
+216,EV.7.10.2,Each Shutdown Button must be a push-pull or push-rotate emergency switch
+217,EV.7.10.3,"One Shutdown Button must be on each side of the vehicle which:
+a. Is located aft of the driver’s compartment at approximately the level of the driver’s head
+b. Has a diameter of 40 mm minimum
+c. Must not be easily removable or mounted onto removable body work"
+218,EV.7.10.4,"One Shutdown Button must be mounted in the cockpit which:
+a. Is located in easy reach of the belted in driver, adjacent to the steering wheel, and
+unobstructed by the steering wheel or any other part of the vehicle
+b. Has diameter of 24 mm minimum"
+219,EV.7.10.5,"The international electrical symbol (a red spark on a white edged blue triangle) must be near
+OFF
+each Shutdown Button."
+220,EV.7.10.6,Pressing any of the Shutdown Buttons must Open the Shutdown Circuit EV.7.2.2
+221,EV.8,CHARGER REQUIREMENTS
+222,EV.8.1,Charger Requirements
+223,EV.8.1.1,"All features and functions of the Charger and Charging Shutdown Circuit must be
+demonstrated at Electrical Technical Inspection. IN.4.1"
+224,EV.8.1.2,Chargers will be sealed after approval. IN.4.7.1
+225,EV.8.2,Charger Features
+226,EV.8.2.1,The Charger must be galvanically isolated (AC) input to (DC) output.
+227,EV.8.2.2,If the Charger housing is conductive it must be connected to the earth ground of the AC input.
+228,EV.8.2.3,All connections of the Charger(s) must be isolated and covered.
+229,EV.8.2.4,"The Charger connector(s) must incorporate a feature to let the connector become live only
+when correctly connected to the Accumulator."
+230,EV.8.2.5,High Voltage charging leads must be orange
+231,EV.8.2.6,"The Charger must have two TSMPs installed, see EV.5.8.2"
+232,EV.8.2.7,"The Charger must include a Charger Shutdown Button which is:
+a. A push-pull or push-rotate emergency switch
+b. Minimum diameter of 25 mm
+c. Labelled with the international electrical symbol (a red spark on a white edged blue
+OFF
+triangle)"
+233,EV.8.3,Charging Shutdown Circuit
+234,EV.8.3.1,"The Charging Shutdown Circuit consists of:
+a. Charger Shutdown Button EV.8.2.7
+b. Accumulator Management System (AMS) EV.7.3
+c. Insulation Monitoring Device (IMD) EV.7.6"
+235,EV.8.3.2,"The AMS and IMD parts of the Charging Shutdown Circuit must:
+a. Be designed as Normally Open contacts
+b. Have completely independent circuits to Open the Charging Shutdown Circuit.
+Design of the respective circuits must ensure that a failure cannot result in electrical
+power being fed back into the Charging Shutdown Circuit."
+236,EV.8.4,Charging Shutdown Circuit Operation
+237,EV.8.4.1,"When Charging, the AMS and IMD must:
+a. Monitor the Accumulator
+b. Open the Charging Shutdown Circuit if a fault is detected."
+238,EV.8.4.2,"When the Charging Shutdown Circuit Opens:
+a. All current flow to the Accumulator must stop immediately
+b. The voltage in the Tractive System must be Low Voltage T.9.1.2 in five seconds or less
+c. The Charger must be turned off
+d. The Charger must stay disabled until manually reset"
+239,EV.9,VEHICLE OPERATIONS
+240,EV.9.1,"Activation Sequence
+The vehicle systems must energize in the following sequence:
+a. Low Voltage (GLV) System EV.9.2
+b. Tractive System Active EV.9.3
+c. Ready to Drive EV.9.4"
+241,EV.9.2,"Low Voltage (GLV) System
+The Shutdown Circuit may be Closed when or after the GLV System is energized EV.7.2.4"
+242,EV.9.3,Tractive System Active
+243,EV.9.3.1,Definition – High Voltage is present outside of the Accumulator Container
+244,EV.9.3.2,"Tractive System Active must not be possible until both:
+• GLV System is Energized
+• Shutdown Circuit is Closed"
+245,EV.9.4,Ready to Drive
+246,EV.9.4.1,Definition – the Motor(s) will respond to the input of the APPS
+247,EV.9.4.2,"Ready to Drive must not be possible until the three at the same time:
+• Tractive System Active EV.9.3
+• The Brake Pedal is pressed and held to engage the mechanical brakes T.3.2
+• The driver performs a manual action to initiate Ready to Drive
+Such as pressing a specific button in the cockpit"
+248,EV.9.5,Ready to Drive Sound
+249,EV.9.5.1,The vehicle must make a characteristic sound when it is Ready to Drive
+250,EV.9.5.2,"The Ready to Drive Sound must be:
+a. Sounded continuously for minimum 1 second and maximum 3 seconds
+b. A minimum sound level of 80 dBA, fast weighting IN.4.6
+c. Easily recognizable. No animal voices, song parts or sounds that could be interpreted as
+offensive will be accepted"
+251,EV.9.5.3,The vehicle must not make other sounds similar to the Ready to Drive Sound.
+252,EV.10,EVENT SITE ACTIVITIES
+253,EV.10.1,Onsite Registration
+254,EV.10.1.1,"The Accumulator must be onsite at the time the team registers to be eligible for Accumulator
+Technical Inspection and Dynamic Events"
+255,EV.10.1.2,"Teams who register without the Accumulator:
+a. Must not bring their Accumulator onsite for the duration of the competition
+b. May participate in Technical Inspection and Static Events"
+256,EV.10.2,Accumulator Removal
+257,EV.10.2.1,"After the team registers onsite, the Accumulator must remain on the competition site until
+the end of the competition, or the team withdraws and leaves the site"
+258,EV.10.2.2,Violators will be disqualified from the competition and must leave immediately
+259,EV.11,WORK PRACTICES
+260,EV.11.1,Personnel
+261,EV.11.1.1,"The Electrical System Officer (ESO): AD.5.2
+a. Is the only person on the team that may declare the vehicle electrically safe to allow
+work on any system
+b. Must accompany the vehicle when operated or moved at the competition site
+c. Must be immediately available by phone at all times during the event"
+262,EV.11.2,Maintenance
+263,EV.11.2.1,"All participating team members must wear safety glasses with side shields at any time when:
+a. Parts of the Tractive System are exposed while energized
+b. Work is performed on the Accumulators"
+264,EV.11.2.2,"Appropriate insulated tools must be used when working on the Accumulator or Tractive
+System"
+265,EV.11.3,Lockout
+266,EV.11.3.1,The TSMS EV.7.9.3 must be locked in the OFF position when any work is done on the vehicle.
+267,EV.11.3.2,"The HVD EV.5.5 must be disconnected when vehicles are:
+a. Moved around the competition site
+b. Participating in Static Events"
+268,EV.11.4,Accumulator
+269,EV.11.4.1,"The following work activities at competition are allowed only in the designated area and
+during Electrical Technical Inspection IN.4 See EV.5.3.3
+a. Opening Accumulator Containers
+b. Any work on Accumulators, cells, or Segments
+c. Energized electrical work"
+270,EV.11.4.2,"Accumulator cells and/or Accumulator Segment(s) must be moved at the competition site
+inside one of the two:
+a. Completely closed Accumulator Container EV.4.3 See EV.4.10.2
+b. Segment/Cell Transport Container EV.11.4.3"
+271,EV.11.4.3,"The Segment/Cell Transport Container(s) must be:
+a. Electrically insulated
+b. Protected from shock hazards and arc flash"
+272,EV.11.4.4,"Segments/Cells inside the Transport Container must agree with the voltage and energy limits
+of EV.5.1.2"
+273,EV.11.5,Charging
+274,EV.11.5.1,"Accumulators must be removed from the vehicle inside the Accumulator Container and placed
+on the Accumulator Container Hand Cart EV.4.10 for Charging."
+275,EV.11.5.2,Accumulator Charging must occur only inside the designated area
+276,EV.11.5.3,"A team member(s) who has knowledge of the Charging process must stay with the
+Accumulator(s) during Charging"
+277,EV.11.5.4,"Each Accumulator Container(s) must have a label with the following data during Charging:
+Team name and Electrical System Officer phone number(s)"
+278,EV.11.5.5,Additional site specific rules or policies may apply

@@ -1,0 +1,800 @@
+T - TECHNICAL ASPECTS
+T.1 COCKPIT
+T.1.1 Cockpit Opening
+T.1.1.1 The template shown below must pass through the cockpit opening
+600 mm
+100 mm
+FRONT
+T.1.1.2 The template will be held horizontally, parallel to the ground, and inserted vertically from a
+height above any Primary Structure or bodywork that is between the Front Hoop and the
+Main Hoop until it meets both of: ( refer to F.6.4 and F.7.5.1 )
+a. Has passed 25 mm below the lowest point of the top of the Side Impact Structure
+b. Is less than or equal to 320 mm above the lowest point inside the cockpit
+T.1.1.3 Fore and aft translation of the template is permitted during insertion.
+T.1.1.4 During this test:
+a. The steering wheel, steering column, seat and all padding may be removed
+b. The shifter, shift mechanism, or clutch mechanism must not be removed unless it is
+integral with the steering wheel and is removed with the steering wheel
+c. The firewall must not be moved or removed
+d. Cables, wires, hoses, tubes, etc. must not block movement of the template
+During inspection, the steering column, for practical purposes, will not be removed. The
+template may be maneuvered around the steering column, but not any fixed supports.
+For ease of use, the template may contain a slot at the front center that the steering column
+may pass through.
+Formula SAE® Rules 2024 © 2023 SAE International Page 54 of 140
+Version 1.0 1 Sep 2023
+mm
+57
+mm
+004
+mm
+001
+mm
+053
+T.1.2 Internal Cross Section
+T.1.2.1 Requirement:
+a. The cockpit must have a free internal cross section
+b. The template shown below must pass through the cockpit
+50 mm
+UP
+50 mm
+flap or slot
+350 mm
+Template maximum thickness: 7 mm
+T.1.2.2 Conduct of the test. The template:
+a. Will be held vertically and inserted into the cockpit opening rearward of the rearmost
+portion of the steering column.
+b. Will then be passed horizontally through the cockpit to a point 100 mm rearwards of the
+face of the rearmost pedal when in the inoperative position
+c. May be moved vertically inside the cockpit
+T.1.2.3 During this test:
+a. If the pedals are adjustable, they must be in their most forward position.
+b. The steering wheel may be removed
+c. Padding may be removed if it can be easily removed without the use of tools with the
+driver in the seat
+d. The seat and any seat insert(s) that may be used must stay in the cockpit
+e. Cables, wires, hoses, tubes, etc. must not block movement of the template
+f. The steering column and associated components may pass through the 50 mm wide
+center band of the template.
+For ease of use, the template may contain a full or partial slot in the shaded area shown on the
+figure
+T.1.3 Driver Protection
+T.1.3.1 The driver’s feet and legs must be completely contained inside the Major Structure of the
+Chassis.
+Formula SAE® Rules 2024 © 2023 SAE International Page 55 of 140
+Version 1.0 1 Sep 2023
+mm
+05
+mm
+053
+T.1.3.2 While the driver’s feet are touching the pedals, in side and front views, any part of the driver’s
+feet or legs must not extend above or outside of the Major Structure of the Chassis.
+T.1.3.3 All moving suspension and steering components and other sharp edges inside the cockpit
+between the Front Hoop and a vertical plane 100 mm rearward of the pedals must be covered
+by a shield made of a solid material.
+Moving components include, but are not limited to springs, shock absorbers, rocker arms, anti-
+roll/sway bars, steering racks and steering column CV joints.
+T.1.3.4 Covers over suspension and steering components must be removable to allow inspection of
+the mounting points
+T.1.4 Vehicle Controls
+T.1.4.1 Accelerator Pedal
+a. An Accelerator Pedal must control the Powertrain output
+b. Pedal Travel is the percent of travel from a fully released position to a fully applied
+position. 0% is fully released and 100% is fully applied.
+c. The Accelerator Pedal must:
+• Return to 0% Pedal Travel when not pushed
+• Have a positive stop to prevent any cable, actuation system or sensor from damage
+or overstress
+T.1.4.2 Any mechanism in the throttle system that could become jammed must be covered.
+This is to prevent debris or interference and includes but is not limited to a gear mechanism
+T.1.4.3 All Vehicle Controls (steering, gear change, Cockpit Main Switch / Cockpit Shutdown Button)
+must be operated from inside the cockpit without any part of the driver, including hands, arms
+or elbows, being outside of:
+a. The Side Impact Structure defined in F.6.4 / F.7.5
+b. Two longitudinal vertical planes parallel to the centerline of the chassis touching the
+uppermost member of the Side Impact Structure
+T.1.4.4 All Vehicle Controls must stay below the top-most point of the Front Hoop in any operational
+position
+T.1.5 Driver’s Seat
+T.1.5.1 The Driver’s Seat must be protected by one of the following:
+a. In side view, the lowest point of any Driver’s Seat must be no lower than the upper
+surface of the lowest structural tube or equivalent
+b. A longitudinal tube (or tubes) that meets the requirements for Side Impact tubing
+(F.3.2.1.e), passing underneath the lowest point of the Driver Seat.
+T.1.6 Thermal Protection
+T.1.6.1 When seated in the normal driving position, sufficient heat insulation must be provided to
+ensure that the driver will not contact any metal or other materials which may become heated
+to a surface temperature above 60°C.
+T.1.6.2 Insulation may be external to the cockpit or incorporated with the Driver’s Seat or Firewall.
+Formula SAE® Rules 2024 © 2023 SAE International Page 56 of 140
+Version 1.0 1 Sep 2023
+T.1.6.3 The design must address all three types of heat transfer between the heat source (examples
+include but are not limited to: exhaust pipe, coolant hose/tube, Accumulator Container) and
+the panel that the driver could contact (seat or floor):
+a. Conduction Isolation by one of the following:
+• No direct contact between the heat source and the panel
+• A heat resistant, conduction isolation material with a minimum thickness of 8 mm
+between the heat source and the panel
+b. Convection Isolation by a minimum air gap of 25 mm between the heat source and the
+panel
+c. Radiation Isolation by one of the following:
+• A solid metal heat shield with a minimum thickness of 0.4 mm
+• Reflective foil or tape when combined with conduction insulation
+T.1.7 Floor Closeout
+T.1.7.1 All vehicles must have a Floor Closeout to prevent track debris from entering
+T.1.7.2 The Floor Closeout must extend from the foot area to the firewall
+T.1.7.3 The panel(s) must be made of a solid, non brittle material
+T.1.7.4 If multiple panels are used, gaps between panels must not exceed 3 mm
+T.1.8 Firewall(s)
+T.1.8.1 Requirement
+A Firewall(s) must separate the driver compartment and any portion of the Driver Harness
+from:
+a. All components of the Fuel System, the engine oil, the liquid cooling systems, any lithium
+batteries
+b. (EV only) All Tractive System components other than Outboard Wheel Motors EV.4.1.3
+where mounted at the wheels or on the front control arms
+T.1.8.2 Construction
+Any Firewall must:
+a. Be a non permeable surface made from a rigid, Nonflammable Material
+b. Seal completely against the passage of fluids (the Firewall itself, edges, any pass throughs
+and Floor Closeout)
+c. Be rigidly mounted
+T.1.8.3 Positioning
+The Firewall must extend sufficiently far upwards and/or rearwards and/or sideways where
+any point on the drivers body less than 100 mm above the bottom of the helmet of the tallest
+driver must not be in direct line of sight with any part given in T.1.8.1 above
+T.1.8.4 Details
+a. Firewalls composed of multiple panels must overlap and be sealed at the joints
+Sealing between firewalls must not be a stressed part of the Firewall
+b. Grommets must be used to seal any pass through for wiring, cables, etc
+Formula SAE® Rules 2024 © 2023 SAE International Page 57 of 140
+Version 1.0 1 Sep 2023
+c. Any seals or adhesives used with the Firewall must be rated for the application
+environment
+T.1.8.5 (EV only) The Accumulator Container must not be part of the Firewall
+T.1.9 Tractive System Firewalls (EV Only)
+T.1.9.1 Tractive System Firewalls must meet the requirements of T.1.8 above
+T.1.9.2 Tractive System Firewalls must be:
+a. Made of aluminum
+b. Grounded, refer to EV.6.7 Grounding
+T.2 DRIVER ACCOMMODATION
+T.2.1 Harness Definitions
+a. 5 Point Harness – consists of two Lap Belts, two Shoulder Belts and one Anti-Submarine
+Belt.
+b. 6 Point Harness – consists of two Lap Belts, two Shoulder Belts and two leg or Anti-
+Submarine Belts.
+c. 7 Point Harness – consists of two Lap Belts, two Shoulder Belts, two leg or Anti-
+Submarine Belts and a negative g or Z Belt.
+d. Upright Driving Position - with a seat back angled at 30° or less from the vertical as
+measured along the line joining the two 200 mm circles of the template of the 95th
+percentile male as defined in F.5.6.4 and positioned per F.5.6.5
+e. Reclined Driving Position - with a seat back angled at more than 30° from the vertical as
+measured along the line joining the two 200 mm circles of the template of the 95th
+percentile male as defined in F.5.6.4 and positioned per F.5.6.5
+f. Chest to Groin Line - the straight line that in side view follows the line of the Shoulder
+Belts from the chest to the release buckle.
+T.2.2 Harness Specification
+T.2.2.1 The vehicle must use a 5, 6 or 7 Point Harness meeting one or more of the following:
+a. SFI Specification 16.1
+b. SFI Specification 16.5
+c. FIA specification 8853/2016
+T.2.2.2 The belts must have the original manufacturers labels showing the specification and
+expiration date
+T.2.2.3 The Harness must be in or before the year of expiration shown on the labels. Harnesses
+expiring on or before Dec 31 of the calendar year of the competition are permitted.
+T.2.2.4 The Harness must be in new or like new condition, with no signs of wear, cuts, chaffing or
+other issues
+T.2.2.5 All Harness hardware must be installed and threaded in accordance with manufacturer’s
+instructions
+T.2.2.6 All Harness hardware must be used as received from the manufacturer. No modification
+(including drilling, cutting, grinding, etc) is permitted.
+Formula SAE® Rules 2024 © 2023 SAE International Page 58 of 140
+Version 1.0 1 Sep 2023
+T.2.3 Harness Requirements
+T.2.3.1 Vehicles with a Reclined Driving Position must have:
+a. A 6 Point Harness or a 7 Point Harness
+b. Anti-Submarine Belts with tilt lock adjusters (“quick adjusters”) OR two sets of Anti-
+Submarine Belts installed.
+T.2.3.2 All Lap Belts must incorporate a tilt lock adjuster (“quick adjuster”).
+Lap Belts with “pull-up” adjusters are recommended over “pull-down” adjusters.
+T.2.3.3 The Shoulder Belts must be the over the shoulder type. Only separate shoulder straps are
+permitted. “Y” type shoulder straps are not allowed. The “H” type configuration is allowed.
+T.2.4 Belt, Strap and Harness Installation - General
+T.2.4.1 The Lap Belt, Shoulder Belts and Anti-Submarine Belt(s) must be securely mounted to the
+Primary Structure.
+T.2.4.2 Any guide or support for the belts must be material meeting F.3.2.1.j
+T.2.4.3 Each tab or bracket to which any part of the Harness is attached must:
+a. Support a minimum load in pullout and tearout before failure of:
+• If one belt is attached to the tab or bracket 15 kN
+• If two belts are attached to the tab or bracket 30 kN
+b. Be 1.6 mm minimum thickness
+c. Not be in bending when the attached part of the Harness is put under load
+d. Not cause abrasion to the belt webbing
+T.2.4.4 Attachment of tabs or brackets must meet the following:
+a. Where brackets are fastened to the chassis, no less than two 6 mm or 1/4” minimum
+diameter Critical Fasteners, see T.8.2 or stronger must be used to attach the bracket to
+the chassis.
+b. Where a single shear tab is welded to the chassis, the tab to tube welding must be on
+both sides of the base of the tab.
+Double shear attachments are preferred. Tabs and brackets for double shear mounts should
+be welded on both sides.
+T.2.4.5 Harness installation must meet T.1.8.1
+T.2.5 Lap Belt Mounting
+T.2.5.1 The Lap Belts must pass around the pelvic area below the Anterior Superior Iliac Spines (the
+hip bones)
+T.2.5.2 Installation of the Lap Belts must go in a straight line from the mounting point until they reach
+the driver's body without touching any hole in the seat or any other intermediate structure
+T.2.5.3 The seat must be rolled or grommeted where the Belts or Harness pass through a hole in the
+seat
+T.2.5.4 With an Upright Driving Position:
+a. The Lap Belt Side View Angle must be between 45° and 65° to the horizontal.
+b. The centerline of the Lap Belt at the seat bottom should be between 0 – 75 mm forward
+of the seat back to seat bottom junction.
+Formula SAE® Rules 2024 © 2023 SAE International Page 59 of 140
+Version 1.0 1 Sep 2023
+T.2.5.5 With a Reclined Driving Position, the Lap Belt Side View Angle must be between 60° and 80° to
+the horizontal.
+Upright Reclined
+Driving Driving
+Position 10° Position 10°
+20°
+80° 20°
+65°
+60°
+45°
+Seat Back Seat Back
+Lap Belt to Seat Back Junction Lap Belt to Seat Back Junction
+T.2.5.6 The Lap Belts must attach by one of the two:
+Lap Belt Lap Belt
+Side View Angle SiSdeh oVuiledwe rA Hnagrlneess Shoulder Harness
+a. Bolt or eyebolt through a welded tuSbidee Vinieswe Arntg loer tested monocoque attachment FS.i7d.e9 V iew Angle
+b. Bolt or clip to a tab or bracket ( T.2.4.3 ) on a tube frame
+T.2.5.7 In side view, the Lap Belt must be capable of pivoting freely by using a shouldered bolt or an
+eye bolt attachment
+T.2.5.8 Any bolt used to attach a Lap Belt, directly to the chassis or to an intermediate bracket, is a
+Critical Fasteners, see T.8.2, with a minimum diameter that is the smaller of:
+• The bolt diameter specified by the manufacturer
+• 10 mm or 3/8”
+T.2.6 Shoulder Harness
+T.2.6.1 From the driver’s shoulders rearwards to the mounting point or structural guide, the Shoulder
+Belt Side View Angle must be between 10° above the horizontal and 20° below the horizontal.
+T.2.6.2 The Shoulder Belt Mount Spacing must be between 175 mm and 235 mm, center to center
+T.2.6.3 The Shoulder Belts must attach by one of the four:
+a. Wrap around the Shoulder Harness Mounting bar
+b. Bolt through a welded tube insert or tested monocoque attachment F.7.9
+c. Bolt or clip to a tab or bracket ( T.2.4.3 ) on the Shoulder Harness Mounting bar
+d. Wrap around physically tested hardware attached to a monocoque
+T.2.6.4 Any bolt used to attach a Shoulder Belt, directly to the chassis or to an intermediate bracket, is
+a Critical Fasteners, see T.8.2, with a minimum diameter that is the smaller of:
+• The bolt diameter specified by the manufacturer
+• 10 mm or 3/8”
+T.2.7 Anti-Submarine Belt Mounting
+T.2.7.1 The Anti-Submarine Belt of a 5 point harness must be mounted with the mounting point in
+line with or slightly forward of the driver’s Chest to Groin Line with an Anti-Submarine Belt
+Side View Angle no more than 20°
+Formula SAE® Rules 2024 © 2023 SAE International Page 60 of 140
+Version 1.0 1 Sep 2023
+Chest to Groin Line
+Shoulder
+Belt
+Mount
+Spacing
+Anti-Submarine Belt
+Side View Angle
+20° max
+T.2.7.2 The Anti-Submarine Belts of a 6 point harness must be mounted in one of the following ways:
+a. With the belts going vertically down from the groin, or with an Anti-Submarine Belt Side
+View Angle up to 20° rearwards. The Anti-Submarine Belt Mount Spacing should be
+approximately 100 mm apart.
+Shoulder
+Belt
+Mount
+Spacing
+Anti-Submarine Belt
+Anti-Submarine Belt
+Mount Spacing
+Side View Angle 20° max
+b. With the Anti-Submarine Belt Mounting Points on the Primary Structure at or near the
+Lap Belt anchorages, the driver sitting on the Anti-Submarine Belts, and the belts coming
+up around the groin to the release buckle.
+Shoulder
+Belt
+Mount
+Spacing
+T.2.7.3 Installation of all Anti-Submarine Belts must go in a straight line from the Anti-Submarine Belt
+Mounting Point(s) without touching any hole in the seat or any other intermediate structure
+until they reach:
+a. The release buckle for the 5 Point Harness mounting per T.2.7.1
+b. The first point where the belt touches the driver’s body for the 6 Point Harness mounting
+per T.2.7.2
+T.2.7.4 The Anti Submarine Belts must attach by one of the three:
+a. Bolt or eyebolt through a welded tube insert or tested monocoque attachment F.7.9
+b. Bolt or clip to a tab or bracket ( T.2.4.3 ) on a tube frame
+Formula SAE® Rules 2024 © 2023 SAE International Page 61 of 140
+Version 1.0 1 Sep 2023
+c. Wrap around a tube meeting F.3.2.1.j that connects the Lower Side Impact tubes F.6.4.5.
+The belt must not be able to touch the ground.
+T.2.7.5 Any bolt used to attach an Anti-Submarine Belt, directly to the chassis or to an intermediate
+bracket, is a Critical Fasteners, see T.8.2, with a minimum diameter that is the smaller of:
+• The bolt diameter specified by the manufacturer
+• 8 mm or 5/16”
+T.2.8 Head Restraint
+T.2.8.1 A Head Restraint must be provided to limit the rearward motion of the driver’s head.
+T.2.8.2 The Head Restraint must be vertical or near vertical in side view.
+T.2.8.3 All material and structure of the Head Restraint must be inside one or both of:
+a. Rollover Protection Envelope F.1.13
+b. Head Restraint Protection (if used) F.5.10
+T.2.8.4 The Head Restraint, attachment and mounting must be strong enough to withstand a
+minimum force of:
+a. 900 N applied in a rearward direction
+b. 300 N applied in a lateral or vertical direction
+T.2.8.5 For all drivers, the Head Restraint must be located and adjusted where:
+a. The Head Restraint is no more than 25 mm away from the back of the driver’s helmet,
+with the driver in their normal driving position.
+b. The contact point of the back of the driver’s helmet on the Head Restraint is no less than
+50 mm from any edge of the Head Restraint.
+Approximately 100 mm of longitudinal adjustment should accommodate range of specified
+drivers. Several Head Restraints with different thicknesses may be used
+T.2.8.6 The Head Restraint padding must:
+a. Be an energy absorbing material that is one of the two:
+• Meets SFI Spec 45.2
+• CONFOR CF45 (Blue) or CONFOR CF45M (Blue) FIA Technical List No 17
+b. Have a minimum thickness of 38 mm
+c. Have a minimum width of 15 cm
+d. Meet one of the following:
+• minimum area of 235 cm2 AND minimum total height adjustment of 17.5 cm
+• minimum height of 28 cm
+e. Be covered with a thin, flexible material that contains a ~20 mm diameter inspection
+hole in a surface other than the front surface
+T.2.9 Roll Bar Padding
+Any portion of the roll bar, roll bar bracing or Chassis which might be contacted by the driver’s
+helmet must be covered with a minimum thickness of 12 mm of padding which meets SFI Spec
+45.1 or FIA 8857-2001.
+Formula SAE® Rules 2024 © 2023 SAE International Page 62 of 140
+Version 1.0 1 Sep 2023
+T.3 BRAKES
+T.3.1 Brake System
+T.3.1.1 The vehicle must have a Brake System
+T.3.1.2 The Brake System must:
+a. Act on all four wheels
+b. Be operated by a single control
+c. Be capable of locking all four wheels
+T.3.1.3 The Brake System must have two independent hydraulic circuits
+A leak or failure at any point in the Brake System must maintain effective brake power on
+minimum two wheels
+T.3.1.4 Each hydraulic circuit must have its own fluid reserve using separate reservoirs or an OEM
+style reservoir
+T.3.1.5 A single brake acting on a limited slip differential may be used
+T.3.1.6 “Brake by Wire” systems are prohibited
+T.3.1.7 Unarmored plastic brake lines are prohibited
+T.3.1.8 The Brake System must be protected with scatter shields from failure of the drive train (see
+T.5.2) or from minor collisions.
+T.3.1.9 In side view any portion of the Brake System that is mounted on the sprung part of the vehicle
+must not project below the lower surface of the chassis
+T.3.1.10 Fasteners in the Brake System are Critical Fasteners, see T.8.2
+T.3.2 Brake Pedal, Pedal Box and Mounting
+T.3.2.1 The Brake Pedal must be one of:
+• Fabricated from steel or aluminum
+• Machined from steel, aluminum or titanium
+T.3.2.2 The Brake Pedal and associated components design must withstand a minimum force of 2000
+N without any failure of the Brake System, pedal box, chassis mounting, or pedal adjustment
+This is not a design criteria. The Brake Pedal and Brake System may be tested by pressing the
+pedal with the maximum force that can be exerted by any official when seated normally
+T.3.2.3 Failure of non-loadbearing components in the Brake System or pedal box must not interfere
+with Brake Pedal operation or Brake System function
+T.3.2.4 (EV only) Additional requirements for Electric Vehicles:
+a. The first 90% of the Brake Pedal travel may be used to regenerate energy without
+actuating the hydraulic brake system.
+b. The remaining Brake Pedal travel must directly actuate the hydraulic brake system.
+Brake energy regeneration may stay active.
+T.3.3 Brake Over Travel Switch - BOTS
+T.3.3.1 The vehicle must have a Brake Over Travel Switch (BOTS). Brake pedal travel exceeding the
+normal range will actuate the switch
+T.3.3.2 The BOTS must be a mechanical single pole, single throw (commonly known as a two position)
+switch (push-pull or flip type).
+Formula SAE® Rules 2024 © 2023 SAE International Page 63 of 140
+Version 1.0 1 Sep 2023
+T.3.3.3 Operation of the BOTS to the OFF position must Open the Shutdown Circuit IC.9.2.2 / EV.7.2.2
+T.3.3.4 Repeated operation of the switch must not reset or restore power
+T.3.3.5 The driver must not be able to reset the BOTS.
+T.3.3.6 The BOTS must be implemented with analog components, and not using programmable logic
+controllers, engine control units, or similar functioning digital controllers.
+T.3.4 Brake Light
+T.3.4.1 The vehicle must have a Brake Light that is clearly visible from the rear in very bright sunlight.
+T.3.4.2 The Brake Light must be:
+a. Red in color on a Black background
+b. Rectangular, triangular or near round shape with a minimum shining surface of 15 cm2
+c. Mounted between the wheel centerline and driver’s shoulder level vertically and
+approximately on vehicle centerline laterally.
+T.3.4.3 When LED lights are used without a diffuser, they must not be more than 20 mm apart.
+T.3.4.4 If a single line of LEDs is used, the minimum length is 150 mm.
+T.4 ELECTRONIC THROTTLE COMPONENTS
+T.4.1 Applicability
+This section T.4 applies only for:
+• IC vehicles using Electronic Throttle Control (ETC) IC.4
+• EV vehicles
+T.4.2 Accelerator Pedal Position Sensor - APPS
+T.4.2.1 The Accelerator Pedal must actuate the APPS T.1.4.1
+a. Two springs must be used to return the foot pedal to 0% Pedal Travel
+b. Each spring must be capable of returning the pedal to 0% Pedal Travel with the other
+disconnected. The springs in the APPS are not acceptable pedal return springs.
+T.4.2.2 Two or more electrically separate sensors must be used as APPSs. A single OEM type APPS
+with two completely separate sensors in a single housing is acceptable.
+T.4.2.3 The APPS sensors must have different transfer functions which meet one of the two:
+• Each sensor has different gradients and/or offsets to the other(s). The circuit must have
+a pull-up or pull-down resistor to bring an open circuit input to 0% Pedal Travel
+• An OEM pedal sensor with opposite slopes. Non OEM opposite slope sensor
+configurations require prior approval.
+The intent is that in a short circuit the APPSs will only agree at 0% Pedal Travel
+T.4.2.4 Implausibility is defined as a deviation of more than 10% Pedal Travel between the sensors or
+other failure as defined in this Section T.4.2. Use of values larger than 10% Pedal Travel
+require justification in the ETC Systems Form and may not be approved
+T.4.2.5 If an Implausibility occurs between the values of the APPSs and persists for more than 100
+msec, the power to the (IC) Electronic Throttle / (EV) Motor(s) must be immediately stopped
+completely.
+Formula SAE® Rules 2024 © 2023 SAE International Page 64 of 140
+Version 1.0 1 Sep 2023
+(EV only) It is not necessary to Open the Shutdown Circuit, the motor controller(s) stopping
+the power to the Motor(s) is sufficient.
+T.4.2.6 If three sensors are used, then in the case of an APPS failure, any two sensors that agree
+within 10% Pedal Travel may be used to define the (IC) throttle position / (EV) torque target
+and the 3rd APPS may be ignored.
+T.4.2.7 Each APPS must be able to be checked during Technical Inspection by having one of the two:
+• A separate detachable connector that enables a check of functions by unplugging it
+• An inline switchable breakout box available that allows disconnection of each APPS
+signal.
+T.4.2.8 The APPS signals must be sent directly to a controller using an analogue signal or via a digital
+data transmission bus such as CAN or FlexRay.
+T.4.2.9 Any failure of the APPS or APPS wiring must be detectable by the controller and must be
+treated like an Implausibility, see T.4.2.4 above
+T.4.2.10 When an analogue signal is used, the APPS will be considered to have failed when they
+achieve an open circuit or short circuit condition which generates a signal outside of the
+normal operating range, for example <0.5 V or >4.5 V.
+The circuitry used to evaluate the sensor must use pull down or pull up resistors to ensure
+that open circuit signals result in a failure being detected.
+T.4.2.11 When any kind of digital data transmission is used to transmit the APPS signal,
+a. The ETC Systems Form must contain a detailed description of all the potential failure
+modes that can occur, the strategy that is used to detect these failures and the tests that
+have been conducted to prove that the detection strategy works.
+b. The failures to be considered must include but are not limited to the failure of the APPS,
+APPS signals being out of range, corruption of the message and loss of messages and the
+associated time outs.
+T.4.2.12 The current rules are written to only apply to the APPS (pedal), but the integrity of the torque
+command signal is important in all stages.
+T.4.3 Brake System Encoder - BSE
+T.4.3.1 The vehicle must have a sensor or switch to measure brake pedal position or brake system
+pressure
+T.4.3.2 The BSE must be able to be checked during Technical Inspection by having one of:
+• A separate detachable connector(s) for any BSE signal(s) to the main ECU without
+affecting any other connections
+• An inline switchable breakout box available that allows disconnection of each BSE
+signal(s) to the main ECU without affecting any other connections
+T.4.3.3 The BSE or switch signals must be sent directly to a controller using an analogue signal or via a
+digital data transmission bus such as CAN or FlexRay
+Any failure of the BSE or BSE wiring that persists more than 100 msec must be detectable by
+the controller and treated like an implausibility and power to the (IC) electronic throttle / (EV)
+Motor(s) must be immediately stopped completely.
+(EV only) It is not necessary to completely deactivate the Tractive System, the motor
+controller(s) stopping power to the motor(s) is sufficient.
+Formula SAE® Rules 2024 © 2023 SAE International Page 65 of 140
+Version 1.0 1 Sep 2023
+T.4.3.4 When an analogue signal is used, the BSE sensors will be considered to have failed when they
+achieve an open circuit or short circuit condition which generates a signal outside of the
+normal operating range, for example <0.5 V or >4.5 V.
+The circuitry used to evaluate the sensor must use pull down or pull up resistors to ensure
+that open circuit signals result in a failure being detected.
+T.4.3.5 When any kind of digital data transmission is used to transmit the BSE signal:
+a. The ETC Systems Form must contain a detailed description of all the potential failure
+modes that can occur, the strategy that is used to detect these failures and the tests that
+have been conducted to prove that the detection strategy works.
+b. The failures modes must include but are not limited to the failure of the sensor, sensor
+signals being out of range, corruption of the message and loss of messages and the
+associated time outs.
+c. In all cases a sensor failure must immediately shutdown power to the motor(s).
+T.5 POWERTRAIN
+T.5.1 Transmission and Drive
+Any transmission and drivetrain may be used.
+T.5.2 Drivetrain Shields and Guards
+T.5.2.1 Exposed high speed final drivetrain equipment such as Continuously Variable Transmissions
+(CVTs), sprockets, gears, pulleys, torque converters, clutches, belt drives, clutch drives and
+electric motors, must be fitted with scatter shields intended to contain drivetrain parts in case
+of radial failure
+T.5.2.2 The final drivetrain shield must:
+a. Be made with solid material (not perforated)
+b. Cover the chain or belt from the drive sprocket to the driven sprocket/chain wheel/belt
+or pulley
+c. Start and end no higher than parallel to the lowest point of the chain wheel/belt/pulley:
+d. Cover the bottom of the chain or belt or rotating component when fuel, brake lines
+T.3.1.8, control, pressurized, electrical components are located below
+T.5.2.3 Body panels or other existing covers are acceptable when constructed per T.5.2.7 / T.5.2.8
+T.5.2.4 Frame Members or existing components that exceed the scatter shield material requirements
+may be used as part of the shield.
+T.5.2.5 Scatter shields may be composed of multiple pieces. Any gaps must be small (< 3 mm)
+T.5.2.6 If equipped, the engine drive sprocket cover may be used as part of the scatter shield system.
+T.5.2.7 Chain Drive - Scatter shields for chains must:
+a. Be made of 2.66 mm (0.105 inch) minimum thickness steel (no alternatives are allowed)
+Formula SAE® Rules 2024 © 2023 SAE International Page 66 of 140
+Version 1.0 1 Sep 2023
+b. Have a minimum width equal to three times the width of the chain
+c. Be centered on the center line of the chain
+d. Stay aligned with the chain under all conditions
+T.5.2.8 Non-metallic Belt Drive - Scatter shields for belts must:
+a. Be made from 3.0 mm minimum thickness aluminum alloy 6061-T6
+b. Have a minimum width that is equal to 1.7 times the width of the belt.
+c. Be centered on the center line of the belt
+d. Stay aligned with the belt under all conditions
+T.5.2.9 Attachment Fasteners - All fasteners attaching scatter shields and guards must be 6 mm or
+1/4” minimum diameter Critical Fasteners, see T.8.2
+T.5.2.10 Finger Guards
+a. Must cover any drivetrain parts that spin while the vehicle is stationary with the engine
+running.
+b. Must be made of material sufficient to resist finger forces.
+c. Mesh or perforated material may be used but must prevent the passage of a 12 mm
+diameter object through the guard.
+T.5.3 Motor Protection (EV Only)
+T.5.3.1 The rotating part of the Motor(s) EV.4.1 must be contained in a structural casing.
+The motor casing may be the original motor casing, a team built motor casing or the original
+casing with additional material added to achieve the minimum required thickness.
+• Minimum thickness for aluminum alloy 6061-T6: 3.0 mm
+If lower grade aluminum alloy is used, then the material must be thicker to provide an
+equivalent strength.
+• Minimum thickness for steel: 2.0 mm
+T.5.3.2 A Scatter Shield must be included around the Motor(s) when one or both:
+• The motor casing rotates around the stator
+• The motor case is perforated
+T.5.3.3 The Motor Scatter Shield must be:
+• Made from aluminum alloy 6061-T6 or steel
+• Minimum thickness: 1.0 mm
+T.5.4 Coolant Fluid
+T.5.4.1 Water cooled engines must use only plain water with no additives of any kind
+T.5.4.2 Liquid coolant for electric motors, Accumulators or HV electronics must be one of:
+• plain water with no additives
+• oil
+T.5.4.3 (EV only) Liquid coolant must not directly touch the cells in the Accumulator
+T.5.5 System Sealing
+T.5.5.1 Any cooling or lubrication system must be sealed to prevent leakage
+Formula SAE® Rules 2024 © 2023 SAE International Page 67 of 140
+Version 1.0 1 Sep 2023
+T.5.5.2 The vehicle must be capable of being tilted to a 45° angle without leaking fluid of any type.
+T.5.5.3 Flammable liquid and vapors or other leaks must not collect or contact the driver
+T.5.5.4 Two holes of minimum diameter 25 mm each must be provided in the structure or belly pan at
+the locations:
+a. The lowest point of the chassis
+b. Rearward of the driver position, forward of a fuel tank or other liquid source
+c. If the lowest point of the chassis obeys T.5.5.4.b, then only one set of holes T.5.5.4.a is
+necessary
+T.5.5.5 Absorbent material and open collection devices (regardless of material) are prohibited in
+compartments containing engine, drivetrain, exhaust and fuel systems below the highest
+point on the exhaust system.
+T.5.6 Catch Cans
+T.5.6.1 The vehicle must have separate containers (catch cans) to retain fluids from any vents from
+the powertrain systems.
+T.5.6.2 Catch cans must be:
+a. Capable of containing boiling water without deformation
+b. Located rearwards of the Firewall below the driver’s shoulder level
+c. Positively retained, using no tie wraps or tape
+T.5.6.3 Catch cans for the engine coolant system and engine lubrication system must have a minimum
+capacity of 10% of the fluid being contained or 0.9 liter, whichever is higher
+T.5.6.4 Catch cans for any vent on other systems containing liquid lubricant or coolant, including a
+differential, gearbox, or electric motor, must have a minimum capacity of 10% of the fluid
+being contained or 0.5 liter, whichever is higher
+T.5.6.5 Any catch can on the cooling system must vent through a hose with a minimum internal
+diameter of 3 mm down to the bottom levels of the Chassis.
+T.6 PRESSURIZED SYSTEMS
+T.6.1 Compressed Gas Cylinders and Lines
+Any system on the vehicle that uses a compressed gas as an actuating medium must meet the
+following:
+T.6.1.1 Working Gas - The working gas must be non flammable
+T.6.1.2 Cylinder Certification - The gas cylinder/tank must be commercially manufactured, designed
+and built for the pressure being used, certified by an accredited testing laboratory in the
+country of its origin, and labeled or stamped appropriately.
+T.6.1.3 Pressure Regulation - The pressure regulator must be mounted directly onto the gas
+cylinder/tank
+T.6.1.4 Lines and Fittings - The gas lines and fittings must be appropriate for the maximum possible
+operating pressure of the system.
+T.6.1.5 Insulation - The gas cylinder/tank must be insulated from any heat sources
+T.6.1.6 Cylinder Material – gas cylinders/tanks in a position 150 mm or less from an exhaust system
+must meet one of the two:
+• Made from metal
+Formula SAE® Rules 2024 © 2023 SAE International Page 68 of 140
+Version 1.0 1 Sep 2023
+• Meet the thermal protection requirements of T.1.6.3
+T.6.1.7 Cylinder Location - The gas cylinder/tank and the pressure regulator must be:
+a. Securely mounted inside the Chassis
+b. Located outside of the Cockpit
+c. In a position below the height of the Shoulder Belt Mount T.2.6
+d. Aligned so the axis of the gas cylinder/tank does not point at the driver
+T.6.1.8 Protection – The gas cylinder/tank and lines must be protected from rollover, collision from
+any direction, or damage resulting from the failure of rotating equipment
+T.6.1.9 The driver must be protected from failure of the cylinder/tank and regulator
+T.6.2 High Pressure Hydraulic Pumps and Lines
+This section T.6.2 does not apply to Brake lines or hydraulic clutch lines
+T.6.2.1 The driver and anyone standing outside the vehicle must be shielded from any hydraulic
+pumps and lines with line pressures of 2100 kPa or higher.
+T.6.2.2 The shields must be steel or aluminum with a minimum thickness of 1 mm.
+T.7 BODYWORK AND AERODYNAMIC DEVICES
+T.7.1 Aerodynamic Devices
+T.7.1.1 Aerodynamic Device
+A part on the vehicle which guides airflow for purposes including generation of downforce
+and/or change of drag.
+Examples include but are not limited to: wings, undertray, splitter, endplates, vanes
+T.7.1.2 No power device may be used to move or remove air from under the vehicle. Power ground
+effects are strictly prohibited.
+T.7.1.3 All Aerodynamic Devices must meet:
+a. The mounting system provides sufficient rigidity in the static condition
+b. The Aerodynamic Devices do not oscillate or move excessively when the vehicle is
+moving. Refer to IN.8.2
+T.7.1.4 All forward facing edges that could contact a pedestrian (wings, end plates, and undertrays)
+must have a minimum radius of 5 mm for all horizontal edges and 3 mm for vertical edges.
+This may be the radius of the edges themselves, or additional permanently attached pieces
+designed to meet this requirement.
+T.7.1.5 Other edges that a person may touch must not be sharp
+T.7.2 Bodywork
+T.7.2.1 Conventionally designed Bodywork or a nose cone is not considered an Aerodynamic Device
+T.7.2.2 Bodywork, a nose cone, or another component mounted to the vehicle is an Aerodynamic
+Device if is designed to, or may possibly, produce force due to aerodynamic effects
+T.7.2.3 Bodywork must not contain openings into the cockpit from the front of the vehicle back to the
+Main Hoop or Firewall. The cockpit opening and minimal openings around the front
+suspension components are allowed.
+Formula SAE® Rules 2024 © 2023 SAE International Page 69 of 140
+Version 1.0 1 Sep 2023
+T.7.2.4 All forward facing edges on the Bodywork that could contact people, including the nose, must
+have forward facing radii minimum 38 mm. This minimum radius must extend 45° or more
+relative to the forward direction, along the top, sides and bottom of all affected edges.
+T.7.3 Measurement
+T.7.3.1 All Aerodynamic Device limitations are measured:
+a. With the wheels pointing in the straight ahead position
+b. Without a driver in the vehicle
+The intent is to standardize the measurement, see GR.6.4.1
+T.7.3.2 Head Restraint Plane
+A transverse vertical plane through the rearmost portion of the front face of the driver head
+restraint support, excluding any padding, set (if adjustable) in its fully rearward position
+T.7.3.3 Rear Aerodynamic Zone
+The volume that is:
+• Rearward of the Head Restraint Plane
+• Inboard of two vertical planes parallel to the centerline of the chassis touching the inside
+of the rear tires at the height of the hub centerline
+T.7.4 Location
+Any part of any Aerodynamic Device or Bodywork must meet V.1.1 and V.1.4.1
+T.7.5 Length
+In plan view, any part of any Aerodynamic Device must be:
+a. No more than 700 mm forward of the fronts of the front tires
+b. No more than 250 mm rearward of the rear of the rear tires
+T.7.6 Width
+In plan view, any part of any Aerodynamic Device must be:
+T.7.6.1 When forward of the centerline of the front wheel axles:
+Inboard of two vertical planes parallel to the centerline of the chassis touching the outside of
+the front tires at the height of the hubs.
+T.7.6.2 When between the centerlines of the front and rear wheel axles:
+Inboard of a line drawn connecting the outer surfaces of the front and rear tires at the height
+of the wheel centers
+T.7.6.3 When rearward of the centerline of the rear wheel axles:
+In the Rear Aerodynamic Zone
+T.7.7 Height
+T.7.7.1 Any part of any Aerodynamic Device that is located:
+a. In the Rear Aerodynamic Zone must be no higher than 1200 mm above the ground
+b. Outside of the Rear Aerodynamic Zone must be no higher than 500 mm above the
+ground
+Formula SAE® Rules 2024 © 2023 SAE International Page 70 of 140
+Version 1.0 1 Sep 2023
+c. Forward of the centerline of the front wheel axles and outboard of two vertical planes
+parallel to the centerline of the chassis touching the inside of the front tires at the height
+of the hubs must be no higher than 250 mm above the ground
+T.7.7.2 Bodywork height is not restricted when the Bodywork is located:
+• Between the transverse vertical planes positioned at the front and rear axle centerlines
+• Inside two vertical fore and aft planes 400 mm outboard from the centerline on each
+side of the vehicle
+Reference Point
+250 mm
+700 mm
+T.8 FASTENERS
+T.8.1 Critical Fasteners
+A fastener (bolt, screw, pin, etc) used in a location specified in the applicable rule
+T.8.2 Critical Fastener Requirements
+T.8.2.1 Any Critical Fastener must meet, at minimum, one of the following:
+a. SAE Grade 5
+b. Metric Class 8.8
+c. AN/MS Specifications
+d. Equivalent to or better than above, as approved by a Rules Question or at Technical
+Inspection
+T.8.2.2 All threaded Critical Fasteners must be one of the following:
+• Hex head
+• Hexagonal recessed drive (Socket Head Cap Screws or Allen screws/bolts)
+T.8.2.3 All Critical Fasteners must be secured from unintentional loosening with Positive Locking
+Mechanisms see T.8.3
+T.8.2.4 A minimum of two full threads must project from any lock nut.
+T.8.2.5 Some Critical Fastener applications have additional requirements that are provided in the
+applicable section.
+Formula SAE® Rules 2024 © 2023 SAE International Page 71 of 140
+Version 1.0 1 Sep 2023
+mm
+052
+woleb
+mm
+005
+mm
+005
+woleb
+mm
+052
+mm
+004
+mm
+0021
+mm
+005
+evoba mm
+005
+woleb
+T.8.3 Positive Locking Mechanisms
+T.8.3.1 Positive Locking Mechanisms are defined as those which:
+a. Technical Inspectors / team members can see that the device/system is in place (visible).
+b. Do not rely on the clamping force to apply the locking or anti vibration feature.
+Meaning If the fastener begins to loosen, the locking device still prevents the fastener coming
+completely loose
+T.8.3.2 Examples of acceptable Positive Locking Mechanisms include, but are not limited to:
+a. Correctly installed safety wiring
+b. Cotter pins
+c. Nylon lock nuts (where temperature does not exceed 80°C)
+d. Prevailing torque lock nuts
+Lock washers, bolts with nylon patches and thread locking compounds (Loctite®), DO NOT
+meet the positive locking requirement.
+T.8.4 Requirements for All Fasteners
+Adjustable tie rod ends must be constrained with a jam nut to prevent loosening.
+T.9 ELECTRICAL EQUIPMENT
+T.9.1 Definitions
+T.9.1.1 High Voltage – HV
+Any voltage more than 60 V DC or 25 V AC RMS
+T.9.1.2 Low Voltage - LV
+Any voltage less than and including 60 V DC or 25 V AC RMS
+T.9.1.3 Normally Open
+A type of electrical relay or contactor that allows current flow only in the energized state
+T.9.2 Low Voltage Batteries
+T.9.2.1 All Low Voltage Batteries and onboard power supplies must be securely mounted inside the
+Chassis below the height of the Shoulder Belt Mount T.2.6
+T.9.2.2 All Low Voltage batteries must have Overcurrent Protection that trips at or below the
+maximum specified discharge current of the cells
+T.9.2.3 The hot (ungrounded) terminal must be insulated.
+T.9.2.4 Any wet cell battery located in the driver compartment must be enclosed in a nonconductive
+marine type container or equivalent.
+T.9.2.5 Batteries or battery packs based on lithium chemistry must meet one of the two:
+a. Have a rigid, sturdy casing made from Nonflammable Material
+b. A commercially available battery designed as an OEM style replacement
+T.9.2.6 All batteries using chemistries other than lead acid must be presented at Technical Inspection
+with markings identifying it for comparison to a datasheet or other documentation proving
+the pack and supporting electronics meet all rules requirements
+Formula SAE® Rules 2024 © 2023 SAE International Page 72 of 140
+Version 1.0 1 Sep 2023
+T.9.3 Master Switches
+Each Master Switch ( IC.9.3 / EV.7.9 ) must meet the following:
+T.9.3.1 Location
+a. On the driver’s right hand side of the vehicle
+b. In proximity to the Main Hoop
+c. At the driver's shoulder height
+d. Able to be easily actuated from outside the vehicle
+T.9.3.2 Characteristics
+a. Be of the rotary mechanical type
+b. Be rigidly mounted to the vehicle and must not be removed during maintenance
+c. Mounted where the rotary axis of the key is near horizontal and across the vehicle
+d. The ON position must be in the horizontal position and must be marked accordingly
+e. The OFF position must be clearly marked
+f. (EV Only) Operated with a red removable key that must only be removable in the
+electrically open position
+T.9.4 Inertia Switch
+T.9.4.1 Inertia Switch Requirement
+• (EV) Must have an Inertia Switch
+• (IC) Should have an Inertia Switch
+T.9.4.2 The Inertia Switch must be:
+a. A Sensata Resettable Crash Sensor or equivalent
+b. Mechanically and rigidly attached to the vehicle
+c. Removable to test functionality
+T.9.4.3 Inertia Switch operation:
+a. Must trigger due to a longitudinal impact load which decelerates the vehicle at between
+8 g and 11 g depending on the duration of the deceleration (refer to spec sheet of the
+Sensata device)
+b. Must Open the Shutdown Circuit IC.9.2.2 / EV.7.2.2 if triggered
+c. Must latch until manually reset
+d. May be reset by the driver from inside the driver's cell
+Formula SAE® Rules 2024 © 2023 SAE International Page 73 of 140
+Version 1.0 1 Sep 2023
+VE - VEHICLE AND DRIVER EQUIPMENT 
