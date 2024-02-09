@@ -65,7 +65,7 @@ if __name__ == '__main__':
     file = upload_file(file_path)
     assistant = create_assistant(file)
 
-    questions_pd = pd.read_csv("../../dataset/rule_extraction/qa_compilation/data/compilation.csv")
+    questions_pd = pd.read_csv("../../dataset/rule_extraction/qa_compilation/data/rule_compilation_qa.csv")
 
     # Get responses from the model and compute accuracy
     questions_pd['response'] = None
