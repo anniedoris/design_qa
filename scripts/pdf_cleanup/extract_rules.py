@@ -7,14 +7,14 @@ rule_texts = []
 
 # Get the rule numbers from the rule num text file
 all_rules = []
-with open('docs/rule_nums/' + rule_section + '_rule_nums.txt', 'r') as file:
+with open('../../dataset/docs/rule_nums/' + rule_section + '_rule_nums.txt', 'r') as file:
     lines = file.readlines()
     for line in lines:
         all_rules.append(line)
 all_rules = [i.strip('\n') for i in lines]
 
 # Read the appropriate rule section document
-file_path = 'docs/rule_section_text/' + rule_section + '_rules' + '.txt'
+file_path = '../../dataset/docs/rule_section_text/' + rule_section + '_rules' + '.txt'
 with open(file_path, 'r', encoding='utf-8') as file:
     data = file.read()
 
@@ -57,4 +57,4 @@ for rule_ind, rule_num in enumerate(all_rules[:-1]):
     rule_texts.append(rule_text.strip('\n'))
 
 df = pd.DataFrame({'rule_num': all_rules[:-1], 'rule_text': rule_texts})
-df.to_csv('docs/csv_rules/' + rule_section + '_extracted.csv')
+df.to_csv('../../dataset/docs/csv_rules/' + rule_section + '_extracted.csv')

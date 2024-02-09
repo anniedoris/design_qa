@@ -1,9 +1,11 @@
 import pandas as pd
-
+import sys
+sys.path.append("..")
+from common_prompts import prompt_preamble
 
 if __name__ == '__main__':
     # import extracted set of rules
-    rules_pd = pd.read_csv("../rules_pdfplumber1_clean1.csv", encoding='utf-8-sig')     # TODO change path to clean one
+    rules_pd = pd.read_csv("../../dataset/docs/csv_rules/all_rules_extracted.csv", encoding='utf-8-sig')
 
     # Hardcoded terms of interest for compilation task
     terms = "Aerodynamic, Tractie System, Shutdown System, Accelerator Pedal Position Sensor/APPS, Brake Pedal, " \
@@ -25,20 +27,19 @@ if __name__ == '__main__':
 
             # add each rule_number in relevant_rules to the ground truth dictionary
             for index, row in relevant_rules.iterrows():
-                ground_truth[term].append(row['rule_number'])
+                ground_truth[term].append(row['rule_num'])
 
     # create the questions
     qa = []
     for term, ground_truth_rules in ground_truth.items():
         # create the question
-        question = f"We are a student engineering team designing a vehicle for the FSAE competition. Attached is the " \
-                   f"FSAE rules document. Please list all rules relevant to `{term}`. Answer with only the rule numbers " \
+        question = prompt_preamble + f"Please list all rules relevant to `{term}`. Answer with only the rule numbers " \
                    f"(i.e.: AA.1.1.1) separated by commas and no other words.\n\n" \
                    f"The rules relevant to `{term}` are:\n"
 
         qa.append([question, ground_truth_rules])
 
     # Export questions and answers to compilation.csv
-    pd.DataFrame(qa, columns=['question', 'answer']).to_csv("data/rule_compilation_qa.csv", index=False)
+    pd.DataFrame(qa, columns=['question', 'answer']).to_csv("../../dataset/rule_extraction/rule_compilation_qa.csv", index=False)
 
     print(len(qa))
