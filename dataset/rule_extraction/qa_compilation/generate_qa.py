@@ -39,6 +39,6 @@ if __name__ == '__main__':
         qa.append([question, ground_truth_rules])
 
     # Export questions and answers to compilation.csv
-    pd.DataFrame(qa, columns=['question', 'answer']).to_csv("data/compilation.csv", index=False)
+    pd.DataFrame(qa, columns=['question', 'answer']).to_csv("data/rule_compilation_qa.csv", index=False)
 
     print(len(qa))
