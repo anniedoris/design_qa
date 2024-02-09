@@ -1,10 +1,10 @@
-﻿rule_num,rule_text
+rule_num,rule_text
 V.1,"CONFIGURATION
 The vehicle must be open wheeled and open cockpit (a formula style body) with four wheels
 that are not in a straight line."
 V.1.1,"Open Wheel
 Open Wheel vehicles must satisfy all of the following criteria:
-a. The top 180¬∞ of the wheels/tires must be unobstructed when viewed from vertically
+a. The top 180° of the wheels/tires must be unobstructed when viewed from vertically
 above the wheel.
 b. The wheels/tires must be unobstructed when viewed from the side.
 c. No part of the vehicle may enter a keep out zone defined by two lines extending
@@ -33,13 +33,13 @@ V.2,DRIVER
 V.2.1,Accommodation
 V.2.1.1,"The vehicle must be able to accommodate drivers of sizes ranging from 5th percentile female
 up to 95th percentile male.
-‚Ä¢ Accommodation includes driver position, driver controls, and driver equipment.
-‚Ä¢ Anthropometric data may be found on the FSAE Online Website."
-V.2.1.2,The driver‚Äôs head and hands must not contact the ground in any rollover attitude.
+• Accommodation includes driver position, driver controls, and driver equipment.
+• Anthropometric data may be found on the FSAE Online Website."
+V.2.1.2,The driver’s head and hands must not contact the ground in any rollover attitude.
 V.2.2,"Visibility
 a. The driver must have sufficient visibility to the front and sides of the vehicle
 b. When seated in a normal driving position, the driver must have a minimum field of vision
-of 100¬∞ to both sides
+of 100° to both sides
 c. If mirrors are required for this rule, they must remain in place and adjusted to enable the
 required visibility throughout all dynamic events."
 V.3,SUSPENSION AND STEERING
@@ -52,8 +52,8 @@ V.3.1.3,"All suspension mounting points must be visible at Technical Inspection 
 removing any covers."
 V.3.1.4,"Fasteners in the Suspension system are Critical Fasteners, see T.8.2"
 V.3.1.5,"All spherical rod ends and spherical bearings on the suspension and steering must be one of:
-‚Ä¢ Mounted in double shear
-‚Ä¢ Captured by having a screw/bolt head or washer with an outside diameter that is larger
+• Mounted in double shear
+• Captured by having a screw/bolt head or washer with an outside diameter that is larger
 than spherical bearing housing inside diameter."
 V.3.2,Steering
 V.3.2.1,The Steering Wheel must be mechanically connected to the front wheels
@@ -65,7 +65,7 @@ locking up (the inversion of a four bar linkage at one of the pivots). The stops
 a. Must prevent the wheels and tires from contacting suspension, bodywork, or Chassis
 during the track events
 b. May be placed on the uprights or on the rack"
-V.3.2.5,"Allowable steering system free play is limited to seven degrees (7¬∞) total measured at the
+V.3.2.5,"Allowable steering system free play is limited to seven degrees (7°) total measured at the
 steering wheel."
 V.3.2.6,The steering rack must be mechanically attached to the Chassis F.5.14
 V.3.2.7,"Joints between all components attaching the Steering Wheel to the steering rack must be
@@ -75,7 +75,7 @@ V.3.2.8,"Fasteners in the steering system are Critical Fasteners, see T.8.2"
 V.3.2.9,Spherical rod ends and spherical bearings in the steering must meet V.3.1.5 above
 V.3.2.10,"Rear wheel steering may be used.
 a. Rear wheel steering must incorporate mechanical stops to limit the range of angular
-movement of the rear wheels to a maximum of six degrees (6¬∞).
+movement of the rear wheels to a maximum of six degrees (6°).
 b. The team must provide the ability for the steering angle range to be verified at Technical
 Inspection with a driver in the vehicle.
 c. Rear wheel steering may be electrically actuated."
@@ -85,8 +85,8 @@ V.3.3.2,The Steering Wheel must be attached to the column with a quick disconnec
 V.3.3.3,"The driver must be able to operate the quick disconnect while in the normal driving position
 with gloves on."
 V.3.3.4,"The Steering Wheel must have a continuous perimeter that is near circular or near oval.
-The outer perimeter profile may have some straight sections, but no concave sections. ‚ÄúH‚Äù,
-‚ÄúFigure 8‚Äù, or cutout wheels are not allowed."
+The outer perimeter profile may have some straight sections, but no concave sections. “H”,
+“Figure 8”, or cutout wheels are not allowed."
 V.4,WHEELS AND TIRES
 V.4.1,"Wheel Size
 Wheels must be 203.2 mm (8.0 inches) or more in diameter."
@@ -104,10 +104,10 @@ a. The tires on the vehicle when it is presented for Technical Inspection.
 b. May be any size or type, slicks or treaded."
 V.4.3.2,"Wet Tires
 Any size or type of treaded or grooved tire where:
-‚Ä¢ The tread pattern or grooves were molded in by the tire manufacturer, or were cut by
+• The tread pattern or grooves were molded in by the tire manufacturer, or were cut by
 the tire manufacturer or appointed agent.
 Any grooves that have been cut must have documented proof that this rule was met
-‚Ä¢ There is a minimum tread depth of 2.4 mm"
+• There is a minimum tread depth of 2.4 mm"
 V.4.3.3,"Tire Set
 a. All four Dry Tires and Wheels or all four Wet Tires and Wheels do not have to be
 identical.
@@ -130,24 +130,24 @@ A minimum representative single piece of uncut, continuous tubing."
 F.1.3,"Monocoque
 A type of Chassis where loads are supported by the external panels"
 F.1.4,"Main Hoop
-A roll bar located alongside or immediately aft of the driver‚Äôs torso."
+A roll bar located alongside or immediately aft of the driver’s torso."
 F.1.5,"Front Hoop
-A roll bar located above the driver‚Äôs legs, in proximity to the steering wheel."
+A roll bar located above the driver’s legs, in proximity to the steering wheel."
 F.1.6,"Roll Hoop(s)
 Referring to both the Front Hoop AND the Main Hoop"
 F.1.7,"Roll Hoop Bracing Supports
 The structure from the lower end of the Roll Hoop Bracing back to the Roll Hoop(s)."
 F.1.8,"Front Bulkhead
-A planar structure that provides protection for the driver‚Äôs feet."
+A planar structure that provides protection for the driver’s feet."
 F.1.9,"Impact Attenuator
 A deformable, energy absorbing device located forward of the Front Bulkhead."
 F.1.10,"Primary Structure
 The combination of the following components:
-‚Ä¢ Front Bulkhead and Front Bulkhead Support
-‚Ä¢ Front Hoop, Main Hoop, Roll Hoop Braces and Supports
-‚Ä¢ Side Impact Structure
-‚Ä¢ (EV Only) Tractive System Protection and Rear Impact Protection
-‚Ä¢ Any Frame Members, guides, or supports that transfer load from the Driver Restraint
+• Front Bulkhead and Front Bulkhead Support
+• Front Hoop, Main Hoop, Roll Hoop Braces and Supports
+• Side Impact Structure
+• (EV Only) Tractive System Protection and Rear Impact Protection
+• Any Frame Members, guides, or supports that transfer load from the Driver Restraint
 System"
 F.1.11,"Primary Structure Envelope
 A volume enclosed by multiple tangent planes, each of which follows the exact outline of the
@@ -177,7 +177,7 @@ An arrangement of Frame Members where all members and segments of members betwee
 bends or nodes with Structural tubes form a structure composed entirely of triangles.
 a. This is generally required between an upper member and a lower member, both of
 which may have multiple segments requiring a diagonal to form multiple triangles.
-b. This is also what is meant by ‚Äúproperly triangulated‚Äù."
+b. This is also what is meant by “properly triangulated”."
 F.1.18,"Nonflammable Material
 Metal or a Non Metallic material which meets UL94-V0, FAR25 or approved equivalent"
 F.2,DOCUMENTATION
@@ -216,7 +216,7 @@ Non Structural Tubing is ignored when assessing compliance to any rule"
 F.3.4,Steel Tubing and Material
 F.3.4.2,"Properties for ANY steel material for calculations submitted in an SES must be:
 a. Non Welded Properties for continuous material calculations:
-Young‚Äôs Modulus (E) = 200 GPa (29,000 ksi)
+Young’s Modulus (E) = 200 GPa (29,000 ksi)
 Yield Strength (Sy) = 305 MPa (44.2 ksi)
 Ultimate Strength (Su) = 365 MPa (52.9 ksi)
 b. Welded Properties for discontinuous material such as joint calculations:
@@ -239,14 +239,14 @@ F.3.5.3,"Aluminum Tubing
 a. Minimum Wall Thickness for Aluminum Tubing: Non Welded 2.0 mm
 Welded 3.0 mm
 b. Non Welded properties for aluminum alloy 6061-T6 for calculations in an SES must be:
-Young‚Äôs Modulus (E) 69 GPa (10,000 ksi)
+Young’s Modulus (E) 69 GPa (10,000 ksi)
 Yield Strength (Sy) 240 MPa (34.8 ksi)
 Ultimate Strength (Su) 290 MPa (42.1 ksi)
 c. Welded properties for aluminum alloy 6061-T6 for calculations in an SES must be:
 Yield Strength (Sy) 115 MPa (16.7 ksi)
 Ultimate Strength (Su) 175 MPa (25.4 ksi)
 d. If welding is used on a regulated aluminum structure, the equivalent yield strength must
-be considered in the ‚Äúas welded‚Äù condition for the alloy used unless the team provides
+be considered in the “as welded” condition for the alloy used unless the team provides
 detailed proof that the frame or component has been properly solution heat treated,
 artificially aged, and not subject to heating during team manufacturing.
 e. If aluminum was solution heat treated and age hardened to increase its strength after
@@ -286,14 +286,14 @@ Teams must build new representative test panels for each ply schedule used in th
 regions of the new chassis as a flat panel and perform a 3 point bending test on these panels.
 Refer to F.4.3.4
 a. Test panels must:
-‚Ä¢ Measure one of the two options: 138 mm x 500 mm OR 275 mm x 500 mm
-‚Ä¢ Be supported by a span distance of 400 mm
-‚Ä¢ Have equal surface area for the top and bottom skin
-‚Ä¢ Have bare edges, without skin material
+• Measure one of the two options: 138 mm x 500 mm OR 275 mm x 500 mm
+• Be supported by a span distance of 400 mm
+• Have equal surface area for the top and bottom skin
+• Have bare edges, without skin material
 b. The SES must include:
-‚Ä¢ Data from the 3 point bending tests
-‚Ä¢ Pictures of the test samples
-‚Ä¢ A picture of the test sample and test setup showing a measurement documenting
+• Data from the 3 point bending tests
+• Pictures of the test samples
+• A picture of the test sample and test setup showing a measurement documenting
 the supported span distance used in the SES
 c. Test panel results must be used to derive stiffness, yield strength, ultimate strength and
 absorbed energy properties by the SES formula and limits for the purpose of calculating
@@ -315,17 +315,17 @@ F.4.3.4,"Test Conduct
 a. The Laminate test F.4.3.2 and the Comparison test F.4.3.2e must use the same fixture
 b. The load applicator used to test any panel/tubes as required in this section F.4.3 must
 be:
-‚Ä¢ Metallic
-‚Ä¢ Radius 50 mm
+• Metallic
+• Radius 50 mm
 c. The load applicator must overhang the test piece to prevent edge loading
 d. Any other material must not be placed between the load applicator and the items on test"
 F.4.3.5,"Perimeter Shear Test
 a. The Perimeter Shear Test must be completed by measuring the force required to push or
 pull a 25 mm diameter flat punch through a flat laminate sample.
 b. The sample must:
-‚Ä¢ Measure 100 mm x 100 mm minimum
-‚Ä¢ Have core and skin thicknesses identical to those used in the actual application
-‚Ä¢ Be manufactured using the same materials and processes
+• Measure 100 mm x 100 mm minimum
+• Have core and skin thicknesses identical to those used in the actual application
+• Be manufactured using the same materials and processes
 c. The fixture must support the entire sample, except for a 32 mm hole aligned coaxially
 with the punch.
 d. The sample must not be clamped to the fixture
@@ -347,12 +347,12 @@ F.4.3.7,"Lap Joint Test
 The Lap Joint Test measures the force required to pull apart a joint comprised of two laminate
 samples that are bonded together.
 a. Do two separate pull tests with different orientations of the adhesive joint:
-‚Ä¢ Parallel to the pull direction, with the adhesive joint in pure shear
-‚Ä¢ T peel normal to the pull direction, with the adhesive joint in peel
+• Parallel to the pull direction, with the adhesive joint in pure shear
+• T peel normal to the pull direction, with the adhesive joint in peel
 b. The samples used must:
-‚Ä¢ Have skin thicknesses identical to those used in the actual monocoque
-‚Ä¢ Be manufactured using the same materials and processes
-‚Ä¢ Have the same overlap as used in the regulated structure. No scaling is permitted.
+• Have skin thicknesses identical to those used in the actual monocoque
+• Be manufactured using the same materials and processes
+• Have the same overlap as used in the regulated structure. No scaling is permitted.
 c. The force and displacement data and photos of the test setup must be included in the
 SES.
 d. The shear strength of the bond must be more than the UTS of the skin"
@@ -367,9 +367,9 @@ F.5,"CHASSIS REQUIREMENTS
 This section applies to all Chassis, regardless of material or construction"
 F.5.1,Primary Structure
 F.5.1.1,"The Primary Structure must be constructed from one or a combination of the following:
-‚Ä¢ Steel Tubing and Material F.3.2 F.3.4
-‚Ä¢ Alternative Tubing Materials F.3.2 F.3.5
-‚Ä¢ Composite Material F.4"
+• Steel Tubing and Material F.3.2 F.3.4
+• Alternative Tubing Materials F.3.2 F.3.5
+• Composite Material F.4"
 F.5.1.2,"Any chassis design that combines the Tube Frame, Monocoque, tubing and/or composite
 types must:
 a. Meet all relevant requirements F.5.1.1
@@ -387,8 +387,8 @@ deviates farthest from a straight line connecting both ends
 b. The support tube must terminate at a node of the chassis
 c. The support tube for any bent tube (other than the Upper Side Impact Member or
 Shoulder Harness Mounting Bar) must be:
-‚Ä¢ The same diameter and thickness as the bent tube
-‚Ä¢ Angled no more than 30¬∞ from the plane of the bent tube"
+• The same diameter and thickness as the bent tube
+• Angled no more than 30° from the plane of the bent tube"
 F.5.3,Holes and Openings in Regulated Tubing
 F.5.3.1,Any holes in any regulated tubing (other than inspection holes) must be addressed on the SES.
 F.5.3.2,"Technical Inspectors may check the compliance of all tubes. This may be done by ultrasonic
@@ -400,10 +400,10 @@ F.5.4.1,"Bolted connections in the Primary Structure must use a removable bolt a
 Bonded fasteners and blind nuts and bolts do not meet this requirement"
 F.5.4.2,"Threaded fasteners used in Primary Structure are Critical Fasteners, see T.8.2"
 F.5.4.3,"Bolted connections in the Primary Structure using tabs or brackets must have an edge
-distance ratio ‚Äúe/D‚Äù of 1.5 or higher
-‚ÄúD‚Äù equals the hole diameter. ‚Äúe‚Äù equals the distance from the edge of the hole to the nearest
+distance ratio “e/D” of 1.5 or higher
+“D” equals the hole diameter. “e” equals the distance from the edge of the hole to the nearest
 free edge
-Tabs attaching the Suspension to the Primary Structure are NOT ‚Äúin the Primary Structure‚Äù"
+Tabs attaching the Suspension to the Primary Structure are NOT “in the Primary Structure”"
 F.5.5,Bonding in Regulated Structure
 F.5.5.1,Adhesive used and referenced bonding strength must be appropriate for both substrate types
 F.5.5.2,"Document the adhesive choice, age and expiration date, substrate preparation, and the
@@ -418,7 +418,7 @@ a. Bends in side view
 b. Bends in front view below the Upper Side Impact Structure F.6.4, F.7.5"
 F.5.6.3,"Roll Hoop and Driver Position
 When seated normally and restrained by the Driver Restraint System, the helmet of a 95th
-percentile male (see V.2.1.1) and all of the team‚Äôs drivers must:
+percentile male (see V.2.1.1) and all of the team’s drivers must:
 a. Be a minimum of 50 mm from the straight line drawn from the top of the Main Hoop to
 the top of the Front Hoop.
 b. Be a minimum of 50 mm from the straight line drawn from the top of the Main Hoop to
@@ -428,23 +428,23 @@ extends forwards."
 F.5.6.4,"Driver Template
 A two dimensional template used to represent the 95th percentile male is made to the
 following dimensions (see figure below):
-‚Ä¢ A circle of diameter 200 mm will represent the hips and buttocks.
-‚Ä¢ A circle of diameter 200 mm will represent the shoulder/cervical region.
-‚Ä¢ A circle of diameter 300 mm will represent the head (with helmet).
-‚Ä¢ A straight line measuring 490 mm will connect the centers of the two 200 mm circles.
-‚Ä¢ A straight line measuring 280 mm will connect the centers of the upper 200 mm circle
+• A circle of diameter 200 mm will represent the hips and buttocks.
+• A circle of diameter 200 mm will represent the shoulder/cervical region.
+• A circle of diameter 300 mm will represent the head (with helmet).
+• A straight line measuring 490 mm will connect the centers of the two 200 mm circles.
+• A straight line measuring 280 mm will connect the centers of the upper 200 mm circle
 and the 300 mm head circle."
 F.5.6.5,"Driver Template Position
 The Driver Template will be positioned as follows:
-‚Ä¢ The seat will be adjusted to the rearmost position
-‚Ä¢ The pedals will be placed in the most forward position
-‚Ä¢ The bottom 200 mm circle will be placed on the seat bottom where the distance
+• The seat will be adjusted to the rearmost position
+• The pedals will be placed in the most forward position
+• The bottom 200 mm circle will be placed on the seat bottom where the distance
 between the center of this circle and the rearmost face of the pedals is no less than 915
 mm
-‚Ä¢ The middle 200 mm circle, representing the shoulders, will be positioned on the seat
+• The middle 200 mm circle, representing the shoulders, will be positioned on the seat
 back
-‚Ä¢ The upper 300 mm circle will be positioned no more than 25 mm away from the head
-restraint (where the driver‚Äôs helmet would normally be located while driving)"
+• The upper 300 mm circle will be positioned no more than 25 mm away from the head
+restraint (where the driver’s helmet would normally be located while driving)"
 F.5.7,Front Hoop
 F.5.7.1,The Front Hoop must be constructed of closed section metal tubing meeting F.3.2.1.c
 F.5.7.2,"With proper Triangulation, the Front Hoop may be fabricated from more than one piece of
@@ -458,7 +458,7 @@ This distance is measured horizontally, on the vehicle centerline, from the rear
 Front Hoop to the forward most surface of the steering wheel rim with the steering in the
 straight ahead position."
 F.5.7.6,"In side view, any part of the Front Hoop above the Upper Side Impact Structure must be
-inclined less than 20¬∞ from the vertical."
+inclined less than 20° from the vertical."
 F.5.7.7,"A Front Hoop that is not steel must have a 4 mm hole drilled in a location to access during
 Technical Inspection
 mm
@@ -471,13 +471,13 @@ side of the Frame, up, over and down to the lowest Frame Member / bottom of Mono
 on the other side of the Frame."
 F.5.8.3,"In the side view of the vehicle,
 a. The part of the Main Hoop that lies above its attachment point to the upper Side Impact
-Tube must be less than 10¬∞ from vertical.
+Tube must be less than 10° from vertical.
 b. Any bends in the Main Hoop above its attachment point to the Major Structure of the
 Chassis must be braced to a node or Attachment point F.7.8 with tubing meeting
 F.3.2.1.h and F.5.9.5
 c. The part of the Main Hoop below the Upper Side Impact Member attachment:
-‚Ä¢ May be forward at any angle
-‚Ä¢ Must not be rearward more than 10¬∞ from vertical"
+• May be forward at any angle
+• Must not be rearward more than 10° from vertical"
 F.5.8.4,"In the front view of the vehicle, the vertical members of the Main Hoop must be minimum 380
 mm apart (inside dimension) at the location where the Main Hoop is attached to the bottom
 tubes of the Major Structure of the Chassis."
@@ -492,7 +492,7 @@ Main Hoop leans rearward, the Braces must be rearward of the Main Hoop)"
 F.5.9.4,"The Main Hoop Braces must be attached 160 mm or less below the top most surface of the
 Main Hoop.
 The Main Hoop Braces should be attached as near as possible to the top of the Main Hoop"
-F.5.9.5,The included angle formed by the Main Hoop and the Main Hoop Braces must be 30¬∞ or more.
+F.5.9.5,The included angle formed by the Main Hoop and the Main Hoop Braces must be 30° or more.
 F.5.9.6,"The Main Hoop Braces must be straight, without any bends."
 F.5.9.7,"The Main Hoop Braces must be:
 a. Securely integrated into the Frame
@@ -508,17 +508,17 @@ c. Meet F.5.2.1 and F.5.2.2, as applicable (does not need to meet F.5.2.3)"
 F.5.10.2,The Head Restraint or mounting T.2.8 must not attach to the Head Restraint Protection
 F.5.11,External Items
 F.5.11.1,"Any item which meets all three of:
-‚Ä¢ Located outside the Component Envelope F.1.15
-‚Ä¢ Located above 350 mm from the ground
-‚Ä¢ Could load the Main Hoop, Main Hoop Brace, or Shoulder Harness Mounting during a
+• Located outside the Component Envelope F.1.15
+• Located above 350 mm from the ground
+• Could load the Main Hoop, Main Hoop Brace, or Shoulder Harness Mounting during a
 rollover"
 F.5.11.2,"External Items must meet one of the two conditions:
 a. Be attached at a Hoop to Brace node or a fully Triangulated structural node without the
 ability to create a moment at the node
 b. When not attached at a node as described above, then:
-‚Ä¢ Additional Structural bracing meeting F.3.2.1.o must be added to prevent bending
+• Additional Structural bracing meeting F.3.2.1.o must be added to prevent bending
 loads
-‚Ä¢ Additional calculations must be performed to show the member will not fail in
+• Additional calculations must be performed to show the member will not fail in
 bending or shear, even if unbraced"
 F.5.11.3,External Items should not point at the driver
 F.5.12,Mechanically Attached Roll Hoop Bracing
@@ -545,7 +545,7 @@ F.5.12.7,"In a Sleeved Butt Joint, the bolts must be 6 mm Metric Grade 9.8 or 1/
 minimum diameter and grade. See F.5.12.1 above"
 F.5.13,Other Bracing Requirements
 F.5.13.1,"Where the braces are not welded to steel Frame Members, the braces must be securely
-attached to the Frame using 8 mm or 5/16‚Äù minimum diameter Critical Fasteners, see T.8.2"
+attached to the Frame using 8 mm or 5/16” minimum diameter Critical Fasteners, see T.8.2"
 F.5.13.2,"Mounting plates welded to Roll Hoop Bracing must be 2.0 mm (0.080 in) minimum thickness
 steel."
 F.5.14,"Steering Protection
@@ -557,10 +557,10 @@ b. Extend to the vertical limit of the steering component(s)
 c. Extend to the local width of the Chassis"
 F.5.15,"Other Side Tube Requirements
 If there is a Roll Hoop Brace or other frame tube alongside the driver, at the height of the neck
-of any of the team‚Äôs drivers, a metal tube or piece of sheet metal must be attached to the
+of any of the team’s drivers, a metal tube or piece of sheet metal must be attached to the
 Frame
-This is intended to prevent the drivers‚Äô shoulders from passing under the Roll Hoop Brace or
-frame tube, and the driver‚Äôs neck contacting this brace or tube."
+This is intended to prevent the drivers’ shoulders from passing under the Roll Hoop Brace or
+frame tube, and the driver’s neck contacting this brace or tube."
 F.5.16,"Component Protection
 When specified in the rules, components must be protected by one or both of:
 a. Fully Triangulated structure with tubes meeting F.3.2.1.n
@@ -581,8 +581,8 @@ and 50 mm below the Upper Side Impact member.
 b. If the upper support member is further than 100 mm above the Upper Side Impact
 member, then properly Triangulated bracing is required to transfer load to the Main
 Hoop by one of:
-‚Ä¢ the Upper Side Impact member
-‚Ä¢ an additional member transmitting load from the junction of the Upper Support
+• the Upper Side Impact member
+• an additional member transmitting load from the junction of the Upper Support
 Member with the Front Hoop
 c. The lower support member must be attached to the base of the Front Bulkhead and the
 base of the Front Hoop.
@@ -594,12 +594,12 @@ F.6.3,Front Hoop Bracing
 F.6.3.1,Front Hoop Braces must be constructed of material meeting F.3.2.1.d
 F.6.3.2,"The Front Hoop must be supported by two Braces extending in the forward direction, one on
 each of the left and right sides of the Front Hoop."
-F.6.3.3,"The Front Hoop Braces must be constructed to protect the driver‚Äôs legs and should extend to
-the structure in front of the driver‚Äôs feet."
+F.6.3.3,"The Front Hoop Braces must be constructed to protect the driver’s legs and should extend to
+the structure in front of the driver’s feet."
 F.6.3.4,"The Front Hoop Braces must be attached as near as possible to the top of the Front Hoop but
 not more than 50 mm below the top-most surface of the Front Hoop. See figure following
 F.5.9.6 above"
-F.6.3.5,"If the Front Hoop above the Upper Side Impact Structure leans rearwards by more than 10¬∞
+F.6.3.5,"If the Front Hoop above the Upper Side Impact Structure leans rearwards by more than 10°
 from the vertical, it must be supported by additional rearward Front Hoop Braces to a fully
 Triangulated structural node."
 F.6.3.6,"The Front Hoop Braces must be straight, without any bends"
@@ -627,11 +627,11 @@ b. Attach to the Main Hoop on both sides of the chassis"
 F.6.5.2,"Bent Shoulder Harness Mounting Bars must:
 a. Meet F.5.2.1 and F.5.2.2
 b. Have bracing members attached at the bend(s) and to the Main Hoop.
-‚Ä¢ Material for this Shoulder Harness Mounting Bar Bracing must meet F.3.2.1.l
-‚Ä¢ The included angle in side view between the Shoulder Harness Bar and the braces
-must be no less than 30¬∞."
+• Material for this Shoulder Harness Mounting Bar Bracing must meet F.3.2.1.l
+• The included angle in side view between the Shoulder Harness Bar and the braces
+must be no less than 30°."
 F.6.5.3,"The Shoulder Harness Mounting Bar should be loaded only by the Shoulder Harness
-The Head Restraint, Firewall, driver‚Äôs seat and light bodywork may attach to the mounting bar"
+The Head Restraint, Firewall, driver’s seat and light bodywork may attach to the mounting bar"
 F.6.6,Main Hoop Bracing Supports
 F.6.6.1,"Frame Members of the Main Hoop Bracing Support system must be constructed of closed
 section tubing meeting F.3.2.1.i"
@@ -660,7 +660,7 @@ a. Meet the materials requirements in F.4 Composite and Other Materials
 b. Use data from the laminate testing results as the basis for any strength or stiffness
 calculations"
 F.7.2,Front Bulkhead
-F.7.2.1,"When modeled as an ‚ÄúL‚Äù shaped section the EI of the Front Bulkhead about both vertical and
+F.7.2.1,"When modeled as an “L” shaped section the EI of the Front Bulkhead about both vertical and
 lateral axis must be equivalent to that of the tubes specified for the Front Bulkhead per F.6.1"
 F.7.2.2,"The length of the section perpendicular to the Front Bulkhead may be a maximum of 25 mm
 measured from the rearmost face of the Front Bulkhead"
@@ -737,13 +737,13 @@ bearing area, weld area and strength to carry the load specified in F.7.8.1 in a
 Data obtained from the laminate perimeter shear strength test (F.4.3.5) must prove sufficient
 shear area is provided."
 F.7.8.4,Proof that the brackets are sufficiently stiff must be documented in the SES.
-F.7.8.5,"Each attachment point requires no less than two 8 mm or 5/16‚Äù minimum diameter Critical
+F.7.8.5,"Each attachment point requires no less than two 8 mm or 5/16” minimum diameter Critical
 Fasteners, see T.8.2"
 F.7.8.6,"Each attachment point requires backing plates which meet one of:
-‚Ä¢ Steel with a minimum thickness of 2 mm
-‚Ä¢ Alternate materials if Equivalency is approved"
+• Steel with a minimum thickness of 2 mm
+• Alternate materials if Equivalency is approved"
 F.7.8.7,"The Front Hoop Bracing, Main Hoop Bracing and Main Hoop Bracing Supports may use only
-one 10 mm or 3/8‚Äù minimum diameter Critical Fasteners, see T.8.2 as an alternative to F.7.8.5
+one 10 mm or 3/8” minimum diameter Critical Fasteners, see T.8.2 as an alternative to F.7.8.5
 above if the bolt is on the centerline of the bracing tube to prevent loading the bolt in
 bending, similar to the figure below."
 F.7.8.8,"Each Roll Hoop or Accumulator Container to Chassis attachment point must contain one of the
@@ -781,21 +781,21 @@ Bulkhead tubes on all sides
 b. Bolted joints, bonding, laminating: the profile must align with or be more than the
 outside dimensions of the Front Bulkhead around the entire periphery"
 F.8.2.3,"Attachment of the Anti Intrusion Plate directly to the Front Bulkhead must be documented in
-the team‚Äôs SES submission. The accepted methods of attachment are:
+the team’s SES submission. The accepted methods of attachment are:
 a. Welding
-‚Ä¢ All weld lengths must be 25 mm or longer
-‚Ä¢ If interrupted, the weld/space ratio must be 1:1 or higher
+• All weld lengths must be 25 mm or longer
+• If interrupted, the weld/space ratio must be 1:1 or higher
 b. Bolted joints
-‚Ä¢ Using no less than eight 8 mm or 5/16‚Äù minimum diameter Critical Fasteners, T.8.2.
-‚Ä¢ The distance between any two bolt centers must be 50 mm minimum.
-‚Ä¢ Each bolt attachment must have pullout, tearout and bending capabilities of 15 kN
+• Using no less than eight 8 mm or 5/16” minimum diameter Critical Fasteners, T.8.2.
+• The distance between any two bolt centers must be 50 mm minimum.
+• Each bolt attachment must have pullout, tearout and bending capabilities of 15 kN
 c. Bonding
-‚Ä¢ The Front Bulkhead must have no openings
-‚Ä¢ The entire surface of the Anti Intrusion Plate must be bonded, with shear and peel
+• The Front Bulkhead must have no openings
+• The entire surface of the Anti Intrusion Plate must be bonded, with shear and peel
 strength higher than 120 kN
 d. Laminating
-‚Ä¢ The Anti Intrusion Plate must be in front of the outer skin of the Front Bulkhead
-‚Ä¢ The lamination must fully enclose the Anti Intrusion Plate and have shear capability
+• The Anti Intrusion Plate must be in front of the outer skin of the Front Bulkhead
+• The lamination must fully enclose the Anti Intrusion Plate and have shear capability
 higher than 120 kN"
 F.8.3,Composite Anti Intrusion Plate
 F.8.3.1,"Composite Anti Intrusion Plates:
@@ -805,15 +805,15 @@ minimum Impact Attenuator area"
 F.8.3.2,"Strength of the Composite Anti Intrusion Plate must be verified by one of the two methods:
 a. Physical testing of the AIP attached to a structurally representative section of the
 intended chassis
-‚Ä¢ The test fixture must have equivalent strength and stiffness to a baseline front
+• The test fixture must have equivalent strength and stiffness to a baseline front
 bulkhead or must be the same as the first 50 mm of the Chassis
-‚Ä¢ Test data is valid for only one Competition Year
+• Test data is valid for only one Competition Year
 b. Laminate material testing under F.4.3.2 and F.4.3.5 and calculations of 3 point bending
 and perimeter shear"
 F.8.4,Impact Attenuator - IA
 F.8.4.1,"Teams must do one of:
-‚Ä¢ Use an approved Standard Impact Attenuator from the FSAE Online Website
-‚Ä¢ Build and test a Custom Impact Attenuator of their own design F.8.8"
+• Use an approved Standard Impact Attenuator from the FSAE Online Website
+• Build and test a Custom Impact Attenuator of their own design F.8.8"
 F.8.4.2,"The Custom Impact Attenuator must meet the following:
 a. Length 200 mm or more, with its length oriented along the fore/aft axis of the Chassis.
 b. Minimum height 100 mm (perpendicular to the ground) and minimum width 200 mm
@@ -827,8 +827,8 @@ F.8.4.3,"If the outside profile of the Front Bulkhead is more than 400 mm x 350 
 the Standard Honeycomb Impact Attenuator, and then one of the two must be met:
 a. The Front Bulkhead must include an additional support that is a diagonal or X-brace that
 meets F.3.2.1.b or Equivalent (integral or attached) for Monocoque bulkheads F.2.3.1
-‚Ä¢ The structure must go across the entire Front Bulkhead opening on the diagonal
-‚Ä¢ Attachment points at both ends must carry a minimum load of 30 kN in any
+• The structure must go across the entire Front Bulkhead opening on the diagonal
+• Attachment points at both ends must carry a minimum load of 30 kN in any
 direction
 b. Physical testing per F.8.8.6 and F.8.8.7 must be performed to prove that the Anti
 Intrusion Plate does not permanently deflect more than 25 mm."
@@ -838,9 +838,9 @@ be documented in the SES submission"
 F.8.5.3,"If the Impact Attenuator is attached by bonding:
 a. Bonding must meet F.5.5
 b. The shear strength of the bond must be higher than:
-‚Ä¢ 95 kN for foam Impact Attenuators
-‚Ä¢ 38.5 kN for honeycomb Impact Attenuators
-‚Ä¢ The maximum compressive force for custom Impact Attenuators
+• 95 kN for foam Impact Attenuators
+• 38.5 kN for honeycomb Impact Attenuators
+• The maximum compressive force for custom Impact Attenuators
 c. The entire surface of a foam Impact Attenuator must be bonded
 d. Only the pre-crushed area of a honeycomb Impact Attenuator may be used for bond
 equivalence"
@@ -849,7 +849,7 @@ a. Welds may be continuous or interrupted
 b. If interrupted, the weld/space ratio must be 1:1 or higher
 c. All weld lengths must be more than 25 mm"
 F.8.5.5,"If the Impact Attenuator is attached by bolting:
-a. Must have no less than eight 8 mm or 5/16‚Äù minimum diameter Critical Fasteners, T.8.2
+a. Must have no less than eight 8 mm or 5/16” minimum diameter Critical Fasteners, T.8.2
 b. The distance between any two bolt centers must be 50 mm minimum
 c. Each bolt attachment must have pullout, tearout and bending capabilities of 15 kN
 d. Must be bolted directly to the Primary Structure"
@@ -886,9 +886,9 @@ items forward of the Anti Intrusion plate must not exceed the peak deceleration 
 F.8.8.2
 Ignore light bodywork, light nosecones, and outboard wheel assemblies"
 F.8.7.2,"The peak load for the type of Impact Attenuator:
-‚Ä¢ Standard Foam Impact Attenuator 95 kN
-‚Ä¢ Standard Honeycomb Impact Attenuator 60 kN
-‚Ä¢ Tested Impact Attenuator peak as measured"
+• Standard Foam Impact Attenuator 95 kN
+• Standard Honeycomb Impact Attenuator 60 kN
+• Tested Impact Attenuator peak as measured"
 F.8.7.3,Use the Test Method F.8.7.4 or the Calculation Method F.8.7.5 to prove the force requirement
 F.8.7.4,"Test Method
 Get the peak force from physical testing of the Impact Attenuator and any Non Crushable
@@ -906,8 +906,8 @@ These are not test requirements
 a. Decelerates the vehicle at a rate not exceeding 20 g average and 40 g peak
 b. Energy absorbed must be more than 7350 J
 When:
-‚Ä¢ Total mass of Vehicle is 300 kg
-‚Ä¢ Impact velocity is 7.0 m/s"
+• Total mass of Vehicle is 300 kg
+• Impact velocity is 7.0 m/s"
 F.8.8.3,"When using the Standard Impact Attenuator, the SES must meet the following:
 a. Test data will not be submitted
 b. All other requirements of this section must be included.
@@ -931,8 +931,8 @@ the intended vehicle attachment method.
 b. The Impact Attenuator Assembly must be attached to a structurally representative
 section of the intended chassis.
 The test fixture must have equivalent strength and stiffness to a baseline front bulkhead.
-A solid block of material in the shape of the front bulkhead is not ‚Äústructurally
-representative‚Äù.
+A solid block of material in the shape of the front bulkhead is not “structurally
+representative”.
 c. There must be 50 mm minimum clearance rearwards of the Anti Intrusion Plate to the
 test fixture.
 d. No part of the Anti Intrusion Plate may permanently deflect more than 25 mm beyond
@@ -946,14 +946,14 @@ b. Dynamic Testing (sled, pendulum, drop tower, etc.) of the Impact Attenuator m
 conducted at a dedicated test facility. This facility may be part of the University, but must
 be supervised by professional staff or the University faculty. Teams must not construct
 their own dynamic test apparatus.
-c. Quasi-Static Testing may be performed by teams using their University‚Äôs
+c. Quasi-Static Testing may be performed by teams using their University’s
 facilities/equipment, but teams are advised to exercise due care when performing all
 tests."
 F.8.8.8,"Test Analysis
 a. When using acceleration data from the dynamic test, the average deceleration must be
 calculated based on the raw unfiltered data.
 b. If peaks above the 40 g limit are present in the data, a Channel Filter Class (CFC) 60
-(100Hz) filter per SAE Recommended Practice J211 ‚ÄúInstrumentation for Impact Test‚Äù, or
+(100Hz) filter per SAE Recommended Practice J211 “Instrumentation for Impact Test”, or
 a 100 Hz, 3rd order, low pass Butterworth (-3dB at 100 Hz) filter may be applied."
 F.9,"FUEL SYSTEM (IC ONLY)
 Fuel System Location and Protection are subject to approval during SES review and Technical
@@ -976,9 +976,9 @@ weight and cell/segment position."
 F.10.1.3,"The Accumulator Containers and mounting systems are subject to approval during SES review
 and Technical Inspection"
 F.10.1.4,"If the Accumulator Container is not constructed from steel or aluminum, the material
-properties should be established at a temperature of 60¬∞C"
+properties should be established at a temperature of 60°C"
 F.10.1.5,"If adhesives are used for credited bonding, the bond performance should be established at a
-temperature of 60¬∞C"
+temperature of 60°C"
 F.10.2,External Structure
 F.10.2.1,"The Floor or Bottom must be made from one of the three:
 a. Steel 1.25 mm minimum thickness
@@ -990,17 +990,17 @@ b. Aluminum 2.3 mm minimum thickness
 c. Equivalent Alternate / Composite materials ( F.4.1, F.4.3 )"
 F.10.2.3,"The accepted methods of joining walls to walls and walls to floor are:
 a. Welding
-‚Ä¢ Welds may be continuous or interrupted.
-‚Ä¢ If interrupted, the weld/space ratio must be 1:1 or higher
-‚Ä¢ All weld lengths must be more than 25 mm
+• Welds may be continuous or interrupted.
+• If interrupted, the weld/space ratio must be 1:1 or higher
+• All weld lengths must be more than 25 mm
 b. Fasteners
 Combined strength of the fasteners must be Equivalent to the strength of the welded
 joint ( F.10.2.3.a above )
 c. Bonding
-‚Ä¢ Bonding must meet F.5.5
-‚Ä¢ Strength of the bonded joint must be Equivalent to the strength of the welded joint
+• Bonding must meet F.5.5
+• Strength of the bonded joint must be Equivalent to the strength of the welded joint
 ( F.10.2.3.a above )
-‚Ä¢ Bonds must run the entire length of the joint"
+• Bonds must run the entire length of the joint"
 F.10.2.4,"Covers and Lids must be attached with a minimum of one fastener F.10.2.3.b for each external
 vertical wall per section"
 F.10.3,Internal Structure
@@ -1008,8 +1008,8 @@ F.10.3.1,"Walls
 a. Construction of Internal walls (vertical or horizontal) separating cells and/or segments
 must meet F.10.2.2
 b. Internal vertical walls separating cells and/or segments:
-‚Ä¢ Must have minimum height of the full height of the Accumulator Segments
-‚Ä¢ Should extend to the lid above any segment
+• Must have minimum height of the full height of the Accumulator Segments
+• Should extend to the lid above any segment
 c. Fastened connections between the floor and any vertical wall of each Section must have
 minimum of two fasteners
 d. Removable horizontal interior walls must be fastened with a minimum of one fastener
@@ -1017,7 +1017,7 @@ for each external vertical wall per section
 Folding or bending plate material to create flanges or to eliminate joints between walls is
 recommended."
 F.10.3.2,"Sections
-a. Internal vertical walls divide the Accumulator Container into ‚ÄúSections‚Äù
+a. Internal vertical walls divide the Accumulator Container into “Sections”
 b. A maximum of 12 kg is allowed in any Section
 c. Fastened connections between vertical walls around Sections containing 8kg or less must
 have a minimum of two fasteners
@@ -1034,7 +1034,7 @@ b. This mounting system design must withstand the following accelerations:
 20 g in the vertical direction (up/down)
 c. Calculations and/or tests proving these requirements are met must be included in the
 SES.
-d. Any fasteners must be 6 mm or 1/4‚Äù minimum diameter"
+d. Any fasteners must be 6 mm or 1/4” minimum diameter"
 F.10.4,Holes and Openings
 F.10.4.1,"The Accumulator Container(s) exterior or interior walls may contain holes or openings, see
 EV.4.3.4"
@@ -1057,13 +1057,13 @@ plates that are one of the two:
 a. Steel with a thickness of 2 mm minimum
 b. Alternate materials Equivalent to 2 mm thickness steel"
 F.10.5.5,"Teams must justify the Accumulator Container attachment using one of the two methods:
-‚Ä¢ Corner Attachments and Analysis per F.10.5.6 and F.10.5.8
-‚Ä¢ Load Based Analysis per F.10.5.7 and F.10.5.8"
-F.10.5.6,"Accumulator Attachment ‚Äì Corner Attachments
+• Corner Attachments and Analysis per F.10.5.6 and F.10.5.8
+• Load Based Analysis per F.10.5.7 and F.10.5.8"
+F.10.5.6,"Accumulator Attachment – Corner Attachments
 a. Eight or more attachments are required for any configuration.
-‚Ä¢ One attachment for each corner of a rectangular structure of multiple Accumulator
+• One attachment for each corner of a rectangular structure of multiple Accumulator
 Segments
-‚Ä¢ More than the minimum number of fasteners may be required for non rectangular
+• More than the minimum number of fasteners may be required for non rectangular
 arrangements
 Examples: If not filled in with additional structure, an extruded L shape would require
 attachments at 10 convex corners (the corners at the inside of the L are not convex);
@@ -1072,7 +1072,7 @@ b. The mechanical connections at each corner must be 50 mm or less from the corn
 the Segment
 c. Each attachment point must be able to withstand a Test Load equal to 1/4 of total mass
 of the container accelerating at 40 g"
-F.10.5.8,"Accumulator Attachment ‚Äì All Types
+F.10.5.8,"Accumulator Attachment – All Types
 a. Every fastener must withstand the Test Load in pure shear, using the minor diameter if
 any threads are in shear
 b. Every Accumulator bracket, chassis bracket, or monocoque attachment point must
@@ -1089,8 +1089,8 @@ F.11.1.1,All Accumulator Containers must lie inside the Primary Structure (F.1.1
 F.11.1.2,"When used, Outboard Wheel Motors and their connections must meet EV.4.1.3"
 F.11.1.3,"Tractive System (EV.1.1) components including cables and wiring other than those in F.11.1.2
 above must be contained inside one or both of:
-‚Ä¢ The Rollover Protection Envelope F.1.13
-‚Ä¢ Structure meeting F.5.16 Component Protection"
+• The Rollover Protection Envelope F.1.13
+• Structure meeting F.5.16 Component Protection"
 F.11.2,Protection
 F.11.2.1,"Side Impact Protection
 a. All Accumulator Containers must be protected from side impact by structure Equivalent
@@ -1098,23 +1098,23 @@ to Side Impact Structure (F.6.4, F.7.5)
 The Accumulator Container must not be part of the Equivalent structure.
 b. Accumulator Container side impact protection must go to a minimum height that is the
 lower of the two:
-‚Ä¢ The height of the Upper Side Impact Structure
-‚Ä¢ The top of the Accumulator Container at that point
+• The height of the Upper Side Impact Structure
+• The top of the Accumulator Container at that point
 c. Tractive System components other than Accumulator Containers in a position below 350
 mm from the ground must be protected from side impact by structure that meets F.5.16
 Component Protection"
 F.11.2.2,"Rear Impact Protection
 a. All Accumulator Containers must be protected from rear impact:
-‚Ä¢ When the rear impact structure is 100 mm or less from an Accumulator Container,
+• When the rear impact structure is 100 mm or less from an Accumulator Container,
 the structure must be Equivalent to Side Impact Structure (F.6.4, F.7.5)
-‚Ä¢ When the rear impact structure is more than 100 mm from an Accumulator
+• When the rear impact structure is more than 100 mm from an Accumulator
 Container, the structure must meet F.5.16 Component Protection
-‚Ä¢ The Accumulator Container must not be part of the Equivalent structure.
+• The Accumulator Container must not be part of the Equivalent structure.
 b. The Rear Impact Protection for the Accumulator Container must:
-‚Ä¢ Go to the Upper Side Impact Height at minimum
-‚Ä¢ Have a structural and triangulated load path from the top of the Rear Impact
+• Go to the Upper Side Impact Height at minimum
+• Have a structural and triangulated load path from the top of the Rear Impact
 Protection to the Upper Side Impact Structure F.6.4, F.7.5 at the Main Hoop
-‚Ä¢ Have a structural and triangulated load path from the bottom of the Rear Impact
+• Have a structural and triangulated load path from the bottom of the Rear Impact
 Protection to the Lower Side Impact Structure F.6.4, F.7.5 at the Main Hoop
 c. Other Tractive System components in a position below 350 mm from the ground must be
 protected from rear impact by structure meeting F.5.16 Component Protection
@@ -1177,13 +1177,13 @@ center band of the template.
 For ease of use, the template may contain a full or partial slot in the shaded area shown on the
 figure"
 T.1.3,Driver Protection
-T.1.3.1,"The driver‚Äôs feet and legs must be completely contained inside the Major Structure of the
+T.1.3.1,"The driver’s feet and legs must be completely contained inside the Major Structure of the
 Chassis.
 mm
 05
 mm
 053"
-T.1.3.2,"While the driver‚Äôs feet are touching the pedals, in side and front views, any part of the driver‚Äôs
+T.1.3.2,"While the driver’s feet are touching the pedals, in side and front views, any part of the driver’s
 feet or legs must not extend above or outside of the Major Structure of the Chassis."
 T.1.3.3,"All moving suspension and steering components and other sharp edges inside the cockpit
 between the Front Hoop and a vertical plane 100 mm rearward of the pedals must be covered
@@ -1198,8 +1198,8 @@ a. An Accelerator Pedal must control the Powertrain output
 b. Pedal Travel is the percent of travel from a fully released position to a fully applied
 position. 0% is fully released and 100% is fully applied.
 c. The Accelerator Pedal must:
-‚Ä¢ Return to 0% Pedal Travel when not pushed
-‚Ä¢ Have a positive stop to prevent any cable, actuation system or sensor from damage
+• Return to 0% Pedal Travel when not pushed
+• Have a positive stop to prevent any cable, actuation system or sensor from damage
 or overstress"
 T.1.4.2,"Any mechanism in the throttle system that could become jammed must be covered.
 This is to prevent debris or interference and includes but is not limited to a gear mechanism"
@@ -1211,29 +1211,29 @@ b. Two longitudinal vertical planes parallel to the centerline of the chassis to
 uppermost member of the Side Impact Structure"
 T.1.4.4,"All Vehicle Controls must stay below the top-most point of the Front Hoop in any operational
 position"
-T.1.5,Driver‚Äôs Seat
-T.1.5.1,"The Driver‚Äôs Seat must be protected by one of the following:
-a. In side view, the lowest point of any Driver‚Äôs Seat must be no lower than the upper
+T.1.5,Driver’s Seat
+T.1.5.1,"The Driver’s Seat must be protected by one of the following:
+a. In side view, the lowest point of any Driver’s Seat must be no lower than the upper
 surface of the lowest structural tube or equivalent
 b. A longitudinal tube (or tubes) that meets the requirements for Side Impact tubing
 (F.3.2.1.e), passing underneath the lowest point of the Driver Seat."
 T.1.6,Thermal Protection
 T.1.6.1,"When seated in the normal driving position, sufficient heat insulation must be provided to
 ensure that the driver will not contact any metal or other materials which may become heated
-to a surface temperature above 60¬∞C."
-T.1.6.2,Insulation may be external to the cockpit or incorporated with the Driver‚Äôs Seat or Firewall.
+to a surface temperature above 60°C."
+T.1.6.2,Insulation may be external to the cockpit or incorporated with the Driver’s Seat or Firewall.
 T.1.6.3,"The design must address all three types of heat transfer between the heat source (examples
 include but are not limited to: exhaust pipe, coolant hose/tube, Accumulator Container) and
 the panel that the driver could contact (seat or floor):
 a. Conduction Isolation by one of the following:
-‚Ä¢ No direct contact between the heat source and the panel
-‚Ä¢ A heat resistant, conduction isolation material with a minimum thickness of 8 mm
+• No direct contact between the heat source and the panel
+• A heat resistant, conduction isolation material with a minimum thickness of 8 mm
 between the heat source and the panel
 b. Convection Isolation by a minimum air gap of 25 mm between the heat source and the
 panel
 c. Radiation Isolation by one of the following:
-‚Ä¢ A solid metal heat shield with a minimum thickness of 0.4 mm
-‚Ä¢ Reflective foil or tape when combined with conduction insulation"
+• A solid metal heat shield with a minimum thickness of 0.4 mm
+• Reflective foil or tape when combined with conduction insulation"
 T.1.7,Floor Closeout
 T.1.7.1,All vehicles must have a Floor Closeout to prevent track debris from entering
 T.1.7.2,The Floor Closeout must extend from the foot area to the firewall
@@ -1271,16 +1271,16 @@ a. Made of aluminum
 b. Grounded, refer to EV.6.7 Grounding"
 T.2,DRIVER ACCOMMODATION
 T.2.1,"Harness Definitions
-a. 5 Point Harness ‚Äì consists of two Lap Belts, two Shoulder Belts and one Anti-Submarine
+a. 5 Point Harness – consists of two Lap Belts, two Shoulder Belts and one Anti-Submarine
 Belt.
-b. 6 Point Harness ‚Äì consists of two Lap Belts, two Shoulder Belts and two leg or Anti-
+b. 6 Point Harness – consists of two Lap Belts, two Shoulder Belts and two leg or Anti-
 Submarine Belts.
-c. 7 Point Harness ‚Äì consists of two Lap Belts, two Shoulder Belts, two leg or Anti-
+c. 7 Point Harness – consists of two Lap Belts, two Shoulder Belts, two leg or Anti-
 Submarine Belts and a negative g or Z Belt.
-d. Upright Driving Position - with a seat back angled at 30¬∞ or less from the vertical as
+d. Upright Driving Position - with a seat back angled at 30° or less from the vertical as
 measured along the line joining the two 200 mm circles of the template of the 95th
 percentile male as defined in F.5.6.4 and positioned per F.5.6.5
-e. Reclined Driving Position - with a seat back angled at more than 30¬∞ from the vertical as
+e. Reclined Driving Position - with a seat back angled at more than 30° from the vertical as
 measured along the line joining the two 200 mm circles of the template of the 95th
 percentile male as defined in F.5.6.4 and positioned per F.5.6.5
 f. Chest to Groin Line - the straight line that in side view follows the line of the Shoulder
@@ -1296,32 +1296,32 @@ T.2.2.3,"The Harness must be in or before the year of expiration shown on the la
 expiring on or before Dec 31 of the calendar year of the competition are permitted."
 T.2.2.4,"The Harness must be in new or like new condition, with no signs of wear, cuts, chaffing or
 other issues"
-T.2.2.5,"All Harness hardware must be installed and threaded in accordance with manufacturer‚Äôs
+T.2.2.5,"All Harness hardware must be installed and threaded in accordance with manufacturer’s
 instructions"
 T.2.2.6,"All Harness hardware must be used as received from the manufacturer. No modification
 (including drilling, cutting, grinding, etc) is permitted."
 T.2.3,Harness Requirements
 T.2.3.1,"Vehicles with a Reclined Driving Position must have:
 a. A 6 Point Harness or a 7 Point Harness
-b. Anti-Submarine Belts with tilt lock adjusters (‚Äúquick adjusters‚Äù) OR two sets of Anti-
+b. Anti-Submarine Belts with tilt lock adjusters (“quick adjusters”) OR two sets of Anti-
 Submarine Belts installed."
-T.2.3.2,"All Lap Belts must incorporate a tilt lock adjuster (‚Äúquick adjuster‚Äù).
-Lap Belts with ‚Äúpull-up‚Äù adjusters are recommended over ‚Äúpull-down‚Äù adjusters."
+T.2.3.2,"All Lap Belts must incorporate a tilt lock adjuster (“quick adjuster”).
+Lap Belts with “pull-up” adjusters are recommended over “pull-down” adjusters."
 T.2.3.3,"The Shoulder Belts must be the over the shoulder type. Only separate shoulder straps are
-permitted. ‚ÄúY‚Äù type shoulder straps are not allowed. The ‚ÄúH‚Äù type configuration is allowed."
+permitted. “Y” type shoulder straps are not allowed. The “H” type configuration is allowed."
 T.2.4,"Belt, Strap and Harness Installation - General"
 T.2.4.1,"The Lap Belt, Shoulder Belts and Anti-Submarine Belt(s) must be securely mounted to the
 Primary Structure."
 T.2.4.2,Any guide or support for the belts must be material meeting F.3.2.1.j
 T.2.4.3,"Each tab or bracket to which any part of the Harness is attached must:
 a. Support a minimum load in pullout and tearout before failure of:
-‚Ä¢ If one belt is attached to the tab or bracket 15 kN
-‚Ä¢ If two belts are attached to the tab or bracket 30 kN
+• If one belt is attached to the tab or bracket 15 kN
+• If two belts are attached to the tab or bracket 30 kN
 b. Be 1.6 mm minimum thickness
 c. Not be in bending when the attached part of the Harness is put under load
 d. Not cause abrasion to the belt webbing"
 T.2.4.4,"Attachment of tabs or brackets must meet the following:
-a. Where brackets are fastened to the chassis, no less than two 6 mm or 1/4‚Äù minimum
+a. Where brackets are fastened to the chassis, no less than two 6 mm or 1/4” minimum
 diameter Critical Fasteners, see T.8.2 or stronger must be used to attach the bracket to
 the chassis.
 b. Where a single shear tab is welded to the chassis, the tab to tube welding must be on
@@ -1337,10 +1337,10 @@ the driver's body without touching any hole in the seat or any other intermediat
 T.2.5.3,"The seat must be rolled or grommeted where the Belts or Harness pass through a hole in the
 seat"
 T.2.5.4,"With an Upright Driving Position:
-a. The Lap Belt Side View Angle must be between 45¬∞ and 65¬∞ to the horizontal.
-b. The centerline of the Lap Belt at the seat bottom should be between 0 ‚Äì 75 mm forward
+a. The Lap Belt Side View Angle must be between 45° and 65° to the horizontal.
+b. The centerline of the Lap Belt at the seat bottom should be between 0 – 75 mm forward
 of the seat back to seat bottom junction."
-T.2.5.5,"With a Reclined Driving Position, the Lap Belt Side View Angle must be between 60¬∞ and 80¬∞ to
+T.2.5.5,"With a Reclined Driving Position, the Lap Belt Side View Angle must be between 60° and 80° to
 the horizontal."
 T.2.5.6,"The Lap Belts must attach by one of the two:
 a. Bolt or eyebolt through a welded tube monocoque attachment F.7.9
@@ -1349,11 +1349,11 @@ T.2.5.7,"In side view, the Lap Belt must be capable of pivoting freely by using 
 eye bolt attachment"
 T.2.5.8,"Any bolt used to attach a Lap Belt, directly to the chassis or to an intermediate bracket, is a
 Critical Fasteners, see T.8.2, with a minimum diameter that is the smaller of:
-‚Ä¢ The bolt diameter specified by the manufacturer
-‚Ä¢ 10 mm or 3/8‚Äù"
+• The bolt diameter specified by the manufacturer
+• 10 mm or 3/8”"
 T.2.6,Shoulder Harness
-T.2.6.1,"From the driver‚Äôs shoulders rearwards to the mounting point or structural guide, the Shoulder
-Belt Side View Angle must be between 10¬∞ above the horizontal and 20¬∞ below the horizontal."
+T.2.6.1,"From the driver’s shoulders rearwards to the mounting point or structural guide, the Shoulder
+Belt Side View Angle must be between 10° above the horizontal and 20° below the horizontal."
 T.2.6.2,"The Shoulder Belt Mount Spacing must be between 175 mm and 235 mm, center to center"
 T.2.6.3,"The Shoulder Belts must attach by one of the four:
 a. Wrap around the Shoulder Harness Mounting bar
@@ -1362,15 +1362,15 @@ c. Bolt or clip to a tab or bracket ( T.2.4.3 ) on the Shoulder Harness Mounting
 d. Wrap around physically tested hardware attached to a monocoque"
 T.2.6.4,"Any bolt used to attach a Shoulder Belt, directly to the chassis or to an intermediate bracket, is
 a Critical Fasteners, see T.8.2, with a minimum diameter that is the smaller of:
-‚Ä¢ The bolt diameter specified by the manufacturer
-‚Ä¢ 10 mm or 3/8‚Äù"
+• The bolt diameter specified by the manufacturer
+• 10 mm or 3/8”"
 T.2.7,Anti-Submarine Belt Mounting
 T.2.7.1,"The Anti-Submarine Belt of a 5 point harness must be mounted with the mounting point in
-line with or slightly forward of the driver‚Äôs Chest to Groin Line with an Anti-Submarine Belt
-Side View Angle no more than 20¬∞"
+line with or slightly forward of the driver’s Chest to Groin Line with an Anti-Submarine Belt
+Side View Angle no more than 20°"
 T.2.7.2,"The Anti-Submarine Belts of a 6 point harness must be mounted in one of the following ways:
 a. With the belts going vertically down from the groin, or with an Anti-Submarine Belt Side
-View Angle up to 20¬∞ rearwards. The Anti-Submarine Belt Mount Spacing should be
+View Angle up to 20° rearwards. The Anti-Submarine Belt Mount Spacing should be
 approximately 100 mm apart.
 b. With the Anti-Submarine Belt Mounting Points on the Primary Structure at or near the
 Lap Belt anchorages, the driver sitting on the Anti-Submarine Belts, and the belts coming
@@ -1379,7 +1379,7 @@ T.2.7.3,"Installation of all Anti-Submarine Belts must go in a straight line fro
 Mounting Point(s) without touching any hole in the seat or any other intermediate structure
 until they reach:
 a. The release buckle for the 5 Point Harness mounting per T.2.7.1
-b. The first point where the belt touches the driver‚Äôs body for the 6 Point Harness mounting
+b. The first point where the belt touches the driver’s body for the 6 Point Harness mounting
 per T.2.7.2"
 T.2.7.4,"The Anti Submarine Belts must attach by one of the three:
 a. Bolt or eyebolt through a welded tube insert or tested monocoque attachment F.7.9
@@ -1388,10 +1388,10 @@ c. Wrap around a tube meeting F.3.2.1.j that connects the Lower Side Impact tube
 The belt must not be able to touch the ground."
 T.2.7.5,"Any bolt used to attach an Anti-Submarine Belt, directly to the chassis or to an intermediate
 bracket, is a Critical Fasteners, see T.8.2, with a minimum diameter that is the smaller of:
-‚Ä¢ The bolt diameter specified by the manufacturer
-‚Ä¢ 8 mm or 5/16‚Äù"
+• The bolt diameter specified by the manufacturer
+• 8 mm or 5/16”"
 T.2.8,Head Restraint
-T.2.8.1,A Head Restraint must be provided to limit the rearward motion of the driver‚Äôs head.
+T.2.8.1,A Head Restraint must be provided to limit the rearward motion of the driver’s head.
 T.2.8.2,The Head Restraint must be vertical or near vertical in side view.
 T.2.8.3,"All material and structure of the Head Restraint must be inside one or both of:
 a. Rollover Protection Envelope F.1.13
@@ -1401,25 +1401,25 @@ minimum force of:
 a. 900 N applied in a rearward direction
 b. 300 N applied in a lateral or vertical direction"
 T.2.8.5,"For all drivers, the Head Restraint must be located and adjusted where:
-a. The Head Restraint is no more than 25 mm away from the back of the driver‚Äôs helmet,
+a. The Head Restraint is no more than 25 mm away from the back of the driver’s helmet,
 with the driver in their normal driving position.
-b. The contact point of the back of the driver‚Äôs helmet on the Head Restraint is no less than
+b. The contact point of the back of the driver’s helmet on the Head Restraint is no less than
 50 mm from any edge of the Head Restraint.
 Approximately 100 mm of longitudinal adjustment should accommodate range of specified
 drivers. Several Head Restraints with different thicknesses may be used"
 T.2.8.6,"The Head Restraint padding must:
 a. Be an energy absorbing material that is one of the two:
-‚Ä¢ Meets SFI Spec 45.2
-‚Ä¢ CONFOR CF45 (Blue) or CONFOR CF45M (Blue) FIA Technical List No 17
+• Meets SFI Spec 45.2
+• CONFOR CF45 (Blue) or CONFOR CF45M (Blue) FIA Technical List No 17
 b. Have a minimum thickness of 38 mm
 c. Have a minimum width of 15 cm
 d. Meet one of the following:
-‚Ä¢ minimum area of 235 cm2 AND minimum total height adjustment of 17.5 cm
-‚Ä¢ minimum height of 28 cm
+• minimum area of 235 cm2 AND minimum total height adjustment of 17.5 cm
+• minimum height of 28 cm
 e. Be covered with a thin, flexible material that contains a ~20 mm diameter inspection
 hole in a surface other than the front surface"
 T.2.9,"Roll Bar Padding
-Any portion of the roll bar, roll bar bracing or Chassis which might be contacted by the driver‚Äôs
+Any portion of the roll bar, roll bar bracing or Chassis which might be contacted by the driver’s
 helmet must be covered with a minimum thickness of 12 mm of padding which meets SFI Spec
 45.1 or FIA 8857-2001."
 T.3,BRAKES
@@ -1435,7 +1435,7 @@ minimum two wheels"
 T.3.1.4,"Each hydraulic circuit must have its own fluid reserve using separate reservoirs or an OEM
 style reservoir"
 T.3.1.5,A single brake acting on a limited slip differential may be used
-T.3.1.6,‚ÄúBrake by Wire‚Äù systems are prohibited
+T.3.1.6,“Brake by Wire” systems are prohibited
 T.3.1.7,Unarmored plastic brake lines are prohibited
 T.3.1.8,"The Brake System must be protected with scatter shields from failure of the drive train (see
 T.5.2) or from minor collisions."
@@ -1444,8 +1444,8 @@ must not project below the lower surface of the chassis"
 T.3.1.10,"Fasteners in the Brake System are Critical Fasteners, see T.8.2"
 T.3.2,"Brake Pedal, Pedal Box and Mounting"
 T.3.2.1,"The Brake Pedal must be one of:
-‚Ä¢ Fabricated from steel or aluminum
-‚Ä¢ Machined from steel, aluminum or titanium"
+• Fabricated from steel or aluminum
+• Machined from steel, aluminum or titanium"
 T.3.2.2,"The Brake Pedal and associated components design must withstand a minimum force of 2000
 N without any failure of the Brake System, pedal box, chassis mounting, or pedal adjustment
 This is not a design criteria. The Brake Pedal and Brake System may be tested by pressing the
@@ -1472,15 +1472,15 @@ T.3.4.1,The vehicle must have a Brake Light that is clearly visible from the rea
 T.3.4.2,"The Brake Light must be:
 a. Red in color on a Black background
 b. Rectangular, triangular or near round shape with a minimum shining surface of 15 cm2
-c. Mounted between the wheel centerline and driver‚Äôs shoulder level vertically and
+c. Mounted between the wheel centerline and driver’s shoulder level vertically and
 approximately on vehicle centerline laterally."
 T.3.4.3,"When LED lights are used without a diffuser, they must not be more than 20 mm apart."
 T.3.4.4,"If a single line of LEDs is used, the minimum length is 150 mm."
 T.4,ELECTRONIC THROTTLE COMPONENTS
 T.4.1,"Applicability
 This section T.4 applies only for:
-‚Ä¢ IC vehicles using Electronic Throttle Control (ETC) IC.4
-‚Ä¢ EV vehicles"
+• IC vehicles using Electronic Throttle Control (ETC) IC.4
+• EV vehicles"
 T.4.2,Accelerator Pedal Position Sensor - APPS
 T.4.2.1,"The Accelerator Pedal must actuate the APPS T.1.4.1
 a. Two springs must be used to return the foot pedal to 0% Pedal Travel
@@ -1489,9 +1489,9 @@ disconnected. The springs in the APPS are not acceptable pedal return springs."
 T.4.2.2,"Two or more electrically separate sensors must be used as APPSs. A single OEM type APPS
 with two completely separate sensors in a single housing is acceptable."
 T.4.2.3,"The APPS sensors must have different transfer functions which meet one of the two:
-‚Ä¢ Each sensor has different gradients and/or offsets to the other(s). The circuit must have
+• Each sensor has different gradients and/or offsets to the other(s). The circuit must have
 a pull-up or pull-down resistor to bring an open circuit input to 0% Pedal Travel
-‚Ä¢ An OEM pedal sensor with opposite slopes. Non OEM opposite slope sensor
+• An OEM pedal sensor with opposite slopes. Non OEM opposite slope sensor
 configurations require prior approval.
 The intent is that in a short circuit the APPSs will only agree at 0% Pedal Travel"
 T.4.2.4,"Implausibility is defined as a deviation of more than 10% Pedal Travel between the sensors or
@@ -1506,8 +1506,8 @@ T.4.2.6,"If three sensors are used, then in the case of an APPS failure, any two
 within 10% Pedal Travel may be used to define the (IC) throttle position / (EV) torque target
 and the 3rd APPS may be ignored."
 T.4.2.7,"Each APPS must be able to be checked during Technical Inspection by having one of the two:
-‚Ä¢ A separate detachable connector that enables a check of functions by unplugging it
-‚Ä¢ An inline switchable breakout box available that allows disconnection of each APPS
+• A separate detachable connector that enables a check of functions by unplugging it
+• An inline switchable breakout box available that allows disconnection of each APPS
 signal."
 T.4.2.8,"The APPS signals must be sent directly to a controller using an analogue signal or via a digital
 data transmission bus such as CAN or FlexRay."
@@ -1531,9 +1531,9 @@ T.4.3,Brake System Encoder - BSE
 T.4.3.1,"The vehicle must have a sensor or switch to measure brake pedal position or brake system
 pressure"
 T.4.3.2,"The BSE must be able to be checked during Technical Inspection by having one of:
-‚Ä¢ A separate detachable connector(s) for any BSE signal(s) to the main ECU without
+• A separate detachable connector(s) for any BSE signal(s) to the main ECU without
 affecting any other connections
-‚Ä¢ An inline switchable breakout box available that allows disconnection of each BSE
+• An inline switchable breakout box available that allows disconnection of each BSE
 signal(s) to the main ECU without affecting any other connections"
 T.4.3.3,"The BSE or switch signals must be sent directly to a controller using an analogue signal or via a
 digital data transmission bus such as CAN or FlexRay
@@ -1586,7 +1586,7 @@ b. Have a minimum width that is equal to 1.7 times the width of the belt.
 c. Be centered on the center line of the belt
 d. Stay aligned with the belt under all conditions"
 T.5.2.9,"Attachment Fasteners - All fasteners attaching scatter shields and guards must be 6 mm or
-1/4‚Äù minimum diameter Critical Fasteners, see T.8.2"
+1/4” minimum diameter Critical Fasteners, see T.8.2"
 T.5.2.10,"Finger Guards
 a. Must cover any drivetrain parts that spin while the vehicle is stationary with the engine
 running.
@@ -1597,25 +1597,25 @@ T.5.3,Motor Protection (EV Only)
 T.5.3.1,"The rotating part of the Motor(s) EV.4.1 must be contained in a structural casing.
 The motor casing may be the original motor casing, a team built motor casing or the original
 casing with additional material added to achieve the minimum required thickness.
-‚Ä¢ Minimum thickness for aluminum alloy 6061-T6: 3.0 mm
+• Minimum thickness for aluminum alloy 6061-T6: 3.0 mm
 If lower grade aluminum alloy is used, then the material must be thicker to provide an
 equivalent strength.
-‚Ä¢ Minimum thickness for steel: 2.0 mm"
+• Minimum thickness for steel: 2.0 mm"
 T.5.3.2,"A Scatter Shield must be included around the Motor(s) when one or both:
-‚Ä¢ The motor casing rotates around the stator
-‚Ä¢ The motor case is perforated"
+• The motor casing rotates around the stator
+• The motor case is perforated"
 T.5.3.3,"The Motor Scatter Shield must be:
-‚Ä¢ Made from aluminum alloy 6061-T6 or steel
-‚Ä¢ Minimum thickness: 1.0 mm"
+• Made from aluminum alloy 6061-T6 or steel
+• Minimum thickness: 1.0 mm"
 T.5.4,Coolant Fluid
 T.5.4.1,Water cooled engines must use only plain water with no additives of any kind
 T.5.4.2,"Liquid coolant for electric motors, Accumulators or HV electronics must be one of:
-‚Ä¢ plain water with no additives
-‚Ä¢ oil"
+• plain water with no additives
+• oil"
 T.5.4.3,(EV only) Liquid coolant must not directly touch the cells in the Accumulator
 T.5.5,System Sealing
 T.5.5.1,Any cooling or lubrication system must be sealed to prevent leakage
-T.5.5.2,The vehicle must be capable of being tilted to a 45¬∞ angle without leaking fluid of any type.
+T.5.5.2,The vehicle must be capable of being tilted to a 45° angle without leaking fluid of any type.
 T.5.5.3,Flammable liquid and vapors or other leaks must not collect or contact the driver
 T.5.5.4,"Two holes of minimum diameter 25 mm each must be provided in the structure or belly pan at
 the locations:
@@ -1631,7 +1631,7 @@ T.5.6.1,"The vehicle must have separate containers (catch cans) to retain fluids
 the powertrain systems."
 T.5.6.2,"Catch cans must be:
 a. Capable of containing boiling water without deformation
-b. Located rearwards of the Firewall below the driver‚Äôs shoulder level
+b. Located rearwards of the Firewall below the driver’s shoulder level
 c. Positively retained, using no tie wraps or tape"
 T.5.6.3,"Catch cans for the engine coolant system and engine lubrication system must have a minimum
 capacity of 10% of the fluid being contained or 0.9 liter, whichever is higher"
@@ -1653,16 +1653,16 @@ cylinder/tank"
 T.6.1.4,"Lines and Fittings - The gas lines and fittings must be appropriate for the maximum possible
 operating pressure of the system."
 T.6.1.5,Insulation - The gas cylinder/tank must be insulated from any heat sources
-T.6.1.6,"Cylinder Material ‚Äì gas cylinders/tanks in a position 150 mm or less from an exhaust system
+T.6.1.6,"Cylinder Material – gas cylinders/tanks in a position 150 mm or less from an exhaust system
 must meet one of the two:
-‚Ä¢ Made from metal
-‚Ä¢ Meet the thermal protection requirements of T.1.6.3"
+• Made from metal
+• Meet the thermal protection requirements of T.1.6.3"
 T.6.1.7,"Cylinder Location - The gas cylinder/tank and the pressure regulator must be:
 a. Securely mounted inside the Chassis
 b. Located outside of the Cockpit
 c. In a position below the height of the Shoulder Belt Mount T.2.6
 d. Aligned so the axis of the gas cylinder/tank does not point at the driver"
-T.6.1.8,"Protection ‚Äì The gas cylinder/tank and lines must be protected from rollover, collision from
+T.6.1.8,"Protection – The gas cylinder/tank and lines must be protected from rollover, collision from
 any direction, or damage resulting from the failure of rotating equipment"
 T.6.1.9,The driver must be protected from failure of the cylinder/tank and regulator
 T.6.2,"High Pressure Hydraulic Pumps and Lines
@@ -1695,7 +1695,7 @@ T.7.2.3,"Bodywork must not contain openings into the cockpit from the front of t
 Main Hoop or Firewall. The cockpit opening and minimal openings around the front
 suspension components are allowed."
 T.7.2.4,"All forward facing edges on the Bodywork that could contact people, including the nose, must
-have forward facing radii minimum 38 mm. This minimum radius must extend 45¬∞ or more
+have forward facing radii minimum 38 mm. This minimum radius must extend 45° or more
 relative to the forward direction, along the top, sides and bottom of all affected edges."
 T.7.3,Measurement
 T.7.3.1,"All Aerodynamic Device limitations are measured:
@@ -1707,8 +1707,8 @@ A transverse vertical plane through the rearmost portion of the front face of th
 restraint support, excluding any padding, set (if adjustable) in its fully rearward position"
 T.7.3.3,"Rear Aerodynamic Zone
 The volume that is:
-‚Ä¢ Rearward of the Head Restraint Plane
-‚Ä¢ Inboard of two vertical planes parallel to the centerline of the chassis touching the inside
+• Rearward of the Head Restraint Plane
+• Inboard of two vertical planes parallel to the centerline of the chassis touching the inside
 of the rear tires at the height of the hub centerline"
 T.7.4,"Location
 Any part of any Aerodynamic Device or Bodywork must meet V.1.1 and V.1.4.1"
@@ -1735,8 +1735,8 @@ c. Forward of the centerline of the front wheel axles and outboard of two vertic
 parallel to the centerline of the chassis touching the inside of the front tires at the height
 of the hubs must be no higher than 250 mm above the ground"
 T.7.7.2,"Bodywork height is not restricted when the Bodywork is located:
-‚Ä¢ Between the transverse vertical planes positioned at the front and rear axle centerlines
-‚Ä¢ Inside two vertical fore and aft planes 400 mm outboard from the centerline on each
+• Between the transverse vertical planes positioned at the front and rear axle centerlines
+• Inside two vertical fore and aft planes 400 mm outboard from the centerline on each
 side of the vehicle"
 T.8,FASTENERS
 T.8.1,"Critical Fasteners
@@ -1749,8 +1749,8 @@ c. AN/MS Specifications
 d. Equivalent to or better than above, as approved by a Rules Question or at Technical
 Inspection"
 T.8.2.2,"All threaded Critical Fasteners must be one of the following:
-‚Ä¢ Hex head
-‚Ä¢ Hexagonal recessed drive (Socket Head Cap Screws or Allen screws/bolts)"
+• Hex head
+• Hexagonal recessed drive (Socket Head Cap Screws or Allen screws/bolts)"
 T.8.2.3,"All Critical Fasteners must be secured from unintentional loosening with Positive Locking
 Mechanisms see T.8.3"
 T.8.2.4,A minimum of two full threads must project from any lock nut.
@@ -1784,15 +1784,15 @@ completely loose"
 T.8.3.2,"Examples of acceptable Positive Locking Mechanisms include, but are not limited to:
 a. Correctly installed safety wiring
 b. Cotter pins
-c. Nylon lock nuts (where temperature does not exceed 80¬∞C)
+c. Nylon lock nuts (where temperature does not exceed 80°C)
 d. Prevailing torque lock nuts
-Lock washers, bolts with nylon patches and thread locking compounds (Loctite¬Æ), DO NOT
+Lock washers, bolts with nylon patches and thread locking compounds (Loctite®), DO NOT
 meet the positive locking requirement."
 T.8.4,"Requirements for All Fasteners
 Adjustable tie rod ends must be constrained with a jam nut to prevent loosening."
 T.9,ELECTRICAL EQUIPMENT
 T.9.1,Definitions
-T.9.1.1,"High Voltage ‚Äì HV
+T.9.1.1,"High Voltage – HV
 Any voltage more than 60 V DC or 25 V AC RMS"
 T.9.1.2,"Low Voltage - LV
 Any voltage less than and including 60 V DC or 25 V AC RMS"
@@ -1815,7 +1815,7 @@ the pack and supporting electronics meet all rules requirements"
 T.9.3,"Master Switches
 Each Master Switch ( IC.9.3 / EV.7.9 ) must meet the following:"
 T.9.3.1,"Location
-a. On the driver‚Äôs right hand side of the vehicle
+a. On the driver’s right hand side of the vehicle
 b. In proximity to the Main Hoop
 c. At the driver's shoulder height
 d. Able to be easily actuated from outside the vehicle"
@@ -1829,8 +1829,8 @@ f. (EV Only) Operated with a red removable key that must only be removable in th
 electrically open position"
 T.9.4,Inertia Switch
 T.9.4.1,"Inertia Switch Requirement
-‚Ä¢ (EV) Must have an Inertia Switch
-‚Ä¢ (IC) Should have an Inertia Switch"
+• (EV) Must have an Inertia Switch
+• (IC) Should have an Inertia Switch"
 T.9.4.2,"The Inertia Switch must be:
 a. A Sensata Resettable Crash Sensor or equivalent
 b. Mechanically and rigidly attached to the vehicle
@@ -1869,8 +1869,8 @@ The SAE International Logo must be displayed on the front and/or both sides of t
 a prominent location."
 VE.1.4,"Inspection Sticker
 The vehicle must have space for the Inspection Sticker(s) IN.13.2 that is:
-‚Ä¢ A clear and unobstructed area, minimum 25 cm wide x 20 cm high
-‚Ä¢ Located on the upper front surface of the nose along the vehicle centerline"
+• A clear and unobstructed area, minimum 25 cm wide x 20 cm high
+• Located on the upper front surface of the nose along the vehicle centerline"
 VE.1.5,Transponder / RFID Tag
 VE.1.5.1,"Each vehicle must have a functional, properly mounted transponder and/or RFID tag of the
 specified type(s)"
@@ -1885,7 +1885,7 @@ b. Visible to a person standing 1 m behind the vehicle
 c. Color: Orange
 d. Oriented laterally and perpendicular to the centerline of the vehicle
 e. Made from round, 25 - 30 mm OD aluminum or steel tube
-f. Exposed around the lower 180¬∞ of its circumference over a minimum length of 280 mm
+f. Exposed around the lower 180° of its circumference over a minimum length of 280 mm
 g. Access from the rear of the tube must be unobstructed for 300 mm or more of its length
 h. The height of the tube must allow 75 mm minimum clearance from the bottom of the
 tube to the ground
@@ -1899,7 +1899,7 @@ b. Is capable of slowing and stopping the forward motion of the vehicle and pull
 rearwards"
 VE.2.3,Fire Extinguisher
 VE.2.3.1,"Each team must have two or more fire extinguishers.
-a. One extinguisher must readily be available in the team‚Äôs paddock area
+a. One extinguisher must readily be available in the team’s paddock area
 b. One extinguisher must accompany the vehicle when moved using the push bar
 A commercially available on board fire system may be used instead of the fire
 extinguisher that accompanies the vehicle"
@@ -1910,14 +1910,14 @@ b. Working Medium: Dry chemical/dry powder. Aqueous Film Forming Foam (AFFF) and
 Halon extinguishers and systems are prohibited.
 c. Equipped with a manufacturer installed pressure/charge gauge.
 d. Minimum acceptable ratings:
-‚Ä¢ USA, Canada & Brazil: 10BC or 1A 10BC
-‚Ä¢ Europe: 34B or 5A 34B
-‚Ä¢ Australia: 20BE or 1A 10BE
+• USA, Canada & Brazil: 10BC or 1A 10BC
+• Europe: 34B or 5A 34B
+• Australia: 20BE or 1A 10BE
 e. Extinguishers of larger capacity (higher numerical ratings) are acceptable."
 VE.2.4,"Electrical Equipment (EV Only)
 The following items must accompany the vehicle at all times:
-‚Ä¢ Two pairs of High Voltage insulating gloves
-‚Ä¢ A multimeter"
+• Two pairs of High Voltage insulating gloves
+• A multimeter"
 VE.2.5,Camera Mounts
 VE.2.5.1,The mounts for video/photographic cameras must be of a safe and secure design.
 VE.2.5.2,All camera installations must be approved at Technical Inspection.
@@ -1936,7 +1936,7 @@ c. May be inspected at any time"
 VE.3.1.2,"Flame Resistant Material
 For this section some, but not all, of the approved materials are: Carbon X, Indura, Nomex,
 Polybenzimidazole (common name PBI) and Proban."
-VE.3.1.3,"Synthetic Material ‚Äì Prohibited
+VE.3.1.3,"Synthetic Material – Prohibited
 Shirts, socks or other undergarments (not to be confused with flame resistant underwear)
 made from nylon or any other synthetic material which could melt when exposed to high heat
 are prohibited."
@@ -1958,33 +1958,33 @@ VE.3.3.1,"Driver Suit
 A one piece suit, made from a minimum of two layers of Flame Resistant Material that covers
 the body from the neck to the ankles and the wrists.
 Each suit must meet one or more of the following standards and be labeled as such:
-‚Ä¢ SFI 3.2A/5 (or higher ex: /10, /15, /20)
-‚Ä¢ SFI 3.4/5 (or higher ex: /10, /15, /20)
-‚Ä¢ FIA Standard 1986
-‚Ä¢ FIA Standard 8856-2000
-‚Ä¢ FIA Standard 8856-2018"
+• SFI 3.2A/5 (or higher ex: /10, /15, /20)
+• SFI 3.4/5 (or higher ex: /10, /15, /20)
+• FIA Standard 1986
+• FIA Standard 8856-2000
+• FIA Standard 8856-2018"
 VE.3.3.2,"Underclothing
 All competitors should wear fire retardant underwear (long pants and long sleeve shirt) under
 their approved Driver Suit."
 VE.3.3.3,"Balaclava
-A Balaclava (head sock) which covers the driver‚Äôs head, hair and neck, made from Flame
+A Balaclava (head sock) which covers the driver’s head, hair and neck, made from Flame
 Resistant Material"
 VE.3.3.4,"Socks
-Socks made from Flame Resistant Material that cover the bare skin between the driver‚Äôs suit
+Socks made from Flame Resistant Material that cover the bare skin between the driver’s suit
 and the Shoes."
 VE.3.3.5,"Shoes
 Shoes or boots made from Flame Resistant Material that meet an approved standard and
 labeled as such:
-‚Ä¢ SFI Spec 3.3
-‚Ä¢ FIA Standard 8856-2000
-‚Ä¢ FIA Standard 8856-2018"
+• SFI Spec 3.3
+• FIA Standard 8856-2000
+• FIA Standard 8856-2018"
 VE.3.3.6,"Gloves
 Gloves made from Flame Resistant Material.
 Gloves of all leather construction or fire retardant gloves constructed using leather palms with
 no insulating Flame Resistant Material underneath are not acceptable."
 VE.3.3.7,"Arm Restraints
 a. Arm restraints must be worn in a way that the driver can release them and exit the
-vehicle unassisted regardless of the vehicle‚Äôs position.
+vehicle unassisted regardless of the vehicle’s position.
 b. Arm restraints must be commercially manufactured. Arm restraints certified to SFI Spec
 3.3 and labeled as such meet this requirement."
 IC.1,GENERAL REQUIREMENTS
@@ -2010,8 +2010,8 @@ shielded from side or rear impacts by structure built per F.6.4 / F.7.5 as appli
 IC.2.3,Intake System Mounting
 IC.2.3.1,"The intake manifold must be securely attached to the engine block or cylinder head with
 brackets and mechanical fasteners.
-‚Ä¢ Hose clamps, plastic ties, or safety wires do not meet this requirement.
-‚Ä¢ The use of rubber bushings or hose is acceptable for creating and sealing air passages,
+• Hose clamps, plastic ties, or safety wires do not meet this requirement.
+• The use of rubber bushings or hose is acceptable for creating and sealing air passages,
 but is not a structural attachment."
 IC.2.3.2,"Threaded fasteners used to secure and/or seal the intake manifold must have a Positive
 Locking Mechanism, see T.8.3."
@@ -2060,12 +2060,12 @@ IC.3.2,"Throttle Actuation Method
 The throttle may be actuated:
 a. Mechanically by a cable or rod system IC.3.3
 b. By Electronic Throttle Control IC.4"
-IC.3.3,Throttle Actuation ‚Äì Mechanical
+IC.3.3,Throttle Actuation – Mechanical
 IC.3.3.1,"The throttle cable or rod must:
 a. Have smooth operation
 b. Have no possibility of binding or sticking
 c. Be minimum 50 mm from any exhaust system component and out of the exhaust stream
-d. Be protected from being bent or kinked by the driver‚Äôs foot when it is operated by the
+d. Be protected from being bent or kinked by the driver’s foot when it is operated by the
 driver or when the driver enters or exits the vehicle"
 IC.3.3.2,"The throttle actuation system must use two or more return springs located at the throttle
 body.
@@ -2092,14 +2092,14 @@ IC.4.2,Commercial ETC System
 IC.4.2.1,"An ETC system that is commercially available, but does not comply with the regulations, may
 be used, if approved prior to the event."
 IC.4.2.2,"To obtain approval, submit a Rules Question which includes:
-‚Ä¢ Which ETC system the team is seeking approval to use.
-‚Ä¢ The specific ETC rule(s) that the commercial system deviates from.
-‚Ä¢ Sufficient technical details of these deviations to determine the acceptability of the
+• Which ETC system the team is seeking approval to use.
+• The specific ETC rule(s) that the commercial system deviates from.
+• Sufficient technical details of these deviations to determine the acceptability of the
 commercial system."
 IC.4.3,Documentation
 IC.4.3.1,"The ETC Notice of Intent:
-‚Ä¢ Must be submitted to inform the organizer of the intent to run ETC
-‚Ä¢ May be used to screen which teams are allowed to use ETC"
+• Must be submitted to inform the organizer of the intent to run ETC
+• May be used to screen which teams are allowed to use ETC"
 IC.4.3.2,The ETC Systems Form must be submitted in order to use ETC
 IC.4.3.3,"Submit the ETC Notice of Intent and ETC Systems Form as given in section DR - Document
 Requirements"
@@ -2175,8 +2175,8 @@ IC.4.8.2,"Signals from any sensors must be sent directly to the BSPD. Outputs fr
 not be used in place of the raw sensor signals."
 IC.4.8.3,"The BSPD must monitor for the following conditions:
 a. Both of the following for more than one second:
-‚Ä¢ Demand for Hard Braking IC.4.6
-‚Ä¢ Throttle more than 10% open IC.4.4
+• Demand for Hard Braking IC.4.6
+• Throttle more than 10% open IC.4.4
 b. Loss of signal from the braking sensor(s) for more than 100 msec
 c. Loss of signal from the throttle sensor(s) for more than 100 msec
 d. Removal of power from the BSPD circuit"
@@ -2227,7 +2227,7 @@ a. Minimum 35 mm inner diameter at any point between the Fuel Tank and the Fuel 
 cap"
 IC.5.4.2,"The portion of the Fuel Filler Neck nearest to the Fuel Filler cap must be:
 a. Minimum 125 mm vertical height above the top level of the Fuel Tank
-b. Angled no more than 30¬∞ from the vertical"
+b. Angled no more than 30° from the vertical"
 IC.5.4.3,"The Fuel Filler Neck must be accompanied by a clear fuel resistant sight tube for reading the
 fuel level which must be:
 a. Visible vertical height: 125 mm minimum
@@ -2265,7 +2265,7 @@ IC.5.7.4,"Any rubber fuel line or hose used must meet the following:
 a. The components over which the hose is clamped must have annular bulb or barbed
 fittings to retain the hose
 b. Clamps specifically designed for fuel lines must be used.
-These clamps have three features: a full 360¬∞ wrap, a nut and bolt system for tightening,
+These clamps have three features: a full 360° wrap, a nut and bolt system for tightening,
 and rolled edges to prevent the clamp cutting into the hose"
 IC.5.7.5,Worm gear type hose clamps must not be used on any fuel line.
 IC.6,FUEL INJECTION
@@ -2273,8 +2273,8 @@ IC.6.1,"Low Pressure Injection (LPI)
 Low Pressure fuel injection systems are those functioning at a pressure below 10 Bar. Most
 Port Fuel Injected (PFI) fuel systems are low pressure."
 IC.6.1.1,"Any Low Pressure flexible fuel lines must be one of:
-‚Ä¢ Metal braided hose with threaded fittings (crimped on or reusable)
-‚Ä¢ Reinforced rubber hose with some form of abrasion resistant protection"
+• Metal braided hose with threaded fittings (crimped on or reusable)
+• Reinforced rubber hose with some form of abrasion resistant protection"
 IC.6.1.2,"Fuel rail and mounting requirements:
 a. Unmodified OEM Fuel Rails are acceptable, regardless of material.
 b. Non OEM fuel rails made from plastic, carbon fiber or rapid prototyping flammable
@@ -2289,7 +2289,7 @@ a. High Pressure fuel systems - those functioning at 10 Bar pressure or above
 b. Direct Injection fuel systems - where the injection occurs directly into the combustion
 system
 Direct Injection systems often utilize a low pressure electric fuel pump and high pressure
-mechanical ‚Äúboost‚Äù pump driven off the engine.
+mechanical “boost” pump driven off the engine.
 c. High Pressure Fuel Lines - those between the boost pump and injectors
 d. Low Pressure Fuel Lines - from the electric supply pump to the boost pump"
 IC.6.2.2,"All High Pressure Fuel Lines must:
@@ -2300,8 +2300,8 @@ b. Not incorporate elastomeric seals
 c. Be rigidly connected every 100 mm by mechanical fasteners to structural engine
 components such as cylinder heads or block"
 IC.6.2.3,"Any Low Pressure flexible Fuel Lines must be one of:
-‚Ä¢ Metal braided hose with threaded fittings (crimped on or reusable)
-‚Ä¢ Reinforced rubber hose with some form of abrasion resistant protection"
+• Metal braided hose with threaded fittings (crimped on or reusable)
+• Reinforced rubber hose with some form of abrasion resistant protection"
 IC.6.2.4,"Fuel rail mounting requirements:
 a. The fuel rail must be securely attached to the engine block or cylinder head with brackets
 and mechanical fasteners. Hose clamps, plastic ties, or safety wires do not meet this
@@ -2310,9 +2310,9 @@ b. The fastening method must be sufficient to hold the fuel rail in place with t
 regulated pressure acting on the injector internals and neglecting any assistance from
 cylinder pressure acting on the injector tip.
 c. Threaded fasteners used to secure the fuel rail are Critical Fasteners, see T.8.2"
-IC.6.2.5,"High Pressure Fuel Pump ‚Äì must be rigidly mounted to structural engine components such as
+IC.6.2.5,"High Pressure Fuel Pump – must be rigidly mounted to structural engine components such as
 the cylinder head or engine block."
-IC.6.2.6,"Pressure Regulator ‚Äì must be fitted between the High Pressure and Low Pressure sides of the
+IC.6.2.6,"Pressure Regulator – must be fitted between the High Pressure and Low Pressure sides of the
 fuel system in parallel with the DI boost pump. The external regulator must be used even if
 the DI boost pump comes equipped with an internal regulator."
 IC.7,EXHAUST AND NOISE CONTROL
@@ -2351,9 +2351,9 @@ Refer to T.9.2 for specific requirements of Low Voltage batteries"
 IC.8.3,Voltage Limit
 IC.8.3.1,Voltage between any two electrical connections must be Low Voltage T.9.1.2
 IC.8.3.2,"This voltage limit does not apply to the following systems:
-‚Ä¢ High Voltage systems for ignition
-‚Ä¢ High Voltage systems for injectors
-‚Ä¢ Voltages internal to OEM charging systems designed for <60 V DC output."
+• High Voltage systems for ignition
+• High Voltage systems for injectors
+• Voltages internal to OEM charging systems designed for <60 V DC output."
 IC.9,SHUTDOWN SYSTEM
 IC.9.1,Shutdown Circuit
 IC.9.1.1,"The Shutdown Circuit consists of the following components:
@@ -2373,9 +2373,9 @@ listed in IC.9.1.1"
 IC.9.2.2,"When the Shutdown Circuit Opens, it must:
 a. Stop the engine
 b. Disconnect power to the:
-‚Ä¢ Fuel Pump(s)
-‚Ä¢ Ignition
-‚Ä¢ (ETC only) Electronic Throttle IC.4.1.1"
+• Fuel Pump(s)
+• Ignition
+• (ETC only) Electronic Throttle IC.4.1.1"
 IC.9.3,Primary Master Switch
 IC.9.3.1,Configuration and Location - The Primary Master Switch must meet T.9.3
 IC.9.3.2,"Function - the Primary Master Switch must:
@@ -2387,13 +2387,13 @@ IC.9.4,Cockpit Main Switch
 IC.9.4.1,"Configuration - The Cockpit Main Switch must:
 a. Be a push-pull or push-rotate emergency switch (pushing the button is the OFF position)
 b. Have a diameter of 24 mm minimum"
-IC.9.4.2,"Location ‚Äì The Cockpit Main Switch must be:
+IC.9.4.2,"Location – The Cockpit Main Switch must be:
 a. In easy reach of the driver when in a normal driving position wearing Harness
 b. Adjacent to the Steering Wheel
 c. Unobstructed by the Steering Wheel or any other part of the vehicle"
 IC.9.4.3,Function - the Cockpit Main Switch may act through a relay
 EV.1,DEFINITIONS
-EV.1.1,"Tractive System ‚Äì TS
+EV.1.1,"Tractive System – TS
 Every part electrically connected to the Motor(s) and/or Accumulator(s)"
 EV.1.2,"Grounded Low Voltage - GLV
 Every electrical part that is not part of the Tractive System"
@@ -2434,9 +2434,9 @@ EV.3.4.1,"A Violation occurs when one or two of these exist:
 a. Use of more than the specified maximum power EV.3.3.1
 b. Exceed the maximum voltage EV.3.3.2
 for one or both conditions:
-‚Ä¢ Continuously for 100 ms or more
-‚Ä¢ After a moving average over 500 ms is applied"
-EV.3.4.2,"Missing Energy Meter data due to the team‚Äôs fault, tampering, or attempting to tamper with
+• Continuously for 100 ms or more
+• After a moving average over 500 ms is applied"
+EV.3.4.2,"Missing Energy Meter data due to the team’s fault, tampering, or attempting to tamper with
 the Energy Meter will be treated as a Violation."
 EV.3.4.3,"Tampering, or attempting to tamper with the Energy Meter or its data may result in
 Disqualification (DQ)"
@@ -2446,7 +2446,7 @@ a. Each run with one or more Violations will Disqualify (DQ) the best run of the
 b. Multiple runs with Violations will DQ multiple runs, ex two runs with Violations DQ the
 two best runs"
 EV.3.5.2,"Violations during the Endurance event:
-‚Ä¢ Each Violation: 60 second penalty D.14.2.1"
+• Each Violation: 60 second penalty D.14.2.1"
 EV.3.5.3,"Repeated Violations may void Inspection Approval or receive additional penalties up to and
 including Disqualification, subject to official discretion."
 EV.3.5.4,"The respective data of each run in which a team has a Violation and the resulting decision may
@@ -2487,8 +2487,8 @@ EV.4.3.8,"Each Accumulator Container must be labelled with the:
 a. School Name and Vehicle Number
 b. Symbol specified in ISO 7010-W012 (triangle with black lightning bolt on yellow
 background) with triangle side length of 100 mm minimum
-c. Text ‚ÄúAlways Energized‚Äù
-d. Text ‚ÄúHigh Voltage‚Äù if the voltage meets T.9.1.1"
+c. Text “Always Energized”
+d. Text “High Voltage” if the voltage meets T.9.1.1"
 EV.4.4,Grounded Low Voltage System
 EV.4.4.1,"The GLV System must be:
 a. A Low Voltage system that is Grounded to the Chassis
@@ -2499,7 +2499,7 @@ a. Connected to GLV System Ground
 b. Next to the TSMP EV.5.8
 c. 4 mm shrouded banana jack
 d. Color: Black
-e. Marked ‚ÄúGND‚Äù"
+e. Marked “GND”"
 EV.4.4.4,Low Voltage Batteries must meet T.9.2
 EV.4.5,"Accelerator Pedal Position Sensor - APPS
 Refer to T.4.2 for specific requirements of the APPS"
@@ -2507,8 +2507,8 @@ EV.4.6,"Brake System Encoder - BSE
 Refer to T.4.3 for specific requirements of the BSE"
 EV.4.7,APPS / Brake Pedal Plausibility Check
 EV.4.7.1,"Must monitor for the two conditions:
-‚Ä¢ The mechanical brakes are engaged EV.4.6, T.3.2.4
-‚Ä¢ The APPS signals more than 25% Pedal Travel EV.4.5"
+• The mechanical brakes are engaged EV.4.6, T.3.2.4
+• The APPS signals more than 25% Pedal Travel EV.4.5"
 EV.4.7.2,"If the two conditions in EV.4.7.1 occur at the same time:
 a. Power to the Motor(s) must be immediately and completely shut down
 b. The Motor shut down must stay active until the APPS signals less than 5% Pedal Travel,
@@ -2521,7 +2521,7 @@ EV.4.9.1,"Every housing or enclosure containing parts of the Tractive System oth
 housings, must be labelled with the:
 a. Symbol specified in ISO 7010-W012 (triangle with black lightning bolt on yellow
 background)
-b. Text ‚ÄúHigh Voltage‚Äù if the voltage meets T.9.1.1"
+b. Text “High Voltage” if the voltage meets T.9.1.1"
 EV.4.9.2,"If the material of the housing containing parts of the Tractive System is electrically conductive,
 it must have a low resistance connection to GLV System Ground, see EV.6.7"
 EV.4.10,Accumulator Hand Cart
@@ -2532,18 +2532,18 @@ EV.4.10.3,"The Hand Cart must:
 a. Be able to carry the load of the Accumulator Container(s) without tipping over
 b. Contain a minimum of two wheels
 c. Have a brake that must be:
-‚Ä¢ Released only using a dead man type switch (where the brake is always on except
+• Released only using a dead man type switch (where the brake is always on except
 when released by pushing and holding a handle) or by manually lifting part of the
 cart off the ground
-‚Ä¢ Able to stop the Hand Cart with a fully loaded Accumulator Container"
+• Able to stop the Hand Cart with a fully loaded Accumulator Container"
 EV.4.10.4,Accumulator Container(s) must be securely attached to the Hand Cart
 EV.5,ENERGY STORAGE
 EV.5.1,Accumulator
 EV.5.1.1,"All cells or super capacitors which store the Tractive System energy are built into Accumulator
 Segments and must be enclosed in (an) Accumulator Container(s)."
 EV.5.1.2,"Each Accumulator Segment must contain:
-‚Ä¢ Maximum static voltage of less than 120 V DC
-‚Ä¢ Maximum energy of 6 MJ
+• Maximum static voltage of less than 120 V DC
+• Maximum energy of 6 MJ
 The contained energy of a stack is calculated by multiplying the maximum stack voltage with
 the nominal capacity of the used cell(s)."
 EV.5.1.3,"No further energy storage except for reasonably sized intermediate circuit capacitors are
@@ -2624,8 +2624,8 @@ EV.5.6.2,"The Intermediate Circuit must precharge before closing the second AIR.
 must be controlled by one of the following two options:
 a. Feedback by monitoring the voltage in the Intermediate Circuit
 b. A conservative time defined by the longer of:
-‚Ä¢ Twice the time to charge to 90%
-‚Ä¢ The time to charge to 90% plus 500ms"
+• Twice the time to charge to 90%
+• The time to charge to 90% plus 500ms"
 EV.5.6.3,"The Tractive System must contain a Discharge Circuit. The Discharge Circuit must be:
 a. Wired in a way that it is always active when the Shutdown Circuit is open
 b. Able to discharge the Intermediate Circuit capacitors if the HVD has been opened
@@ -2645,7 +2645,7 @@ EV.5.7.3,The control signal which closes the AIRs must not control the Voltage I
 EV.5.7.4,"The Voltage Indicator must:
 a. Be located where it is clearly visible when connecting/disconnecting the Accumulator
 Tractive System connections
-b. Be labeled ‚ÄúHigh Voltage Present‚Äù"
+b. Be labeled “High Voltage Present”"
 EV.5.8,Tractive System Measuring Points - TSMP
 EV.5.8.1,"Two Tractive System Measuring Points (TSMP) must be installed in the vehicle which are:
 a. Connected to the positive and negative motor controller/inverter supply lines
@@ -2658,7 +2658,7 @@ b. Available during charging of any Accumulator(s)"
 EV.5.8.3,"The TSMPs must be:
 a. 4 mm shrouded banana jacks rated to an appropriate voltage level
 b. Color: Red
-c. Marked ‚ÄúHV+‚Äù and ‚ÄúHV-‚Äú"
+c. Marked “HV+” and “HV-“"
 EV.5.8.5,Any TSMP must not contain additional Overcurrent Protection.
 EV.5.9,Tractive System Active Light - TSAL
 EV.5.9.1,"The vehicle must include a Tractive Systems Active Light (TSAL) that must:
@@ -2678,7 +2678,7 @@ EV.5.9.5,"The TSAL mounting location must:
 a. Be near the Main Hoop at the highest point of the vehicle.
 b. Be inside the Rollover Protection Envelope F.1.13
 c. Be no lower than 150 mm from the highest point of the Main Hoop.
-d. Not allow contact with the driver‚Äôs helmet in any circumstances.
+d. Not allow contact with the driver’s helmet in any circumstances.
 e. Not be in proximity to other lights."
 EV.5.9.6,"The TSAL must be visible:
 a. From every horizontal direction, except small angles which are blocked by the Main Hoop
@@ -2687,8 +2687,8 @@ TSAL
 c. In direct sunlight"
 EV.5.10,"Connectors
 Tractive System connectors outside of a housing must meet one of the two:
-‚Ä¢ Contain an Interlock EV.7.8 which must Open the Shutdown Circuit EV.7.2.2
-‚Ä¢ Be sealed at Tech Inspection IN.4.7.1"
+• Contain an Interlock EV.7.8 which must Open the Shutdown Circuit EV.7.2.2
+• Be sealed at Tech Inspection IN.4.7.1"
 EV.6,ELECTRICAL SYSTEM
 EV.6.1,Covers
 EV.6.1.1,"Nonconductive material or covers must prevent inadvertent human contact with any Tractive
@@ -2703,7 +2703,7 @@ A rating of IP65 is recommended"
 EV.6.2,Insulation
 EV.6.2.1,"Insulation material must:
 a. Be appropriate for the expected surrounding temperatures
-b. Have a minimum temperature rating of 90¬∞C"
+b. Have a minimum temperature rating of 90°C"
 EV.6.2.2,"Insulating tape or paint may be part of the insulation, but must not be the only insulation."
 EV.6.3,Wiring
 EV.6.3.1,"All wires and terminals and other conductors used in the Tractive System must be sized for the
@@ -2712,7 +2712,7 @@ EV.6.3.2,"All Tractive System wiring must:
 a. Be marked with wire gauge, temperature rating and insulation voltage rating.
 A serial number or a norm printed on the wire is sufficient if this serial number or norm is
 clearly bound to the wire characteristics for example by a data sheet.
-b. Have temperature rating more than or equal to 90¬∞C"
+b. Have temperature rating more than or equal to 90°C"
 EV.6.3.3,"Tractive System wiring must be:
 a. Done to professional standards with sufficient strain relief
 b. Protected from loosening due to vibration
@@ -2720,11 +2720,11 @@ c. Protected against damage by rotating and / or moving parts
 d. Located out of the way of possible snagging or damage"
 EV.6.3.4,"Any Tractive System wiring that runs outside of electrical enclosures:
 a. Must meet one of:
-‚Ä¢ Enclosed in separate orange nonconductive conduit
-‚Ä¢ Use an orange shielded cable.
+• Enclosed in separate orange nonconductive conduit
+• Use an orange shielded cable.
 b. Must meet one of:
-‚Ä¢ Run in a fully enclosed container. Bodywork is not an enclosure.
-‚Ä¢ The conduit or shielded cable is securely anchored at each end to allow it to
+• Run in a fully enclosed container. Bodywork is not an enclosure.
+• The conduit or shielded cable is securely anchored at each end to allow it to
 withstand a force of 200 N without straining the cable end crimp
 c. Any shielded cable must have the shield grounded."
 EV.6.3.5,Wiring that is not part of the Tractive System must not use orange wiring or conduit.
@@ -2738,7 +2738,7 @@ EV.6.4.2,"If external, uninsulated heat sinks are used, they must be properly gr
 System Ground, see EV.6.7"
 EV.6.4.3,"Bolted electrical connections in the high current path of the Tractive System must include a
 positive locking feature to prevent unintentional loosening
-Lock washers or thread locking compounds (Loctite¬Æ) or adhesives are not acceptable.
+Lock washers or thread locking compounds (Loctite®) or adhesives are not acceptable.
 Bolts with nylon patches are allowed for blind connections into OEM components."
 EV.6.4.4,"Information about the electrical connections supporting the high current path must be
 available at Electrical Technical Inspection"
@@ -2782,11 +2782,11 @@ devices could transmit
 b. Contain additional Overcurrent Protection to protect the conductors"
 EV.6.6.5,"Battery packs with Low Voltage or non voltage rated fusible links for cell connections may be
 used when all three conditions are met:
-‚Ä¢ An Overcurrent Protection device rated at less than or equal to one third the sum of the
+• An Overcurrent Protection device rated at less than or equal to one third the sum of the
 parallel fusible links and complying with EV.6.6.2.b above is connected in series.
-‚Ä¢ The AMS can detect an open fusible link and will Open the Shutdown Circuit EV.7.2.2 if a
+• The AMS can detect an open fusible link and will Open the Shutdown Circuit EV.7.2.2 if a
 fault is detected.
-‚Ä¢ Fusible link current rating is specified in manufacturer‚Äôs data or suitable test data is
+• Fusible link current rating is specified in manufacturer’s data or suitable test data is
 provided."
 EV.6.6.6,"If conductor ampacity is reduced below the ampacity of the upstream Overcurrent Protection,
 the reduced conductor longer than 150 mm must have additional Overcurrent Protection.
@@ -2871,7 +2871,7 @@ b. Turn on the AMS Indicator Light. The light must stay on until the AMS is rese
 EV.7.3.6,"The AMS Indicator Light must be:
 a. Color: Red
 b. Clearly visible to the seated driver in bright sunlight
-c. Clearly marked with the lettering ‚ÄúAMS‚Äù"
+c. Clearly marked with the lettering “AMS”"
 EV.7.4,Accumulator Voltage
 EV.7.4.1,"The AMS must measure the cell voltage of every cell
 When single cells are directly connected in parallel, only one voltage measurement is needed"
@@ -2887,18 +2887,18 @@ b. The voltage rating of the Overcurrent Protection must be equal to or higher t
 maximum segment voltage"
 EV.7.4.5,"Overcurrent Protection is not required on a voltage sense wire if all three of the following
 conditions are met:
-‚Ä¢ AMS is a distributed AMS system (one cell measurement per board)
-‚Ä¢ Sense wire length is less than 25 mm
-‚Ä¢ AMS board has Overcurrent Protection"
+• AMS is a distributed AMS system (one cell measurement per board)
+• Sense wire length is less than 25 mm
+• AMS board has Overcurrent Protection"
 EV.7.5,Accumulator Temperature
 EV.7.5.1,The AMS must measure the temperatures of critical points of the Accumulator
 EV.7.5.2,"Temperatures (considering measurement accuracy) must stay below the lower of the two:
-‚Ä¢ The maximum cell temperature limit stated in the cell data sheet
-‚Ä¢ 60¬∞C"
+• The maximum cell temperature limit stated in the cell data sheet
+• 60°C"
 EV.7.5.3,Cell temperatures must be measured at the negative terminal of the respective cell
 EV.7.5.4,"The temperature sensor used must be in direct contact with one of:
-‚Ä¢ The negative terminal itself
-‚Ä¢ The negative terminal busbar less than 10 mm away from the cell terminal"
+• The negative terminal itself
+• The negative terminal busbar less than 10 mm away from the cell terminal"
 EV.7.5.5,"For lithium based cells,
 a. The temperature of a minimum of 20% of the cells must be monitored by the AMS
 b. The monitored cells must be equally distributed inside the Accumulator Container(s)
@@ -2906,13 +2906,13 @@ Every cell temperature should be monitored"
 EV.7.5.6,"Multiple cells may be monitored with one temperature sensor, if EV.7.5 is met for all cells
 sensed by the sensor."
 EV.7.5.7,"Temperature sensors must have appropriate electrical isolation that meets one of the two:
-‚Ä¢ Between the sensor and cell
-‚Ä¢ In the sensing circuit
+• Between the sensor and cell
+• In the sensing circuit
 The isolation must consider both GLV/TS isolation as well as common mode voltages between
 sense locations."
 EV.7.6,Insulation Monitoring Device - IMD
 EV.7.6.1,The vehicle must have an Insulation Monitoring Device (IMD) installed in the Tractive System
-EV.7.6.2,"The IMD must be a Bender ISOMETER¬Æ IR155-3203 or IR155-3204 (website) or an approved
+EV.7.6.2,"The IMD must be a Bender ISOMETER® IR155-3203 or IR155-3204 (website) or an approved
 alternate equivalent IMD
 Refer to the Rules FAQ on the FSAE Online website for approved equivalent IMD"
 EV.7.6.3,"The response value of the IMD must be set to 500 Ohm / Volt or higher, related to the
@@ -2927,14 +2927,14 @@ b. Turn on the IMD Indicator Light. The light must stay on until the IMD is rese
 EV.7.6.6,"The IMD Indicator Light must be:
 a. Color: Red
 b. Clearly visible to the seated driver in bright sunlight
-c. Clearly marked with the lettering ‚ÄúIMD‚Äù"
+c. Clearly marked with the lettering “IMD”"
 EV.7.7,Brake System Plausibility Device - BSPD
 EV.7.7.1,"The vehicle must have a standalone nonprogrammable circuit to check for simultaneous
 braking and high power output
 The BSPD must be provided in addition to the APPS / Brake Pedal Plausibility Check (EV.4.7)"
 EV.7.7.2,"The BSPD must Open the Shutdown Circuit EV.7.2.2 when the two of these exist:
-‚Ä¢ Demand for Hard Braking EV.4.6
-‚Ä¢ Motor/Accumulator current is at a level where 5 kW of electrical power in the DC circuit
+• Demand for Hard Braking EV.4.6
+• Motor/Accumulator current is at a level where 5 kW of electrical power in the DC circuit
 is delivered to the Motor(s) at the nominal battery voltage
 The BSPD may delay opening the shutdown circuit up to 0.5 sec to avoid false trips"
 EV.7.7.3,"The BSPD must Open the Shutdown Circuit EV.7.2.2 when there is an open or short circuit in
@@ -2960,19 +2960,19 @@ b. Be direct acting, not act through a relay or logic"
 EV.7.9.2,"The Grounded Low Voltage Master Switch (GLVMS) must:
 a. Completely stop all power to the GLV System EV.4.4
 b. Be in the center of a completely red circular area of > 50 mm in diameter
-c. Be labeled ‚ÄúLV‚Äù"
+c. Be labeled “LV”"
 EV.7.9.3,"The Tractive System Master Switch (TSMS) must:
 a. Open the Shutdown Circuit in the OFF position EV.7.2.2
 b. Be the last switch before the AIRs except for Precharge circuitry and Interlocks.
 c. Be in the center of a completely orange circular area of > 50 mm in diameter
-d. Be labeled ‚ÄúTS‚Äù and the symbol specified in ISO 7010-W012 (triangle with black
+d. Be labeled “TS” and the symbol specified in ISO 7010-W012 (triangle with black
 lightning bolt on yellow background).
 e. Be fitted with a ""lockout/tagout"" capability in the OFF position EV.11.3.1"
 EV.7.10,Shutdown Buttons
 EV.7.10.1,Three Shutdown Buttons must be installed on the vehicle.
 EV.7.10.2,Each Shutdown Button must be a push-pull or push-rotate emergency switch
 EV.7.10.3,"One Shutdown Button must be on each side of the vehicle which:
-a. Is located aft of the driver‚Äôs compartment at approximately the level of the driver‚Äôs head
+a. Is located aft of the driver’s compartment at approximately the level of the driver’s head
 b. Has a diameter of 40 mm minimum
 c. Must not be easily removable or mounted onto removable body work"
 EV.7.10.4,"One Shutdown Button must be mounted in the cockpit which:
@@ -3030,16 +3030,16 @@ c. Ready to Drive EV.9.4"
 EV.9.2,"Low Voltage (GLV) System
 The Shutdown Circuit may be Closed when or after the GLV System is energized EV.7.2.4"
 EV.9.3,Tractive System Active
-EV.9.3.1,Definition ‚Äì High Voltage is present outside of the Accumulator Container
+EV.9.3.1,Definition – High Voltage is present outside of the Accumulator Container
 EV.9.3.2,"Tractive System Active must not be possible until both:
-‚Ä¢ GLV System is Energized
-‚Ä¢ Shutdown Circuit is Closed"
+• GLV System is Energized
+• Shutdown Circuit is Closed"
 EV.9.4,Ready to Drive
-EV.9.4.1,Definition ‚Äì the Motor(s) will respond to the input of the APPS
+EV.9.4.1,Definition – the Motor(s) will respond to the input of the APPS
 EV.9.4.2,"Ready to Drive must not be possible until the three at the same time:
-‚Ä¢ Tractive System Active EV.9.3
-‚Ä¢ The Brake Pedal is pressed and held to engage the mechanical brakes T.3.2
-‚Ä¢ The driver performs a manual action to initiate Ready to Drive
+• Tractive System Active EV.9.3
+• The Brake Pedal is pressed and held to engage the mechanical brakes T.3.2
+• The driver performs a manual action to initiate Ready to Drive
 Such as pressing a specific button in the cockpit"
 EV.9.5,Ready to Drive Sound
 EV.9.5.1,The vehicle must make a characteristic sound when it is Ready to Drive
@@ -3139,35 +3139,35 @@ IN.2.4.2,Technical Inspectors may examine any other items at their discretion
 IN.2.5,"Correction
 If any part of a vehicle does not comply with the rules, or is otherwise a concern, the team
 must:
-‚Ä¢ Correct the problem
-‚Ä¢ Continue Inspection or have the vehicle Reinspected"
+• Correct the problem
+• Continue Inspection or have the vehicle Reinspected"
 IN.2.6,Marked Items
 IN.2.6.1,"Officials may mark, seal, or designate items or areas which have been inspected to document
 the inspection and reduce the chance of tampering"
 IN.2.6.2,Damaged or lost marks or seals require Reinspection IN.15
 IN.3,"INITIAL INSPECTION
 Bring these to Initial Inspection:
-‚Ä¢ Technical Inspection Form
-‚Ä¢ All Driver Equipment per VE.3 to be used by each driver
-‚Ä¢ Fire Extinguishers (for paddock and vehicle) VE.2.3
-‚Ä¢ Wet Tires V.4.3.2"
+• Technical Inspection Form
+• All Driver Equipment per VE.3 to be used by each driver
+• Fire Extinguishers (for paddock and vehicle) VE.2.3
+• Wet Tires V.4.3.2"
 IN.4,ELECTRICAL TECHNICAL INSPECTION (EV ONLY)
 IN.4.1,"Inspection Items
 Bring these to Electrical Technical Inspection:
-‚Ä¢ Charger(s) for the Accumulator(s) EV.8.1
-‚Ä¢ Accumulator Container Hand Cart EV.4.10
-‚Ä¢ Spare Accumulator(s) (if applicable) EV.5.1.4
-‚Ä¢ Electrical Systems Form (ESF) and Component Data Sheets EV.2
-‚Ä¢ Copies of any submitted Rules Questions with the received answer GR.7
+• Charger(s) for the Accumulator(s) EV.8.1
+• Accumulator Container Hand Cart EV.4.10
+• Spare Accumulator(s) (if applicable) EV.5.1.4
+• Electrical Systems Form (ESF) and Component Data Sheets EV.2
+• Copies of any submitted Rules Questions with the received answer GR.7
 The following basic tools in good condition:
-‚Ä¢ Insulated cable shears
-‚Ä¢ Insulated screw drivers
-‚Ä¢ Multimeter with protected probe tips
-‚Ä¢ Insulated tools, if screwed connections are used in the Tractive System
-‚Ä¢ Face Shield
-‚Ä¢ HV insulating gloves which are 12 months or less from their test date
-‚Ä¢ Two HV insulating blankets of minimum 0.83 m¬≤ each
-‚Ä¢ Safety glasses with side shields for all team members that might work on the Tractive
+• Insulated cable shears
+• Insulated screw drivers
+• Multimeter with protected probe tips
+• Insulated tools, if screwed connections are used in the Tractive System
+• Face Shield
+• HV insulating gloves which are 12 months or less from their test date
+• Two HV insulating blankets of minimum 0.83 m² each
+• Safety glasses with side shields for all team members that might work on the Tractive
 System or Accumulator"
 IN.4.2,"Accumulator Inspection
 The Accumulator(s) and associated equipment (Hand Cart, Chargers, etc) may be inspected
@@ -3205,9 +3205,9 @@ The Clearance Checks and Egress Test may be performed separately or in conjuncti
 other parts of Technical Inspection"
 IN.5.1,"Driver Clearance
 Each driver in the normal driving position is checked for the three:
-‚Ä¢ Helmet clearance F.5.6.3
-‚Ä¢ Head Restraint positioning T.2.8.5
-‚Ä¢ Harness fit and adjustment T.2.5, T.2.6, T.2.7"
+• Helmet clearance F.5.6.3
+• Head Restraint positioning T.2.8.5
+• Harness fit and adjustment T.2.5, T.2.6, T.2.7"
 IN.5.2,Egress Test
 IN.5.2.1,Each driver must be able to exit to the side of the vehicle in no more than 5 seconds.
 IN.5.2.2,"The Egress Test will be conducted for each driver as follows:
@@ -3239,14 +3239,14 @@ To pass Mechanical Technical Inspection, both Cockpit Templates must fit as desc
 IN.8,MECHANICAL TECHNICAL INSPECTION
 IN.8.1,"Inspection Items
 The following items must be brought to Mechanical Technical Inspection:
-‚Ä¢ Vehicle on Dry Tires V.4.3.1
-‚Ä¢ Technical Inspection Form
-‚Ä¢ Push Bar VE.2.2
-‚Ä¢ Structural Equivalency Spreadsheet (SES) ‚Äì electronic copy F.2.1
-‚Ä¢ Monocoque Laminate Test Specimens (if applicable) F.4.3
-‚Ä¢ The Impact Attenuator that was tested (if applicable) F.8.8.7
-‚Ä¢ Accumulator Container samples (EV only) (if applicable) F.10.2.1.c, F.10.2.2.c
-‚Ä¢ Electronic copies of any submitted Rules Questions with the received answer GR.7"
+• Vehicle on Dry Tires V.4.3.1
+• Technical Inspection Form
+• Push Bar VE.2.2
+• Structural Equivalency Spreadsheet (SES) – electronic copy F.2.1
+• Monocoque Laminate Test Specimens (if applicable) F.4.3
+• The Impact Attenuator that was tested (if applicable) F.8.8.7
+• Accumulator Container samples (EV only) (if applicable) F.10.2.1.c, F.10.2.2.c
+• Electronic copies of any submitted Rules Questions with the received answer GR.7"
 IN.8.2,Aerodynamic Devices Stability and Strength
 IN.8.2.1,"Any Aerodynamic Devices may be checked by pushing on the device in any direction and at
 any point.
@@ -3279,8 +3279,8 @@ c. Tilt tests may be conducted in one or the other, or both directions in order 
 d. (IC only) Engines fitted with mechanically actuated fuel pumps must be run to fill and
 pressure the system downstream of the High Pressure pump. See IC.6.2"
 IN.9.2,Tilt Test Criteria
-IN.9.2.1,No fluid leakage of any type when the vehicle is tilted to a 45¬∞ angle to the horizontal
-IN.9.2.2,"Vehicle does not roll when tilted at an angle of 60¬∞ to the horizontal, corresponding to 1.7 g."
+IN.9.2.1,No fluid leakage of any type when the vehicle is tilted to a 45° angle to the horizontal
+IN.9.2.2,"Vehicle does not roll when tilted at an angle of 60° to the horizontal, corresponding to 1.7 g."
 IN.9.3,"Tilt Test Completion
 Tilt Tests must be passed before a vehicle may attempt any further inspections"
 IN.10,NOISE AND SWITCH TEST (IC ONLY)
@@ -3288,10 +3288,10 @@ IN.10.1,Sound Level Measurement
 IN.10.1.1,"The sound level will be measured during a stationary test, with the vehicle gearbox in neutral
 at the defined Test Speed"
 IN.10.1.2,"Measurements will be made with a free field microphone placed:
-‚Ä¢ free from obstructions
-‚Ä¢ at the Exhaust Outlet vertical level IC.7.2.2
-‚Ä¢ 0.5 m from the end of the Exhaust Outlet IC.7.2.2
-‚Ä¢ at an angle of 45¬∞ with the outlet in the horizontal plane (see IN.10.2.2 below)"
+• free from obstructions
+• at the Exhaust Outlet vertical level IC.7.2.2
+• 0.5 m from the end of the Exhaust Outlet IC.7.2.2
+• at an angle of 45° with the outlet in the horizontal plane (see IN.10.2.2 below)"
 IN.10.2,Special Configurations
 IN.10.2.1,"Where the Exhaust has more than one Exhaust Outlet:
 a. The noise test is repeated for each outlet
@@ -3305,7 +3305,7 @@ a. The position of the device must be visible to the officials for the noise tes
 b. The device must be manually operable by the officials during the noise test
 c. The device must not be moved or modified after the noise test is passed"
 IN.10.3,"Industrial Engine
-An engine which, according to the manufacturers‚Äô specifications and without the required
+An engine which, according to the manufacturers’ specifications and without the required
 restrictor, is capable of producing 5 hp per 100 cc or less.
 Submit a Rules Question to request approval of an Industrial Engine."
 IN.10.4,Test Speeds
@@ -3316,7 +3316,7 @@ b. Industrial Engines 731.5 m/min (2,400 ft/min)
 The calculated speed will be rounded to the nearest 500 rpm.
 Test Speeds for typical engines are published on the FSAE Online website"
 IN.10.4.2,"Idle Test Speed
-a. Determined by the vehicle‚Äôs calibrated idle speed
+a. Determined by the vehicle’s calibrated idle speed
 b. If the idle speed varies then the vehicle will be tested across the range of idle speeds
 determined by the team"
 IN.10.4.3,The vehicle must be compliant at all engine speeds up to the maximum defined Test Speed.
@@ -3333,10 +3333,10 @@ IN.10.8,"Noise Test Completion
 Noise Tests must be passed before a vehicle may attempt any further inspections"
 IN.11,RAIN TEST (EV ONLY)
 IN.11.1,"Rain Test Requirements
-‚Ä¢ Tractive System must be Active
-‚Ä¢ The vehicle must not be in Ready to Drive mode (EV.7)
-‚Ä¢ Any driven wheels must not touch the ground
-‚Ä¢ A driver must not be seated in the vehicle"
+• Tractive System must be Active
+• The vehicle must not be in Ready to Drive mode (EV.7)
+• Any driven wheels must not touch the ground
+• A driver must not be seated in the vehicle"
 IN.11.2,"Rain Test Conduct
 The water spray will be rain like, not a direct high pressure water jet
 a. Spray water at the vehicle from any possible direction for 120 seconds
@@ -3355,8 +3355,8 @@ IN.12.2.1,"Brake Test procedure:
 a. Accelerate to speed (typically getting into 2nd gear) until reaching the designated area
 b. Apply the brakes with force sufficient to demonstrate full lockup of all four wheels"
 IN.12.2.2,"The Brake Test passes if:
-‚Ä¢ All four wheels lock up
-‚Ä¢ The engine stays running during the complete test"
+• All four wheels lock up
+• The engine stays running during the complete test"
 IN.12.3,Brake Test Conduct (EV Only)
 IN.12.3.1,"Brake Test procedure:
 a. Accelerate to speed until reaching the designated area
@@ -3393,26 +3393,26 @@ IN.14.2.1,"The vehicle must maintain all required specifications (including but 
 suspension travel, braking capacity (pad material/composition), sound level and wing location)
 throughout the competition."
 IN.14.2.2,"Changes to fit the vehicle to different drivers are allowed. Permitted changes are:
-‚Ä¢ Adjustment of the driver restraint system, Head Restraint, seat and pedal assembly
-‚Ä¢ Substitution of the Head Restraint or seat insert
-‚Ä¢ Adjustment of mirrors"
+• Adjustment of the driver restraint system, Head Restraint, seat and pedal assembly
+• Substitution of the Head Restraint or seat insert
+• Adjustment of mirrors"
 IN.14.2.3,"Once the vehicle receives Inspection Approval, the ONLY modifications permitted to the
 vehicle are the following:
-‚Ä¢ Adjustment of belts, chains and clutches
-‚Ä¢ Adjustment of brake bias
-‚Ä¢ Adjustment to engine / powertrain operating parameters, including fuel mixture and
+• Adjustment of belts, chains and clutches
+• Adjustment of brake bias
+• Adjustment to engine / powertrain operating parameters, including fuel mixture and
 ignition timing, and any software calibration changes
-‚Ä¢ Adjustment of the suspension
-‚Ä¢ Changing springs, sway bars and shims in the suspension
-‚Ä¢ Adjustment of Tire Pressure, subject to V.4.3.4
-‚Ä¢ Adjustment of wing or wing element(s) angle, but not the location T.7.1
-‚Ä¢ Replenishment of fluids
-‚Ä¢ Replacement of worn tires or brake pads. Replacement tires and brake pads must be
+• Adjustment of the suspension
+• Changing springs, sway bars and shims in the suspension
+• Adjustment of Tire Pressure, subject to V.4.3.4
+• Adjustment of wing or wing element(s) angle, but not the location T.7.1
+• Replenishment of fluids
+• Replacement of worn tires or brake pads. Replacement tires and brake pads must be
 identical in material/composition/size to those presented and approved at Technical
 Inspection.
-‚Ä¢ Changing of wheels and tires for weather conditions D.6
-‚Ä¢ Recharging Low Voltage batteries
-‚Ä¢ Recharging High Voltage Accumulators"
+• Changing of wheels and tires for weather conditions D.6
+• Recharging Low Voltage batteries
+• Recharging High Voltage Accumulators"
 IN.14.3,"Repairs or Changes After Inspection Approval
 The Inspection Approval may be voided for any reason including, but not limited to:
 a. Damage to the vehicle IN.13.1.3
@@ -3439,9 +3439,9 @@ Design 150 points
 Total 325 points"
 S.2,PRESENTATION EVENT
 S.2.1,"Presentation Event Objective
-The Presentation Event evaluates the team‚Äôs ability to develop and deliver a comprehensive
+The Presentation Event evaluates the team’s ability to develop and deliver a comprehensive
 business, logistical, production, or technical case that will convince outside interests to invest
-in the team‚Äôs concept."
+in the team’s concept."
 S.2.2,Presentation Concept
 S.2.2.1,The concept for the Presentation Event will be provided on the FSAE Online website.
 S.2.2.2,The concept for the Presentation Event may change for each competition
@@ -3463,10 +3463,10 @@ S.2.4.3,"Pre event submissions will be subject to penalties imposed as given in 
 Requirements."
 S.2.5,Presentation Format
 S.2.5.1,One or more team members will give the presentation to the judges.
-S.2.5.2,"All team members who will give any part of the presentation, or who will respond to judges‚Äô
+S.2.5.2,"All team members who will give any part of the presentation, or who will respond to judges’
 questions must be:
-‚Ä¢ In the presentation area when the presentation starts
-‚Ä¢ Introduced and identified to the judges."
+• In the presentation area when the presentation starts
+• Introduced and identified to the judges."
 S.2.5.3,"Presentations will be time limited. The judges will stop any presentation exceeding the time
 limit."
 S.2.5.4,"The presentation itself will not be interrupted by questions. Immediately following the
@@ -3477,11 +3477,11 @@ Teams planning to use data projectors, visual display devices (tablets, computer
 other communication means as part of their presentation must bring, or arrange for, their
 own equipment."
 S.2.7,Evaluation Criteria
-S.2.7.1,"Presentations will be evaluated on content, organization, visual aids, delivery and the team‚Äôs
-response to the judges‚Äô questions."
+S.2.7.1,"Presentations will be evaluated on content, organization, visual aids, delivery and the team’s
+response to the judges’ questions."
 S.2.7.2,"The actual quality of the prototype itself will not be considered as part of the presentation
 judging"
-S.2.7.3,Presentation Judging Score Sheet ‚Äì available at the FSAE Online website.
+S.2.7.3,Presentation Judging Score Sheet – available at the FSAE Online website.
 S.2.8,"Judging Sequence
 Presentation judging may be conducted in one or more phases."
 S.2.9,Presentation Event Scoring
@@ -3506,9 +3506,9 @@ the Cost and Manufacturing Event.
 c. The Formula SAE Cost Event Supplement is available on the FSAE Online website"
 S.3.3,Cost Event Areas
 S.3.3.1,"Cost Report
-Preparation and submission of a report (the ‚ÄúCost Report‚Äù)"
+Preparation and submission of a report (the “Cost Report”)"
 S.3.3.2,"Event Day Discussion
-Discussion at the Competition with the Cost Judges around the team‚Äôs vehicle."
+Discussion at the Competition with the Cost Judges around the team’s vehicle."
 S.3.3.3,"Cost Scenario
 Teams will respond to a challenge related to cost or manufacturing of the vehicle."
 S.3.4,Cost Report
@@ -3565,33 +3565,33 @@ calendar year. Support materials, such as technical drawings, will not be releas
 S.3.12,Cost Report Penalties Process
 S.3.12.1,"The following procedure will be used in determining penalties:
 a. Penalty A will be calculated using procedure Penalty Method A - Fixed Point Deductions
-b. Penalty B will be calculated using procedure Penalty Method B ‚Äì Adjusted Cost
+b. Penalty B will be calculated using procedure Penalty Method B – Adjusted Cost
 Additions
 c. The higher of the two penalties will be applied against the Cost Event score
-‚Ä¢ Penalty A expressed in points will be deducted from the Cost Event score
-‚Ä¢ Penalty B expressed in dollars will be added to the Adjusted Cost of the vehicle"
+• Penalty A expressed in points will be deducted from the Cost Event score
+• Penalty B expressed in dollars will be added to the Adjusted Cost of the vehicle"
 S.3.12.2,"Any error that results in a team over reporting a cost in their Cost Report will not be further
 penalized."
-S.3.12.3,"Any instance where a team‚Äôs score benefits by an intentional or unintentional error on the
+S.3.12.3,"Any instance where a team’s score benefits by an intentional or unintentional error on the
 part of the students will be corrected on a case by case basis."
 S.3.12.4,"Penalty Method A - Fixed Point Deductions
 a. From the Bill of Material, the Cost Judges will determine if all Parts and Processes have
 been included in the analysis.
 b. In the case of any omission or error a penalty proportional to the BOM level of the error
 will be imposed:
-‚Ä¢ Missing/inaccurate Material, Process, Fastener 1 point
-‚Ä¢ Missing/inaccurate Part 3 point
-‚Ä¢ Missing/inaccurate Assembly 5 point
+• Missing/inaccurate Material, Process, Fastener 1 point
+• Missing/inaccurate Part 3 point
+• Missing/inaccurate Assembly 5 point
 c. Each of the penalties listed above supersedes the previous penalty.
 Example - if a point deduction is given for a missing Assembly, the missing Parts are ignored.
 d. Differences other than those listed above will be deducted at the discretion of the Cost
 Judges."
-S.3.12.5,"Penalty Method B ‚Äì Adjusted Cost Additions
+S.3.12.5,"Penalty Method B – Adjusted Cost Additions
 a. The table cost for the missing or incomplete items will be calculated from the standard
 Cost Tables.
 b. The penalty will be a value equal to twice the difference between the team cost and the
 correct cost for all items in error.
-Penalty = 2 x (Table Cost ‚Äì Team Reported Cost)
+Penalty = 2 x (Table Cost – Team Reported Cost)
 The table costs of all items in error are included in the calculation. A missing Assembly would
 include the price of all Parts, Materials, Processes and Fasteners making up the Assembly."
 S.3.13,Event Day and Discussion
@@ -3617,9 +3617,9 @@ S.3.16,Cost Event Scoring
 S.3.16.1,Cost Event scoring will be provided on the FSAE Online website or with the Cost Scenario
 S.3.16.2,The Cost Event is worth 100 points
 S.3.16.3,"Cost Event Scores may be awarded in areas including, but not limited to:
-‚Ä¢ Price Score
-‚Ä¢ Discussion Score
-‚Ä¢ Scenario Score"
+• Price Score
+• Discussion Score
+• Scenario Score"
 S.3.16.4,"Penalty points may be subtracted from the Cost Score, with no limit."
 S.3.16.5,"Cost Event scoring may include normalizing the scores of different judging teams and scaling
 the results."
@@ -3632,13 +3632,13 @@ S.4.1.2,"The team and vehicle that illustrate the best use of engineering to mee
 cost effective high performance vehicle, and the best understanding of the design by the team
 members will win the Design Event."
 S.4.1.3,"Components and systems that are incorporated into the design as finished items are not
-evaluated as a student designed unit, but are assessed on the team‚Äôs selection and application
+evaluated as a student designed unit, but are assessed on the team’s selection and application
 of that unit."
 S.4.2,Design Documents
 S.4.2.1,"Teams must submit the Design Briefing, Design Spec Sheet and Vehicle Drawings"
 S.4.2.2,"These Design Documents will be used for:
-‚Ä¢ Design Judge reviews prior to the Design Event
-‚Ä¢ Sorting teams into appropriate design groups based on the quality of their review."
+• Design Judge reviews prior to the Design Event
+• Sorting teams into appropriate design groups based on the quality of their review."
 S.4.2.3,"Penalties for Late Submission of all or any one of the Design Documents will be imposed as
 given in section DR - Document Requirements"
 S.4.2.4,"Teams that submit one or more Design Documents which do not represent a serious effort to
@@ -3680,7 +3680,7 @@ Typical Design judging includes a first round review of all teams, then addition
 selected teams."
 S.4.9,Judging Criteria
 S.4.9.1,"The Design Judges will:
-a. Evaluate the engineering effort based upon the team‚Äôs Design Documents, discussion
+a. Evaluate the engineering effort based upon the team’s Design Documents, discussion
 with the team, and an inspection of the vehicle
 b. Inspect the vehicle to determine if the design concepts are adequate and appropriate for
 the application (relative to the objectives stated in the rules).
@@ -3702,9 +3702,9 @@ Efficiency 100 points
 Endurance 275 points
 Total 675 points"
 D.1.2,Definitions
-D.1.2.1,"Dynamic Area ‚Äì Any designated portion(s) of the competition site where the vehicles may
+D.1.2.1,"Dynamic Area – Any designated portion(s) of the competition site where the vehicles may
 move under their own power. This includes competition, inspection and practice areas."
-D.1.2.2,"Staging Area ‚Äì Any area(s) inside the Dynamic Area prior to the entry to an event for the
+D.1.2.2,"Staging Area – Any area(s) inside the Dynamic Area prior to the entry to an event for the
 purpose of gathering those vehicles that are about to start."
 D.2,PIT AND PADDOCK
 D.2.1,Vehicle Movement
@@ -3731,7 +3731,7 @@ Technical Inspector gives permission
 b. The vehicle is supported on a stand
 c. The drive wheels are minimum 10 cm off the ground, OR the drive wheels are removed"
 D.3,DRIVING
-D.3.1,"Drivers Meetings ‚Äì Attendance Required
+D.3.1,"Drivers Meetings – Attendance Required
 All drivers for an event must attend the drivers meeting(s). The driver for an event will be
 disqualified if he/she does not attend the driver meeting for the event."
 D.3.2,"Dynamic Area Limitations
@@ -3783,7 +3783,7 @@ something has been observed that needs closer inspection."
 D.4.1.4,"Blue Flag - Pull into the designated passing zone to be passed by a faster competitor. Obey the
 corner workers signals at the end of the passing zone to merge into competition."
 D.4.1.5,Checkered Flag - Run has been completed. Exit the course at the designated point.
-D.4.1.6,"Green Flag ‚Äì Approval to begin your run, enter the course under direction of the starter. If
+D.4.1.6,"Green Flag – Approval to begin your run, enter the course under direction of the starter. If
 you stall the vehicle, please restart and await another Green Flag"
 D.4.1.7,"Red Flag - Come to an immediate safe controlled stop on the course. Pull to the side of the
 course as much as possible to keep the course open. Follow corner worker directions."
@@ -3807,9 +3807,9 @@ D.5.1.2,No adjustments will be made to times for running in differing Operating 
 D.5.1.3,The minimum performance levels to score points may be adjusted by the Officials.
 D.5.2,Operating Conditions
 D.5.2.1,"The following operating conditions will be recognized:
-‚Ä¢ Dry
-‚Ä¢ Damp
-‚Ä¢ Wet"
+• Dry
+• Damp
+• Wet"
 D.5.2.2,The current operating condition will be decided by the Officials and may change at any time.
 D.5.2.3,"The current operating condition will be prominently displayed at the Dynamic Area, and may
 be communicated by other means."
@@ -3826,12 +3826,12 @@ vehicles will be Black Flagged and brought into the Driver Change Area"
 D.6.2.4,"Time allowed to change tires:
 a. Change to Wet Tires - Any time in excess of 10 minutes without driver change, or 13
 minutes with Driver Change, will be added to the team's total time for Endurance
-b. Change to Dry Tires - The time used to change to Dry Tires will be added to the team‚Äôs
+b. Change to Dry Tires - The time used to change to Dry Tires will be added to the team’s
 total time for Endurance"
 D.6.2.5,"If the vehicle has a tire puncture,
 a. The wheel and tire may be replaced with an identical wheel and tire
 b. When the puncture is caused by track debris and not a result of component failure or the
-vehicle itself, the tire change time will not count towards the team‚Äôs total time."
+vehicle itself, the tire change time will not count towards the team’s total time."
 D.7,DRIVER LIMITATIONS
 D.7.1,Three Event Limit
 D.7.1.1,An individual team member may not drive in more than three events.
@@ -3843,7 +3843,7 @@ D.8.1.1,"DOO - Cone is Down or Out when one or both:
 a. Cone has been knocked over (Down)
 b. The entire base of the cone lies outside the box marked around the cone in its
 undisturbed position (Out)"
-D.8.1.2,"DNF - Did Not Finish ‚Äì The team attempted a run, but did not complete it, or was not allowed
+D.8.1.2,"DNF - Did Not Finish – The team attempted a run, but did not complete it, or was not allowed
 to complete it"
 D.8.1.3,DQ - Disqualified - run(s) or event(s) no longer valid
 D.8.1.4,"Gate - The path between two cones through which the vehicle must pass. Two cones, one on
@@ -3852,7 +3852,7 @@ D.8.1.5,"Entry Gate -The path marked by cones which establishes the required pat
 take to enter the course."
 D.8.1.6,"Exit Gate - The path marked by cones which establishes the required path the vehicle must
 take to exit the course."
-D.8.1.7,"OC ‚Äì Off Course
+D.8.1.7,"OC – Off Course
 a. The vehicle did not pass through a gate in the required direction.
 b. The vehicle has all four wheels outside the course boundary as indicated by cones, edge
 marking or the edge of the paved surface.
@@ -3883,21 +3883,21 @@ D.9.3.2,"Off Course (OC)
 DNF for that run"
 D.9.4,Acceleration Scoring
 D.9.4.1,"Scoring Term Definitions:
-‚Ä¢ Corrected Time = Acceleration Run Time + ( DOO * 2 )
-‚Ä¢ Tyour - the best Corrected Time for the team
-‚Ä¢ Tmin - the lowest Corrected Time recorded for any team
-‚Ä¢ Tmax - 150% of Tmin"
+• Corrected Time = Acceleration Run Time + ( DOO * 2 )
+• Tyour - the best Corrected Time for the team
+• Tmin - the lowest Corrected Time recorded for any team
+• Tmax - 150% of Tmin"
 D.9.4.3,"When Tyour > Tmax , Acceleration Score = 4.5"
 D.10,"SKIDPAD EVENT
 The Skidpad event measures the vehicle cornering ability on a flat surface while making a
 constant radius turn."
 D.10.1,Skidpad Layout
 D.10.1.1,"Course Design
-‚Ä¢ Two pairs of concentric circles in a figure of eight pattern
-‚Ä¢ Centers of the circles 18.25 m apart
-‚Ä¢ Inner circles 15.25 m in diameter
-‚Ä¢ Outer circles 21.25 m in diameter
-‚Ä¢ Driving path the 3.0 m wide path between the inner and outer circles"
+• Two pairs of concentric circles in a figure of eight pattern
+• Centers of the circles 18.25 m apart
+• Inner circles 15.25 m in diameter
+• Outer circles 21.25 m in diameter
+• Driving path the 3.0 m wide path between the inner and outer circles"
 D.10.1.2,"Cone Placement
 a. Sixteen (16) pylons will be placed around the inside of each inner circle and thirteen (13)
 pylons will be positioned around the outside of each outer circle in the pattern shown in
@@ -3940,10 +3940,10 @@ Vehicles that run an incorrect number of laps or run the laps in the wrong seque
 DNF for that run."
 D.10.4,Skidpad Scoring
 D.10.4.1,"Scoring Term Definitions
-‚Ä¢ Corrected Time = ( Right Lap Time + Left Lap Time ) / 2 + ( DOO * 0.125 )
-‚Ä¢ Tyour - the best Corrected Time for the team
-‚Ä¢ Tmin - is the lowest Corrected Time recorded for any team
-‚Ä¢ Tmax - 125% of Tmin"
+• Corrected Time = ( Right Lap Time + Left Lap Time ) / 2 + ( DOO * 0.125 )
+• Tyour - the best Corrected Time for the team
+• Tmin - is the lowest Corrected Time recorded for any team
+• Tmax - 125% of Tmin"
 D.10.4.3,"When Tyour > Tmax , Skidpad Score = 3.5"
 D.11,"AUTOCROSS EVENT
 The Autocross event evaluates the vehicle maneuverability and handling qualities on a tight
@@ -3983,10 +3983,10 @@ D.11.3.3,"Missed Slalom
 Missing one or more gates of a given slalom will be counted as one Off Course"
 D.11.4,Autocross Scoring
 D.11.4.1,"Scoring Term Definitions:
-‚Ä¢ Corrected Time = Autocross Run Time + ( DOO * 2 ) + ( OC * 20 )
-‚Ä¢ Tyour - the best Corrected Time for the team
-‚Ä¢ Tmin - the lowest Corrected Time recorded for any team
-‚Ä¢ Tmax - 145% of Tmin"
+• Corrected Time = Autocross Run Time + ( DOO * 2 ) + ( OC * 20 )
+• Tyour - the best Corrected Time for the team
+• Tmin - the lowest Corrected Time recorded for any team
+• Tmax - 145% of Tmin"
 D.11.4.3,"When Tyour > Tmax , Autocross Score = 6.5"
 D.12,"ENDURANCE EVENT
 The Endurance event evaluates the overall performance of the vehicle and tests the durability
@@ -4047,8 +4047,8 @@ a. The first driver will perform an Endurance Run per D.12.6 below
 b. The Driver Change must then be performed per D.12.8 below
 c. The second driver will perform an Endurance Run per D.12.6 below"
 D.12.5.3,"The Endurance Event is complete when both:
-‚Ä¢ the team has completed the specified number of laps
-‚Ä¢ the second driver crosses the finish line"
+• the team has completed the specified number of laps
+• the second driver crosses the finish line"
 D.12.6,Endurance Run Procedure
 D.12.6.1,A Green Flag or light signal will give the approval to begin the run
 D.12.6.2,The driver will drive approximately half of the Endurance distance
@@ -4089,7 +4089,7 @@ D.12.9.1,"If a vehicle breaks down or cannot restart, it will be removed from th
 and scored DNF"
 D.12.9.2,"If a vehicle stalls, or ingests a cone, etc., it may be allowed to continue, subject to D.12.1.4
 and D.12.4"
-D.12.10,Endurance Event ‚Äì Black Flags
+D.12.10,Endurance Event – Black Flags
 D.12.10.1,A Black Flag will be shown at the designated location
 D.12.10.2,The vehicle must pull into the Driver Change Area at the first opportunity
 D.12.10.3,The amount of time spent in the Driver Change Area is at the discretion of the officials.
@@ -4106,10 +4106,10 @@ a. May be shown for any reason to question the vehicle condition
 b. Time spent off track is not included in the Endurance Run time."
 D.12.10.6,"Based on the inspection or discussion during a Black Flag period, the vehicle may not be
 allowed to continue the Endurance Run and will be scored DNF"
-D.12.11,Endurance Event ‚Äì Passing
+D.12.11,Endurance Event – Passing
 D.12.11.1,"Passing during Endurance may only be done in the designated passing zones, under the
 control of the track officials."
-D.12.11.2,"Passing zones have two parallel lanes ‚Äì a slow lane for the vehicles that are being passed and
+D.12.11.2,"Passing zones have two parallel lanes – a slow lane for the vehicles that are being passed and
 a fast lane for vehicles that are making a pass."
 D.12.11.3,"When a pass is to be made:
 a. A slower leading vehicle will receive a Blue Flag
@@ -4141,12 +4141,12 @@ any reason including driver inexperience or mechanical problems, it is too slow 
 driven in a manner that demonstrates an inability to properly control."
 D.12.13,Endurance Scoring
 D.12.13.1,"Scoring Term Definitions:
-‚Ä¢ Endurance Run Time - Total Time for both Drivers, minus the Driver Change lap, minus
+• Endurance Run Time - Total Time for both Drivers, minus the Driver Change lap, minus
 any Mechanical Black Flag Time, plus any Penalty time D.14.2
-‚Ä¢ Corrected Time = Endurance Run Time + ( DOO * 2 ) + ( OC * 20 )
-‚Ä¢ Tyour - the Corrected Time for the team
-‚Ä¢ Tmin - the lowest Corrected Time recorded for any team
-‚Ä¢ Tmax - 145% of Tmin"
+• Corrected Time = Endurance Run Time + ( DOO * 2 ) + ( OC * 20 )
+• Tyour - the Corrected Time for the team
+• Tmin - the lowest Corrected Time recorded for any team
+• Tmax - 145% of Tmin"
 D.12.13.3,"The vehicle receives points based on the laps and/or parts of Endurance completed.
 The Endurance Laps Score is worth up to 25 points"
 D.12.13.4,"The Endurance Score is calculated as:
@@ -4172,8 +4172,8 @@ D.13.2.5,"For Internal Combustion vehicles (IC):
 a. The Fuel Tank must be filled to the Fuel Level Line (IC.5.4.5) to measure fuel used.
 IC.5.5.1
 b. If the fuel level changes after refuelling:
-‚Ä¢ Additional fuel will be added to return the fuel tank level to the fuel level line.
-‚Ä¢ Twice this amount will be added to the previously measured fuel consumption
+• Additional fuel will be added to return the fuel tank level to the fuel level line.
+• Twice this amount will be added to the previously measured fuel consumption
 c. If damage or a potential environmental hazard (example - Fuel Tank leakage) exists, the
 Fuel Tank will not be refilled D.13.3.4"
 D.13.2.6,"For Electric Vehicles (EV):
@@ -4204,23 +4204,23 @@ c. Electric 0.65 kg of CO per kWh
 2"
 D.13.4.2,(EV only) Full credit is given for energy recovered through regenerative braking
 D.13.4.3,"Scoring Term Definitions:
-‚Ä¢ CO min - the smallest mass of CO used by any competitor who is eligible for Efficiency
+• CO min - the smallest mass of CO used by any competitor who is eligible for Efficiency
 2 2
-‚Ä¢ CO your - the mass of CO used by the team being scored
+• CO your - the mass of CO used by the team being scored
 2 2
-‚Ä¢ Tmin - the lowest Endurance time of the fastest team which is eligible for Efficiency
-‚Ä¢ Tyour - same as Endurance (D.12.13.1)
-‚Ä¢ Lapyours - the number of laps driven by the team being scored
-‚Ä¢ Laptotal Tmin and Latptotal CO min - be the number of laps completed by the teams
+• Tmin - the lowest Endurance time of the fastest team which is eligible for Efficiency
+• Tyour - same as Endurance (D.12.13.1)
+• Lapyours - the number of laps driven by the team being scored
+• Laptotal Tmin and Latptotal CO min - be the number of laps completed by the teams
 2
 which set Tmin and CO min, respectively
 2"
 D.13.4.5,"EfficiencyFactor min is calculated using the above formula with:
-‚Ä¢ CO your (IC) equivalent to 60.06 kg CO /100km (based on gasoline 26 ltr/100km)
+• CO your (IC) equivalent to 60.06 kg CO /100km (based on gasoline 26 ltr/100km)
 2 2
-‚Ä¢ CO your (EV) equivalent to 20.02 kg CO /100km
+• CO your (EV) equivalent to 20.02 kg CO /100km
 2 2
-‚Ä¢ Tyour 1.45 times Tmin"
+• Tyour 1.45 times Tmin"
 D.14,POST ENDURANCE
 D.14.1,Technical Inspection Required
 D.14.1.1,"After Endurance and refuelling are completed, all vehicles must report to Technical Inspection."
