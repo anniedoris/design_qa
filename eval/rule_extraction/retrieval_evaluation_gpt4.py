@@ -1,3 +1,4 @@
+import os
 import re
 import string
 from collections import Counter
@@ -91,33 +92,24 @@ def token_f1_score(prediction, ground_truth):
     return f1
 
 
-def combine_prediction(row):
-    rule_number = row['rule_number']
-    rule_text = row['rule_text']
-    rule_title = row['rule_title']
-
-    if rule_number is None or pd.isnull(rule_number):
-        rule_number = ""
-    if rule_text is None or pd.isnull(rule_text):
-        rule_text = ""
-    if rule_title is None or pd.isnull(rule_title):
-        rule_title = ""
-
-    return ' '.join([rule_number, rule_title, rule_text])
-
-
 if __name__ == '__main__':
     # get the api key from memory
     from config import OPENAI_API_KEY
     client = OpenAI(api_key=OPENAI_API_KEY)
 
-    file_path = 'docs/FSAE_Rules_2024_V1 (2).pdf'
+    file_path = '../../dataset/rule_extraction/docs/FSAE_Rules_2024_V1.pdf'
     file = upload_file(file_path)
     assistant = create_assistant(file)
 
-    questions_pd = pd.read_csv("docs/FSAE DesignSpecQA Benchmark - retrieval.csv")
+    questions_pd = pd.read_csv("../../dataset/rule_extraction/qa_retrieval/data/rule_retrieval_qa.csv")
+    # if output csv does not exist, create it
+    if not os.path.exists("retrieval_evaluation_gpt4.csv"):
+        questions_pd.to_csv("retrieval_evaluation_gpt4.csv", index=False)
+    else:
+        questions_pd = pd.read_csv("retrieval_evaluation_gpt4.csv")
+
     for index, row in tqdm(questions_pd.iterrows(), desc='generating responses', total=len(questions_pd)):
-        # if response column is not empty, skip the row
+        # if response column already has a response, skip the row
         try:
             response = row['response']
         except KeyError:
@@ -125,31 +117,18 @@ if __name__ == '__main__':
         if not pd.isnull(response):
             continue
 
-        rule_number = row['rule_number']
-        rule_text = row['rule_text']
-
-        # Exclude the following questions
-        if rule_text is None or pd.isnull(rule_text) or rule_number.split('.')[0] in ['GR', 'AR', 'DR']:
-            continue
-
-        # Compile the question
-        question = f"We are a student engineering team designing a vehicle for the FSAE competition. Attached is the " \
-                   f"FSAE rules document. What does rule {rule_number} state exactly? Answer with only the text of " \
-                   f"the rule and no other words."
+        question = row['question']
+        answer = row['answer']
 
         # Run through model
-        response = run_thread(question)
+        response = run_thread(question).split("【")[0] + "."
 
-        # Save the response
-        questions_pd.loc[index, 'question'] = question
-        questions_pd.loc[index, 'response'] = response.split("【")[0] + "."
-        questions_pd.to_csv("docs/FSAE DesignSpecQA Benchmark - retrieval.csv", index=False)
+        # Save the response and calculate f1 score
+        questions_pd.loc[index, 'response'] = response
+        questions_pd.loc[index, 'f1 score'] = token_f1_score(answer, response)
 
-    # compute the f1 score between the answer and the response
-    questions_pd['f1 score'] = questions_pd[questions_pd[['rule_text', 'response']].notnull().all(1)].apply(lambda row: token_f1_score(combine_prediction(row), row['response']), axis=1)
-
-    # save the results
-    questions_pd.to_csv("docs/FSAE DesignSpecQA Benchmark - retrieval.csv", index=False)
+        # save to disk after each iteration
+        questions_pd.to_csv("retrieval_evaluation_gpt4.csv", index=False)
 
     # print the average of the f1 scores
     print(f"Average F1 Score: {questions_pd['f1 score'].mean()}")
