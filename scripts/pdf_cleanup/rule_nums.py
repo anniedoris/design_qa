@@ -4,7 +4,7 @@ import pandas as pd
 # Output is .txt in docs folder
 
 rule_category = "D"
-file_path = 'docs/rules_pdfplumber1.txt' # File to read rules from
+file_path = '../../dataset/docs/rules_pdfplumber1.txt' # File to read rules from
 rule_numbers = []
 
 with open(file_path, 'r', encoding='utf-8') as file:
@@ -19,6 +19,6 @@ for i, line in enumerate(data.split('\n')):
             rule_num = line.split(' ')[0]
             rule_numbers.append(rule_num)
 
-with open('docs/' + rule_category + ".txt", "w") as file:
+with open('../../dataset/docs/rule_nums/' + rule_category + ".txt", "w") as file:
     for rule in rule_numbers:
         file.write(rule + '\n')
