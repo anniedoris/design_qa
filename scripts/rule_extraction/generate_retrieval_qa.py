@@ -1,7 +1,6 @@
 import re
 import string
 from collections import Counter
-from openai import OpenAI
 from time import sleep
 import pandas as pd
 from tqdm import tqdm
