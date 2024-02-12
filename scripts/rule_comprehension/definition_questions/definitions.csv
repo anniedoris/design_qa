@@ -1,0 +1,14 @@
+﻿im_num,highlighted_component,hidden_components,mention_in_rules
+1,pedals,no,multi
+2,front hoop,no,definition
+3,roll hoop,no,definition
+4,main hoop,no,definition
+5,front bulkhead,no,definition
+6,frame,no,definition?
+7,"steering, steering column, rack",no,multi
+8,"powertrain, scatter shields",no,multi
+9,brakes,yes,multi
+10,battery,no,multi
+11,rockers,no,once
+12,uprights,yes,once
+13,wheel centers,yes,once
