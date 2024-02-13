@@ -82,13 +82,13 @@ def tokenize(text):
     tokens = [t for t in tokens if len(t) > 0]
     return tokens
 
-def bleu_score(reference, hypothesis, gram):
+def bleu_score(target, prediction, gram):
     """
     Taken from the ScienceQA evaluations.py script
     """
 
-    reference_tokens = tokenize(reference)
-    hypothesis_tokens = tokenize(hypothesis)
+    reference_tokens = tokenize(target)
+    hypothesis_tokens = tokenize(prediction)
 
     print("Reference tokens")
     print(reference_tokens)
@@ -160,7 +160,7 @@ def eval_presence_qa(prediction, ground_truth):
             false_negative = 1
     return true_positive, false_positive, true_negative, false_negative
 
-# TODO
+# TODO for using BLEU and ROUGE, could consider reporting geometric mean across several n-grams
 def eval_dimensions_qa():
     return
 
@@ -171,6 +171,5 @@ def eval_functional_performance_qa():
 if __name__ == '__main__':
     test_a = "This is a match"
     test_b = "This is not a match"
-    score = bleu_score(test_a, test_b, 1)
-    # score = eval_presence_qa(test_a, test_b)
+    score = score_rouge(test_a, test_b)
     print(score)
