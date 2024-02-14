@@ -9,7 +9,7 @@ def convert_pdf_to_images(pdf_path, output_folder):
     - output_folder: Folder where the output images will be saved.
     """
     # Convert PDF to a list of images
-    images = convert_from_path(pdf_path)
+    images = convert_from_path(pdf_path, dpi=600)
 
     # Save each page as an image
     for i, image in enumerate(images):
@@ -18,6 +18,6 @@ def convert_pdf_to_images(pdf_path, output_folder):
         print(f"Saved {image_path}")
 
 # Example usage
-pdf_path = 'rule_comprehension_definitions_pdf.pdf'
+pdf_path = 'rule_comprehension_definitions.pdf'
 output_folder = 'def_slide_images'
 convert_pdf_to_images(pdf_path, output_folder)

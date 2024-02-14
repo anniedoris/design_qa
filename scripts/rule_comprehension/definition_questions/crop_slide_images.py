@@ -44,4 +44,4 @@ for im in os.listdir('def_slide_images'):
     
     # Example usage:
     image_path = 'def_slide_images/' + im
-    crop_image(image_path, left=185, top=195, right=758, bottom=0)
+    crop_image(image_path, left=550, top=600, right=2275, bottom=0)
