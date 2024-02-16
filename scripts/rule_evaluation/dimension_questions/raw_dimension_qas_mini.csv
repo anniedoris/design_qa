@@ -1,0 +1,4 @@
+﻿image_name,rule_tested,complies,dimension_system,view
+V.1.2_yes,V.1.2,yes,direct,front
+V.1.2_no,V.1.2,no,direct,front
+zoom_front_view,V.1.2,yes,scale,front
