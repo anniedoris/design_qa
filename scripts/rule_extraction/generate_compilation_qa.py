@@ -1,7 +1,27 @@
+import re
 import pandas as pd
 import sys
 sys.path.append("..")
 from common_prompts import prompt_preamble
+
+
+def find_subrules(rule_num, all_rules):
+    """
+    Recursively find all subrules for a given rule number.
+
+    :param rule_num: The rule number to find subrules for.
+    :param all_rules: DataFrame containing all rules.
+    :return: DataFrame of all subrules for the given rule number.
+    """
+    # Find child rules by checking if the rule_num is a prefix of other rule_nums
+    subrules = all_rules[all_rules['rule_num'].str.startswith(rule_num + ".")]
+
+    # Recursively find subrules for each child rule
+    for _, subrule in subrules.iterrows():
+        subrules = pd.concat([subrules, find_subrules(subrule['rule_num'], all_rules)])
+
+    return subrules.drop_duplicates()  # Remove duplicates if any
+
 
 if __name__ == '__main__':
     # import extracted set of rules
@@ -21,9 +41,24 @@ if __name__ == '__main__':
         for subterm in term.split("/"):
             # Find the rules that contain the subterm
             relevant_rules = rules_pd[rules_pd['rule_text'].str.contains(subterm, case=False, na=False)]
-            # add the subrules as well # TODO
+            # add the subrules as well
+            for index, row in relevant_rules.iterrows():
+                subrules = find_subrules(row['rule_num'], rules_pd)
+                relevant_rules = pd.concat([relevant_rules, subrules])
 
-            # add rules that are mentioned in the rule # TODO
+            # add rules that are mentioned in the rule
+            for index, row in relevant_rules.iterrows():
+                # regex search for rule number
+                matches = re.findall(r'([A-Z]+\.\d+(\.\d+){1,2})', row['rule_text'])
+
+                if matches:
+                    for match in matches:
+                        # append the rule and text to relevant_rules
+                        rule_number = match[0]
+                        relevant_rules = relevant_rules._append({'rule_num': rule_number}, ignore_index=True)
+
+            # drop duplicated based on rule_num
+            relevant_rules = relevant_rules.drop_duplicates(subset='rule_num')
 
             # add each rule_number in relevant_rules to the ground truth dictionary
             for index, row in relevant_rules.iterrows():
