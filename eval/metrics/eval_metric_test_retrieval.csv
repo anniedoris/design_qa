@@ -1,0 +1,5 @@
+﻿model_prediction,ground_truth
+The vehicle must be open wheeled and open cockpit (a formula style body) with four wheels that are not in a straight line. ,"CONFIGURATION
+The vehicle must be open wheeled and open cockpit (a formula style body) with four wheels
+that are not in a straight line."
+The vehicle must have a minimum wheelbase of 1525 mm.,The vehicle must have a minimum wheelbase of 1525 mm

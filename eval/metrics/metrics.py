@@ -4,6 +4,8 @@ import string
 from collections import Counter
 from nltk.translate.bleu_score import sentence_bleu
 from rouge import Rouge
+import pandas as pd
+from statistics import mean
 
 # METRICS IN LITERATURE
 # Macro-averaged F1, use bags of tokens to compute accuracy
@@ -43,6 +45,7 @@ def normalize_answer(s):
     def remove_articles(text):
         return re.sub(r"\b(a|an|the)\b", " ", text)
 
+    # This replaces any newline characters or tab characters with a space
     def white_space_fix(text):
         return " ".join(text.split())
 
@@ -62,6 +65,7 @@ def token_f1_score(prediction, ground_truth):
     """
     prediction_tokens = normalize_answer(prediction).split()
     ground_truth_tokens = normalize_answer(ground_truth).split()
+    # Counts the number of times there's a match between the prediction and the ground truth
     common = Counter(prediction_tokens) & Counter(ground_truth_tokens)
     num_same = sum(common.values())
     if num_same == 0:
@@ -120,8 +124,21 @@ def score_rouge(target, prediction):
 ## Evals per QA dataset
 ########################
 # Retrieval QAs will be scored using F1
-def eval_retrieval_qa(prediction, ground_truth):
-    return token_f1_score(prediction, ground_truth)
+def eval_retrieval_qa(results_csv):
+    """
+    results_csv: the csv should contain the results from running the QA through a model.
+    it should have a column called "model_prediction" and another called "ground_truth" with corresponding GT
+    
+    returns: 
+    1. overall score on QA (macro average)
+    2. F1 score for each QA
+    """
+    results_df = pd.read_csv(results_csv)
+    f1_scores = []
+    for i, row in results_df.iterrows():
+        f1_scores.append(token_f1_score(row['model_prediction'], row['ground_truth']))
+        
+    return mean(f1_scores), f1_scores
 
 # TODO
 def eval_compilation_qa():
@@ -169,7 +186,17 @@ def eval_functional_performance_qa():
     return
 
 if __name__ == '__main__':
-    test_a = "This is a match"
-    test_b = "This is not a match"
-    score = score_rouge(test_a, test_b)
-    print(score)
+    # test_a = "This is a match"
+    # test_b = "This is not a match"
+    # score = score_rouge(test_a, test_b)
+    # print(score)
+    
+    # text_to_norm = "This is a sample sentence. What are you going to do! What are you going to do!"
+    # normalized = normalize_answer(text_to_norm)
+    # print(normalized)
+    
+    # token_f1_score("I am an apple", "I am an apple apple")
+    
+    macro, all = eval_retrieval_qa('eval_metric_test_retrieval.csv')
+    print(macro)
+    print(all)
