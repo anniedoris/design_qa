@@ -34,7 +34,7 @@ from statistics import mean
     ## Functional performance
 
 ########################
-## Text F1, bag of tokens
+## Cleaning functions
 ########################
 def normalize_answer(s):
     """
@@ -58,13 +58,46 @@ def normalize_answer(s):
 
     return white_space_fix(remove_articles(remove_punc(lower(s))))
 
+def clean_rule_list_prediction(rl):
+    list_of_rules = rl.split(',')
+    list_of_rules = [i.strip() for i in list_of_rules]
+    return " ".join(list_of_rules)
 
-def token_f1_score(prediction, ground_truth):
+# TODO: fix compilation.csv ground truth so we don't have to handle GT differently from prediction
+def clean_rule_list_ground_truth(rl):
+    rl = rl.strip('[')
+    rl = rl.strip(']')
+    list_of_rules = rl.split(',')
+    list_of_rules = [i.strip() for i in list_of_rules]
+    list_of_rules = [i.strip("'") for i in list_of_rules]
+    return " ".join(list_of_rules)
+
+########################
+## F1 functions
+########################
+
+# # F1 on a bag of word basis
+# def token_f1_score(prediction, ground_truth):
+#     """
+#     Taken from the official evaluation script for v1.1 of the SQuAD dataset.
+#     """
+#     prediction_tokens = normalize_answer(prediction).split()
+#     ground_truth_tokens = normalize_answer(ground_truth).split()
+#     # Counts the number of times there's a match between the prediction and the ground truth
+#     common = Counter(prediction_tokens) & Counter(ground_truth_tokens)
+#     num_same = sum(common.values())
+#     if num_same == 0:
+#         return 0
+#     precision = 1.0 * num_same / len(prediction_tokens)
+#     recall = 1.0 * num_same / len(ground_truth_tokens)
+#     f1 = (2 * precision * recall) / (precision + recall)
+#     return f1
+
+# F1 on a bag of tokens
+def token_f1_score(prediction_tokens, ground_truth_tokens):
     """
-    Taken from the official evaluation script for v1.1 of the SQuAD dataset.
+    Based on the official evaluation script for v1.1 of the SQuAD dataset.
     """
-    prediction_tokens = normalize_answer(prediction).split()
-    ground_truth_tokens = normalize_answer(ground_truth).split()
     # Counts the number of times there's a match between the prediction and the ground truth
     common = Counter(prediction_tokens) & Counter(ground_truth_tokens)
     num_same = sum(common.values())
@@ -73,7 +106,7 @@ def token_f1_score(prediction, ground_truth):
     precision = 1.0 * num_same / len(prediction_tokens)
     recall = 1.0 * num_same / len(ground_truth_tokens)
     f1 = (2 * precision * recall) / (precision + recall)
-    return f1 
+    return f1
 
 ########################
 ## BLEU
@@ -123,26 +156,43 @@ def score_rouge(target, prediction):
 ########################
 ## Evals per QA dataset
 ########################
-# Retrieval QAs will be scored using F1
+# Retrieval QAs will be scored using F1 on bag of words
 def eval_retrieval_qa(results_csv):
     """
-    results_csv: the csv should contain the results from running the QA through a model.
+    :param results_csv: the csv should contain the results from running the QA through a model.
     it should have a column called "model_prediction" and another called "ground_truth" with corresponding GT
     
-    returns: 
+    :returns: 
     1. overall score on QA (macro average)
     2. F1 score for each QA
     """
     results_df = pd.read_csv(results_csv)
     f1_scores = []
     for i, row in results_df.iterrows():
-        f1_scores.append(token_f1_score(row['model_prediction'], row['ground_truth']))
+        prediction_tokens = normalize_answer(row['model_prediction']).split()
+        ground_truth_tokens = normalize_answer(row['ground_truth']).split()
+        f1_scores.append(token_f1_score(prediction_tokens, ground_truth_tokens))
         
     return mean(f1_scores), f1_scores
 
-# TODO
-def eval_compilation_qa():
-    return
+# Compilation QAs will be scored using F1 on rule numbers
+def eval_compilation_qa(results_csv):
+    """
+    :param results_csv: the csv should contain the results from running the QA through a model.
+    it should have a column called "model_prediction" and another called "ground_truth" with corresponding GT
+    
+    :returns: 
+    1. overall score on QA (macro average)
+    2. F1 score for each QA
+    """
+    results_df = pd.read_csv(results_csv)
+    f1_scores = []
+    for i, row in results_df.iterrows():
+        prediction_tokens = clean_rule_list_prediction(row['model_prediction']).split()
+        ground_truth_tokens = clean_rule_list_ground_truth(row['ground_truth']).split()
+        f1_scores.append(token_f1_score(prediction_tokens, ground_truth_tokens))
+        
+    return mean(f1_scores), f1_scores
 
 # Definition QAs will be scored using max F1 across all synonyms
 # TODO: think about whether this is the best metric for this category. I think it makes sense as long as all synonyms for
@@ -186,17 +236,12 @@ def eval_functional_performance_qa():
     return
 
 if __name__ == '__main__':
-    # test_a = "This is a match"
-    # test_b = "This is not a match"
-    # score = score_rouge(test_a, test_b)
-    # print(score)
+    # # TEST RETRIEVAL QA
+    # macro, all = eval_retrieval_qa('eval_metric_test_retrieval.csv')
+    # print(macro)
+    # print(all)
     
-    # text_to_norm = "This is a sample sentence. What are you going to do! What are you going to do!"
-    # normalized = normalize_answer(text_to_norm)
-    # print(normalized)
-    
-    # token_f1_score("I am an apple", "I am an apple apple")
-    
-    macro, all = eval_retrieval_qa('eval_metric_test_retrieval.csv')
-    print(macro)
-    print(all)
+    # TEST COMPILATION QA
+    macro_avg, all_answers = eval_compilation_qa('eval_metric_test_compilation.csv')
+    print(macro_avg)
+    print(all_answers)
