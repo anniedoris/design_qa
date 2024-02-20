@@ -58,6 +58,9 @@ def normalize_answer(s):
 
     return white_space_fix(remove_articles(remove_punc(lower(s))))
 
+def character_string_no_space(text):
+    return text.replace(' ', '')
+
 def clean_rule_list_prediction(rl):
     list_of_rules = rl.split(',')
     list_of_rules = [i.strip() for i in list_of_rules]
@@ -194,19 +197,56 @@ def eval_compilation_qa(results_csv):
         
     return mean(f1_scores), f1_scores
 
-# Definition QAs will be scored using max F1 across all synonyms
-# TODO: think about whether this is the best metric for this category. I think it makes sense as long as all synonyms for
-# the component(s) are directly mentioned in the document
-def eval_definition_qa(prediction, ground_truth):
-    # ground_truth_list contains a list of possible synonym answers to the question, separated by commas
-    synonyms_ground_truth = ground_truth.split(',')
-    synonyms_ground_truth = [i.strip(' ') for i in synonyms_ground_truth]
+# Definition QAs will be scored using F1 on bag of characters, handles synonyms
+def eval_definition_qa(results_csv):
+    """
+    :param results_csv: the csv should contain the results from running the QA through a model.
+    it should have a column called "model_prediction" and another called "ground_truth" with corresponding GT
+    and a third column with "mentions" indicating the number of times the component was mentioned
+    
+    :returns: 
+    1. overall score on QA (macro average)
+    2. overall score for defintion-explicit
+    3. overall score for multi-mention
+    4. overall score for single mention
+    5. F1 score for each QA (max score if there were synonyms)
+    """
+    results_df = pd.read_csv(results_csv)
     f1_scores = []
-    for synonym in synonyms_ground_truth:
-        f1_scores.append(token_f1_score(prediction, synonym))
-
-    # Return the max f1 score for all synonyms
-    return max(f1_scores)
+    f1_scores_definition = []
+    f1_scores_multi = []
+    f1_scores_single = []
+    for i, row in results_df.iterrows():
+        qa_f1_scores = []
+        
+        prediction_tokens = list(character_string_no_space(normalize_answer(row['model_prediction'])))
+        synonym_tokens = []
+        if ";" in row['ground_truth']:
+            synonyms = row['ground_truth'].split(';')
+            for syn in synonyms:
+                synonym_tokens.append(list(character_string_no_space(normalize_answer(syn))))
+        else:
+            synonym_tokens.append(list(character_string_no_space(row['ground_truth'])))
+        
+        for ground_truth_tokens in synonym_tokens:
+            qa_f1_scores.append(token_f1_score(prediction_tokens, ground_truth_tokens))
+        
+        f1_scores.append(max(qa_f1_scores))
+        
+        if row['mentions'] == 'definition':
+            f1_scores_definition.append(max(qa_f1_scores))
+        elif row['mentions'] == 'multi':
+            f1_scores_multi.append(max(qa_f1_scores))
+        else:
+            f1_scores_single.append(max(qa_f1_scores))
+    
+    def mean_score(input_list):
+        if len(input_list) < 1:
+            return None
+        else:
+            return mean(input_list)
+    
+    return mean(f1_scores), mean_score(f1_scores_definition), mean_score(f1_scores_multi), mean_score(f1_scores_single), f1_scores
 
 # Presence QAs will be scored using F1 across all QAs (each individual QA is just logged if it's FP FN TP TN)
 def eval_presence_qa(prediction, ground_truth):
@@ -241,7 +281,10 @@ if __name__ == '__main__':
     # print(macro)
     # print(all)
     
-    # TEST COMPILATION QA
-    macro_avg, all_answers = eval_compilation_qa('eval_metric_test_compilation.csv')
-    print(macro_avg)
-    print(all_answers)
+    # # TEST COMPILATION QA
+    # macro_avg, all_answers = eval_compilation_qa('eval_metric_test_compilation.csv')
+    # print(macro_avg)
+    # print(all_answers)
+    
+    # TEST DEFINITION QA
+    eval_definition_qa('eval_metric_test_definition.csv')
