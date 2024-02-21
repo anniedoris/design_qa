@@ -37,10 +37,10 @@ if __name__ == '__main__':
         "Looking at the close-up view, is/are " + present_components + " visible in the close-up view? Answer simply with yes or no."
         
         # TODO: add mentions in rules back like definition_qa
-        qa.append([question, row['present'], str(current_image_num) + '.jpg'])
+        qa.append([question, row['present'], str(current_image_num) + '.jpg', row['mention_in_rules']])
         
         current_image_num += 1
         
-    pd.DataFrame(qa, columns=['question', 'answer', 'image']).to_csv("../../../dataset/rule_comprehension/rule_presence_qa.csv", index=False)
+    pd.DataFrame(qa, columns=['question', 'answer', 'image', 'mentions']).to_csv("../../../dataset/rule_comprehension/rule_presence_qa.csv", index=False)
     
     

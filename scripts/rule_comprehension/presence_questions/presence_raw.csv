@@ -1,31 +1,31 @@
-﻿im_num,component,present
-1,front hoop,no
-2,front hoop,yes
-3,pedals,no
-4,pedals,yes
-5,roll hoop; roll hoops,no
-6,roll hoop; roll hoops,yes
-7,main hoop,no
-8,main hoop,yes
-9,front bulkhead,no
-10,front bulkhead,yes
-11,chassis; frame,no
-12,chassis; frame,yes
-13,brake; brakes,no
-14,brake; brakes,yes
-15,battery,no
-16,battery,yes
-17,rocker; rockers,no
-18,rocker; rockers,yes
-19,upright; uprights,no
-20,upright; uprights,yes
-21,wheel center; wheel centers,no
-22,wheel center; wheel centers,yes
-23,steering wheel,no
-24,steering wheel,yes
-25,steering column,no
-26,steering column,yes
-27,steering rack,no
-28,steering rack,yes
-29,powertrain,no
-30,powertrain,yes
+﻿im_num,component,present,mention_in_rules
+1,front hoop,no,definition
+2,front hoop,yes,definition
+3,pedals,no,multi
+4,pedals,yes,multi
+5,roll hoop; roll hoops,no,definition
+6,roll hoop; roll hoops,yes,definition
+7,main hoop,no,definition
+8,main hoop,yes,definition
+9,front bulkhead,no,definition
+10,front bulkhead,yes,definition
+11,chassis; frame,no,definition
+12,chassis; frame,yes,definition
+13,brake; brakes,no,multi
+14,brake; brakes,yes,multi
+15,battery,no,multi
+16,battery,yes,multi
+17,rocker; rockers,no,once
+18,rocker; rockers,yes,once
+19,upright; uprights,no,once
+20,upright; uprights,yes,once
+21,wheel center; wheel centers,no,once
+22,wheel center; wheel centers,yes,once
+23,steering wheel,no,multi
+24,steering wheel,yes,multi
+25,steering column,no,multi
+26,steering column,yes,multi
+27,steering rack,no,multi
+28,steering rack,yes,multi
+29,powertrain,no,multi
+30,powertrain,yes,multi

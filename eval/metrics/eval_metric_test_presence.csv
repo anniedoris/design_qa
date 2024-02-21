@@ -1,0 +1,8 @@
+﻿model_prediction,ground_truth,mentions
+NO,no,definition
+blah blah yes,yes,definition
+blah blah no,no,multi
+YES,yes,multi
+blah blah yes no,no,once
+blah blah no yes,yes,once
+blah blah blah ,no,definition

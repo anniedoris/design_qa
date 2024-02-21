@@ -249,23 +249,53 @@ def eval_definition_qa(results_csv):
     return mean(f1_scores), mean_score(f1_scores_definition), mean_score(f1_scores_multi), mean_score(f1_scores_single), f1_scores
 
 # Presence QAs will be scored using F1 across all QAs (each individual QA is just logged if it's FP FN TP TN)
-def eval_presence_qa(prediction, ground_truth):
-    true_positive = 0
-    true_negative = 0
-    false_positive = 0
-    false_negative = 0
-
-    if prediction == "yes" or prediction == "Yes":
-        if ground_truth == "yes":
-            true_positive = 1
+def eval_presence_qa(results_csv):
+    """
+    :param results_csv: the csv should contain the results from running the QA through a model.
+    it should have a column called "model_prediction" and another called "ground_truth" with corresponding GT
+    
+    :returns: 
+    1. overall score on QA (macro average)
+    2. F1 score for each QA
+    """
+    results_df = pd.read_csv(results_csv)
+    
+    # TODO: need to move class information over
+    f1_scores = []
+    f1_scores_definition = []
+    f1_scores_multi = []
+    f1_scores_single = []
+    for i, row in results_df.iterrows():
+        prediction_tokens = normalize_answer(row['model_prediction']).split()
+        ground_truth_tokens = normalize_answer(row['ground_truth']).split()
+        
+        # Get the first yes/no in the prediction answer
+        def get_first_yes_no(text_list):
+            for i in text_list:
+                if i == "yes":
+                    return ['yes']
+                if i == "no":
+                    return ['no']
+            return ['noanswer']
+        
+        prediction_tokens = get_first_yes_no(prediction_tokens)
+        
+        f1_scores.append(token_f1_score(prediction_tokens, ground_truth_tokens))
+        
+        if row['mentions'] == 'definition':
+            f1_scores_definition.append(token_f1_score(prediction_tokens, ground_truth_tokens))
+        elif row['mentions'] == 'multi':
+            f1_scores_multi.append(token_f1_score(prediction_tokens, ground_truth_tokens))
         else:
-            false_positive = 1
-    else:
-        if ground_truth == "no" or prediction == "No":
-            true_negative = 1
+            f1_scores_single.append(token_f1_score(prediction_tokens, ground_truth_tokens))
+            
+    def mean_score(input_list):
+        if len(input_list) < 1:
+            return None
         else:
-            false_negative = 1
-    return true_positive, false_positive, true_negative, false_negative
+            return mean(input_list)
+    
+    return mean(f1_scores), mean_score(f1_scores_definition), mean_score(f1_scores_multi), mean_score(f1_scores_single), f1_scores
 
 # TODO for using BLEU and ROUGE, could consider reporting geometric mean across several n-grams
 def eval_dimensions_qa():
@@ -286,5 +316,18 @@ if __name__ == '__main__':
     # print(macro_avg)
     # print(all_answers)
     
-    # TEST DEFINITION QA
-    eval_definition_qa('eval_metric_test_definition.csv')
+    # # TEST DEFINITION QA
+    # eval_definition_qa('eval_metric_test_definition.csv')
+    
+    # # TEST PRESENCE QA
+    # macro_avg, definitions_avg, multi_avg, single_avg, all_answers = eval_presence_qa('eval_metric_test_presence.csv')
+    # print("macro average")
+    # print(macro_avg)
+    # print("definitions avg")
+    # print(definitions_avg)
+    # print("multi avg")
+    # print(multi_avg)
+    # print("single avg")
+    # print(single_avg)
+    # print("all f1")
+    # print(all_answers)
