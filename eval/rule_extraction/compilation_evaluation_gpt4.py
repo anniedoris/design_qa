@@ -1,13 +1,9 @@
-import os
-import re
-import string
-from collections import Counter
 from openai import OpenAI
 from time import sleep
 import pandas as pd
 from tqdm import tqdm
 import ast
-
+from metrics import eval_compilation_qa
 
 def upload_file(file_path):
     # Upload a file with an "assistants" purpose
@@ -57,19 +53,17 @@ def run_thread(question):
 
 if __name__ == '__main__':
     # get the api key from memory
-    # OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-    from config import OPENAI_API_KEY
-    client = OpenAI(api_key=OPENAI_API_KEY)
+    client = OpenAI()
 
-    file_path = '../../dataset/rule_extraction/docs/FSAE_Rules_2024_V1.pdf'
+    file_path = '../../dataset/docs/FSAE_Rules_2024_V1.pdf'
     file = upload_file(file_path)
     assistant = create_assistant(file)
 
-    questions_pd = pd.read_csv("../../dataset/rule_extraction/qa_compilation/data/rule_compilation_qa.csv")
+    questions_pd = pd.read_csv("../../dataset/rule_extraction/rule_compilation_qa.csv")
 
-    # Get responses from the model and compute accuracy
-    questions_pd['response'] = None
-    for index, row in tqdm(questions_pd.iterrows(), total=len(questions_pd)):
+    # Get responses from the model
+    questions_pd['model_prediction'] = None
+    for index, row in tqdm(questions_pd.iterrows(), total=len(questions_pd), desc='generating responses'):
         question = row['question']
 
         # Run through model
@@ -77,16 +71,21 @@ if __name__ == '__main__':
 
         # Save the response
         response = response.split("【")[0].split(', ')
-        questions_pd.at[index, 'response'] = response
+        questions_pd.at[index, 'model_prediction'] = response
 
         # compute the accuracy of the response:
-        ground_truth = ast.literal_eval(row['answer'])
-        score = 0   # TODO
-        questions_pd.at[index, 'f1_score'] = score
+        # ground_truth = ast.literal_eval(row['answer'])
+        # score = f1_score(ground_truth, response, average='micro')
+        # questions_pd.at[index, 'f1_score'] = score
 
 
     # save the results
-    questions_pd.to_csv("compilation_evaluation_gpt4.csv", index=False)
+    csv_name = "compilation_evaluation_gpt4.csv"
+    questions_pd.to_csv(csv_name, index=False)
+
+    # Compute the accuracy of the responses
+    overall_f1, individual_f1 = eval_compilation_qa(csv_name)
 
     # print the average of the scores
-    print(f"Average F1 Score: {questions_pd['f1_score'].mean()}")
+    print(f"Average F1 Score: {overall_f1}")
+    print(f"\nIndividual F1 Scores: {individual_f1}")

@@ -5,8 +5,10 @@ from time import sleep
 import pandas as pd
 from tqdm import tqdm
 import sys
+
 sys.path.append("..")
 from common_prompts import prompt_preamble
+
 
 def compile_answer(row):
     rule_text = row['rule_text']
@@ -40,14 +42,15 @@ if __name__ == '__main__':
 
         # Compile the question
         question = prompt_preamble + f"What does rule {rule_number} state exactly? Answer with only the text of " \
-                   f"the rule and no other words."
-        
+                                     f"the rule and no other words."
+
         answer = compile_answer(row)
 
         if answer != None:
             qa.append([question, answer])
 
     # Export questions and answers to compilation.csv
-    pd.DataFrame(qa, columns=['question', 'answer']).to_csv("../../dataset/rule_extraction/rule_retrieval_qa.csv", index=False)
+    pd.DataFrame(qa, columns=['question', 'answer']).to_csv("../../dataset/rule_extraction/rule_retrieval_qa.csv",
+                                                            index=False)
 
     print(len(qa))

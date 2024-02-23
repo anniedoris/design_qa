@@ -94,14 +94,13 @@ def token_f1_score(prediction, ground_truth):
 
 if __name__ == '__main__':
     # get the api key from memory
-    from config import OPENAI_API_KEY
-    client = OpenAI(api_key=OPENAI_API_KEY)
+    client = OpenAI()
 
-    file_path = '../../dataset/rule_extraction/docs/FSAE_Rules_2024_V1.pdf'
+    file_path = '../../dataset/docs/FSAE_Rules_2024_V1.pdf'
     file = upload_file(file_path)
     assistant = create_assistant(file)
 
-    questions_pd = pd.read_csv("../../dataset/rule_extraction/qa_retrieval/data/rule_retrieval_qa.csv")
+    questions_pd = pd.read_csv("../../dataset/rule_extraction/rule_retrieval_qa.csv")
     # if output csv does not exist, create it
     if not os.path.exists("retrieval_evaluation_gpt4.csv"):
         questions_pd.to_csv("retrieval_evaluation_gpt4.csv", index=False)
