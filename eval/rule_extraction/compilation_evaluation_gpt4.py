@@ -2,7 +2,7 @@ from openai import OpenAI
 from time import sleep
 import pandas as pd
 from tqdm import tqdm
-import ast
+import os
 from metrics import eval_compilation_qa
 
 def upload_file(file_path):
@@ -61,9 +61,23 @@ if __name__ == '__main__':
 
     questions_pd = pd.read_csv("../../dataset/rule_extraction/rule_compilation_qa.csv")
 
+    # if output csv does not exist, create it
+    csv_name = "compilation_evaluation_gpt4.csv"
+    if not os.path.exists(csv_name):
+        questions_pd.to_csv(csv_name, index=False)
+    else:
+        questions_pd = pd.read_csv(csv_name)
+
     # Get responses from the model
-    questions_pd['model_prediction'] = None
     for index, row in tqdm(questions_pd.iterrows(), total=len(questions_pd), desc='generating responses'):
+        # if model_prediction column already has a prediction, skip the row
+        try:
+            model_prediction = row['model_prediction']
+        except KeyError:
+            model_prediction = None
+        if not pd.isnull(model_prediction):
+            continue
+
         question = row['question']
 
         # Run through model
@@ -73,19 +87,12 @@ if __name__ == '__main__':
         response = response.split("【")[0].split(', ')
         questions_pd.at[index, 'model_prediction'] = response
 
-        # compute the accuracy of the response:
-        # ground_truth = ast.literal_eval(row['answer'])
-        # score = f1_score(ground_truth, response, average='micro')
-        # questions_pd.at[index, 'f1_score'] = score
-
-
     # save the results
-    csv_name = "compilation_evaluation_gpt4.csv"
     questions_pd.to_csv(csv_name, index=False)
 
     # Compute the accuracy of the responses
-    overall_f1, individual_f1 = eval_compilation_qa(csv_name)
+    macro_avg, all_answers = eval_compilation_qa(csv_name)
 
     # print the average of the scores
-    print(f"Average F1 Score: {overall_f1}")
-    print(f"\nIndividual F1 Scores: {individual_f1}")
+    print(f"Average F1 Score: {macro_avg}")
+    print(f"\nIndividual F1 Scores: {all_answers}")

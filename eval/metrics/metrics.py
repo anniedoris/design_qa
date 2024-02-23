@@ -5,6 +5,7 @@ from nltk.translate.bleu_score import sentence_bleu
 from rouge import Rouge
 import pandas as pd
 from statistics import mean
+import ast
 
 
 # METRICS IN LITERATURE
@@ -66,16 +67,6 @@ def character_string_no_space(text):
 def clean_rule_list_prediction(rl):
     list_of_rules = rl.split(',')
     list_of_rules = [i.strip() for i in list_of_rules]
-    return " ".join(list_of_rules)
-
-
-# TODO: fix compilation.csv ground truth so we don't have to handle GT differently from prediction
-def clean_rule_list_ground_truth(rl):
-    rl = rl.strip('[')
-    rl = rl.strip(']')
-    list_of_rules = rl.split(',')
-    list_of_rules = [i.strip() for i in list_of_rules]
-    list_of_rules = [i.strip("'") for i in list_of_rules]
     return " ".join(list_of_rules)
 
 
@@ -200,8 +191,8 @@ def eval_compilation_qa(results_csv):
     results_df = pd.read_csv(results_csv)
     f1_scores = []
     for i, row in results_df.iterrows():
-        prediction_tokens = clean_rule_list_prediction(row['model_prediction']).split()
-        ground_truth_tokens = clean_rule_list_ground_truth(row['ground_truth']).split()
+        prediction_tokens = ast.literal_eval(row['model_prediction'])
+        ground_truth_tokens = ast.literal_eval(row['ground_truth'])
         f1_scores.append(token_f1_score(prediction_tokens, ground_truth_tokens))
 
     return mean(f1_scores), f1_scores
@@ -329,6 +320,11 @@ if __name__ == '__main__':
     # print(all)
 
     # # TEST COMPILATION QA
+    # print(pd.read_csv('../rule_extraction/compilation_evaluation_gpt4.csv')['ground_truth'].head())
+    # print(pd.read_csv('../rule_extraction/compilation_evaluation_gpt4.csv')['model_prediction'].head())
+    # macro_avg, all_answers = eval_compilation_qa('../rule_extraction/compilation_evaluation_gpt4.csv')
+    # print(macro_avg)
+    # print(all_answers)
     # macro_avg, all_answers = eval_compilation_qa('eval_metric_test_compilation.csv')
     # print(macro_avg)
     # print(all_answers)
