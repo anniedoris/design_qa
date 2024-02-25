@@ -1,16 +1,31 @@
-﻿im_num,highlighted_component,hidden_components,mention_in_rules,checked_by_team,,,,,
-1,pedals,no,multi,no,,,,,
-2,front hoop,no,definition,no,,,,,
-3,roll hoop; roll hoops,no,definition,no,,,,,
-4,main hoop,no,definition,no,,,,,
-5,front bulkhead,no,definition,no,,,,,
-6,chassis; frame,no,definition,no,,,,,
-7,steering wheel,no,multi,no,,,,,
-8,powertrain,no,multi,no,,,,,
-9,brakes,yes,multi,no,,,,,
-10,battery,no,multi,no,,,,,
-11,rockers,no,once,no,,,,,
-12,uprights,yes,once,no,,,,,
-13,wheel centers,yes,once,no,,,,,
-14,steering column,no,multi,no,,,,,
-15,steering rack,no,multi,no,,,,,
+﻿im_num,highlighted_component,hidden_components,mention_in_rules,checked_by_team
+1,pedals,no,mentioned,no
+2,front hoop,no,definition,no
+3,roll hoop; roll hoops,no,definition,no
+4,main hoop,no,definition,no
+5,front bulkhead,no,definition,no
+6,chassis; frame,no,definition,no
+7,steering wheel,no,mentioned,no
+8,powertrain,no,mentioned,no
+9,brakes,yes,mentioned,no
+10,accumulator; accumulator container,no,definition,no
+11,rocker arms; rockers,no,mentioned,no
+12,uprights,yes,mentioned,no
+13,wheel centers,yes,not_mentioned,no
+14,steering column,no,mentioned,no
+15,steering rack,no,mentioned,no
+16,monocoque,no,definition,no
+17,flip ups,no,not_mentioned,no
+18,rear wing,no,not_mentioned,no
+19,undertray,no,mentioned,no
+20,endplate,no,mentioned,no
+21,front wing,no,mentioned,no
+22,AArm; AArms,no,not_mentioned,no
+23,tie rod; tie rods,no,not_mentioned,no
+24,push rod; push rods,no,not_mentioned,no
+25,anti-roll bar; anti-roll hoop,no,not_mentioned,no
+26,seat,no,mentioned,no
+27,nosecone; nose cone; nose cones; nosecones,no,mentioned,no
+28,body panel; body panels,no,mentioned,no
+29,motor,no,mentioned,no
+30,firewall; firewalls,no,mentioned,no
