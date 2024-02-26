@@ -208,15 +208,15 @@ def eval_definition_qa(results_csv):
     :returns: 
     1. overall score on QA (macro average)
     2. overall score for defintion-explicit
-    3. overall score for multi-mention
-    4. overall score for single mention
+    3. overall score for mentioned
+    4. overall score for not mentioned
     5. F1 score for each QA (max score if there were synonyms)
     """
     results_df = pd.read_csv(results_csv)
     f1_scores = []
     f1_scores_definition = []
     f1_scores_multi = []
-    f1_scores_single = []
+    f1_scores_none = []
     for i, row in results_df.iterrows():
         qa_f1_scores = []
 
@@ -236,10 +236,10 @@ def eval_definition_qa(results_csv):
 
         if row['mentions'] == 'definition':
             f1_scores_definition.append(max(qa_f1_scores))
-        elif row['mentions'] == 'multi':
+        elif row['mentions'] == 'mentioned':
             f1_scores_multi.append(max(qa_f1_scores))
         else:
-            f1_scores_single.append(max(qa_f1_scores))
+            f1_scores_none.append(max(qa_f1_scores))
 
     def mean_score(input_list):
         if len(input_list) < 1:
@@ -248,7 +248,7 @@ def eval_definition_qa(results_csv):
             return mean(input_list)
 
     return mean(f1_scores), mean_score(f1_scores_definition), mean_score(f1_scores_multi), mean_score(
-        f1_scores_single), f1_scores
+        f1_scores_none), f1_scores
 
 
 # Presence QAs will be scored using F1 across all QAs (each individual QA is just logged if it's FP FN TP TN)
@@ -329,8 +329,18 @@ if __name__ == '__main__':
     # print(macro_avg)
     # print(all_answers)
 
-    # # TEST DEFINITION QA
-    # eval_definition_qa('eval_metric_test_definition.csv')
+    # TEST DEFINITION QA
+    macro_avg, definitions_avg, multi_avg, single_avg, all_answers = eval_definition_qa('eval_metric_test_definition.csv')
+    print("Macro avg")
+    print(macro_avg)
+    print("Definitions")
+    print(definitions_avg)
+    print("Multi avg")
+    print(multi_avg)
+    print("Single avg")
+    print(single_avg)
+    print("All answers")
+    print(all_answers)
 
     # # TEST PRESENCE QA
     # macro_avg, definitions_avg, multi_avg, single_avg, all_answers = eval_presence_qa('eval_metric_test_presence.csv')
