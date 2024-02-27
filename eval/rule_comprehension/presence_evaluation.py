@@ -118,7 +118,7 @@ if __name__ == '__main__':
             image_path = "../../dataset/rule_comprehension/rule_presence_qa/" + row['image']
 
             # Run through model
-            response = run_thread(model, question[:322], image_path)
+            response = run_thread(model, question[:322], image_path)    # TODO: fix the trucation problem
 
             # Save the response
             questions_pd.at[index, 'model_prediction'] = response

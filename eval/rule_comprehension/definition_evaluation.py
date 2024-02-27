@@ -118,7 +118,7 @@ if __name__ == '__main__':
             image_path = "../../dataset/rule_comprehension/rule_definition_qa/" + row['image']
 
             # Run through model
-            response = run_thread(model, question[:322], image_path)
+            response = run_thread(model, question[:322], image_path)    # TODO: fix the trucation problem
 
             # Save the response
             questions_pd.at[index, 'model_prediction'] = response
@@ -127,7 +127,7 @@ if __name__ == '__main__':
             questions_pd.to_csv(csv_name, index=False)
 
         # Compute the accuracy of the responses
-        macro_avg, definitions_avg, multi_avg, single_avg, all_answers = eval_definition_qa(csv_name)
+        macro_avg, definitions_avg, multi_avg, single_avg, all_answers = eval_definition_qa(csv_name)   # TODO: fix ground_truth/answer
 
         # Print the results
         print(f"\nMacro avg: {macro_avg}")
