@@ -1,4 +1,4 @@
-﻿image_name,rule_tested,complies,dimension_system,view
-V.1.2_yes,V.1.2,yes,direct,front
-V.1.2_no,V.1.2,no,direct,front
-zoom_front_view,V.1.2,yes,scale,front
+﻿image_name,rule_tested,complies,dimension_system,view,cad_model,context_im,context_im_detailed,additional_info,additional_info_context,explanation_1,explanation_2
+V.1.2_yes,V.1.2,yes,direct,left,vehicle,1,15,,"In the CAD views, the wheels are highlighted in pink.",,
+V.1.2_no,V.1.2,no,direct,left,vehicle,1,15,,"In the CAD views, the wheels are highlighted in pink.",,
+zoom_front_view,V.1.2,yes,scale,left,vehicle,1,15,,"In the CAD views, the wheels are highlighted in pink.",,
