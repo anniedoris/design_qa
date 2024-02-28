@@ -111,7 +111,7 @@ def draw_line_img(img, y, thickness, offset):
     return img
 
 df = pd.read_csv('raw_dimension_qas.csv')
-detailed_context = True
+detailed_context = False
 
 qa = []
 for i, row in df.iterrows():
