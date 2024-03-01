@@ -22,6 +22,6 @@ if __name__ == '__main__':
             qa.append([question, row['highlighted_component'], str(current_image_num) + '.jpg', row['mention_in_rules']])
         current_image_num += 1
         
-    pd.DataFrame(qa, columns=['question', 'answer', 'image', 'mentions']).to_csv("../../../dataset/rule_comprehension/rule_definition_qa.csv", index=False)
+    pd.DataFrame(qa, columns=['question', 'ground_truth', 'image', 'mentions']).to_csv("../../../dataset/rule_comprehension/rule_definition_qa.csv", index=False)
     
     

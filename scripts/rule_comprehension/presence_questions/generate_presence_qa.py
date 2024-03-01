@@ -41,6 +41,6 @@ if __name__ == '__main__':
         
         current_image_num += 1
         
-    pd.DataFrame(qa, columns=['question', 'answer', 'image', 'mentions']).to_csv("../../../dataset/rule_comprehension/rule_presence_qa.csv", index=False)
+    pd.DataFrame(qa, columns=['question', 'ground_truth', 'image', 'mentions']).to_csv("../../../dataset/rule_comprehension/rule_presence_qa.csv", index=False)
     
     
