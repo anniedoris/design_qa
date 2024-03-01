@@ -43,11 +43,11 @@ def run_thread(model, question, image_path, context):
         multi_modal_llm = ReplicateMultiModal(
             model=model,
             max_new_tokens=100,
-            temperature=0.1,
-            num_input_files=1,
-            top_p=0.9,
-            num_beams=1,
-            repetition_penalty=1,
+            # temperature=0.1,
+            # num_input_files=1,
+            # top_p=0.9,
+            # num_beams=1,
+            # repetition_penalty=1,
         )
     elif model == 'gpt-4-vision-preview':
         # OpenAI model
