@@ -196,9 +196,11 @@ for i, row in df.iterrows():
     qa.append([question, answer, output_im_name, dimension_type])
 
 if detailed_context:    
-    pd.DataFrame(qa, columns=['question', 'answer', 'image', 'dimension_type']).to_csv("../../../dataset/rule_evaluation/rule_dimension_qa/detailed_context/rule_dimension_qa_detailed_context.csv", index=False)
+    pd.DataFrame(qa, columns=['question', 'answer', 'image', 'dimension_type']).to_csv(
+        "../../../dataset/rule_compliance/rule_dimension_qa/detailed_context/rule_dimension_qa_detailed_context.csv", index=False)
 else:
-    pd.DataFrame(qa, columns=['question', 'answer', 'image', 'dimension_type']).to_csv("../../../dataset/rule_evaluation/rule_dimension_qa/context/rule_dimension_qa_context.csv", index=False)
+    pd.DataFrame(qa, columns=['question', 'answer', 'image', 'dimension_type']).to_csv(
+        "../../../dataset/rule_compliance/rule_dimension_qa/context/rule_dimension_qa_context.csv", index=False)
     
     
 
