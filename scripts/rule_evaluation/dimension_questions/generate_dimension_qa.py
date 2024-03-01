@@ -5,7 +5,19 @@ import sys
 sys.path.append("../..")
 from common_prompts import prompt_preamble
 
-def convert_pdf_to_images(pdf_path):
+def convert_pdf_to_images(pdf_path, index):
+    """
+    Convert single page PDF to an image.
+
+    Parameters:
+    - pdf_path: Path to the PDF file.
+    """
+    # Convert PDF to a list of images
+    images = convert_from_path(pdf_path, dpi=600)
+    
+    return images[index]
+
+def convert_single_pdf_to_images(pdf_path):
     """
     Convert single page PDF to an image.
 
@@ -17,7 +29,6 @@ def convert_pdf_to_images(pdf_path):
     
     for i, image in enumerate(images):
         pass
-    # image.save('dimension_jpg/' + pdf_path)
     
     return image
 
@@ -34,6 +45,36 @@ def crop_image(img, left, top, right, bottom):
     cropped_img = img.crop((new_left, new_top, new_right, new_bottom))
     
     return cropped_img
+
+def crop_cad_image(img, left, top, right, bottom):
+    """
+    Crop the image from the left, top, right, and bottom
+
+    Parameters:
+    - image_path: Path to the image file.
+    - left: Amount to crop from the left.
+    - top: Amount to crop from the top.
+    - right: Amount to crop from the right.
+    - bottom: Amount to crop from the bottom.
+    """
+        
+    # Calculate the new dimensions
+    width, height = img.size
+    new_left = left
+    new_top = top
+    new_right = width - right
+    new_bottom = height - bottom
+
+    # Perform the crop
+    cropped_img = img.crop((new_left, new_top, new_right, new_bottom))
+
+    # Display the cropped image
+    # cropped_img.show()
+    
+    # Finally, rotate the image by 90 degrees
+    rotated_img = cropped_img.rotate(-90, expand=True)
+    
+    return rotated_img
 
 def rotate_image(img, rotation_angle):
     rotated_img = img.rotate(rotation_angle, expand=True)
@@ -70,46 +111,67 @@ def draw_line_img(img, y, thickness, offset):
     return img
 
 df = pd.read_csv('raw_dimension_qas.csv')
+detailed_context = False
 
 qa = []
 for i, row in df.iterrows():
-
-    # Six views image   
-    pdf_path = 'six_views.pdf'
-    baseline_six_img = convert_pdf_to_images(pdf_path)
-
-    baseline_six_img = crop_image(baseline_six_img, 200, 690, 1700, 90)
-    baseline_six_img = rotate_image(baseline_six_img, -90)
+    
+    print("RULE")
+    print(row['rule_tested'])
+    if detailed_context:
+        context_img = convert_pdf_to_images('rule_evaluation_definition_detailed_context.pdf', int(row['context_im_detailed']))
+    else:
+        context_img = convert_pdf_to_images('rule_evaluation_definition_context.pdf', int(row['context_im']))
+    cropped_context_img = crop_cad_image(context_img, left=550, top=600, right=2275, bottom=0)
 
     # Single image
     pdf_name = row['image_name'] + '.pdf'
     pdf_path = 'dimension_pdfs/' + pdf_name
-    zoomed_im = convert_pdf_to_images(pdf_path)
+    zoomed_im = convert_single_pdf_to_images(pdf_path)
     zoomed_im = crop_image(zoomed_im, 0, 0, 0, 1800)
-    concat_im = concatenate_images(baseline_six_img, zoomed_im)
+    concat_im = concatenate_images(cropped_context_img, zoomed_im)
 
-    # Draw line on image
+    # Draw line on drawing image
     draw_img = draw_line_img(concat_im, zoomed_im.height, 5, 370)
-    draw_img = draw_line_img(concat_im, concat_im.height - 570, 7, 360)
 
-    # Overlay coordinate frame
-    if row['view'] == "front":
-        overlay = Image.open('front_coord.png')
-        overlay = overlay.resize((overlay.width*6, overlay.height*6))
-        draw_img.paste(overlay, (500, 500), overlay if overlay.mode == 'RGBA' else None)
-        # draw_img.show()
+    # Overlay coordinate frame on the drawing
+    overlay = Image.open('coord_orientations/' + row['view'] + '_coord.png')
+    overlay = overlay.resize((overlay.width*6, overlay.height*6))
+    draw_img.paste(overlay, (draw_img.width - 1600, 500), overlay if overlay.mode == 'RGBA' else None)
+    draw_img.show()
     
     rule_num = row['rule_tested']
     answer = row['complies']
+    cad_model = row['cad_model']
+    additional_info = str(row['additional_info'])
+    if "nan" in additional_info:
+        additional_info = ""
     
+    if len(additional_info) > 1:
+        additional_info += " "
+    
+    additional_info_context = ""
+    if detailed_context:
+        additional_info_context = str(row['additional_info_context'])
+        
+        if "nan" in additional_info_context:
+            additional_info_context = ""
+            
+        if len(additional_info_context) > 1:
+            additional_info_context += " "
+    
+    prompt_1 = f"Also attached is an image that shows an engineering drawing of the {cad_model} on the top accompanied by six CAD views of the {cad_model} on"\
+        " the bottom. The six CAD views each feature a different orientation of our design, so that 3D information about our design can be inferred."\
+        " " + additional_info_context + "The CAD views are provided to contextualize the engineering drawing, which has the same orientation as one of the six CAD views. All units displayed"\
+        " in the engineering have units of mm. " + additional_info + "Based on the engineering drawing, does our design comply with rule " + rule_num + " specified in the FSAE rule document?"
+    prompt_2 = f" Answer only with a simple 'yes/no' (complies/does not comply with the rule) followed by an explanation (begin it with 'Explanation:')"\
+        " that explains the reasoning behind your answer."
+        
     # For direct dimensioning questions
     if row['dimension_system'] == "direct":
-        question = prompt_preamble + 'The attached image shows two engineering drawings of our designed vehicle, one on top of the other.'\
-        ' The top drawing shows a close-up view of the design. The bottom drawing (provided for context) shows six smaller views that show all the critical orientations of'\
-        ' our design. Note that the close-up view orientation matches one of the six smaller view orientations. Using the close-up view, does our design comply'\
-        ' with rule ' + rule_num + ' specified in the FSAE rule document? Only use dimensions explicitly shown in the close-up view to answer the question.'\
-        " If a dimension is not explicitly shown, you can assume that it complies with the rules. Answer only with a simple 'yes/no' (complies/does not comply"\
-        ' with rule ' + rule_num + "), followed by an explanation (started with 'Explanation:') that explains the reasoning behind your answer."
+        question = prompt_preamble + prompt_1 + \
+        " Only use dimensions explicitly shown in the engineering drawing to answer the question. If a dimension is not explicitly shown, you can assume that it"\
+        " complies with the rules." + prompt_2
         
         if answer == "yes":
             output_im_name = row['rule_tested'] + "a" + '.jpg'
@@ -118,21 +180,25 @@ for i, row in df.iterrows():
     
     # For scale bar questions 
     else:
-        question = prompt_preamble + 'The attached image shows two engineering drawings of our designed vehicle, one on top of the other.'\
-        ' The top drawing shows a close-up view of the design. The bottom drawing (provided for context) shows six smaller views that show all the critical orientations of'\
-        ' our design. Note that the close-up view orientation matches one of the six smaller view orientations. Using the close-up view, does our design comply'\
-        ' with rule ' + rule_num + ' specified in the FSAE rule document? To answer the question, use the scale bar shown in the close-up view to compute necessary dimensions in the close-up view.'\
-        " Answer only with a simple 'yes/no' (complies/does not comply"\
-        ' with rule ' + rule_num + "), followed by an explanation (indicated by 'Explanation:') that explains the reasoning behind your answer."
+        question = prompt_preamble + prompt_1 + \
+        " To answer the question, use the scale bar shown at the top of the engineering drawing to compute necessary dimensions in the drawing. " +\
+        prompt_2
+        
         output_im_name = row['rule_tested'] + "c" + '.jpg'
     
     # Save the generated image
-    draw_img.save("../../../dataset/rule_evaluation/rule_dimension_qa/" + output_im_name)
+    if detailed_context:
+        draw_img.save("../../../dataset/rule_evaluation/rule_dimension_qa/detailed_context/" + output_im_name)
+    else:
+        draw_img.save("../../../dataset/rule_evaluation/rule_dimension_qa/context/" + output_im_name)
     
     dimension_type = row['dimension_system']
     qa.append([question, answer, output_im_name, dimension_type])
-    
-pd.DataFrame(qa, columns=['question', 'answer', 'image', 'dimension_type']).to_csv("../../../dataset/rule_evaluation/rule_dimension_qa.csv", index=False)
+
+if detailed_context:    
+    pd.DataFrame(qa, columns=['question', 'answer', 'image', 'dimension_type']).to_csv("../../../dataset/rule_evaluation/rule_dimension_qa/detailed_context/rule_dimension_qa_detailed_context.csv", index=False)
+else:
+    pd.DataFrame(qa, columns=['question', 'answer', 'image', 'dimension_type']).to_csv("../../../dataset/rule_evaluation/rule_dimension_qa/context/rule_dimension_qa_context.csv", index=False)
     
     
 
