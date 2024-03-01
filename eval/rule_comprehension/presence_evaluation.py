@@ -23,10 +23,10 @@ def get_text_prompts(text_query_path):
     return queries
 
 
-def load_output_csv(model):
+def load_output_csv(model, overwrite_answers=False):
     # if output csv does not exist, create it
     csv_name = f"presence_evaluation_{model}.csv"
-    if not os.path.exists(csv_name):
+    if not os.path.exists(csv_name) or overwrite_answers:
         questions_pd = pd.read_csv("../../dataset/rule_comprehension/rule_presence_qa.csv")
         questions_pd.to_csv(csv_name, index=False)
     else:
@@ -38,7 +38,7 @@ def run_thread(model, question, image_path, context):
     if model == 'llava-13b':
         top_k = 1
         # API token of the model/pipeline that we will be using
-        REPLICATE_API_TOKEN = ""
+        REPLICATE_API_TOKEN = "r8_0kZwnNy7gAZn5okS4tkbUp89qaOWWyj36ErFg"
         os.environ["REPLICATE_API_TOKEN"] = REPLICATE_API_TOKEN
         model = REPLICATE_MULTI_MODAL_LLM_MODELS["llava-13b"]
         multi_modal_llm = ReplicateMultiModal(
@@ -75,10 +75,11 @@ def add_context_to_prompt(prompt, context):
     context = sorted(context, key=lambda x: int(x.metadata["page_label"]))
 
     # add the context to the prompt
-    prompt_with_context = prompt[:80] + "Below is context from the FSAE rule document which might be relevant for the question: \n"
+    prompt_with_context = prompt[:80] + "Below is context from the FSAE rule document which might or might not " \
+                                        "be relevant for the question: \n\n```\n"
     for doc in context:
         prompt_with_context += f"{doc.text}\n"
-    prompt_with_context += prompt[117:]
+    prompt_with_context += "```\n\n" + prompt[117:]
     return prompt_with_context
 
 
@@ -97,6 +98,8 @@ def retrieve_context(index, question, top_k=10):
 
 
 if __name__ == '__main__':
+    overwrite_answers = True
+
     # Index the text data
     if os.path.exists("index"):
         # rebuild storage context
@@ -108,7 +111,7 @@ if __name__ == '__main__':
         index.storage_context.persist("index")
 
     for model in ['gpt-4-vision-preview', 'llava-13b']:
-        questions_pd, csv_name = load_output_csv(model)
+        questions_pd, csv_name = load_output_csv(model, overwrite_answers=overwrite_answers)
 
         for i, row in tqdm(questions_pd.iterrows(), total=len(questions_pd), desc=f'generating responses for {model}'):
             # if model_prediction column already has a prediction, skip the row
@@ -116,7 +119,7 @@ if __name__ == '__main__':
                 model_prediction = row['model_prediction']
             except KeyError:
                 model_prediction = None
-            if not pd.isnull(model_prediction):
+            if not pd.isnull(model_prediction) and not overwrite_answers:
                 continue
 
             question = row['question']
@@ -141,3 +144,12 @@ if __name__ == '__main__':
         print(f"\nMulti avg: {multi_avg}")
         print(f"\nSingle avg: {single_avg}")
         print(f"\nAll answers: {all_answers}")
+
+        # Save results to txt file
+        with open(f"presence_evaluation_{model}.txt", "w") as text_file:
+            text_file.write(f"Model: {model}")
+            text_file.write(f"\nMacro avg: {macro_avg}")
+            text_file.write(f"\nDefinitions: {definitions_avg}")
+            text_file.write(f"\nMulti avg: {multi_avg}")
+            text_file.write(f"\nSingle avg: {single_avg}")
+            text_file.write(f"\nAll answers: {all_answers}")
