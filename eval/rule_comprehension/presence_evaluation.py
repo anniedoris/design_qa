@@ -123,7 +123,7 @@ if __name__ == '__main__':
             image_path = "../../dataset/rule_comprehension/rule_presence_qa/" + row['image']
 
             # Run through model
-            context = retrieve_context(index, question)
+            context = retrieve_context(index, question, top_k=5)
             response = run_thread(model, question, image_path, context)
 
             # Save the response
