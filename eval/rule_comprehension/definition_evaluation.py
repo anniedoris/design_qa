@@ -35,7 +35,6 @@ def load_output_csv(model, overwrite_answers=False):
 
 def run_thread(model, question, image_path):
     if model == 'llava-13b':
-        top_k = 1
         # API token of the model/pipeline that we will be using
         REPLICATE_API_TOKEN = ""
         os.environ["REPLICATE_API_TOKEN"] = REPLICATE_API_TOKEN
@@ -50,7 +49,6 @@ def run_thread(model, question, image_path):
             repetition_penalty=1,
         )
     elif model == 'gpt-4-vision-preview':
-        top_k = 5
         # OpenAI model
         multi_modal_llm = OpenAIMultiModal(
             model="gpt-4-vision-preview", max_new_tokens=1500
