@@ -38,7 +38,7 @@ def run_thread(model, question, image_path, context):
     if model == 'llava-13b':
         top_k = 1
         # API token of the model/pipeline that we will be using
-        REPLICATE_API_TOKEN = "r8_0kZwnNy7gAZn5okS4tkbUp89qaOWWyj36ErFg"
+        REPLICATE_API_TOKEN = ""
         os.environ["REPLICATE_API_TOKEN"] = REPLICATE_API_TOKEN
         model = REPLICATE_MULTI_MODAL_LLM_MODELS["llava-13b"]
         multi_modal_llm = ReplicateMultiModal(
