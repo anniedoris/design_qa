@@ -40,15 +40,7 @@ def run_thread(model, question, image_path, context):
         REPLICATE_API_TOKEN = ""
         os.environ["REPLICATE_API_TOKEN"] = REPLICATE_API_TOKEN
         model = REPLICATE_MULTI_MODAL_LLM_MODELS["llava-13b"]
-        multi_modal_llm = ReplicateMultiModal(
-            model=model,
-            max_new_tokens=100,
-            temperature=0.1,
-            num_input_files=1,
-            top_p=0.9,
-            num_beams=1,
-            repetition_penalty=1,
-        )
+        multi_modal_llm = ReplicateMultiModal(model=model, max_new_tokens=100)
     elif model == 'gpt-4-vision-preview':
         # OpenAI model
         multi_modal_llm = OpenAIMultiModal(
