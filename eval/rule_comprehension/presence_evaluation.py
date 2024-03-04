@@ -40,20 +40,10 @@ def run_thread(model, question, image_path, context):
         REPLICATE_API_TOKEN = ""
         os.environ["REPLICATE_API_TOKEN"] = REPLICATE_API_TOKEN
         model = REPLICATE_MULTI_MODAL_LLM_MODELS["llava-13b"]
-        multi_modal_llm = ReplicateMultiModal(
-            model=model,
-            max_new_tokens=100,
-            # temperature=0.1,
-            # num_input_files=1,
-            # top_p=0.9,
-            # num_beams=1,
-            # repetition_penalty=1,
-        )
-    elif model == 'gpt-4-vision-preview':
+        multi_modal_llm = ReplicateMultiModal(model=model, max_new_tokens=100)
+    elif model == 'gpt-4-1106-vision-preview':
         # OpenAI model
-        multi_modal_llm = OpenAIMultiModal(
-            model="gpt-4-vision-preview", max_new_tokens=1500
-        )
+        multi_modal_llm = OpenAIMultiModal(model="gpt-4-vision-preview", max_new_tokens=100)
     else:
         raise ValueError("Invalid model")
 
@@ -69,15 +59,19 @@ def run_thread(model, question, image_path, context):
 
 
 def add_context_to_prompt(prompt, context):
-    # sort the context by page
-    context = sorted(context, key=lambda x: int(x.metadata["page_label"]))
+    if isinstance(context, str): # if context is a string, it is the entire document
+        prompt_with_context = prompt[:80] + f"Below is context from the FSAE rule document which might or might not " \
+                                            f"be relevant for the question: \n\n```\n{context}\n```\n\n" + prompt[117:]
+    else:
+        # sort the context by page
+        context = sorted(context, key=lambda x: int(x.metadata["page_label"]))
 
-    # add the context to the prompt
-    prompt_with_context = prompt[:80] + "Below is context from the FSAE rule document which might or might not " \
-                                        "be relevant for the question: \n\n```\n"
-    for doc in context:
-        prompt_with_context += f"{doc.text}\n"
-    prompt_with_context += "```\n\n" + prompt[117:]
+        # add the context to the prompt
+        prompt_with_context = prompt[:80] + "Below is context from the FSAE rule document which might or might not " \
+                                            "be relevant for the question: \n\n```\n"
+        for doc in context:
+            prompt_with_context += f"{doc.text}\n"
+        prompt_with_context += "```\n\n" + prompt[117:]
     return prompt_with_context
 
 
@@ -90,8 +84,13 @@ def create_index():
 
 
 def retrieve_context(index, question, top_k=10):
-    retriever = index.as_retriever(similarity_top_k=top_k)
-    context = retriever.retrieve(question)
+    if top_k == 0:
+        # load all context from original text document
+        txt_path = "../../dataset/docs/rules_pdfplumber1.txt"
+        context = open(txt_path, "r", encoding="utf-8").read()
+    else:
+        retriever = index.as_retriever(similarity_top_k=top_k)
+        context = retriever.retrieve(question)
     return context
 
 
@@ -125,7 +124,7 @@ if __name__ == '__main__':
         index = create_index()
         index.storage_context.persist("index")
 
-    for model in ['gpt-4-vision-preview', 'llava-13b']:
+    for model in ['gpt-4-1106-vision-preview', 'llava-13b']:
         questions_pd, csv_name = load_output_csv(model, overwrite_answers=overwrite_answers)
 
         for i, row in tqdm(questions_pd.iterrows(), total=len(questions_pd), desc=f'generating responses for {model}'):
@@ -141,7 +140,12 @@ if __name__ == '__main__':
             image_path = "../../dataset/rule_comprehension/rule_presence_qa/" + row['image']
 
             # Run through model
-            context = retrieve_context(index, question, top_k=5)
+            if model == 'llava-13b':
+                context = retrieve_context(index, question, top_k=10)
+            elif model == 'gpt-4-1106-vision-preview':
+                context = retrieve_context(index, question, top_k=0)
+            else:
+                raise ValueError(f"Invalid model: {model}")
             response = run_thread(model, question, image_path, context)
 
             # Save the response
