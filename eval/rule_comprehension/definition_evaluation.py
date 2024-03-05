@@ -3,23 +3,10 @@ from llama_index.multi_modal_llms.replicate import ReplicateMultiModal
 from llama_index.core.indices import VectorStoreIndex
 from llama_index.multi_modal_llms.replicate.base import REPLICATE_MULTI_MODAL_LLM_MODELS
 from llama_index.multi_modal_llms.openai import OpenAIMultiModal
-import csv
 import os
 import pandas as pd
 from tqdm import tqdm
 from metrics import eval_definition_qa
-
-
-def get_text_prompts(text_query_path):
-    # get prompt dataset
-    # text prompt
-    queries = []
-    with open(text_query_path, mode='r') as file:
-        # Create a CSV reader
-        csv_reader = csv.reader(file)
-        for row in csv_reader:
-            queries.append(row[0])
-    return queries
 
 
 def load_output_csv(model, overwrite_answers=False):
@@ -39,20 +26,10 @@ def run_thread(model, question, image_path):
         REPLICATE_API_TOKEN = ""
         os.environ["REPLICATE_API_TOKEN"] = REPLICATE_API_TOKEN
         model = REPLICATE_MULTI_MODAL_LLM_MODELS["llava-13b"]
-        multi_modal_llm = ReplicateMultiModal(
-            model=model,
-            max_new_tokens=100,
-            # temperature=0.1,
-            # num_input_files=1,
-            # top_p=0.9,
-            # num_beams=1,
-            # repetition_penalty=1,
-        )
-    elif model == 'gpt-4-vision-preview':
+        multi_modal_llm = ReplicateMultiModal(model=model, max_new_tokens=100)
+    elif model == 'gpt-4-1106-vision-preview' or model == 'gpt-4-1106-vision-preview+context':
         # OpenAI model
-        multi_modal_llm = OpenAIMultiModal(
-            model="gpt-4-vision-preview", max_new_tokens=1500
-        )
+        multi_modal_llm = OpenAIMultiModal(model="gpt-4-vision-preview", max_new_tokens=100)
     else:
         raise ValueError("Invalid model")
 
@@ -89,10 +66,21 @@ def save_results(model, macro_avg, definitions_avg, multi_avg, single_avg, all_a
         text_file.write(f"\nAll answers: {all_answers}")
 
 
-if __name__ == '__main__':
-    overwrite_answers = True
+def retrieve_context(question):
+    # load all context from original text document
+    txt_path = "../../dataset/docs/rules_pdfplumber1.txt"
+    context = open(txt_path, "r", encoding="utf-8").read()
 
-    for model in ['gpt-4-vision-preview', 'llava-13b']:
+    question_with_context = question[:80] + f"Below is context from the FSAE rule document which might or might not " \
+                            f"be relevant for the question: \n\n```\n{context}\n```\n\n" + question[117:]
+
+    return question_with_context
+
+
+if __name__ == '__main__':
+    overwrite_answers = False
+
+    for model in ['gpt-4-1106-vision-preview+context', 'gpt-4-1106-vision-preview', 'llava-13b']:
         questions_pd, csv_name = load_output_csv(model, overwrite_answers=overwrite_answers)
 
         for i, row in tqdm(questions_pd.iterrows(), total=len(questions_pd), desc=f'generating responses for {model}'):
@@ -108,6 +96,8 @@ if __name__ == '__main__':
             image_path = "../../dataset/rule_comprehension/rule_definition_qa/" + row['image']
 
             # Run through model
+            if model == 'gpt-4-1106-vision-preview+context':
+                question = retrieve_context(question)
             response = run_thread(model, question, image_path)
 
             # Save the response
