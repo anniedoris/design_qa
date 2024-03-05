@@ -4,6 +4,7 @@ from llama_index.core.indices import VectorStoreIndex
 from llama_index.multi_modal_llms.replicate.base import REPLICATE_MULTI_MODAL_LLM_MODELS
 from llama_index.multi_modal_llms.openai import OpenAIMultiModal
 from llama_index.core import StorageContext, load_index_from_storage
+from llama_index.embeddings.openai import OpenAIEmbedding
 import csv
 import os
 import pandas as pd
@@ -41,7 +42,7 @@ def run_thread(model, question, image_path, context):
         os.environ["REPLICATE_API_TOKEN"] = REPLICATE_API_TOKEN
         model = REPLICATE_MULTI_MODAL_LLM_MODELS["llava-13b"]
         multi_modal_llm = ReplicateMultiModal(model=model, max_new_tokens=100)
-    elif model == 'gpt-4-1106-vision-preview':
+    elif model == 'gpt-4-1106-vision-preview' or model == 'gpt-4-1106-vision-preview+RAG':
         # OpenAI model
         multi_modal_llm = OpenAIMultiModal(model="gpt-4-vision-preview", max_new_tokens=100)
     else:
@@ -79,7 +80,9 @@ def create_index():
     # create the vector index from text documents
     pdf_path = "../../dataset/docs/FSAE_Rules_2024_V1.pdf"
     text_documents = SimpleDirectoryReader(input_files=[pdf_path]).load_data()
-    index = VectorStoreIndex.from_documents(text_documents)
+
+    embedding_model = OpenAIEmbedding(model='text-embedding-3-large')
+    index = VectorStoreIndex.from_documents(text_documents, embed_model=embedding_model)
     return index
 
 
@@ -95,6 +98,7 @@ def retrieve_context(index, question, top_k=10):
 
 
 def save_results(model, macro_avg, definitions_avg, multi_avg, single_avg, all_answers):
+    print(f"Model: {model}")
     print(f"\nMacro avg: {macro_avg}")
     print(f"\nDefinitions: {definitions_avg}")
     print(f"\nMulti avg: {multi_avg}")
@@ -112,20 +116,20 @@ def save_results(model, macro_avg, definitions_avg, multi_avg, single_avg, all_a
 
 
 if __name__ == '__main__':
-    overwrite_answers = True
+    overwrite_answers = False
 
     # Index the text data
     if os.path.exists("index"):
         # rebuild storage context
         storage_context = StorageContext.from_defaults(persist_dir="index")
         # load index
-        index = load_index_from_storage(storage_context)
+        index = load_index_from_storage(storage_context, embed_model=OpenAIEmbedding(model='text-embedding-3-large'))
     else:
         index = create_index()
         index.storage_context.persist("index")
 
-    for model in ['gpt-4-1106-vision-preview', 'llava-13b']:
-        questions_pd, csv_name = load_output_csv(model, overwrite_answers=overwrite_answers)
+    for model in [ 'gpt-4-1106-vision-preview+RAG', 'llava-13b', 'gpt-4-1106-vision-preview']:
+        questions_pd, csv_name = load_output_csv(model, overwrite_answers)
 
         for i, row in tqdm(questions_pd.iterrows(), total=len(questions_pd), desc=f'generating responses for {model}'):
             # if model_prediction column already has a prediction, skip the row
@@ -140,8 +144,8 @@ if __name__ == '__main__':
             image_path = "../../dataset/rule_comprehension/rule_presence_qa/" + row['image']
 
             # Run through model
-            if model == 'llava-13b':
-                context = retrieve_context(index, question, top_k=10)
+            if model == 'llava-13b' or model == 'gpt-4-1106-vision-preview+RAG':
+                context = retrieve_context(index, question, top_k=3)
             elif model == 'gpt-4-1106-vision-preview':
                 context = retrieve_context(index, question, top_k=0)
             else:
