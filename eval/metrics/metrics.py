@@ -215,7 +215,7 @@ def eval_definition_qa(results_csv):
     results_df = pd.read_csv(results_csv)
     f1_scores = []
     f1_scores_definition = []
-    f1_scores_multi = []
+    f1_scores_mentioned = []
     f1_scores_none = []
     for i, row in results_df.iterrows():
         qa_f1_scores = []
@@ -237,7 +237,7 @@ def eval_definition_qa(results_csv):
         if row['mentions'] == 'definition':
             f1_scores_definition.append(max(qa_f1_scores))
         elif row['mentions'] == 'mentioned':
-            f1_scores_multi.append(max(qa_f1_scores))
+            f1_scores_mentioned.append(max(qa_f1_scores))
         else:
             f1_scores_none.append(max(qa_f1_scores))
 
@@ -247,11 +247,11 @@ def eval_definition_qa(results_csv):
         else:
             return mean(input_list)
 
-    return mean(f1_scores), mean_score(f1_scores_definition), mean_score(f1_scores_multi), mean_score(
+    return mean(f1_scores), mean_score(f1_scores_definition), mean_score(f1_scores_mentioned), mean_score(
         f1_scores_none), f1_scores
 
 
-# Presence QAs will be scored using F1 across all QAs (each individual QA is just logged if it's FP FN TP TN)
+# Presence QAs will be scored using accuracy
 def eval_presence_qa(results_csv):
     """
     :param results_csv: the csv should contain the results from running the QA through a model.
@@ -259,20 +259,23 @@ def eval_presence_qa(results_csv):
     
     :returns: 
     1. overall score on QA (macro average)
-    2. F1 score for each QA
+     2. overall score for defintion-explicit
+    3. overall score for mentioned
+    4. overall score for not mentioned
+    5. F1 score for each QA (max score if there were synonyms)
     """
     results_df = pd.read_csv(results_csv)
 
-    # TODO: need to move class information over
+    # Lists ready for scores
     f1_scores = []
     f1_scores_definition = []
-    f1_scores_multi = []
-    f1_scores_single = []
+    f1_scores_mentioned = []
+    f1_scores_not_mentioned = []
     for i, row in results_df.iterrows():
         prediction_tokens = normalize_answer(row['model_prediction']).split()
         ground_truth_tokens = normalize_answer(row['ground_truth']).split()
 
-        # Get the first yes/no in the prediction answer
+        # Extract the first yes/no in the prediction answer, this will be what we will score the model on
         def get_first_yes_no(text_list):
             for i in text_list:
                 if i == "yes":
@@ -283,14 +286,17 @@ def eval_presence_qa(results_csv):
 
         prediction_tokens = get_first_yes_no(prediction_tokens)
 
+        # Computing f1_score between yeses and nos on a word level will produce 1 if the responses agree and 0
+        # if the responses don't. So this will produce list of 1s and 0s across all questions
         f1_scores.append(token_f1_score(prediction_tokens, ground_truth_tokens))
 
+        # Log results dependening on number of mentions
         if row['mentions'] == 'definition':
             f1_scores_definition.append(token_f1_score(prediction_tokens, ground_truth_tokens))
-        elif row['mentions'] == 'multi':
-            f1_scores_multi.append(token_f1_score(prediction_tokens, ground_truth_tokens))
+        elif row['mentions'] == 'mentioned':
+            f1_scores_mentioned.append(token_f1_score(prediction_tokens, ground_truth_tokens))
         else:
-            f1_scores_single.append(token_f1_score(prediction_tokens, ground_truth_tokens))
+            f1_scores_not_mentioned.append(token_f1_score(prediction_tokens, ground_truth_tokens))
 
     def mean_score(input_list):
         if len(input_list) < 1:
@@ -298,8 +304,9 @@ def eval_presence_qa(results_csv):
         else:
             return mean(input_list)
 
-    return mean(f1_scores), mean_score(f1_scores_definition), mean_score(f1_scores_multi), mean_score(
-        f1_scores_single), f1_scores
+    # Return means
+    return mean(f1_scores), mean_score(f1_scores_definition), mean_score(f1_scores_mentioned), mean_score(
+        f1_scores_not_mentioned), f1_scores
 
 
 # TODO for using BLEU and ROUGE, could consider reporting geometric mean across several n-grams
@@ -329,28 +336,28 @@ if __name__ == '__main__':
     # print(macro_avg)
     # print(all_answers)
 
-    # TEST DEFINITION QA
-    macro_avg, definitions_avg, multi_avg, single_avg, all_answers = eval_definition_qa('eval_metric_test_definition.csv')
-    print("Macro avg")
-    print(macro_avg)
-    print("Definitions")
-    print(definitions_avg)
-    print("Multi avg")
-    print(multi_avg)
-    print("Single avg")
-    print(single_avg)
-    print("All answers")
-    print(all_answers)
+    # # TEST DEFINITION QA
+    # macro_avg, definitions_avg, mentioned_avg, no_mention_avg, all_answers = eval_definition_qa('eval_metric_test_definition.csv')
+    # print("Macro avg")
+    # print(macro_avg)
+    # print("Definitions")
+    # print(definitions_avg)
+    # print("Mentioned avg")
+    # print(mentioned_avg)
+    # print("No mention avg")
+    # print(no_mention_avg)
+    # print("All answers")
+    # print(all_answers)
 
     # # TEST PRESENCE QA
-    # macro_avg, definitions_avg, multi_avg, single_avg, all_answers = eval_presence_qa('eval_metric_test_presence.csv')
+    # macro_avg, definitions_avg, mentioned_avg, no_mentioned_avg, all_answers = eval_presence_qa('eval_metric_test_presence.csv')
     # print("macro average")
     # print(macro_avg)
     # print("definitions avg")
     # print(definitions_avg)
-    # print("multi avg")
-    # print(multi_avg)
-    # print("single avg")
-    # print(single_avg)
+    # print("mentioned avg")
+    # print(mentioned_avg)
+    # print("no mentioned avg")
+    # print(no_mentioned_avg)
     # print("all f1")
     # print(all_answers)
