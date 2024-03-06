@@ -1,31 +1,63 @@
-﻿im_num,component,present,mention_in_rules
-1,front hoop,no,definition
-2,front hoop,yes,definition
-3,pedals,no,multi
-4,pedals,yes,multi
-5,roll hoop; roll hoops,no,definition
-6,roll hoop; roll hoops,yes,definition
-7,main hoop,no,definition
-8,main hoop,yes,definition
-9,front bulkhead,no,definition
-10,front bulkhead,yes,definition
-11,chassis; frame,no,definition
-12,chassis; frame,yes,definition
-13,brake; brakes,no,multi
-14,brake; brakes,yes,multi
-15,battery,no,multi
-16,battery,yes,multi
-17,rocker; rockers,no,once
-18,rocker; rockers,yes,once
-19,upright; uprights,no,once
-20,upright; uprights,yes,once
-21,wheel center; wheel centers,no,once
-22,wheel center; wheel centers,yes,once
-23,steering wheel,no,multi
-24,steering wheel,yes,multi
-25,steering column,no,multi
-26,steering column,yes,multi
-27,steering rack,no,multi
-28,steering rack,yes,multi
-29,powertrain,no,multi
-30,powertrain,yes,multi
+﻿im_num,component,present,mention_in_rules,cad
+1,front hoop; front roll hoop,no,definition,frame
+2,front hoop; front roll hoop,yes,definition,frame
+3,pedal box; pedal assembly,no,mentioned,frame
+4,pedal box; pedal assembly,yes,mentioned,frame
+5,roll hoop; roll hoops,no,definition,frame
+6,roll hoop; roll hoops,yes,definition,frame
+7,main hoop,no,definition,frame
+8,main hoop,yes,definition,frame
+9,front bulkhead; front basket,no,definition,frame
+10,front bulkhead; front basket,yes,definition,frame
+11,chassis; frame; space frame,no,definition,frame
+12,chassis; frame; space frame,yes,definition,frame
+13,brakes; brake system; brake,no,mentioned,frame
+14,brakes; brake system; brake,yes,mentioned,frame
+15,accumulator; accumulator container; battery,no,definition,frame
+16,accumulator; accumulator container; battery,yes,definition,frame
+17,rocker arms; rocker arm,no,mentioned,frame
+18,rocker arms; rocker arm,yes,mentioned,frame
+19,uprights; upright,no,mentioned,frame
+20,uprights; upright,yes,mentioned,frame
+21,wheel centers; wheel center,no,mentioned,frame
+22,wheel centers; wheel center,yes,mentioned,frame
+23,steering wheel,no,mentioned,frame
+24,steering wheel,yes,mentioned,frame
+25,steering column,no,mentioned,frame
+26,steering column,yes,mentioned,frame
+27,steering rack,no,mentioned,frame
+28,steering rack,yes,mentioned,frame
+29,powertrain; drivetrain,no,mentioned,frame
+30,powertrain; drivetrain,yes,mentioned,frame
+31,master cylinders; master cylinder,no,mentioned,frame
+32,master cylinders; master cylinder,yes,mentioned,frame
+33,APPS; accelerator pedal position sensor,no,mentioned,frame
+34,APPS; accelerator pedal position sensor,yes,mentioned,frame
+35,aero package; aerodynamic package; aero devices; aerodynamic devices,no,mentioned,aero
+36,aero package; aerodynamic package; aero devices; aerodynamic devices,yes,mentioned,aero
+37,rear wing,no,not_mentioned,aero
+38,rear wing,yes,not_mentioned,aero
+39,undertray; diffuser,no,mentioned,aero
+40,undertray; diffuser,yes,mentioned,aero
+41,endplates; endplate,no,mentioned,aero
+42,endplates; endplate,yes,mentioned,aero
+43,front wing,no,mentioned,aero
+44,front wing,yes,mentioned,aero
+45,AArm; AArms,no,not_mentioned,frame
+46,AArm; AArms,yes,not_mentioned,frame
+47,toe rod; toe rods,no,not_mentioned,frame
+48,toe rod; toe rods,yes,not_mentioned,frame
+49,tie rod; tie rods,no,mentioned,frame
+50,tie rod; tie rods,yes,mentioned,frame
+51,pull rod; pull rods,no,not_mentioned,frame
+52,pull rod; pull rods,yes,not_mentioned,frame
+53,ARBs; anti-roll bars; anti-roll bar,no,not_mentioned,frame
+54,ARBs; anti-roll bars; anti-roll bar,yes,not_mentioned,frame
+55,seat,no,mentioned,frame
+56,seat,yes,mentioned,frame
+57,nosecone and body panels,no,mentioned,aero
+58,nosecone and body panels,yes,mentioned,aero
+59,motor,no,mentioned,frame
+60,motor,yes,mentioned,frame
+61,firewall,no,mentioned,frame
+62,firewall,yes,mentioned,frame

@@ -3,7 +3,7 @@ import os
 
 # This script processes the images so they are finalized for the dataset
 
-def crop_image(image_path, left, top, right, bottom):
+def crop_image(image_path, im, left, top, right, bottom):
     """
     Crop the image from the left, top, right, and bottom.
 
@@ -15,7 +15,14 @@ def crop_image(image_path, left, top, right, bottom):
     - bottom: Amount to crop from the bottom.
     """
 
-    baseline_im = Image.open('baseline.jpg')
+    # TODO, do this in a cleaner way
+    aero_list = [35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 57, 58]
+    aero_list = [str(i) + '.jpg' for i in aero_list]
+    
+    if im in aero_list:
+        baseline_im = Image.open('aero.jpg')
+    else:
+        baseline_im = Image.open('frame.jpg')
     
     # Open the image
     with Image.open(image_path) as img:
@@ -71,4 +78,4 @@ for im in os.listdir('raw_presence_images'):
     
     # Example usage:
     image_path = 'raw_presence_images/' + im
-    crop_image(image_path, left=800, top=1800, right=2575, bottom=1775)
+    crop_image(image_path, im, left=800, top=1800, right=2575, bottom=1775)
