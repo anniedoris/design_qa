@@ -41,14 +41,6 @@ def run_thread(model, question, image_path):
     return str(rag_response)
 
 
-def create_index():
-    # create the vector index from text documents
-    pdf_path = "../../dataset/docs/FSAE_Rules_2024_V1.pdf"
-    text_documents = SimpleDirectoryReader(input_files=[pdf_path]).load_data()
-    index = VectorStoreIndex.from_documents(text_documents)
-    return index
-
-
 def save_results(model, macro_avg, definitions_avg, multi_avg, single_avg, all_answers):
     print(f"\nMacro avg: {macro_avg}")
     print(f"\nDefinitions: {definitions_avg}")
@@ -78,7 +70,7 @@ def retrieve_context(question):
 
 
 if __name__ == '__main__':
-    overwrite_answers = False
+    overwrite_answers = True
 
     for model in ['gpt-4-1106-vision-preview+context', 'gpt-4-1106-vision-preview', 'llava-13b']:
         questions_pd, csv_name = load_output_csv(model, overwrite_answers=overwrite_answers)
