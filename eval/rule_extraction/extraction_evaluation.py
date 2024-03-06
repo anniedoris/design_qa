@@ -136,7 +136,7 @@ if __name__ == '__main__':
         index.storage_context.persist("index")
 
     for question_type in ['retrieval', "compilation"]:
-        for model in ['llama-2-70b-chat', 'gpt-4-0125-preview', 'gpt-4-0125-preview+RAG']:
+        for model in ['gpt-4-0125-preview+RAG', 'gpt-4-0125-preview', 'llama-2-70b-chat']:
             questions_pd, csv_name = load_output_csv(model, question_type, overwrite_answers)
 
             for i, row in tqdm(questions_pd.iterrows(), total=len(questions_pd), desc=f'generating responses for '
@@ -158,7 +158,11 @@ if __name__ == '__main__':
                     context = retrieve_context(index, question, top_k=0)
                 else:
                     raise ValueError("Invalid model")
-                response = run_thread(model, question, context)
+                try:
+                    response = run_thread(model, question, context)
+                except Exception as e:
+                    print(f"Error: {e}")
+                    response = ' '
 
                 # Save the response
                 questions_pd.at[i, 'model_prediction'] = response
