@@ -111,6 +111,7 @@ def draw_line_img(img, y, thickness, offset):
     return img
 
 df = pd.read_csv('raw_dimension_qas.csv')
+# df = pd.read_csv('raw_T.8.2.4.csv')
 detailed_context = False
 
 qa = []
@@ -137,7 +138,9 @@ for i, row in df.iterrows():
     # Overlay coordinate frame on the drawing
     overlay = Image.open('coord_orientations/' + row['view'] + '_coord.png')
     overlay = overlay.resize((overlay.width*6, overlay.height*6))
-    draw_img.paste(overlay, (draw_img.width - 1600, 500), overlay if overlay.mode == 'RGBA' else None)
+    draw_img.paste(overlay, (draw_img.width - 1600, 700), overlay if overlay.mode == 'RGBA' else None)
+    # overlay = overlay.resize((overlay.width*4, overlay.height*4)) # for raw_T.8.2.4 so coord doesn't overlap
+    # draw_img.paste(overlay, (draw_img.width - 1200, 700), overlay if overlay.mode == 'RGBA' else None) # for raw_T.8.2.4 so coord doesn't overlap
     draw_img.show()
     
     rule_num = row['rule_tested']
@@ -163,7 +166,7 @@ for i, row in df.iterrows():
     prompt_1 = f"Also attached is an image that shows an engineering drawing of the {cad_model} on the top accompanied by six CAD views of the {cad_model} on"\
         " the bottom. The six CAD views each feature a different orientation of our design, so that 3D information about our design can be inferred."\
         " " + additional_info_context + "The CAD views are provided to contextualize the engineering drawing, which has the same orientation as one of the six CAD views. All units displayed"\
-        " in the engineering have units of mm. " + additional_info + "Based on the engineering drawing, does our design comply with rule " + rule_num + " specified in the FSAE rule document?"
+        " in the engineering drawing have units of mm. " + additional_info + "Based on the engineering drawing, does our design comply with rule " + rule_num + " specified in the FSAE rule document?"
     prompt_2 = f" Answer only with a simple 'yes/no' (complies/does not comply with the rule) followed by an explanation (begin it with 'Explanation:')"\
         " that explains the reasoning behind your answer."
         
@@ -188,19 +191,20 @@ for i, row in df.iterrows():
     
     # Save the generated image
     if detailed_context:
-        draw_img.save("../../../dataset/rule_evaluation/rule_dimension_qa/detailed_context/" + output_im_name)
+        draw_img.save("../../../dataset/rule_compliance/rule_dimension_qa/detailed_context/" + output_im_name)
     else:
-        draw_img.save("../../../dataset/rule_evaluation/rule_dimension_qa/context/" + output_im_name)
+        draw_img.save("../../../dataset/rule_compliance/rule_dimension_qa/context/" + output_im_name)
     
     dimension_type = row['dimension_system']
-    qa.append([question, answer, output_im_name, dimension_type])
+    explanation = row['explanation']
+    qa.append([question, answer, output_im_name, dimension_type, explanation])
 
-if detailed_context:    
-    pd.DataFrame(qa, columns=['question', 'answer', 'image', 'dimension_type']).to_csv(
-        "../../../dataset/rule_compliance/rule_dimension_qa/detailed_context/rule_dimension_qa_detailed_context.csv", index=False)
-else:
-    pd.DataFrame(qa, columns=['question', 'answer', 'image', 'dimension_type']).to_csv(
-        "../../../dataset/rule_compliance/rule_dimension_qa/context/rule_dimension_qa_context.csv", index=False)
+# if detailed_context:    
+#     pd.DataFrame(qa, columns=['question', 'answer', 'image', 'dimension_type']).to_csv(
+#         "../../../dataset/rule_compliance/rule_dimension_qa/detailed_context/rule_dimension_qa_detailed_context.csv", index=False)
+# else:
+#     pd.DataFrame(qa, columns=['question', 'answer', 'image', 'dimension_type']).to_csv(
+#         "../../../dataset/rule_compliance/rule_dimension_qa/context/rule_dimension_qa_context.csv", index=False)
     
     
 
