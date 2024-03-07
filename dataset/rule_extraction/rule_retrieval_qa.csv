@@ -1,4 +1,4 @@
-question,answer
+question,ground_truth
 We are a student engineering team designing a vehicle for the FSAE competition. Attached is the FSAE rules document. What does rule V.1 state exactly? Answer with only the text of the rule and no other words.,"CONFIGURATION
 The vehicle must be open wheeled and open cockpit (a formula style body) with four wheels
 that are not in a straight line."

@@ -28,11 +28,11 @@ if __name__ == '__main__':
     rules_pd = pd.read_csv("../../dataset/docs/csv_rules/all_rules_extracted.csv", encoding='utf-8-sig')
 
     # Hardcoded terms of interest for compilation task
-    terms = "Aerodynamic, Tractie System, Shutdown System, Accelerator Pedal Position Sensor/APPS, Brake Pedal, " \
-            "Suspension, Battery, Chassis, Primary Structure, Critical Fasteners, Envelopes, Tube/Tubing, " \
-            "Material properties, External Items, Impact Attenuator, Accumulator, Firewall, Powertrain, Catch " \
-            "Cans, Thermal Protection, Scatter Shields, Coolant, Butt Joints, Inertia Switch, Transponder, " \
-            "Brake Over Travel Switch/BOTS, Wiring, Grounded Low Voltage/GLV, Grounding, Lighting"
+    terms = "Aerodynamic/Aerodynamics, Tractive System, Shutdown System, Accelerator Pedal Position Sensor/APPS, Brake Pedal, " \
+            "Suspension, Battery, Chassis, Primary Structure, Critical Fasteners/Critical Fastener, Envelope, Tube/Tubing/Tubes, " \
+            "Material properties/material/materials, External Items/External Item, Impact Attenuator, Accumulator, Firewall, Powertrain, Catch " \
+            "Cans, Thermal Protection, Scatter Shields, Coolant, Butt Joints/Butt Joint, Inertia Switch, Transponder, " \
+            "Brake Over Travel Switch/BOTS, Wiring, Grounded Low Voltage/GLV, Grounding, Lighting/Light/Lights"
 
     ground_truth = {}
     # find the rules that contain the terms
