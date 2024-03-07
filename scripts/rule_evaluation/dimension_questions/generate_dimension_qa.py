@@ -112,7 +112,7 @@ def draw_line_img(img, y, thickness, offset):
 
 df = pd.read_csv('raw_dimension_qas.csv')
 # df = pd.read_csv('raw_T.8.2.4.csv')
-detailed_context = False
+detailed_context = True # sets whether the hint images are appended (True) or not (False)
 
 qa = []
 for i, row in df.iterrows():
@@ -199,12 +199,12 @@ for i, row in df.iterrows():
     explanation = row['explanation']
     qa.append([question, answer, output_im_name, dimension_type, explanation])
 
-# if detailed_context:    
-#     pd.DataFrame(qa, columns=['question', 'answer', 'image', 'dimension_type']).to_csv(
-#         "../../../dataset/rule_compliance/rule_dimension_qa/detailed_context/rule_dimension_qa_detailed_context.csv", index=False)
-# else:
-#     pd.DataFrame(qa, columns=['question', 'answer', 'image', 'dimension_type']).to_csv(
-#         "../../../dataset/rule_compliance/rule_dimension_qa/context/rule_dimension_qa_context.csv", index=False)
+if detailed_context:    
+    pd.DataFrame(qa, columns=['question', 'answer', 'image', 'dimension_type', 'explanation']).to_csv(
+        "../../../dataset/rule_compliance/rule_dimension_qa/detailed_context/rule_dimension_qa_detailed_context.csv", index=False)
+else:
+    pd.DataFrame(qa, columns=['question', 'answer', 'image', 'dimension_type', 'explanation']).to_csv(
+        "../../../dataset/rule_compliance/rule_dimension_qa/context/rule_dimension_qa_context.csv", index=False)
     
     
 
