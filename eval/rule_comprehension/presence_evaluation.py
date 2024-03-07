@@ -116,19 +116,21 @@ def save_results(model, macro_avg, definitions_avg, multi_avg, single_avg, all_a
 
 
 if __name__ == '__main__':
-    overwrite_answers = False
+    overwrite_answers = True
 
     # Index the text data
     if os.path.exists("index"):
+        print("Loading index...")
         # rebuild storage context
         storage_context = StorageContext.from_defaults(persist_dir="index")
         # load index
         index = load_index_from_storage(storage_context, embed_model=OpenAIEmbedding(model='text-embedding-3-large'))
     else:
+        print("Creating index...")
         index = create_index()
         index.storage_context.persist("index")
 
-    for model in [ 'gpt-4-1106-vision-preview+RAG', 'llava-13b', 'gpt-4-1106-vision-preview']:
+    for model in ['llava-13b', 'gpt-4-1106-vision-preview+RAG', 'gpt-4-1106-vision-preview']:
         questions_pd, csv_name = load_output_csv(model, overwrite_answers)
 
         for i, row in tqdm(questions_pd.iterrows(), total=len(questions_pd), desc=f'generating responses for {model}'):
@@ -145,7 +147,7 @@ if __name__ == '__main__':
 
             # Run through model
             if model == 'llava-13b' or model == 'gpt-4-1106-vision-preview+RAG':
-                context = retrieve_context(index, question, top_k=3)
+                context = retrieve_context(index, question, top_k=5)
             elif model == 'gpt-4-1106-vision-preview':
                 context = retrieve_context(index, question, top_k=0)
             else:
