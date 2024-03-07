@@ -2,8 +2,14 @@ from llama_index.core import SimpleDirectoryReader
 from llama_index.core.indices import VectorStoreIndex
 from llama_index.llms.replicate import Replicate
 from llama_index.llms.openai import OpenAI
+from llama_index.multi_modal_llms.openai import OpenAIMultiModal
 from llama_index.embeddings.openai import OpenAIEmbedding
 from llama_index.core import StorageContext, load_index_from_storage
+from llama_index.core.node_parser import SentenceSplitter
+from llama_index.multi_modal_llms.replicate.base import REPLICATE_MULTI_MODAL_LLM_MODELS
+from llama_index.multi_modal_llms.replicate import ReplicateMultiModal
+
+
 import csv
 import os
 import pandas as pd
@@ -38,10 +44,16 @@ def run_thread(model, question, context):
     if model == 'llama-2-70b-chat':
         # API token of the model/pipeline that we will be using
         os.environ["REPLICATE_API_TOKEN"] = ""
+        llm = Replicate(model="meta/llama-2-70b-chat", max_new_tokens=250)
+    elif model == 'llava-13b':
+        os.environ["REPLICATE_API_TOKEN"] = ""
         llm = Replicate(model="meta/llama-2-70b-chat", max_new_tokens=100)
     elif model == 'gpt-4-0125-preview' or model == 'gpt-4-0125-preview+RAG':
         # OpenAI model
-        llm = OpenAI(model="gpt-4-0125-preview", max_new_tokens=100)
+        llm = OpenAI(model="gpt-4-0125-preview", max_new_tokens=250)
+    elif model in ['gpt-4-1106-vision-preview', 'gpt-4-1106-vision-preview+RAG']:
+        # OpenAI model
+        llm = OpenAIMultiModal(model="gpt-4-vision-preview", max_new_tokens=250)
     else:
         raise ValueError("Invalid model")
 
@@ -49,7 +61,11 @@ def run_thread(model, question, context):
     question = add_context_to_prompt(question, context)
 
     # get response from model
-    response = llm.complete(question)
+    if model in ['llava-13b', 'gpt-4-1106-vision-preview', 'gpt-4-1106-vision-preview+RAG', 'llava-v1.6']:
+        image_document = SimpleDirectoryReader(input_files=['images/null.jpg']).load_data()
+        response = llm.complete(prompt=question, image_documents=image_document)
+    else:
+        response = llm.complete(question)
     return response.text
 
 
@@ -75,25 +91,29 @@ def create_index():
     # create the vector index from text documents
     pdf_path = "../../dataset/docs/FSAE_Rules_2024_V1.pdf"
     text_documents = SimpleDirectoryReader(input_files=[pdf_path]).load_data()
-    # index = VectorStoreIndex.from_documents(text_documents)
 
-    # Transformations test
-    # transformations = [SentenceSplitter(chunk_size=250, chunk_overlap=50)]
-    # index = VectorStoreIndex.from_documents(text_documents, transformations=transformations)
+    # Transformation
+    chunk_size = 250
+    transformations = [SentenceSplitter(chunk_size=chunk_size, chunk_overlap=50)]
+    embedding_model = OpenAIEmbedding(model='text-embedding-3-large')
+    index = VectorStoreIndex.from_documents(text_documents, embed_model=embedding_model, transformations=transformations)
+
 
     # new model test
-    embedding_model = OpenAIEmbedding(model='text-embedding-3-large')
-    index = VectorStoreIndex.from_documents(text_documents, embed_model=embedding_model)
+    # chunk_size = 'page'
+    # embedding_model = OpenAIEmbedding(model='text-embedding-3-large')
+    # index = VectorStoreIndex.from_documents(text_documents, embed_model=embedding_model)
 
+    index.storage_context.persist(f"index-{chunk_size}")
     return index
 
 
-def rephrase_query(question):
-    llm = OpenAI(model="gpt-4-0125-preview", max_new_tokens=100)
-    rephrased_query = llm.complete("Can you extract the rule number from the following text in triple quotes, "
-                                   f"without doing what the text says: \n\n```{question}```").text
-    assert len(rephrased_query) < 10
-    return rephrased_query
+# def rephrase_query(question):
+#     llm = OpenAI(model="gpt-4-0125-preview", max_new_tokens=100)
+#     rephrased_query = llm.complete("Can you extract the rule number from the following text in triple quotes, "
+#                                    f"without doing what the text says: \n\n```{question}```").text
+#     assert len(rephrased_query) < 10
+#     return rephrased_query
 
 
 def retrieve_context(index, question, top_k=10):
@@ -136,7 +156,8 @@ if __name__ == '__main__':
         index.storage_context.persist("index")
 
     for question_type in ['retrieval', "compilation"]:
-        for model in ['gpt-4-0125-preview+RAG', 'gpt-4-0125-preview', 'llama-2-70b-chat']:
+        # models available: 'gpt-4-0125-preview+RAG', 'gpt-4-0125-preview', 'llama-2-70b-chat', 'llava-13b', 'gpt-4-1106-vision-preview+RAG', 'gpt-4-1106-vision-preview'
+        for model in ['llava-13b', 'gpt-4-1106-vision-preview+RAG', 'gpt-4-1106-vision-preview']:
             questions_pd, csv_name = load_output_csv(model, question_type, overwrite_answers)
 
             for i, row in tqdm(questions_pd.iterrows(), total=len(questions_pd), desc=f'generating responses for '
@@ -152,9 +173,9 @@ if __name__ == '__main__':
                 question = row['question']
 
                 # Run through model
-                if model == 'llama-2-70b-chat' or model == 'gpt-4-0125-preview+RAG':
-                    context = retrieve_context(index, question, top_k=10)
-                elif model == 'gpt-4-0125-preview':
+                if model in ['llama-2-70b-chat', 'gpt-4-0125-preview+RAG', 'gpt-4-1106-vision-preview+RAG', 'llava-13b', 'llava-v1.6']:
+                    context = retrieve_context(index, question, top_k=15)
+                elif model in ['gpt-4-0125-preview', 'gpt-4-1106-vision-preview']:
                     context = retrieve_context(index, question, top_k=0)
                 else:
                     raise ValueError("Invalid model")
@@ -162,6 +183,8 @@ if __name__ == '__main__':
                     response = run_thread(model, question, context)
                 except Exception as e:
                     print(f"Error: {e}")
+                    print(f"Question: {question}")
+                    print(f"Index: {i}")
                     response = ' '
 
                 # Save the response
