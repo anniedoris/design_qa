@@ -191,7 +191,11 @@ def eval_compilation_qa(results_csv):
     results_df = pd.read_csv(results_csv)
     f1_scores = []
     for i, row in results_df.iterrows():
-        prediction_tokens = ast.literal_eval(row['model_prediction'])
+        try:
+            prediction_tokens = row['model_prediction'].split(", ")
+        except Exception as e:
+            print(f"Error: {e}")
+            print("Model output non-standard")
         ground_truth_tokens = ast.literal_eval(row['ground_truth'])
         f1_scores.append(token_f1_score(prediction_tokens, ground_truth_tokens))
 
