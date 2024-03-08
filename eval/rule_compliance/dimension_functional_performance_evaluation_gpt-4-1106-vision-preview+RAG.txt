@@ -1,0 +1,7 @@
+Model: gpt-4-1106-vision-preview+RAG
+Macro avg: 0
+All accuracies: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Macro avg bleus: 0
+All bleus: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Macro avg rogues: 0
+All rogues: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]

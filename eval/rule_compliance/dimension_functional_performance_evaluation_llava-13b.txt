@@ -1,0 +1,7 @@
+Model: llava-13b
+Macro avg: 0
+All accuracies: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Macro avg bleus: 0
+All bleus: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Macro avg rogues: 0
+All rogues: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
