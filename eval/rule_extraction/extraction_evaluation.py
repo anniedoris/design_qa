@@ -47,8 +47,8 @@ def run_thread(model, question, context):
         llm = Replicate(model="meta/llama-2-70b-chat", max_new_tokens=250)
     elif model == 'llava-13b':
         os.environ["REPLICATE_API_TOKEN"] = ""
-        llm = Replicate(model="meta/llama-2-70b-chat", max_new_tokens=100)
-    elif model == 'gpt-4-0125-preview' or model == 'gpt-4-0125-preview+RAG':
+        llm = ReplicateMultiModal(model=REPLICATE_MULTI_MODAL_LLM_MODELS["llava-13b"], max_new_tokens=250)
+    elif model in ['gpt-4-0125-preview', 'gpt-4-0125-preview+RAG']:
         # OpenAI model
         llm = OpenAI(model="gpt-4-0125-preview", max_new_tokens=250)
     elif model in ['gpt-4-1106-vision-preview', 'gpt-4-1106-vision-preview+RAG']:
