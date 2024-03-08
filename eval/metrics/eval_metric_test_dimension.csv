@@ -1,0 +1,8 @@
+﻿model_prediction,ground_truth,explanation,dimension_type
+"Yes.
+
+Explanation: The provided engineering drawing indicates a wheelbase of 1549.4 mm, which is greater than the minimum requirement of 1525 mm as per rule V.1.2 of the FSAE Rules 2024 document​​. Therefore, the design complies with this specific rule regarding the minimum wheelbase.",yes,The image shows the dimension of the cars wheelbase and it is clearly greater than the rules minimum wheelbase.,direct
+"No. Explanation: The provided engineering drawing shows a wheelbase dimension of 1524.9 mm. According to the FSAE rules for the 2024 competition, the vehicle must have a minimum wheelbase of 1525 mm​​. The drawing indicates the wheelbase is 0.1 mm less than the required minimum. Therefore, based on the explicitly shown dimension in the engineering drawing, the design does not comply with rule V.1.2 regarding the minimum wheelbase requirement.",yes,The image shows the dimension of the cars wheelbase and it is clearly less than the rules minimum wheelbase.,direct
+"Yes.
+
+Explanation: The provided engineering drawing indicates a wheelbase of 1549.4 mm, which is greater than the minimum requirement of 1525 mm as per rule V.1.2 of the FSAE Rules 2024 document​​. Therefore, the design complies with this specific rule regarding the minimum wheelbase.",yes,,scale
