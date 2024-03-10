@@ -335,28 +335,7 @@ def eval_dimensions_qa(results_csv):
     rogues = []
     
     for i, row in results_df.iterrows():
-        # prediction_tokens = normalize_answer(row['model_prediction']).split()
-        # ground_truth_tokens = normalize_answer(row['ground_truth']).split()
-
-        # # Extract the first yes/no in the prediction answer, this will be what we will score the model on
-        # def get_first_yes_no(text_list):
-        #     for i in text_list:
-        #         if i == "yes":
-        #             return ['yes']
-        #         if i == "no":
-        #             return ['no']
-        #     return ['noanswer']
-
-        # prediction_yes_no = get_first_yes_no(prediction_tokens)
-
-        # # Computing f1_score between yeses and nos on a word level will produce 1 if the responses agree and 0
-        # # if the responses don't. So this will produce list of 1s and 0s across all questions
-        # accuracies.append(token_f1_score(prediction_yes_no, ground_truth_tokens))
-        
-        # if row['dimension_type'] == "direct":
-        #     direct_dim_accuracies.append(token_f1_score(prediction_yes_no, ground_truth_tokens))
-        # else:
-        #     scale_bar_accuracies.append(token_f1_score(prediction_yes_no, ground_truth_tokens))
+        ground_truth_tokens = normalize_answer(row['ground_truth']).split()
             
         # Locate the explanation portion of the answer
         def find_explanation_and_answer(pred):
@@ -370,60 +349,74 @@ def eval_dimensions_qa(results_csv):
                     explanation_index = i
                 if "answer:" in word:
                     answer_index = i
-                    # return " ".join(pred.split()[i+1:])
             if explanation_index != None:
                 explanation = " ".join(pred.split()[explanation_index + 1 : answer_index])
             if answer_index != None:
-                answer_text = " ".join(pred.split()[answer_index + 1:])
-            print("Explanation:")
-            print(explanation)
-            print("Answer:")
-            print(answer_text)
-            return ""
+                answer = " ".join(pred.split()[answer_index + 1:])
+                if len(answer.split()) > 3:
+                    answer = " ".join(answer.split()[:3])
+                    
+            return answer, explanation
         
-        explanation_section_pred = find_explanation_and_answer(row['model_prediction'])
+        answer, explanation = find_explanation_and_answer(row['model_prediction'])
         
-        # print(explanation_section_pred)
+        # Extract the first yes/no in the prediction answer, this will be what we will score the model on
+        def get_first_yes_no(text_list):
+            for i in text_list:
+                if i == "yes":
+                    return ['yes']
+                if i == "no":
+                    return ['no']
+            return ['noanswer']
         
-    #     # Only have explanations for direct dimensions
-    #     if row['dimension_type'] == "direct":
+        prediction_yes_no = get_first_yes_no(normalize_answer(answer).split())
+        
+        # Computing f1_score between yeses and nos on a word level will produce 1 if the responses agree and 0
+        # if the responses don't. So this will produce list of 1s and 0s across all questions
+        accuracies.append(token_f1_score(prediction_yes_no, ground_truth_tokens))
+        
+        if row['dimension_type'] == "direct":
+            direct_dim_accuracies.append(token_f1_score(prediction_yes_no, ground_truth_tokens))
+        else:
+            scale_bar_accuracies.append(token_f1_score(prediction_yes_no, ground_truth_tokens))
+        
+        # Only have explanations for direct dimensions
+        if row['dimension_type'] == "direct":
             
-    #         if explanation_section_pred == "":
-    #             rogues.append(0)
-    #             bleus.append(0)
-    #         else:
-    #             # compute bleu-2
-    #             bleu_2 = bleu_score(row['explanation'], explanation_section_pred, 2) #used bleu 2 instead of 4 because only single reference leads to lower
-    #             # chance of n-gram overlap
-    #             bleus.append(bleu_2)
+            if explanation == "":
+                rogues.append(0)
+                bleus.append(0)
+            else:
+                # compute bleu-2
+                bleu_2 = bleu_score(row['explanation'], explanation, 2) #used bleu 2 instead of 4 because only single reference leads to lower
+                # chance of n-gram overlap
+                bleus.append(bleu_2)
                 
-    #             # compute rouge-l
-    #             rouge_l = score_rouge(row['explanation'], explanation_section_pred)
-    #             rogues.append(rouge_l)
+                # compute rouge-l
+                rouge_l = score_rouge(row['explanation'], explanation)
+                rogues.append(rouge_l)
 
     def mean_score(input_list):
         if len(input_list) < 1:
             return None
         else:
             return mean(input_list)
-    return
-    # Return means
-    # return mean_score(accuracies), mean_score(direct_dim_accuracies), mean_score(scale_bar_accuracies), accuracies, mean_score(bleus), bleus, mean(rogues), rogues
+
+    return mean_score(accuracies), mean_score(direct_dim_accuracies), mean_score(scale_bar_accuracies), accuracies, mean_score(bleus), bleus, mean(rogues), rogues
 
 
-# TODO
 def eval_functional_performance_qa(results_csv):
     """
-    :param results_csv: the csv should contain the results from running the QA through a model.
-    it should have a column called "model_prediction" and another called "ground_truth" with corresponding GT
-    
-    :returns: 
-    1. overall accuracy score on QAs (macro average)
-    2. all accuracies
-    3. macro avg bleu-2
-    4. all bleu-2 scores
-    5. macro avg rogue-l
-    6. all rogue-l scores
+        :param results_csv: the csv should contain the results from running the QA through a model.
+        it should have a column called "model_prediction" and another called "ground_truth" with corresponding GT
+        
+        :returns: 
+        1. overall accuracy score on QAs (macro average)
+        2. all accuracies
+        3. macro avg bleu-2
+        4. all bleu-2 scores
+        5. macro avg rogue-l
+        6. all rogue-l scores
     """
     results_df = pd.read_csv(results_csv)
 
@@ -433,23 +426,7 @@ def eval_functional_performance_qa(results_csv):
     rogues = []
     
     for i, row in results_df.iterrows():
-        prediction_tokens = normalize_answer(row['model_prediction']).split()
         ground_truth_tokens = normalize_answer(row['ground_truth']).split()
-
-        # Extract the first yes/no in the prediction answer, this will be what we will score the model on
-        def get_first_yes_no(text_list):
-            for i in text_list:
-                if i == "yes":
-                    return ['yes']
-                if i == "no":
-                    return ['no']
-            return ['noanswer']
-
-        prediction_yes_no = get_first_yes_no(prediction_tokens)
-
-        # Computing f1_score between yeses and nos on a word level will produce 1 if the responses agree and 0
-        # if the responses don't. So this will produce list of 1s and 0s across all questions
-        accuracies.append(token_f1_score(prediction_yes_no, ground_truth_tokens))
             
         # Locate the explanation portion of the answer
         def find_explanation_and_answer(pred):
@@ -463,26 +440,42 @@ def eval_functional_performance_qa(results_csv):
                     explanation_index = i
                 if "answer:" in word:
                     answer_index = i
-                    # return " ".join(pred.split()[i+1:])
             if explanation_index != None:
-                explanation = " ".join(pred.split()[explanation_index : answer_index])
-            print("Explanation:")
-            print(explanation)
-            return ""
+                explanation = " ".join(pred.split()[explanation_index + 1 : answer_index])
+            if answer_index != None:
+                answer = " ".join(pred.split()[answer_index + 1:])
+                if len(answer.split()) > 3:
+                    answer = " ".join(answer.split()[:3])
+            return answer, explanation
         
-        explanation_section_pred = find_explanation_and_answer(row['model_prediction'])
+        answer, explanation = find_explanation_and_answer(row['model_prediction'])
         
-        if explanation_section_pred == "":
+        # Extract the first yes/no in the prediction answer, this will be what we will score the model on
+        def get_first_yes_no(text_list):
+            for i in text_list:
+                if i == "yes":
+                    return ['yes']
+                if i == "no":
+                    return ['no']
+            return ['noanswer']
+        
+        prediction_yes_no = get_first_yes_no(normalize_answer(answer).split())
+        
+        # Computing f1_score between yeses and nos on a word level will produce 1 if the responses agree and 0
+        # if the responses don't. So this will produce list of 1s and 0s across all questions
+        accuracies.append(token_f1_score(prediction_yes_no, ground_truth_tokens))
+            
+        if explanation == "":
             rogues.append(0)
             bleus.append(0)
         else:
             # compute bleu-2
-            bleu_2 = bleu_score(row['explanation'], explanation_section_pred, 2) #used bleu 2 instead of 4 because only single reference leads to lower
+            bleu_2 = bleu_score(row['explanation'], explanation, 2) #used bleu 2 instead of 4 because only single reference leads to lower
             # chance of n-gram overlap
             bleus.append(bleu_2)
             
             # compute rouge-l
-            rouge_l = score_rouge(row['explanation'], explanation_section_pred)
+            rouge_l = score_rouge(row['explanation'], explanation)
             rogues.append(rouge_l)
 
     def mean_score(input_list):
@@ -491,7 +484,6 @@ def eval_functional_performance_qa(results_csv):
         else:
             return mean(input_list)
 
-    # Return means
     return mean_score(accuracies), accuracies, mean_score(bleus), bleus, mean(rogues), rogues
 
 
@@ -538,10 +530,9 @@ if __name__ == '__main__':
     # print("all f1")
     # print(all_answers)
     
-    # # TEST DIMENSION QA
-    # macro_avg_accuracy, direct_dim_avg, scale_bar_avg, all_accuracies, macro_avg_bleus, all_bleus, macro_avg_rogues, all_rogues = eval_dimensions_qa('eval_metric_test_dimension.csv')
-    eval_dimensions_qa('eval_metric_test_dimension.csv')
-    # print("macro average")
+    # # # TEST DIMENSION QA
+    # macro_avg_accuracy, direct_dim_avg, scale_bar_avg, all_accuracies, macro_avg_bleus, all_bleus, macro_avg_rogues, all_rogues = eval_dimensions_qa('compliance_test.csv')
+    # eval_dimensions_qa('compliance_test.csv')
     # print("macro average")
     # print(macro_avg_accuracy)
     # print("direct dimension accuracies")
@@ -558,4 +549,20 @@ if __name__ == '__main__':
     # print(macro_avg_rogues)
     # print("all_rogues")
     # print(all_rogues)
+    
+    # # TEST FP QA
+    macro_avg_accuracy, all_accuracies, macro_avg_bleus, all_bleus, macro_avg_rogues, all_rogues = eval_functional_performance_qa('compliance_test_fp.csv')
+    eval_dimensions_qa('compliance_test.csv')
+    print("macro average")
+    print(macro_avg_accuracy)
+    print("all accuracies")
+    print(all_accuracies)
+    print("macro avg bleus")
+    print(macro_avg_bleus)
+    print("all_bleus")
+    print(all_bleus)
+    print("macro avg rogues")
+    print(macro_avg_rogues)
+    print("all_rogues")
+    print(all_rogues)
     
