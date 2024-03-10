@@ -27,7 +27,7 @@ def get_text_prompts(text_query_path):
 
 def load_output_csv(model, question_type, overwrite_answers=False):
     # if output csv does not exist, create it
-    csv_name = f"{question_type}_evaluation_{model}.csv"
+    csv_name = f"dimension_{question_type}_evaluation_{model}.csv"
     if not os.path.exists(csv_name) or overwrite_answers:
         questions_pd = pd.read_csv(f"../../dataset/rule_compliance/rule_{question_type}_qa/rule_{question_type}_qa.csv")
         questions_pd.to_csv(csv_name, index=False)
@@ -116,7 +116,7 @@ def save_results(model, macro_avg_accuracy, all_accuracies, macro_avg_bleus, all
     print(f"\nAll rogues: {all_rogues}")
 
     # Save results to txt file
-    with open(f"functional_performance_{question_type}_evaluation_{model}.txt", "w") as text_file:
+    with open(f"dimension_{question_type}_evaluation_{model}.txt", "w") as text_file:
         text_file.write(f"Model: {model}")
         text_file.write(f"\nMacro avg: {macro_avg_accuracy}")
         text_file.write(f"\nAll accuracies: {all_accuracies}")
@@ -160,7 +160,7 @@ if __name__ == '__main__':
 
             # Run through model
             if model in ['gpt-4-1106-vision-preview+RAG', 'llava-13b']:
-                context = retrieve_context(index, question, top_k=15)
+                context = retrieve_context(index, question, top_k=12)
             elif model in ['gpt-4-1106-vision-preview']:
                 context = retrieve_context(index, question, top_k=0)
             else:
