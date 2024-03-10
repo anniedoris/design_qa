@@ -200,10 +200,10 @@ for i, row in df.iterrows():
     qa.append([question, answer, output_im_name, dimension_type, explanation])
 
 if detailed_context:    
-    pd.DataFrame(qa, columns=['question', 'answer', 'image', 'dimension_type', 'explanation']).to_csv(
+    pd.DataFrame(qa, columns=['question', 'ground_truth', 'image', 'dimension_type', 'explanation']).to_csv(
         "../../../dataset/rule_compliance/rule_dimension_qa/detailed_context/rule_dimension_qa_detailed_context.csv", index=False, encoding='utf-8')
 else:
-    pd.DataFrame(qa, columns=['question', 'answer', 'image', 'dimension_type', 'explanation']).to_csv(
+    pd.DataFrame(qa, columns=['question', 'ground_truth', 'image', 'dimension_type', 'explanation']).to_csv(
         "../../../dataset/rule_compliance/rule_dimension_qa/context/rule_dimension_qa_context.csv", index=False, encoding='utf-8')
     
     
