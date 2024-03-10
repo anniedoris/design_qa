@@ -167,8 +167,8 @@ for i, row in df.iterrows():
         " the bottom. The six CAD views each feature a different orientation of our design, so that 3D information about our design can be inferred."\
         " " + additional_info_context + "The CAD views are provided to contextualize the engineering drawing, which has the same orientation as one of the six CAD views. All units displayed"\
         " in the engineering drawing have units of mm. " + additional_info + "Based on the engineering drawing, does our design comply with rule " + rule_num + " specified in the FSAE rule document?"
-    prompt_2 = f" Answer only with a simple 'yes/no' (complies/does not comply with the rule) followed by an explanation (begin it with 'Explanation:')"\
-        " that explains the reasoning behind your answer."
+    prompt_2 = f" First provide an explanation for your answer (begin it with 'Explanation:'). Then provide just a yes/no answer"\
+        " (begin it with 'Answer:') that summarizes your response."
         
     # For direct dimensioning questions
     if row['dimension_system'] == "direct":
@@ -201,10 +201,10 @@ for i, row in df.iterrows():
 
 if detailed_context:    
     pd.DataFrame(qa, columns=['question', 'answer', 'image', 'dimension_type', 'explanation']).to_csv(
-        "../../../dataset/rule_compliance/rule_dimension_qa/detailed_context/rule_dimension_qa_detailed_context.csv", index=False)
+        "../../../dataset/rule_compliance/rule_dimension_qa/detailed_context/rule_dimension_qa_detailed_context.csv", index=False, encoding='utf-8')
 else:
     pd.DataFrame(qa, columns=['question', 'answer', 'image', 'dimension_type', 'explanation']).to_csv(
-        "../../../dataset/rule_compliance/rule_dimension_qa/context/rule_dimension_qa_context.csv", index=False)
+        "../../../dataset/rule_compliance/rule_dimension_qa/context/rule_dimension_qa_context.csv", index=False, encoding='utf-8')
     
     
 
