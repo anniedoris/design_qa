@@ -27,7 +27,7 @@ def get_text_prompts(text_query_path):
 
 def load_output_csv(model, question_type, overwrite_answers=False):
     # if output csv does not exist, create it
-    csv_name = f"dimension_{question_type}_evaluation_{model}.csv"
+    csv_name = f"results/dimension_{question_type}_evaluation_{model}.csv"
     if not os.path.exists(csv_name) or overwrite_answers:
         questions_pd = pd.read_csv(f"../../dataset/rule_compliance/rule_{question_type}_qa/rule_{question_type}_qa.csv")
         questions_pd.to_csv(csv_name, index=False)
@@ -82,7 +82,7 @@ def add_context_to_prompt(prompt, context):
 
 def create_index():
     # create the vector index from text documents
-    pdf_path = "../../dataset/docs/FSAE_Rules_2024_V1.pdf"
+    pdf_path = "../../../dataset/docs/FSAE_Rules_2024_V1.pdf"
     text_documents = SimpleDirectoryReader(input_files=[pdf_path]).load_data()
 
     # Transformation
@@ -98,7 +98,7 @@ def create_index():
 def retrieve_context(index, question, top_k=10):
     if top_k == 0:
         # load all context from original text document
-        txt_path = "../../dataset/docs/rules_pdfplumber1.txt"
+        txt_path = "../../../dataset/docs/rules_pdfplumber1.txt"
         context = open(txt_path, "r", encoding="utf-8").read()
     else:
         retriever = index.as_retriever(similarity_top_k=top_k)
@@ -130,10 +130,10 @@ if __name__ == '__main__':
     overwrite_answers = False
 
     # Index the text data
-    if os.path.exists("index"):
+    if os.path.exists("../index"):
         print("Loading index from storage...")
         # rebuild storage context
-        storage_context = StorageContext.from_defaults(persist_dir="index")
+        storage_context = StorageContext.from_defaults(persist_dir="../index")
         # load index
         index = load_index_from_storage(storage_context, embed_model=OpenAIEmbedding(model='text-embedding-3-large'))
     else:
@@ -179,9 +179,3 @@ if __name__ == '__main__':
 
             # save the results
             questions_pd.to_csv(csv_name, index=False)
-
-        # Compute the accuracy of the responses
-        macro_avg_accuracy, all_accuracies, macro_avg_bleus, all_bleus, macro_avg_rogues, all_rogues = eval_functional_performance_qa(csv_name)
-
-        # Print and save the results
-        save_results(model, macro_avg_accuracy, all_accuracies, macro_avg_bleus, all_bleus, macro_avg_rogues, all_rogues)
