@@ -9,7 +9,6 @@ import csv
 import os
 import pandas as pd
 from tqdm import tqdm
-from metrics import eval_presence_qa
 
 
 def get_text_prompts(text_query_path):
@@ -95,24 +94,6 @@ def retrieve_context(index, question, top_k=10):
         retriever = index.as_retriever(similarity_top_k=top_k)
         context = retriever.retrieve(question)
     return context
-
-
-def save_results(model, macro_avg, definitions_avg, multi_avg, single_avg, all_answers):
-    print(f"Model: {model}")
-    print(f"\nMacro avg: {macro_avg}")
-    print(f"\nDefinitions: {definitions_avg}")
-    print(f"\nMulti avg: {multi_avg}")
-    print(f"\nSingle avg: {single_avg}")
-    print(f"\nAll answers: {all_answers}")
-
-    # Save results to txt file
-    with open(f"results/presence_evaluation_{model}.txt", "w") as text_file:
-        text_file.write(f"Model: {model}")
-        text_file.write(f"\nMacro avg: {macro_avg}")
-        text_file.write(f"\nDefinitions: {definitions_avg}")
-        text_file.write(f"\nMulti avg: {multi_avg}")
-        text_file.write(f"\nSingle avg: {single_avg}")
-        text_file.write(f"\nAll answers: {all_answers}")
 
 
 if __name__ == '__main__':

@@ -8,8 +8,6 @@ from llama_index.core import StorageContext, load_index_from_storage
 from llama_index.core.node_parser import SentenceSplitter
 from llama_index.multi_modal_llms.replicate.base import REPLICATE_MULTI_MODAL_LLM_MODELS
 from llama_index.multi_modal_llms.replicate import ReplicateMultiModal
-
-
 import csv
 import os
 import pandas as pd

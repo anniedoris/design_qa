@@ -1,12 +1,10 @@
 from llama_index.core import SimpleDirectoryReader
 from llama_index.multi_modal_llms.replicate import ReplicateMultiModal
-from llama_index.core.indices import VectorStoreIndex
 from llama_index.multi_modal_llms.replicate.base import REPLICATE_MULTI_MODAL_LLM_MODELS
 from llama_index.multi_modal_llms.openai import OpenAIMultiModal
 import os
 import pandas as pd
 from tqdm import tqdm
-from metrics import eval_definition_qa
 
 
 def load_output_csv(model, overwrite_answers=False):
@@ -39,23 +37,6 @@ def run_thread(model, question, image_path):
     # get response from model
     rag_response = multi_modal_llm.complete(prompt=question, image_documents=image_document)
     return str(rag_response)
-
-
-def save_results(model, macro_avg, definitions_avg, multi_avg, single_avg, all_answers):
-    print(f"\nMacro avg: {macro_avg}")
-    print(f"\nDefinitions: {definitions_avg}")
-    print(f"\nMulti avg: {multi_avg}")
-    print(f"\nSingle avg: {single_avg}")
-    print(f"\nAll answers: {all_answers}")
-
-    # Save results to txt file
-    with open(f"results/definition_evaluation_{model}.txt", "w") as text_file:
-        text_file.write(f"Model: {model}")
-        text_file.write(f"\nMacro avg: {macro_avg}")
-        text_file.write(f"\nDefinitions: {definitions_avg}")
-        text_file.write(f"\nMulti avg: {multi_avg}")
-        text_file.write(f"\nSingle avg: {single_avg}")
-        text_file.write(f"\nAll answers: {all_answers}")
 
 
 def retrieve_context(question):
