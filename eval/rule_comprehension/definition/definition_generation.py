@@ -11,9 +11,9 @@ from metrics import eval_definition_qa
 
 def load_output_csv(model, overwrite_answers=False):
     # if output csv does not exist, create it
-    csv_name = f"definition_evaluation_{model}.csv"
+    csv_name = f"results/definition_evaluation_{model}.csv"
     if not os.path.exists(csv_name) or overwrite_answers:
-        questions_pd = pd.read_csv("../../dataset/rule_comprehension/rule_definition_qa.csv")
+        questions_pd = pd.read_csv("../../../dataset/rule_comprehension/rule_definition_qa.csv")
         questions_pd.to_csv(csv_name, index=False)
     else:
         questions_pd = pd.read_csv(csv_name)
@@ -49,7 +49,7 @@ def save_results(model, macro_avg, definitions_avg, multi_avg, single_avg, all_a
     print(f"\nAll answers: {all_answers}")
 
     # Save results to txt file
-    with open(f"definition_evaluation_{model}.txt", "w") as text_file:
+    with open(f"results/definition_evaluation_{model}.txt", "w") as text_file:
         text_file.write(f"Model: {model}")
         text_file.write(f"\nMacro avg: {macro_avg}")
         text_file.write(f"\nDefinitions: {definitions_avg}")
@@ -60,7 +60,7 @@ def save_results(model, macro_avg, definitions_avg, multi_avg, single_avg, all_a
 
 def retrieve_context(question):
     # load all context from original text document
-    txt_path = "../../dataset/docs/rules_pdfplumber1.txt"
+    txt_path = "../../../dataset/docs/rules_pdfplumber1.txt"
     context = open(txt_path, "r", encoding="utf-8").read()
 
     question_with_context = question[:80] + f"Below is context from the FSAE rule document which might or might not " \
@@ -97,9 +97,3 @@ if __name__ == '__main__':
 
             # save the results
             questions_pd.to_csv(csv_name, index=False)
-
-        # Compute the accuracy of the responses
-        macro_avg, definitions_avg, multi_avg, single_avg, all_answers = eval_definition_qa(csv_name)
-
-        # Print and save the results
-        save_results(model, macro_avg, definitions_avg, multi_avg, single_avg, all_answers)

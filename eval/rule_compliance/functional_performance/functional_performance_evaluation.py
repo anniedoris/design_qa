@@ -11,7 +11,7 @@ def save_results(model, macro_avg_accuracy, all_accuracies, macro_avg_bleus, all
     print(f"\nAll rogues: {all_rogues}")
 
     # Save results to txt file
-    with open(f"dimension_{question_type}_evaluation_{model}.txt", "w") as text_file:
+    with open(f"results/dimension_{question_type}_evaluation_{model}.txt", "w") as text_file:
         text_file.write(f"Model: {model}")
         text_file.write(f"\nMacro avg: {macro_avg_accuracy}")
         text_file.write(f"\nAll accuracies: {all_accuracies}")
