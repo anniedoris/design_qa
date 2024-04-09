@@ -116,7 +116,7 @@ def save_results(model, macro_avg, definitions_avg, multi_avg, single_avg, all_a
 
 
 if __name__ == '__main__':
-    overwrite_answers = True
+    overwrite_answers = False
 
     # Index the text data
     if os.path.exists("index"):

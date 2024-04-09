@@ -70,7 +70,7 @@ def retrieve_context(question):
 
 
 if __name__ == '__main__':
-    overwrite_answers = True
+    overwrite_answers = False
 
     for model in ['gpt-4-1106-vision-preview+context', 'gpt-4-1106-vision-preview', 'llava-13b']:
         questions_pd, csv_name = load_output_csv(model, overwrite_answers=overwrite_answers)
