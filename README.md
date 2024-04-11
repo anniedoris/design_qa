@@ -1,5 +1,7 @@
 # design_qa
 
+4/11/24: UPDATES TO THIS PAGE ARE IN PROGRESS. MORE DOCUMENTATION AND AN OFFICIAL WEBSITE COMING SOON.
+
 This repo is a reference-dependent document-grounded VQA/long-text dataset pertaining to the FSAE rules. We provide the dataset and methods to evaluate select MLLMs.
 
 ## Dataset
