@@ -10,6 +10,10 @@ DesignQA is a novel benchmark aimed at evaluating the proficiency of multimodal 
 
 * A unique benchmark that requires models to analyze and integrate information from both visual and long-text inputs
 
+Here is a visual overview of the benchmark:
+
+![Dataset Overview](docs/images/designqa_overview.png)
+
 ## Dataset
 The dataset can be found in the ```dataset``` directory. The dataset is split into three sections: Rule Extraction, Rule Comprehension, and Rule Evaluation. Each dataset section has several different task datasets, which are QAs that can be fed directly to a model for model evaluation. All of these task datasets can be found in the ```dataset``` directory (under their relevant section) and end with ```_qa.csv```. Scripts for dataset generation can be found in the ```scripts``` directory.
 
