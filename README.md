@@ -55,29 +55,44 @@ An example ground-truth answer (for rule the term `Aerodynamic/Aerodynamics`) is
 ```
 
 ### Rule Comprehension
-This semgnet of the dataset tests a model's ability to understand the terms and definitions presented within a specific rule or requirement. The questions in this segment involve images. The Rule Comprehension question-answer pairs are further divded into two subsets: Definition QAs and Presence QAs.
+This semgnet of the dataset tests a model's ability to understand the terms and definitions presented within many of the rules and requiriements. The questions in this segment involve images. The Rule Comprehension question-answer pairs are further divded into two subsets: Definition QAs and Presence QAs.
 
 #### Definition QAs
-These questions ask the model to identify the name of a component highlighted in pink in a multi-view CAD image. The definition QA images can be found in ```dataset/rule_comprehension/rule_definition_qa/``` and the question-answers can be found in ```dataset/rule_comprehension/rule_definition_qa.csv```. An example question-answer pair is as follows:
+These questions ask the model to identify the name of a component highlighted in pink in a multi-view CAD image. The definition QA images can be found in ```dataset/rule_comprehension/rule_definition_qa/``` and the question-answers can be found in ```dataset/rule_comprehension/rule_definition_qa.csv```. An example question is as follows:
 
 ```
 We are a student engineering team designing a vehicle for the FSAE competition. Attached is the FSAE rules document. Also attached is an image showing six CAD views of our vehicle design. What is the name of the component(s) highlighted in pink? Answer just with the name of the highlighted component(s) and nothing else.
 ```
 ![Definition_QA_image](docs/images/1.jpg)
 
-The corresponding ground-truth answer is:
+The corresponding ground-truth answer is as follows, where synonyms are separated by semi-colons:
 
 ```
 pedal box; pedal assembly
 ```
 
 #### Presence QAs
+These questions ask the model to identify whether a specific component is present in a zoomed-in CAD view. As such, the responses are yes/no answers and this is an easier variant of the Definition QAs. The presence QA images can be found in ```dataset/rule_comprehension/rule_presence_qa/``` and the question-answers can be found in ```dataset/rule_comprehension/rule_presence_qa.csv```. An example question is as follows:
+
+```
+We are a student engineering team designing a vehicle for the FSAE competition. Attached is the FSAE rules document. Also attached is an image showing seven CAD views (each boxed in black) of our vehicle design. The top, big view shows a close-up view of the design. The six smaller views on the bottom of the image show different complete views of the CAD of the vehicle and are provided for context. Note that the close-up view orientation matches one of the six complete view orientations. The close-up view may also have some components hidden (with respect to the corresponding complete view) for visualization of specific components. Looking at the close-up view, is/are any part of the the accumulator or the accumulator container or the battery visible in the close-up view? Answer simply with yes or no.
+```
+![Definition_QA_image](docs/images/15.jpg)
+
+The corresponding ground-truth answer is as follows:
+
+```
+no
+```
+
+
 
 ## Automatic Evaluation Metrics
 
-
 ## Evaluating Your Model
 Implementation of existing MLLM model evaluation can be found in the ```eval``` directory.
+
+## Leaderboard
 
 ## Citations
 TODO
