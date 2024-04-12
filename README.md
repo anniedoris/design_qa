@@ -118,11 +118,22 @@ We should use the battery structure in the vehicle because the stress result in 
 
 
 ## Automatic Evaluation Metrics
+Each subset of the benchmark can be scored using an automated evluation metric. The details of the evaluation metrics and the decision behind using each one can be found in our paper. The metrics are implemented in ```eval/metrics/metrics.py```.
 
 ## Evaluating Your Model
-Implementation of existing MLLM model evaluation can be found in the ```eval``` directory. There are 
+To evaluate a model using our benchmark, there are several options. 
+
+1. **Evaluate a model supported by Replicate or LlamaIndex**
+* The models we evaluated in our paper (GPT4 and LLaVA) are supported by LlamaIndex and Replicate respectively. You can look at examples for how we implemented evaluation for these LlamaIndex and Replicate supported models in the ```eval/``` directory. Check out the ```.py``` files within each of ```eval/rule_compliance/``` and ```eval/rule_comprehension/``` and ```eval/rule_extraction/```. These scripts will both run the evaluation and score the model on each of the benchmark subsets.
+
+2. **Evaluate a local/custom model**
+* You can directly pull the dataset from the ```dataset/``` directory and run the queries. If you output the results to a csv with one column as ```ground_truth``` and another as ```model_prediction``` for each of the QAs, you can then use TODO.py to automatically evaluate your results.
 
 ## Leaderboard
+We have a [leaderboard](https://design-qa.github.io/)! To submit to the leaderboard, please file a github issue and make sure to include your ```.txt``` file results as well as the code that you used for the model evaluation. We will manually verify the results and post to our leaderboard!
+
 
 ## Citations
+If you use our benchmark in your work, please make sure to cite us!
+
 TODO
