@@ -58,7 +58,18 @@ An example ground-truth answer (for rule the term `Aerodynamic/Aerodynamics`) is
 This semgnet of the dataset tests a model's ability to understand the terms and definitions presented within a specific rule or requirement. The questions in this segment involve images. The Rule Comprehension question-answer pairs are further divded into two subsets: Definition QAs and Presence QAs.
 
 #### Definition QAs
+These questions ask the model to identify the name of a component highlighted in pink in a multi-view CAD image. The definition QA images can be found in ```dataset/rule_comprehension/rule_definition_qa/``` and the question-answers can be found in ```dataset/rule_comprehension/rule_definition_qa.csv```. An example question-answer pair is as follows:
 
+```
+We are a student engineering team designing a vehicle for the FSAE competition. Attached is the FSAE rules document. Also attached is an image showing six CAD views of our vehicle design. What is the name of the component(s) highlighted in pink? Answer just with the name of the highlighted component(s) and nothing else.
+```
+![Dataset Overview](docs/images/1.png)
+
+The corresponding ground-truth answer is:
+
+```
+pedal box; pedal assembly
+```
 
 #### Presence QAs
 
