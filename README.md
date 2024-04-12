@@ -1,6 +1,6 @@
 # DesignQA Benchmark
 
-DesignQA: A Multimodal Benchmark for Evaluating Large Language Models' Understanding of Engineering Documentation
+**DesignQA: A Multimodal Benchmark for Evaluating Large Language Models' Understanding of Engineering Documentation**
 
 Check out the pre-print [here](https://arxiv.org/abs/2404.07917)!
 
@@ -23,7 +23,41 @@ Here is a visual overview of the benchmark:
 ![Dataset Overview](docs/images/designqa_overview.png)
 
 ## Dataset
-The dataset can be found in the ```dataset``` directory. The dataset is split into three sections: Rule Extraction, Rule Comprehension, and Rule Evaluation. Each dataset section has several different task datasets, which are QAs that can be fed directly to a model for model evaluation. All of these task datasets can be found in the ```dataset``` directory (under their relevant section) and end with ```_qa.csv```. Scripts for dataset generation can be found in the ```scripts``` directory.
+The dataset can be found in the ```dataset``` directory. The dataset is split into three sections: Rule Extraction, Rule Comprehension, and Rule Evaluation. Each dataset section has two different subsets, each of which corresponds with a specific task needed to design according to technical documentation. Examples of the segments and subsets are as follows:
 
-## Evaluation
+### Rule Extraction
+This segment of the dataset tests a model's ability to extract requested information from a lengthy technical document. The questions in this segment do not involve images.
+
+#### Retrieval QAs
+These questions ask the model to extract a specific rule from the 2024 FSAE competition rules. The retrieval QAs can be found in ```dataset/rule_extraction/rule_retrieval_qa.csv```. All of the questions have the format:
+
+```
+We are a student engineering team designing a vehicle for the FSAE competition. Attached is the FSAE rules document. What does rule {rule_number} state exactly? Answer with only the text of the rule and no other words.
+```
+
+An example ground-truth answer (for rule V.1) is:
+
+```
+CONFIGURATION The vehicle must be open wheeled and open cockpit (a formula style body) with four wheels that are not in a straight line.
+```
+
+#### Compilation QAs
+These questions ask the model to find all rules in the FSAE competition rules relevant to a specific term. The compilation QAs can be found in ```dataset/rule_extraction/rule_compilation_qa.csv```. All of the questions have the format:
+
+```
+We are a student engineering team designing a vehicle for the FSAE competition. Attached is the FSAE rules document. Please list all rules relevant to {term}. Answer with only the rule numbers (i.e.: AA.1.1.1) separated by commas and no other words. The rules relevant to `Aerodynamic/Aerodynamics` are:
+```
+
+An example ground-truth answer (for rule the term `Aerodynamic/Aerodynamics`) is:
+
+```
+	['T.7', 'T.7.1', 'T.7.1.1', 'T.7.1.3', 'T.7.2.1', 'T.7.2.2', 'T.7.3.1', 'T.7.3.3', 'T.7.4', 'T.7.5', 'T.7.6', 'T.7.6.3', 'T.7.7.1', 'IN.8.2', 'IN.8.2.1', 'IN.8.2.3', 'T.7.1.2', 'T.7.1.4', 'T.7.1.5', 'T.7.2', 'T.7.2.3', 'T.7.2.4', 'T.7.3', 'T.7.3.2', 'T.7.6.1', 'T.7.6.2', 'T.7.7', 'T.7.7.2', 'IN.8.2.2', 'GR.6.4.1', 'V.1.1', 'V.1.4.1']
+```
+
+### Rule Comprehension
+
+## Evaluating Your Model
 Implementation of existing MLLM model evaluation can be found in the ```eval``` directory.
+
+## Citations
+TODO
