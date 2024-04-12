@@ -1,5 +1,13 @@
 # DesignQA Benchmark
 
+DesignQA: A Multimodal Benchmark for Evaluating Large Language Models' Understanding of Engineering Documentation
+
+Check out the pre-print [here](https://arxiv.org/abs/2404.07917)!
+
+Check out our official website and leaderboard [here](https://design-qa.github.io/)!
+
+## Overview
+
 DesignQA is a novel benchmark aimed at evaluating the proficiency of multimodal large language models (MLLMs) in comprehending and applying engineering requirements in technical documentation. The benchmark is developed in conjunction with the MIT Motorsport team, so that the question-answer pairs are based on real world data and the ~200 page FSAE competition rules. Some key features of the DesignQA benchmark include:
 
 * 1451 question-answer pairs pertaining to design of an FSAE vehicle according to the FSAE competition rules
