@@ -92,16 +92,36 @@ The final segment of the benchmark tests a model's ability to determine whether 
 These questions ask the model to determine whether a design complies with a dimensional constraint specified in a rule from the FSAE competition document. The dimension QAs and images can be found in ```dataset/rule_compliance/rule_dimension_qa/```. This directory is further divided into ```context/``` and ```detailed_context/``` subdirectories: the detailed_context questions contain additional context in the prompts and images (such as highlights of specific components) that we hypothesized would make answering the questions easier. The regular context questions do not have this additional helpful context. When scoring the dimension questions, we run both the ```context/``` and ```detailed_context/``` questions and average the scores together. An example question (without detailed context) is as follows:
 
 ```
-The corresponding ground-truth answer is as follows, where synonyms are separated by semi-colons:
+![Definition_QA_image](docs/images/V.1.4.2a.jpg.jpg)
+
+The corresponding ground-truth answer is as follows:
+
+```
+yes
+The image shows the radius of wheels which (multiplied by 2) is greater than rules minimum wheel diameter.
+
 ```
 
 #### Functional Performance QAs
+These questions ask the model to determine whether a design complies with a functional performance-related rule from the FSAE competition document. The functional performance QAs can be found in ```dataset/rule_compliance/rule_functional_performance_qa.csv``` and the corresponding images can be found in ```dataset/rule_compliance/images```. An example question is as follows:
+
+```
+We are a student engineering team designing a vehicle for the FSAE competition. Attached is the FSAE rules document. Also attached is an image that shows the results from an FEA simulation performed on the battery structure. The battery structure is made from non-welded 6061-T6 aluminum tubing. Based on the results presented in the image and rule F.3.5.3b in the rule document, can we use the battery structure in the vehicle? First provide an explanation for your answer (begin it with ‘Explanation:’). Then provide just a yes/no answer (begin it with ‘Answer:’) that summarizes your response.
+```
+![Definition_QA_image](docs/images/1.png)
+
+The corresponding grouth-truth answer is as follows:
+
+```
+yes
+We should use the battery structure in the vehicle because the stress result in the FEA model is less than the yield strength of non-welded 6061-T6 tubing (240 Mpa).
+```
 
 
 ## Automatic Evaluation Metrics
 
 ## Evaluating Your Model
-Implementation of existing MLLM model evaluation can be found in the ```eval``` directory.
+Implementation of existing MLLM model evaluation can be found in the ```eval``` directory. There are 
 
 ## Leaderboard
 
