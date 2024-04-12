@@ -63,7 +63,7 @@ These questions ask the model to identify the name of a component highlighted in
 ```
 We are a student engineering team designing a vehicle for the FSAE competition. Attached is the FSAE rules document. Also attached is an image showing six CAD views of our vehicle design. What is the name of the component(s) highlighted in pink? Answer just with the name of the highlighted component(s) and nothing else.
 ```
-![Dataset Overview](docs/images/1.png)
+![Definition_QA_image](docs/images/1.jpg)
 
 The corresponding ground-truth answer is:
 
