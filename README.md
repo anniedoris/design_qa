@@ -91,7 +91,6 @@ The final segment of the benchmark tests a model's ability to determine whether 
 #### Dimension QAs
 These questions ask the model to determine whether a design complies with a dimensional constraint specified in a rule from the FSAE competition document. The dimension QAs and images can be found in ```dataset/rule_compliance/rule_dimension_qa/```. This directory is further divided into ```context/``` and ```detailed_context/``` subdirectories: the detailed_context questions contain additional context in the prompts and images (such as highlights of specific components) that we hypothesized would make answering the questions easier. The regular context questions do not have this additional helpful context. When scoring the dimension questions, we run both the ```context/``` and ```detailed_context/``` questions and average the scores together. An example question (without detailed context) is as follows:
 
-```
 ![Dimension_QA_image](docs/images/V.1.4.2a.jpg)
 
 The corresponding ground-truth answer is as follows:
