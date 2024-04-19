@@ -9,7 +9,11 @@ import csv
 import os
 import pandas as pd
 from tqdm import tqdm
+import sys
+sys.path.append("../metrics/")
+sys.path.append("../")
 from metrics import eval_presence_qa
+from model_list import model_list
 
 
 def get_text_prompts(text_query_path):
@@ -38,8 +42,6 @@ def load_output_csv(model, overwrite_answers=False):
 def run_thread(model, question, image_path, context):
     if model == 'llava-13b':
         # API token of the model/pipeline that we will be using
-        REPLICATE_API_TOKEN = ""
-        os.environ["REPLICATE_API_TOKEN"] = REPLICATE_API_TOKEN
         model = REPLICATE_MULTI_MODAL_LLM_MODELS["llava-13b"]
         multi_modal_llm = ReplicateMultiModal(model=model, max_new_tokens=100)
     elif model == 'gpt-4-1106-vision-preview' or model == 'gpt-4-1106-vision-preview+RAG':
@@ -116,7 +118,7 @@ def save_results(model, macro_avg, definitions_avg, multi_avg, single_avg, all_a
 
 
 if __name__ == '__main__':
-    overwrite_answers = False
+    overwrite_answers = True
 
     # Index the text data
     if os.path.exists("index"):
@@ -130,7 +132,7 @@ if __name__ == '__main__':
         index = create_index()
         index.storage_context.persist("index")
 
-    for model in ['llava-13b', 'gpt-4-1106-vision-preview+RAG', 'gpt-4-1106-vision-preview']:
+    for model in model_list:
         questions_pd, csv_name = load_output_csv(model, overwrite_answers)
 
         for i, row in tqdm(questions_pd.iterrows(), total=len(questions_pd), desc=f'generating responses for {model}'):

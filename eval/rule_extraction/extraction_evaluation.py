@@ -11,6 +11,8 @@ from llama_index.multi_modal_llms.replicate import ReplicateMultiModal
 
 
 import csv
+import sys
+sys.path.append("../metrics/")
 import os
 import pandas as pd
 from tqdm import tqdm
@@ -43,10 +45,10 @@ def load_output_csv(model, question_type, overwrite_answers=False):
 def run_thread(model, question, context):
     if model == 'llama-2-70b-chat':
         # API token of the model/pipeline that we will be using
-        os.environ["REPLICATE_API_TOKEN"] = ""
+        # os.environ["REPLICATE_API_TOKEN"] = ""
         llm = Replicate(model="meta/llama-2-70b-chat", max_new_tokens=250)
     elif model == 'llava-13b':
-        os.environ["REPLICATE_API_TOKEN"] = ""
+        # os.environ["REPLICATE_API_TOKEN"] = ""
         llm = ReplicateMultiModal(model=REPLICATE_MULTI_MODAL_LLM_MODELS["llava-13b"], max_new_tokens=250)
     elif model in ['gpt-4-0125-preview', 'gpt-4-0125-preview+RAG']:
         # OpenAI model
@@ -141,7 +143,7 @@ def save_results(model, macro_avg, all_answers, question_type):
 
 
 if __name__ == '__main__':
-    overwrite_answers = False
+    overwrite_answers = True
 
     # Index the text data
     if os.path.exists("index"):
@@ -154,6 +156,7 @@ if __name__ == '__main__':
         print("Creating index...")
         index = create_index()
         index.storage_context.persist("index")
+        print("Finished index...")
 
     for question_type in ['retrieval', "compilation"]:
         # models available: 'gpt-4-0125-preview+RAG', 'gpt-4-0125-preview', 'llama-2-70b-chat', 'llava-13b', 'gpt-4-1106-vision-preview+RAG', 'gpt-4-1106-vision-preview'
