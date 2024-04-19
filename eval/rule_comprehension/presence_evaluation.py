@@ -14,6 +14,7 @@ sys.path.append("../metrics/")
 sys.path.append("../")
 from metrics import eval_presence_qa
 from model_list import model_list
+import pdb
 
 
 def get_text_prompts(text_query_path):
@@ -40,9 +41,9 @@ def load_output_csv(model, overwrite_answers=False):
 
 
 def run_thread(model, question, image_path, context):
-    if model == 'llava-13b':
+    if (model == 'llava-13b') or (model == 'fuyu-8b') or (model == 'minigpt-4') or (model == 'cogvlm'):
         # API token of the model/pipeline that we will be using
-        model = REPLICATE_MULTI_MODAL_LLM_MODELS["llava-13b"]
+        model = REPLICATE_MULTI_MODAL_LLM_MODELS[model]
         multi_modal_llm = ReplicateMultiModal(model=model, max_new_tokens=100)
     elif model == 'gpt-4-1106-vision-preview' or model == 'gpt-4-1106-vision-preview+RAG':
         # OpenAI model
@@ -148,7 +149,7 @@ if __name__ == '__main__':
             image_path = "../../dataset/rule_comprehension/rule_presence_qa/" + row['image']
 
             # Run through model
-            if model == 'llava-13b' or model == 'gpt-4-1106-vision-preview+RAG':
+            if model == 'llava-13b' or model == 'gpt-4-1106-vision-preview+RAG' or model == 'fuyu-8b' or model == 'minigpt-4' or model == 'cogvlm':
                 context = retrieve_context(index, question, top_k=5)
             elif model == 'gpt-4-1106-vision-preview':
                 context = retrieve_context(index, question, top_k=0)
