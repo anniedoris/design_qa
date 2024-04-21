@@ -6,6 +6,7 @@ from llama_index.multi_modal_llms.openai import OpenAIMultiModal
 from llama_index.core import StorageContext, load_index_from_storage
 from llama_index.embeddings.openai import OpenAIEmbedding
 from llama_index.core.node_parser import SentenceSplitter
+from llama_index.multi_modal_llms.gemini import GeminiMultiModal
 import csv
 import os
 import pandas as pd
@@ -39,7 +40,7 @@ def load_output_csv(model, question_type, overwrite_answers=False):
         questions_pd = pd.read_csv(csv_name)
     return questions_pd, csv_name
 
-
+ 
 def run_thread(model, question, image_path, context):
     if model == 'llava-13b':
         # API token of the model/pipeline that we will be using
@@ -53,6 +54,8 @@ def run_thread(model, question, image_path, context):
         multi_modal_llm = OpenAIMultiModal(
             model='gpt-4-vision-preview', max_new_tokens=1500
         )
+    elif model in ['gemini']:
+        multi_modal_llm = GeminiMultiModal(model_name='models/gemini-pro-vision')
     else:
         raise ValueError("Invalid model")
 
@@ -171,7 +174,7 @@ if __name__ == '__main__':
                 # Run through model
                 if model in ['gpt-4-1106-vision-preview+RAG', 'llava-13b', 'fuyu-8b']:
                     context = retrieve_context(index, question, top_k=12)
-                elif model in ['gpt-4-1106-vision-preview']:
+                elif model in ['gpt-4-1106-vision-preview', 'gemini']:
                     context = retrieve_context(index, question, top_k=0)
                 else:
                     raise ValueError("Invalid model")
