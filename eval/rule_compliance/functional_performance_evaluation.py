@@ -6,11 +6,16 @@ from llama_index.multi_modal_llms.openai import OpenAIMultiModal
 from llama_index.core import StorageContext, load_index_from_storage
 from llama_index.embeddings.openai import OpenAIEmbedding
 from llama_index.core.node_parser import SentenceSplitter
+from llama_index.multi_modal_llms.gemini import GeminiMultiModal
 import csv
 import os
 import pandas as pd
 from tqdm import tqdm
+import sys
+sys.path.append("../metrics/")
+sys.path.append("../")
 from metrics import eval_functional_performance_qa
+from model_list import model_list
 
 
 def get_text_prompts(text_query_path):
@@ -39,8 +44,8 @@ def load_output_csv(model, question_type, overwrite_answers=False):
 def run_thread(model, question, image_path, context):
     if model == 'llava-13b':
         # API token of the model/pipeline that we will be using
-        REPLICATE_API_TOKEN = ""
-        os.environ["REPLICATE_API_TOKEN"] = REPLICATE_API_TOKEN
+        # REPLICATE_API_TOKEN = ""
+        # os.environ["REPLICATE_API_TOKEN"] = REPLICATE_API_TOKEN
         model = REPLICATE_MULTI_MODAL_LLM_MODELS["llava-13b"]
         multi_modal_llm = ReplicateMultiModal(model=model, max_new_tokens=100)
     elif model in ['gpt-4-1106-vision-preview', 'gpt-4-1106-vision-preview+RAG']:
@@ -48,6 +53,8 @@ def run_thread(model, question, image_path, context):
         multi_modal_llm = OpenAIMultiModal(
             model='gpt-4-vision-preview', max_new_tokens=1500
         )
+    elif model in ['gemini-pro']:
+        multi_modal_llm = GeminiMultiModal(model_name='models/gemini-pro-vision')
     else:
         raise ValueError("Invalid model")
 
@@ -127,7 +134,11 @@ def save_results(model, macro_avg_accuracy, all_accuracies, macro_avg_bleus, all
 
 
 if __name__ == '__main__':
-    overwrite_answers = False
+    overwrite_answers = True
+
+    # Set up google api key
+    GOOGLE_API_KEY = ""  # add your GOOGLE API key here
+    os.environ["GOOGLE_API_KEY"] = GOOGLE_API_KEY
 
     # Index the text data
     if os.path.exists("index"):
@@ -142,7 +153,7 @@ if __name__ == '__main__':
         index.storage_context.persist("index")
 
     question_type = "functional_performance"
-    for model in ['gpt-4-1106-vision-preview', 'gpt-4-1106-vision-preview+RAG', 'llava-13b']:
+    for model in model_list:
         questions_pd, csv_name = load_output_csv(model, question_type, overwrite_answers)
 
         for i, row in tqdm(questions_pd.iterrows(), total=len(questions_pd), desc=f'generating responses for '
@@ -159,7 +170,7 @@ if __name__ == '__main__':
             image_path = f"../../dataset/rule_compliance/rule_{question_type}_qa/images/" + row['image']
 
             # Run through model
-            if model in ['gpt-4-1106-vision-preview+RAG', 'llava-13b']:
+            if model in ['gpt-4-1106-vision-preview+RAG', 'llava-13b', 'gemini-pro']:
                 context = retrieve_context(index, question, top_k=12)
             elif model in ['gpt-4-1106-vision-preview']:
                 context = retrieve_context(index, question, top_k=0)
