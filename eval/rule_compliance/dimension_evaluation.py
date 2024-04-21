@@ -54,7 +54,7 @@ def run_thread(model, question, image_path, context):
         multi_modal_llm = OpenAIMultiModal(
             model='gpt-4-vision-preview', max_new_tokens=1500
         )
-    elif model in ['gemini']:
+    elif model in ['gemini-pro']:
         multi_modal_llm = GeminiMultiModal(model_name='models/gemini-pro-vision')
     else:
         raise ValueError("Invalid model")
@@ -142,6 +142,10 @@ def save_results(model, macro_avg_accuracy, direct_dim_avg, scale_bar_avg, all_a
 if __name__ == '__main__':
     overwrite_answers = True
 
+    # Set up google api key
+    GOOGLE_API_KEY = ""  # add your GOOGLE API key here
+    os.environ["GOOGLE_API_KEY"] = GOOGLE_API_KEY
+
     # Index the text data
     if os.path.exists("index"):
         print("Loading index from storage...")
@@ -172,9 +176,9 @@ if __name__ == '__main__':
                 image_path = f"../../dataset/rule_compliance/rule_dimension_qa/{question_type}/" + row['image']
 
                 # Run through model
-                if model in ['gpt-4-1106-vision-preview+RAG', 'llava-13b', 'fuyu-8b']:
+                if model in ['gpt-4-1106-vision-preview+RAG', 'llava-13b', 'fuyu-8b', 'gemini-pro']:
                     context = retrieve_context(index, question, top_k=12)
-                elif model in ['gpt-4-1106-vision-preview', 'gemini']:
+                elif model in ['gpt-4-1106-vision-preview']:
                     context = retrieve_context(index, question, top_k=0)
                 else:
                     raise ValueError("Invalid model")
