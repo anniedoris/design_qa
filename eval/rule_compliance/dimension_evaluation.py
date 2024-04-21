@@ -9,8 +9,12 @@ from llama_index.core.node_parser import SentenceSplitter
 import csv
 import os
 import pandas as pd
+import sys
+sys.path.append("../metrics/")
+sys.path.append("../")
 from tqdm import tqdm
 from metrics import eval_dimensions_qa
+from model_list import model_list
 
 
 def get_text_prompts(text_query_path):
@@ -39,9 +43,10 @@ def load_output_csv(model, question_type, overwrite_answers=False):
 def run_thread(model, question, image_path, context):
     if model == 'llava-13b':
         # API token of the model/pipeline that we will be using
-        REPLICATE_API_TOKEN = ""
-        os.environ["REPLICATE_API_TOKEN"] = REPLICATE_API_TOKEN
         model = REPLICATE_MULTI_MODAL_LLM_MODELS["llava-13b"]
+        multi_modal_llm = ReplicateMultiModal(model=model, max_new_tokens=100)
+    elif model == 'fuyu-8b':
+        model = REPLICATE_MULTI_MODAL_LLM_MODELS["fuyu-8b"]
         multi_modal_llm = ReplicateMultiModal(model=model, max_new_tokens=100)
     elif model in ['gpt-4-1106-vision-preview', 'gpt-4-1106-vision-preview+RAG']:
         # OpenAI model
@@ -132,7 +137,7 @@ def save_results(model, macro_avg_accuracy, direct_dim_avg, scale_bar_avg, all_a
 
 
 if __name__ == '__main__':
-    overwrite_answers = False
+    overwrite_answers = True
 
     # Index the text data
     if os.path.exists("index"):
@@ -147,7 +152,7 @@ if __name__ == '__main__':
         index.storage_context.persist("index")
 
     for question_type in ["context", "detailed_context"]:
-        for model in ['gpt-4-1106-vision-preview', 'gpt-4-1106-vision-preview+RAG', 'llava-13b']:
+        for model in model_list:
             questions_pd, csv_name = load_output_csv(model, question_type, overwrite_answers)
 
             for i, row in tqdm(questions_pd.iterrows(), total=len(questions_pd), desc=f'generating responses for '
@@ -164,7 +169,7 @@ if __name__ == '__main__':
                 image_path = f"../../dataset/rule_compliance/rule_dimension_qa/{question_type}/" + row['image']
 
                 # Run through model
-                if model in ['gpt-4-1106-vision-preview+RAG', 'llava-13b']:
+                if model in ['gpt-4-1106-vision-preview+RAG', 'llava-13b', 'fuyu-8b']:
                     context = retrieve_context(index, question, top_k=12)
                 elif model in ['gpt-4-1106-vision-preview']:
                     context = retrieve_context(index, question, top_k=0)
