@@ -8,15 +8,18 @@ from llama_index.core import StorageContext, load_index_from_storage
 from llama_index.core.node_parser import SentenceSplitter
 from llama_index.multi_modal_llms.replicate.base import REPLICATE_MULTI_MODAL_LLM_MODELS
 from llama_index.multi_modal_llms.replicate import ReplicateMultiModal
+from llama_index.multi_modal_llms.gemini import GeminiMultiModal
 
 
 import csv
 import sys
 sys.path.append("../metrics/")
+sys.path.append("../")
 import os
 import pandas as pd
 from tqdm import tqdm
 from metrics import eval_retrieval_qa, eval_compilation_qa
+from model_list import model_list
 
 
 def get_text_prompts(text_query_path):
@@ -56,6 +59,8 @@ def run_thread(model, question, context):
     elif model in ['gpt-4-1106-vision-preview', 'gpt-4-1106-vision-preview+RAG']:
         # OpenAI model
         llm = OpenAIMultiModal(model="gpt-4-vision-preview", max_new_tokens=250)
+    elif model in ['gemini-pro']:
+        llm = GeminiMultiModal(model_name='models/gemini-pro-vision', max_new_tokens=250)
     else:
         raise ValueError("Invalid model")
 
@@ -63,7 +68,7 @@ def run_thread(model, question, context):
     question = add_context_to_prompt(question, context)
 
     # get response from model
-    if model in ['llava-13b', 'gpt-4-1106-vision-preview', 'gpt-4-1106-vision-preview+RAG', 'llava-v1.6']:
+    if model in ['llava-13b', 'gpt-4-1106-vision-preview', 'gpt-4-1106-vision-preview+RAG', 'llava-v1.6', 'gemini-pro']:
         image_document = SimpleDirectoryReader(input_files=['images/null.jpg']).load_data()
         response = llm.complete(prompt=question, image_documents=image_document)
     else:
@@ -145,6 +150,10 @@ def save_results(model, macro_avg, all_answers, question_type):
 if __name__ == '__main__':
     overwrite_answers = True
 
+    # Set up google api key
+    GOOGLE_API_KEY = ""  # add your GOOGLE API key here
+    os.environ["GOOGLE_API_KEY"] = GOOGLE_API_KEY
+
     # Index the text data
     if os.path.exists("index"):
         print("Loading index...")
@@ -158,9 +167,9 @@ if __name__ == '__main__':
         index.storage_context.persist("index")
         print("Finished index...")
 
-    for question_type in ['retrieval', "compilation"]:
+    for question_type in ["compilation"]:
         # models available: 'gpt-4-0125-preview+RAG', 'gpt-4-0125-preview', 'llama-2-70b-chat', 'llava-13b', 'gpt-4-1106-vision-preview+RAG', 'gpt-4-1106-vision-preview'
-        for model in ['llava-13b', 'gpt-4-1106-vision-preview+RAG', 'gpt-4-1106-vision-preview']:
+        for model in model_list:
             questions_pd, csv_name = load_output_csv(model, question_type, overwrite_answers)
 
             for i, row in tqdm(questions_pd.iterrows(), total=len(questions_pd), desc=f'generating responses for '
@@ -176,7 +185,7 @@ if __name__ == '__main__':
                 question = row['question']
 
                 # Run through model
-                if model in ['llama-2-70b-chat', 'gpt-4-0125-preview+RAG', 'gpt-4-1106-vision-preview+RAG', 'llava-13b', 'llava-v1.6']:
+                if model in ['llama-2-70b-chat', 'gpt-4-0125-preview+RAG', 'gpt-4-1106-vision-preview+RAG', 'llava-13b', 'llava-v1.6', 'gemini-pro']:
                     context = retrieve_context(index, question, top_k=15)
                 elif model in ['gpt-4-0125-preview', 'gpt-4-1106-vision-preview']:
                     context = retrieve_context(index, question, top_k=0)
