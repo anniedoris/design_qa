@@ -78,7 +78,7 @@ if __name__ == '__main__':
     overwrite_answers = True
 
     # Set up google api key
-    GOOGLE_API_KEY = "AIzaSyAzhm3A7yzbvSlgM5ZqaIIWzXuKOozRlNc"  # add your GOOGLE API key here
+    GOOGLE_API_KEY = ""  # add your GOOGLE API key here
     os.environ["GOOGLE_API_KEY"] = GOOGLE_API_KEY
 
     for model in model_list:
