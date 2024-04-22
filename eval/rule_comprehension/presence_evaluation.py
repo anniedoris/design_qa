@@ -158,7 +158,7 @@ if __name__ == '__main__':
 
             # Run through model
             if model == 'llava-13b' or model == 'gpt-4-1106-vision-preview+RAG' or model == 'gemini-pro':
-                context = retrieve_context(index, question, top_k=12)
+                context = retrieve_context(index, question, top_k=10)
             elif model == 'gpt-4-1106-vision-preview':
                 context = retrieve_context(index, question, top_k=0)
             else:
