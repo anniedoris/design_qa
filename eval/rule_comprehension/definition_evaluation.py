@@ -3,10 +3,15 @@ from llama_index.multi_modal_llms.replicate import ReplicateMultiModal
 from llama_index.core.indices import VectorStoreIndex
 from llama_index.multi_modal_llms.replicate.base import REPLICATE_MULTI_MODAL_LLM_MODELS
 from llama_index.multi_modal_llms.openai import OpenAIMultiModal
+from llama_index.multi_modal_llms.gemini import GeminiMultiModal
 import os
 import pandas as pd
 from tqdm import tqdm
+import sys
+sys.path.append("../metrics/")
+sys.path.append("../")
 from metrics import eval_definition_qa
+from model_list import model_list
 
 
 def load_output_csv(model, overwrite_answers=False):
@@ -23,13 +28,13 @@ def load_output_csv(model, overwrite_answers=False):
 def run_thread(model, question, image_path):
     if model == 'llava-13b':
         # API token of the model/pipeline that we will be using
-        REPLICATE_API_TOKEN = ""
-        os.environ["REPLICATE_API_TOKEN"] = REPLICATE_API_TOKEN
         model = REPLICATE_MULTI_MODAL_LLM_MODELS["llava-13b"]
         multi_modal_llm = ReplicateMultiModal(model=model, max_new_tokens=100)
     elif model == 'gpt-4-1106-vision-preview' or model == 'gpt-4-1106-vision-preview+context':
         # OpenAI model
         multi_modal_llm = OpenAIMultiModal(model="gpt-4-vision-preview", max_new_tokens=100)
+    elif model in ['gemini-pro']:
+        multi_modal_llm = GeminiMultiModal(model_name='models/gemini-pro-vision')
     else:
         raise ValueError("Invalid model")
 
@@ -70,9 +75,13 @@ def retrieve_context(question):
 
 
 if __name__ == '__main__':
-    overwrite_answers = False
+    overwrite_answers = True
 
-    for model in ['gpt-4-1106-vision-preview+context', 'gpt-4-1106-vision-preview', 'llava-13b']:
+    # Set up google api key
+    GOOGLE_API_KEY = "AIzaSyAzhm3A7yzbvSlgM5ZqaIIWzXuKOozRlNc"  # add your GOOGLE API key here
+    os.environ["GOOGLE_API_KEY"] = GOOGLE_API_KEY
+
+    for model in model_list:
         questions_pd, csv_name = load_output_csv(model, overwrite_answers=overwrite_answers)
 
         for i, row in tqdm(questions_pd.iterrows(), total=len(questions_pd), desc=f'generating responses for {model}'):
