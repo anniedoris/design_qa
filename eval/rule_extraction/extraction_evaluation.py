@@ -194,7 +194,7 @@ if __name__ == '__main__':
         index.storage_context.persist("index")
         print("Finished index...")
 
-    for question_type in ["compilation"]:
+    for question_type in ["retrieval"]:
         # models available: 'gpt-4-0125-preview+RAG', 'gpt-4-0125-preview', 'llama-2-70b-chat', 'llava-13b', 'gpt-4-1106-vision-preview+RAG', 'gpt-4-1106-vision-preview'
         for model in model_list:
             questions_pd, csv_name = load_output_csv(model, question_type, overwrite_answers)
