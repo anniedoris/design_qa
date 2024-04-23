@@ -4,6 +4,7 @@ from llama_index.core.indices import VectorStoreIndex
 from llama_index.multi_modal_llms.replicate.base import REPLICATE_MULTI_MODAL_LLM_MODELS
 from llama_index.multi_modal_llms.openai import OpenAIMultiModal
 from llama_index.multi_modal_llms.gemini import GeminiMultiModal
+from llama_index.multi_modal_llms.anthropic import AnthropicMultiModal
 import os
 import pandas as pd
 from tqdm import tqdm
@@ -12,6 +13,7 @@ sys.path.append("../metrics/")
 sys.path.append("../")
 from metrics import eval_definition_qa
 from model_list import model_list
+from PIL import Image
 
 
 def load_output_csv(model, overwrite_answers=False):
@@ -24,6 +26,24 @@ def load_output_csv(model, overwrite_answers=False):
         questions_pd = pd.read_csv(csv_name)
     return questions_pd, csv_name
 
+def convert_and_optimize_jpg_to_png(jpg_file_path, png_file_path, max_size_mb=3.3):
+    # Load the image
+    with Image.open(jpg_file_path) as img:
+        # Convert and save initially to check size
+        img.save(png_file_path, 'PNG')
+
+        # Check file size and reduce resolution if necessary
+        file_size = os.path.getsize(png_file_path)
+        max_size_bytes = max_size_mb * 1024 * 1024  # Convert MB to bytes
+
+        while file_size > max_size_bytes:
+            # Reduce both dimensions by 10%
+            width, height = img.size
+            img = img.resize((int(width * 0.9), int(height * 0.9)), Image.LANCZOS)
+
+            # Save and check again
+            img.save(png_file_path, 'PNG', optimize=True)
+            file_size = os.path.getsize(png_file_path)
 
 def run_thread(model, question, image_path):
     if model == 'llava-13b':
@@ -35,6 +55,12 @@ def run_thread(model, question, image_path):
         multi_modal_llm = OpenAIMultiModal(model="gpt-4-vision-preview", max_new_tokens=100)
     elif model in ['gemini-pro']:
         multi_modal_llm = GeminiMultiModal(model_name='models/gemini-pro-vision')
+    elif model in ['claude-opus-RAG']:
+        multi_modal_llm = AnthropicMultiModal(model="claude-3-opus-20240229")
+        print("Converting image to png")
+        convert_and_optimize_jpg_to_png(image_path, image_path.strip('jpg') + 'png')
+        print("Finished converting image to png")
+        image_path = image_path.strip('jpg') + 'png'
     else:
         raise ValueError("Invalid model")
 
@@ -76,10 +102,6 @@ def retrieve_context(question):
 
 if __name__ == '__main__':
     overwrite_answers = True
-
-    # Set up google api key
-    GOOGLE_API_KEY = ""  # add your GOOGLE API key here
-    os.environ["GOOGLE_API_KEY"] = GOOGLE_API_KEY
 
     for model in model_list:
         questions_pd, csv_name = load_output_csv(model, overwrite_answers=overwrite_answers)
