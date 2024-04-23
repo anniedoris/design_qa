@@ -74,7 +74,8 @@ def run_thread(model, question, image_path, context):
         multi_modal_llm = GeminiMultiModal(model_name='models/gemini-pro-vision')
     elif model in ['claude-opus-RAG', 'claude-opus']:
         multi_modal_llm = AnthropicMultiModal(model="claude-3-opus-20240229")
-        print("Converting image to png")
+        print("Converting image to png:")
+        print(image_path)
         convert_and_optimize_jpg_to_png(image_path, image_path.strip('jpg') + 'png')
         print("Finished converting image to png")
         image_path = image_path.strip('jpg') + 'png'
