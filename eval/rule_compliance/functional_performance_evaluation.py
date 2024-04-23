@@ -7,6 +7,7 @@ from llama_index.core import StorageContext, load_index_from_storage
 from llama_index.embeddings.openai import OpenAIEmbedding
 from llama_index.core.node_parser import SentenceSplitter
 from llama_index.multi_modal_llms.gemini import GeminiMultiModal
+from llama_index.multi_modal_llms.anthropic import AnthropicMultiModal
 import csv
 import os
 import pandas as pd
@@ -16,6 +17,7 @@ sys.path.append("../metrics/")
 sys.path.append("../")
 from metrics import eval_functional_performance_qa
 from model_list import model_list
+from PIL import Image
 
 
 def get_text_prompts(text_query_path):
@@ -40,6 +42,24 @@ def load_output_csv(model, question_type, overwrite_answers=False):
         questions_pd = pd.read_csv(csv_name)
     return questions_pd, csv_name
 
+def convert_and_optimize_jpg_to_png(jpg_file_path, png_file_path, max_size_mb=3.3):
+    # Load the image
+    with Image.open(jpg_file_path) as img:
+        # Convert and save initially to check size
+        img.save(png_file_path, 'PNG')
+
+        # Check file size and reduce resolution if necessary
+        file_size = os.path.getsize(png_file_path)
+        max_size_bytes = max_size_mb * 1024 * 1024  # Convert MB to bytes
+
+        while file_size > max_size_bytes:
+            # Reduce both dimensions by 10%
+            width, height = img.size
+            img = img.resize((int(width * 0.9), int(height * 0.9)), Image.LANCZOS)
+
+            # Save and check again
+            img.save(png_file_path, 'PNG', optimize=True)
+            file_size = os.path.getsize(png_file_path)
 
 def run_thread(model, question, image_path, context):
     if model == 'llava-13b':
@@ -55,6 +75,12 @@ def run_thread(model, question, image_path, context):
         )
     elif model in ['gemini-pro']:
         multi_modal_llm = GeminiMultiModal(model_name='models/gemini-pro-vision')
+    elif model in ['gemini-ultra']:
+        multi_modal_llm = GeminiMultiModal(model_name='models/gemini-ultra-vision')
+    elif model in ['claude-opus-RAG']:
+        multi_modal_llm = AnthropicMultiModal(model="claude-3-opus-20240229")
+        # convert_and_optimize_jpg_to_png(image_path, image_path.strip('jpg') + 'png')
+        # image_path = image_path.strip('jpg') + 'png'
     else:
         raise ValueError("Invalid model")
 
@@ -170,7 +196,7 @@ if __name__ == '__main__':
             image_path = f"../../dataset/rule_compliance/rule_{question_type}_qa/images/" + row['image']
 
             # Run through model
-            if model in ['gpt-4-1106-vision-preview+RAG', 'llava-13b', 'gemini-pro']:
+            if model in ['gpt-4-1106-vision-preview+RAG', 'llava-13b', 'gemini-pro', 'gemini-ultra', 'claude-opus-RAG']:
                 context = retrieve_context(index, question, top_k=12)
             elif model in ['gpt-4-1106-vision-preview']:
                 context = retrieve_context(index, question, top_k=0)
