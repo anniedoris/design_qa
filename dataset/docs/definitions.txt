@@ -1,0 +1,74 @@
+F - CHASSIS AND STRUCTURAL
+F.1 DEFINITIONS
+F.1.1 Chassis
+The fabricated structural assembly that supports all functional vehicle systems.
+This assembly may be a single fabricated structure, multiple fabricated structures or a
+combination of composite and welded structures.
+F.1.2 Frame Member
+A minimum representative single piece of uncut, continuous tubing.
+F.1.3 Monocoque
+A type of Chassis where loads are supported by the external panels
+F.1.4 Main Hoop
+A roll bar located alongside or immediately aft of the driver’s torso.
+F.1.5 Front Hoop
+A roll bar located above the driver’s legs, in proximity to the steering wheel.
+F.1.6 Roll Hoop(s)
+Referring to both the Front Hoop AND the Main Hoop
+F.1.7 Roll Hoop Bracing Supports
+The structure from the lower end of the Roll Hoop Bracing back to the Roll Hoop(s).
+F.1.8 Front Bulkhead
+A planar structure that provides protection for the driver’s feet.
+F.1.9 Impact Attenuator
+A deformable, energy absorbing device located forward of the Front Bulkhead.
+F.1.10 Primary Structure
+The combination of the following components:
+• Front Bulkhead and Front Bulkhead Support
+• Front Hoop, Main Hoop, Roll Hoop Braces and Supports
+• Side Impact Structure
+• (EV Only) Tractive System Protection and Rear Impact Protection
+• Any Frame Members, guides, or supports that transfer load from the Driver Restraint
+System
+F.1.11 Primary Structure Envelope
+A volume enclosed by multiple tangent planes, each of which follows the exact outline of the
+Primary Structure Frame Members
+F.1.12 Major Structure
+The portion of the Chassis that lies inside the Primary Structure Envelope, excluding the Main
+Hoop Bracing and the portion of the Main Hoop above a horizontal plane located at the top of
+the Upper Side Impact Member or top of the Side Impact Zone.
+Formula SAE® Rules 2024 © 2023 SAE International Page 23 of 140
+Version 1.0 1 Sep 2023
+F.1.13 Rollover Protection Envelope
+The Primary Structure plus a plane from the top of the Main Hoop to the top of the Front
+Hoop, plus a plane from the top of the Main Hoop to the rearmost Triangulated structural
+tube, or monocoque equivalent.
+* If there are no Triangulated Structural members aft of the Main Hoop, the Rollover
+Protection Envelope ends at the rear plane of the Main Hoop
+F.1.14 Tire Surface Envelope
+The volume enclosed by tangent lines between the Main Hoop and the outside edge of each
+of the four tires.
+F.1.15 Component Envelope
+The area that is inside a plane from the top of the Main Hoop to the top of the Front
+Bulkhead, plus a plane from the top of the Main Hoop to the rearmost Triangulated structural
+tube, or monocoque equivalent. * see note in step F.1.13 above
+F.1.16 Buckling Modulus (EI)
+Equal to E*I, where E = modulus of Elasticity, and I = area moment of inertia about the
+weakest axis.
+F.1.17 Triangulation
+An arrangement of Frame Members where all members and segments of members between
+bends or nodes with Structural tubes form a structure composed entirely of triangles.
+a. This is generally required between an upper member and a lower member, both of
+which may have multiple segments requiring a diagonal to form multiple triangles.
+b. This is also what is meant by “properly triangulated”.
+Formula SAE® Rules 2024 © 2023 SAE International Page 24 of 140
+Version 1.0 1 Sep 2023
+F.1.18 Nonflammable Material
+Metal or a Non Metallic material which meets UL94-V0, FAR25 or approved equivalent
+EV - ELECTRIC VEHICLES
+EV.1 DEFINITIONS
+EV.1.1 Tractive System – TS
+Every part electrically connected to the Motor(s) and/or Accumulator(s)
+EV.1.2 Grounded Low Voltage - GLV
+Every electrical part that is not part of the Tractive System
+EV.1.3 Accumulator
+All the battery cells or super capacitors that store the electrical energy to be used by the
+Tractive System
