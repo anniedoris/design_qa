@@ -1,0 +1,2636 @@
+,temp,ground_truth,image,explanation,rule_num,question
+0,"We are a student engineering team designing a vehicle for the FSAE competition. Attached is the FSAE rules document. Also attached is an image that shows the results from an FEA simulation performed on the battery structure. The battery structure is made from non-welded 6061-T6 aluminum tubing. Based on the results presented in the image and rule F.3.5.3b in the rule document, can we use the battery structure in the vehicle?  First provide an explanation for your answer (begin it with ‘Explanation:’). Then provide just a yes/no answer (begin it with ‘Answer:’) that summarizes your response.",yes,1.png,We should use the battery structure in the vehicle because the stress result in the FEA model is less than the yield strength of non-welded 6061-T6 tubing (240 Mpa).,F.3.5.3,"We are a student engineering team designing a vehicle for the FSAE competition. Below is context from the FSAE rule document which might or might not be relevant for the question: 
+
+```
+C Yes
+j. Driver Restraint Harness Attachment Size B Yes
+k. Shoulder Harness Mounting Bar Size A NO
+l. Shoulder Harness Mounting Bar Bracing Size C Yes
+m. Accumulator Protection Structure Size B Yes
+n. Component Protection Size C Yes
+o. Structural Tubing Size C Yes
+F.3.3 Non Structural Tubing
+F.3.3.1 Definition
+Any tubing which does NOT meet F.3.2.1.o Structural Tubing
+F.3.3.2 Applicability
+Non Structural Tubing is ignored when assessing compliance to any rule
+F.3.4 Steel Tubing and Material
+F.3.4.1 Minimum Requirements for Steel Tubing
+A tube must meet all four minimum requirements for each Size specified:
+Minimum Minimum Minimum
+Minimum
+Area Cross Outside Example Sizes of
+Tube Wall
+Moment of Sectional Diameter or Round Tube
+Thickness
+Inertia Area Square Width
+1.0” x 0.095”
+a. Size A 11320 mm4 173 mm2 25.0 mm 2.0 mm
+25 x 2.5 mm
+1.0” x 0.065”
+b. Size B 8509 mm4 114 mm2 25.0 mm 1.2 mm
+25.4 x 1.6 mm
+1.0” x 0.049”
+c. Size C 6695 mm4 91 mm2 25.0 mm 1.2 mm
+25.4 x 1.2 mm
+1.375” x 0.049”
+d. Size D 18015 mm4 126 mm2 35.0 mm 1.2 mm
+35 x 1.2 mm
+Formula SAE® Rules 2024 © 2023 SAE International Page 26 of 140
+Version 1.0 1 Sep 2023
+F.3.4.2 Properties for ANY steel material for calculations submitted in an SES must be:
+a. Non Welded Properties for continuous material calculations:
+Young’s Modulus (E) = 200 GPa (29,000 ksi)
+Yield Strength (Sy) = 305 MPa (44.2 ksi)
+Ultimate Strength (Su) = 365 MPa (52.9 ksi)
+b. Welded Properties for discontinuous material such as joint calculations:
+Yield Strength (Sy) = 180 MPa (26 ksi)
+Ultimate Strength (Su) = 300 MPa (43.5 ksi)
+F.3.4.3 Where Welded tubing reinforcements are required (such as inserts for bolt holes or material
+to support suspension cutouts), Equivalence of the Welded tube and reinforcement must be
+shown to the original Non Welded tube in the SES
+F.3.5 Alternative Tubing Materials
+F.3.5.1 Alternative Materials may be used for applications shown as permitted in F.3.2.1
+F.3.5.2 If any Alternative Materials are used, the SES must contain:
+a. Documentation of material type, (purchase receipt, shipping document or letter of
+donation) and the material properties.
+b. Calculations that show equivalent to or better than the minimum requirements for steel
+tubing in the application as listed in F.3.4.1 for yield and ultimate strengths matching the
+Non Welded Steel properties from F.3.4.2.a above in bending, buckling and tension, for
+buckling modulus and for energy dissipation
+c. Details of the manufacturing technique and process
+F.3.5.3 Aluminum Tubing
+a. Minimum Wall Thickness for Aluminum Tubing: Non Welded 2.0 mm
+Welded 3.0 mm
+b. Non Welded properties for aluminum alloy 6061-T6 for calculations in an SES must be:
+Young’s Modulus (E) 69 GPa (10,000 ksi)
+Yield Strength (Sy) 240 MPa (34.8 ksi)
+Ultimate Strength (Su) 290 MPa (42.1 ksi)
+c. Welded properties for aluminum alloy 6061-T6 for calculations in an SES must be:
+Yield Strength (Sy) 115 MPa (16.7 ksi)
+Ultimate Strength (Su) 175 MPa (25.4 ksi)
+d. If welding is used on a regulated aluminum structure, the equivalent yield strength must
+be considered in the “as welded” condition for the alloy used unless the team provides
+detailed proof that the frame or component has been properly solution heat treated,
+artificially aged, and not subject to heating during team manufacturing.
+e. If aluminum was solution heat treated and age hardened to increase its strength after
+welding, the team must supply evidence as to how the process was performed.
+This includes, but is not limited to, the heat treating facility used, the process applied,
+and the fixturing used.
+Formula SAE® Rules 2024 © 2023 SAE International Page 27 of 140
+Version 1.0 1 Sep 2023
+F.4 COMPOSITE AND OTHER MATERIALS
+F.4.1 Requirements
+If any composite or other material is used, the SES must contain:
+F.4.1.1 Documentation of material type, (purchase receipt, shipping document or letter of donation)
+and the material properties.
+F.4.1.2 Details of the manufacturing technique and/or composite layup technique as well as the
+structural material used (examples - cloth type, weight, and resin type, number of layers, core
+material, and skin material if metal).
+F.4.1.3 Calculations that show equivalence of the structure to one of similar geometry made to meet
+the minimum requirements for a structure made from steel tubing per F.3.2. Equivalency
+calculations must be submitted for energy dissipation, yield and ultimate strengths in bending,
+buckling, and tension.
+F.4.1.4 Construction dates of the test panel(s) and monocoque, and approximate age(s) of the
+materials used.
+The intent is for the test panel to use the same material batch, material age, material storage,
+and student layup quality as the monocoque.
+F.4.2 Quasi-Isotropic Layup
+A layup with equal fiber strength and stiffness along any orientation in the plane of the layup.
+a. When a layup has equal fiber properties and mass in the 0/90/+45/-45 directions, the
+layup may be considered Quasi-Isotropic
+F.4.3 Laminate and Material Testing
+F.4.3.1 Testing Requirements
+a. Any tested samples must be engraved with the construction date, sample name, and
+peak test force.
+b. The same set of test results must not be used for different monocoques in different
+years.
+The intent is for the test panel to use the same material batch, material age, material storage,
+and student layup quality as the monocoque.
+F.4.3.2 Primary Structure Laminate Testing
+Teams must build new representative test panels for each ply schedule used in the regulated
+regions of the new chassis as a flat panel and perform a 3 point bending test on these panels.
+Refer to F.4.3.4
+a. Test panels must:
+• Measure one of the two options: 138 mm x 500 mm OR 275 mm x 500 mm
+• Be supported by a span distance of 400 mm
+• Have equal surface area for the top and bottom skin
+• Have bare edges, without skin material
+b. The SES must include:
+• Data from the 3 point bending tests
+• Pictures of the test samples
+Formula SAE® Rules 2024 © 2023 SAE International Page 28 of 140
+Version 1.0 1 Sep 2023
+• A picture of the test sample and test setup showing a measurement documenting
+the supported span distance used in the SES
+c. Test panel results must be used to derive stiffness, yield strength, ultimate strength and
+absorbed energy properties by the SES formula and limits for the purpose of calculating
+laminate panels equivalency corresponding to Primary Structure regions of the chassis.
+d. Test panels must use the thickest core associated with each skin layup.
+Designs may use core thickness that is 50% - 100% of the test panel core thickness
+associated with each skin layup.
+e. Calculation of derived properties must use the part of test data where deflection is 50
+mm or less
+f. Calculation of absorbed energy must use the integral of force times displacement
+F.4.3.3 Comparison Test
+Teams must make an equivalent test that will determine any compliance in the test rig and
+establish an absorbed energy value of the baseline tubes.
+a. The comparison test must use two Side Impact steel tubes (F.3.2.1.e)
+b. The steel tubes must be tested to a minimum displacement of 19.0 mm
+c. The calculation of absorbed energy must use the integral of force times displacement
+from the initiation of load to a displacement of 19.0 mm
+F.4.3.4 Test Conduct
+a. The Laminate test F.4.3.2 and the Comparison test F.4.3.2e must use the same fixture
+b. The load applicator used to test any panel/tubes as required in this section F.4.3 must
+be:
+• Metallic
+• Radius 50 mm
+c. The load applicator must overhang the test piece to prevent edge loading
+d. Any other material must not be placed between the load applicator and the items on test
+F.4.3.5 Perimeter Shear Test
+a. The Perimeter Shear Test must be completed by measuring the force required to push or
+pull a 25 mm diameter flat punch through a flat laminate sample.
+b. The sample must:
+• Measure 100 mm x 100 mm minimum
+• Have core and skin thicknesses identical to those used in the actual application
+• Be manufactured using the same materials and processes
+Formula SAE® Rules 2024 © 2023 SAE International Page 29 of 140
+Version 1.0 1 Sep 2023
+c. The fixture must support the entire sample, except for a 32 mm hole aligned coaxially
+with the punch.
+d. The sample must not be clamped to the fixture
+e. The edge of the punch and hole in the fixture may include an optional fillet up to a
+maximum radius of 1 mm.
+f. The SES must include force and displacement data and photos of the test setup.
+g. The first peak in the load-deflection curve must be used to determine the skin shear
+strength; this may be less than the minimum force required by F.7.3.3 / F.7.5.5
+h. The maximum force recorded must meet the requirements of F.7.3.3 / F.7.5.5
+F.4.3.6
+```
+
+Also attached is an image that shows the results from an FEA simulation performed on the battery structure. The battery structure is made from non-welded 6061-T6 aluminum tubing. Based on the results presented in the image and rule F.3.5.3b in the rule document, can we use the battery structure in the vehicle?  First provide an explanation for your answer (begin it with ‘Explanation:’). Then provide just a yes/no answer (begin it with ‘Answer:’) that summarizes your response."
+1,"We are a student engineering team designing a vehicle for the FSAE competition. Attached is the FSAE rules document. Also attached is an image that shows the results from an FEA simulation performed on the battery structure. The battery structure is made from non-welded 6061-T6 aluminum tubing. Based on the results presented in the image and rule F.3.5.3b in the rule document, can we use the battery structure in the vehicle? First provide an explanation for your answer (begin it with ‘Explanation:’). Then provide just a yes/no answer (begin it with ‘Answer:’) that summarizes your response.",no,2.png,We should not use the battery structure in the vehicle because the stress result in the FEA model exceeds the yield strength of non-welded 6061-T6 tubing (240 Mpa).,F.3.5.3,"We are a student engineering team designing a vehicle for the FSAE competition. Below is context from the FSAE rule document which might or might not be relevant for the question: 
+
+```
+ance with the Formula SAE Rules
+b. Determine Equivalence to Formula SAE Rules using an accepted basis
+F.2.2 Structural Documentation
+F.2.2.1 All teams must submit a Structural Equivalency Spreadsheet (SES) as given in section DR -
+Document Requirements
+F.2.3 Equivalence
+F.2.3.1 Equivalency in the structural context is determined and documented with the methods in the
+SES
+F.2.3.2 Any Equivalency calculations must prove Equivalency relative to Steel Tubing in the same
+application
+F.2.3.3 The properties of tubes and laminates may be combined to prove Equivalence.
+For example, in a Side Impact Structure consisting of one tube per F.3.2.1.e and a laminate
+panel, the panel only needs to be Equivalent to two Side Impact Tubes.
+F.2.4 Tolerance
+Tolerance on dimensions given in the rules is allowed and is addressed in the SES.
+F.2.5 Fabrication
+Vehicles must be fabricated in accordance with the design, materials, and processes described
+in the SES.
+F.3 TUBING AND MATERIAL
+F.3.1 Dimensions
+Diameter and Wall Thickness values provided in this Section F.3 are based on dimensions for
+commonly available tubing.
+Formula SAE® Rules 2024 © 2023 SAE International Page 25 of 140
+Version 1.0 1 Sep 2023
+F.3.2 Tubing Requirements
+F.3.2.1 Requirements by Application
+Steel Tube Must Alternative Tubing
+Application Meet Size per Material Permitted
+F.3.4: per F.3.5 ?
+a. Front Bulkhead Size B Yes
+b. Front Bulkhead Support Size C Yes
+c. Front Hoop Size A Yes
+d. Front Hoop Bracing Size B Yes
+e. Side Impact Structure Size B Yes
+f. Bent / Multi Upper Side Impact Member Size D Yes
+g. Main Hoop Size A NO
+h. Main Hoop Bracing Size B NO
+i. Main Hoop Bracing Supports Size C Yes
+j. Driver Restraint Harness Attachment Size B Yes
+k. Shoulder Harness Mounting Bar Size A NO
+l. Shoulder Harness Mounting Bar Bracing Size C Yes
+m. Accumulator Protection Structure Size B Yes
+n. Component Protection Size C Yes
+o. Structural Tubing Size C Yes
+F.3.3 Non Structural Tubing
+F.3.3.1 Definition
+Any tubing which does NOT meet F.3.2.1.o Structural Tubing
+F.3.3.2 Applicability
+Non Structural Tubing is ignored when assessing compliance to any rule
+F.3.4 Steel Tubing and Material
+F.3.4.1 Minimum Requirements for Steel Tubing
+A tube must meet all four minimum requirements for each Size specified:
+Minimum Minimum Minimum
+Minimum
+Area Cross Outside Example Sizes of
+Tube Wall
+Moment of Sectional Diameter or Round Tube
+Thickness
+Inertia Area Square Width
+1.0” x 0.095”
+a. Size A 11320 mm4 173 mm2 25.0 mm 2.0 mm
+25 x 2.5 mm
+1.0” x 0.065”
+b. Size B 8509 mm4 114 mm2 25.0 mm 1.2 mm
+25.4 x 1.6 mm
+1.0” x 0.049”
+c. Size C 6695 mm4 91 mm2 25.0 mm 1.2 mm
+25.4 x 1.2 mm
+1.375” x 0.049”
+d. Size D 18015 mm4 126 mm2 35.0 mm 1.2 mm
+35 x 1.2 mm
+Formula SAE® Rules 2024 © 2023 SAE International Page 26 of 140
+Version 1.0 1 Sep 2023
+F.3.4.2 Properties for ANY steel material for calculations submitted in an SES must be:
+a. Non Welded Properties for continuous material calculations:
+Young’s Modulus (E) = 200 GPa (29,000 ksi)
+Yield Strength (Sy) = 305 MPa (44.2 ksi)
+Ultimate Strength (Su) = 365 MPa (52.9 ksi)
+b. Welded Properties for discontinuous material such as joint calculations:
+Yield Strength (Sy) = 180 MPa (26 ksi)
+Ultimate Strength (Su) = 300 MPa (43.5 ksi)
+F.3.4.3 Where Welded tubing reinforcements are required (such as inserts for bolt holes or material
+to support suspension cutouts), Equivalence of the Welded tube and reinforcement must be
+shown to the original Non Welded tube in the SES
+F.3.5 Alternative Tubing Materials
+F.3.5.1 Alternative Materials may be used for applications shown as permitted in F.3.2.1
+F.3.5.2 If any Alternative Materials are used, the SES must contain:
+a. Documentation of material type, (purchase receipt, shipping document or letter of
+donation) and the material properties.
+b. Calculations that show equivalent to or better than the minimum requirements for steel
+tubing in the application as listed in F.3.4.1 for yield and ultimate strengths matching the
+Non Welded Steel properties from F.3.4.2.a above in bending, buckling and tension, for
+buckling modulus and for energy dissipation
+c. Details of the manufacturing technique and process
+F.3.5.3 Aluminum Tubing
+a. Minimum Wall Thickness for Aluminum Tubing: Non Welded 2.0 mm
+Welded 3.0 mm
+b. Non Welded properties for aluminum alloy 6061-T6 for calculations in an SES must be:
+Young’s Modulus (E) 69 GPa (10,000 ksi)
+Yield Strength (Sy) 240 MPa (34.8 ksi)
+Ultimate Strength (Su) 290 MPa (42.1 ksi)
+c. Welded properties for aluminum alloy 6061-T6 for calculations in an SES must be:
+Yield Strength (Sy) 115 MPa (16.7 ksi)
+Ultimate Strength (Su) 175 MPa (25.4 ksi)
+d. If welding is used on a regulated aluminum structure, the equivalent yield strength must
+be considered in the “as welded” condition for the alloy used unless the team provides
+detailed proof that the frame or component has been properly solution heat treated,
+artificially aged, and not subject to heating during team manufacturing.
+e. If aluminum was solution heat treated and age hardened to increase its strength after
+welding, the team must supply evidence as to how the process was performed.
+This includes, but is not limited to, the heat treating facility used, the process applied,
+and the fixturing used.
+Formula SAE® Rules 2024 © 2023 SAE International Page 27 of 140
+Version 1.0 1 Sep 2023
+F.4 COMPOSITE AND OTHER MATERIALS
+F.4.1 Requirements
+If any composite or other material is used, the SES must contain:
+F.4.1.1 Documentation of material type, (purchase receipt, shipping document or letter of donation)
+and the material properties.
+F.4.1.2 Details of the manufacturing technique and/or composite layup technique as well as the
+structural material used (examples - cloth type, weight, and resin type, number of layers, core
+material, and skin material if metal).
+F.4.1.3 Calculations that show equivalence of the structure to one of similar geometry made to meet
+the minimum requirements for a structure made from steel tubing per F.3.2. Equivalency
+calculations must be submitted for energy dissipation, yield and ultimate strengths in bending,
+buckling, and tension.
+F.4.1.4 Construction dates of the test panel(s) and monocoque, and approximate age(s) of the
+materials used.
+The intent is for the test panel to use the same material batch, material age, material storage,
+and student layup quality as the monocoque.
+F.4.2 Quasi-Isotropic Layup
+A layup with equal fiber strength and stiffness along any orientation in the plane of the layup.
+a. When a layup has equal fiber properties and mass in the 0/90/+45/-45 directions, the
+layup may be considered Quasi-Isotropic
+F.4.3 Laminate and Material Testing
+F.4.3.1 Testing Requirements
+a. Any tested samples must be engraved with the construction date, sample name, and
+peak test force.
+b. The same set of test results must not be used for different monocoques in different
+years.
+The intent is for the test panel to use the same material batch, material age, material storage,
+and student layup quality as the monocoque.
+F.4.3.2 Primary Structure Laminate Testing
+Teams must build new representative test panels for each ply schedule used in the regulated
+regions of the new chassis as a flat panel and perform a 3 point bending test on these panels.
+Refer to F.4.3.4
+a. Test panels must:
+• Measure one of the two options: 138 mm x 500 mm OR 275 mm x 500 mm
+• Be supported by a span distance of 400 mm
+• Have equal surface area for the top and bottom skin
+• Have bare edges, without skin material
+b. The SES must include:
+• Data from the 3 point bending tests
+• Pictures of the test samples
+Formula SAE® Rules 2024 © 2023 SAE International Page 28 of 140
+Version 1.0 1 Sep 2023
+• A picture of the test sample and test setup showing a measurement documenting
+the supported span distance used in the SES
+c. Test panel results must be used to derive stiffness, yield strength, ultimate strength and
+absorbed energy properties by the SES formula and limits for the purpose of calculating
+laminate panels equivalency corresponding to Primary Structure regions of the chassis.
+d. Test panels must use the thickest core associated with each skin layup.
+Designs may use core thickness that is 50% - 100% of the test panel core thickness
+associated with each skin layup.
+e. Calculation of derived properties must use the part of test data where deflection is 50
+mm or less
+f. Calculation of absorbed energy must use the integral of force times displacement
+F.4.3.3 Comparison Test
+Teams must make an equivalent test that will determine any compliance in the test rig and
+establish an absorbed energy value of the baseline tubes.
+a. The comparison test must use two Side Impact steel tubes (F.3.2.1.e)
+b. The steel tub
+```
+
+Also attached is an image that shows the results from an FEA simulation performed on the battery structure. The battery structure is made from non-welded 6061-T6 aluminum tubing. Based on the results presented in the image and rule F.3.5.3b in the rule document, can we use the battery structure in the vehicle? First provide an explanation for your answer (begin it with ‘Explanation:’). Then provide just a yes/no answer (begin it with ‘Answer:’) that summarizes your response."
+2,"We are a student engineering team designing a vehicle for the FSAE competition. Attached is the FSAE rules document. Also attached is an image that shows information about the riders that can be accommodated in the vehicle. At the top of the image, there is general anthropomorphic information. Below that, there is information about the largest man and smallest woman our vehicle can accommodate. Based on the information presented in the image, does our vehicle comply with rule V.2.1.1 presented in the rule document? First provide an explanation for your answer (begin it with ‘Explanation:’). Then provide just a yes/no answer (begin it with ‘Answer:’) that summarizes your response.",yes,3.png,"V.2.1.1 states that the vehicle must be able to accommodate drivers of sizes ranging from 5th percentile female
+up to 95th percentile male. Based on the data presented, we can see that the data for the largest man and smallest woman that the vehicle can accommodate match the 5th percentile female and 95th percentile male anthropomorphic data. Therefore, the vehicle complies with V.2.1.1.",V.2.1.1,"We are a student engineering team designing a vehicle for the FSAE competition. Below is context from the FSAE rule document which might or might not be relevant for the question: 
+
+```
+.7.4.2 Teams must remove all of their material and trash when leaving the site at the end of the
+competition.
+AD.7.4.3 Teams that abandon furniture, or that leave a paddock that requires special cleaning, will be
+billed for removal and/or cleanup costs.
+Formula SAE® Rules 2024 © 2023 SAE International Page 15 of 140
+Version 1.0 1 Sep 2023
+DR - DOCUMENT REQUIREMENTS
+DR.1 DOCUMENTATION
+DR.1.1 Requirements
+DR.1.1.1 The documents supporting each vehicle must be submitted before the deadlines posted on
+the Event Website or otherwise published by the organizer.
+DR.1.1.2 The procedures for submitting documents are published on the Event Website or otherwise
+identified by the organizer.
+DR.1.2 Definitions
+DR.1.2.1 Submission Date
+The date and time of upload to the website
+DR.1.2.2 Submission Deadline
+The date and time by which the document must be uploaded or submitted
+DR.1.2.3 No Submissions Accepted After
+The last date and time that documents may be uploaded or submitted
+DR.1.2.4 Late Submission
+• Uploaded after the Submission Deadline and prior to No Submissions Accepted After
+• Submitted largely incomplete prior to or after the Submission Deadline
+DR.1.2.5 Not Submitted
+• Not uploaded prior to No Submissions Accepted After
+• Not in the specified form or format
+DR.1.2.6 Amount Late
+The number of days between the Submission Deadline and the Submission Date.
+Any partial day is rounded up to a full day.
+Examples: submitting a few minutes late would be one day penalty; submitting 25 hours late
+would be two days penalty
+DR.1.2.7 Reviewer
+A designated event official who is assigned to review and accept a Submission
+DR.2 SUBMISSION DETAILS
+DR.2.1 Submission Location
+Teams entering Formula SAE competitions in North America must upload the required
+documents to the team account on the FSAE Online Website, see AD.2.2
+DR.2.2 Submission Format Requirements
+Refer to Table DR-1 Submission Information
+DR.2.2.1 Template files with the required format must be used when specified in Table DR-1
+DR.2.2.2 Template files are available on the FSAE Online Website, see AD.2.2.1
+DR.2.2.3 Do Not alter the format of any provided template files
+Formula SAE® Rules 2024 © 2023 SAE International Page 16 of 140
+Version 1.0 1 Sep 2023
+DR.2.2.4 Each submission must be one single file in the specified format (PDF - Portable Document File,
+XLSX - Microsoft Excel Worksheet File)
+DR.3 SUBMISSION PENALTIES
+DR.3.1 Submissions
+DR.3.1.1 Each team is responsible for confirming that their documents have been properly uploaded or
+submitted and that the deadlines have been met
+DR.3.1.2 Prior to the Submission Deadline:
+a. Documents may be uploaded at any time
+b. Uploads may be replaced with new uploads without penalty
+DR.3.1.3 If a Submitted Document revision is requested by the Reviewer, a new Submission Deadline
+for the revised document may apply
+DR.3.1.4 Teams will not be notified if a document is submitted incorrectly
+DR.3.2 Penalty Detail
+DR.3.2.1 Late Submissions will receive a point penalty as shown in Table DR-2, subject to official
+discretion.
+DR.3.2.2 Additional penalties will apply if Not Submitted, subject to official discretion
+DR.3.2.3 Penalties up to and including Removal of Team Entry may apply based on document reviews,
+subject to official discretion
+DR.3.3 Removal of Team Entry
+DR.3.3.1 The organizer may remove the team entry when the:
+a. Identified documents are Not Submitted in 5 days or less from the deadline. Removals
+will take place after each Document Submission deadline.
+b. Team does not respond to Reviewer requests or organizer communications
+DR.3.3.2 When a team entry will be removed:
+a. The team will be notified prior to cancelling registration
+b. No refund of entry fees will be given
+DR.3.4 Specific Penalties
+DR.3.4.1 Electronic Throttle Control (ETC) (IC Only)
+a. There is no point penalty for ETC documents
+b. The team will not be allowed to run ETC on their vehicle and must use mechanical
+throttle operation when:
+• The ETC Notice of Intent is Not Submitted
+• The ETC Systems Form is Not Submitted, or is not accepted
+DR.3.4.2 Fuel Type IC.5.1
+There is no point penalty for a late fuel type order. Once the deadline has passed, the team
+will be allocated the basic fuel type.
+DR.3.4.3 Program Submissions
+Please submit material requested for the Event Program by the published deadlines
+Formula SAE® Rules 2024 © 2023 SAE International Page 17 of 140
+Version 1.0 1 Sep 2023
+Table DR-1 Submission Information
+Refer Required Submit in Penalty
+Submission
+to: Format: File Format: Group
+Structural Equivalency Spreadsheet
+(SES) F.2.1 see below XLSX Tech
+as applicable to your design
+ETC - Notice of Intent IC.4.3 see below PDF ETC
+ETC – Systems Form (ETCSF) IC.4.3 see below XLSX ETC
+EV – Electrical Systems Officer and AD.5.2,
+see below PDF Tech
+Electrical Systems Advisor Form AD.5.3
+EV - Electrical System Form (ESF) EV.2.1 see below XLSX Tech
+Presentation (if required, see S.2.4.1) S.2.4 see S.2.4 see S.2.4 Present
+Cost Report S.3.4 see S.3.4.2 (1) Cost
+Cost Addendum S.3.7 see below see S.3.7 none
+Design Briefing S.4.3 see below PDF Design
+Vehicle Drawings S.4.4 see S.4.4.1 PDF Design
+Design Spec Sheet S.4.5 see below XLSX Design
+Format: Use the template file or form available on the FSAE Online Website AD.2.2.1
+Note (1): Refer to the FSAE Online website for submission requirements
+Table DR-2 Submission Penalty Information
+Penalty Maximum
+Penalty
+Points per Point Not Submitted 5 Days after the Deadline
+Group
+Day Penalty
+Tech -10 -50 Removal of Team Entry - see DR.3.3
+ETC Not Approved to use ETC - see DR.3.4.1
+Removed from Presentation Event
+Present -10 -50
+Score 0 points in Presentation Event
+Removed from Cost Event
+Cost -10 -50
+Score -100 points in Cost Event
+Removed from Design Event
+Design -10 -50
+Score 0 points in Design Event
+Formula SAE® Rules 2024 © 2023 SAE International Page 18 of 140
+Version 1.0 1 Sep 2023
+V - VEHICLE REQUIREMENTS
+V.1 CONFIGURATION
+The vehicle must be open wheeled and open cockpit (a formula style body) with four wheels
+that are not in a straight line.
+V.1.1 Open Wheel
+Open Wheel vehicles must satisfy all of the following criteria:
+a. The top 180° of the wheels/tires must be unobstructed when viewed from vertically
+above the wheel.
+b. The wheels/tires must be unobstructed when viewed from the side.
+c. No part of the vehicle may enter a keep out zone defined by two lines extending
+vertically from positions 75 mm in front of and 75 mm aft of, the outer diameter of the
+front and rear tires in the side view elevation of the vehicle, with tires steered straight
+ahead. This keep out zone will extend laterally from the outside plane of the wheel/tire
+to the inboard plane of the wheel/tire.
+V.1.2 Wheelbase
+The vehicle must have a minimum wheelbase of 1525 mm
+V.1.3 Vehicle Track
+V.1.3.1 The track and center of gravity must combine to provide sufficient rollover stability. See
+IN.9.2
+V.1.3.2 The smaller track of the vehicle (front or rear) must be no less than 75% of the larger track.
+Formula SAE® Rules 2024 © 2023 SAE International Page 19 of 140
+Version 1.0 1 Sep 2023
+V.1.4 Ground Clearance
+V.1.4.1 Ground clearance must be sufficient to prevent any portion of the vehicle except the tires
+from touching the ground during dynamic events
+V.1.4.2 The distance to the ground below the Lower Side Impact Structure ( F.6.4.5, F.7.5.1 ) at its
+lowest point should be 75 mm or less
+V.1.4.3 Intentional or excessive ground contact of any portion of the vehicle other than the tires will
+forfeit a run or an entire dynamic event
+The intent is that sliding skirts or other devices that by design, fabrication or as a consequence
+of moving, contact the track surface are prohibited and any unintended contact with the
+ground which causes damage, or in the opinion of the Dynamic Event Officials could result in
+damage to the track, will result in forfeit of a run or an entire dynamic event
+V.2 DRIVER
+V.2.1 Accommodation
+V.2.1.1 The vehicle must be able to accommodate drivers of sizes ranging from 5th percentile female
+up to 95th percentile male.
+• Accommodation includes driver position, driver controls, and driver equipment.
+• Anthropometric data may be found on the FSAE Online Website.
+V.2.1.2 The driver’s head and hands must not contact the ground in any rollover attitude.
+V.2.2 Visibility
+a. The driver must have sufficient visibility to the front and sides of the vehicle
+b. When seated in a normal driving position, the driver must have a minimum field of vision
+of 100° to both sides
+c. If mirrors are required for this rule, they must remain in place and adjusted to enable the
+required visibility throughout all dynamic events.
+V.3 SUSPENSION AND STEERING
+V.3.1 Suspension
+V.3.1.1 The vehicle must
+```
+
+Also attached is an image that shows information about the riders that can be accommodated in the vehicle. At the top of the image, there is general anthropomorphic information. Below that, there is information about the largest man and smallest woman our vehicle can accommodate. Based on the information presented in the image, does our vehicle comply with rule V.2.1.1 presented in the rule document? First provide an explanation for your answer (begin it with ‘Explanation:’). Then provide just a yes/no answer (begin it with ‘Answer:’) that summarizes your response."
+3,"We are a student engineering team designing a vehicle for the FSAE competition. Attached is the FSAE rules document. Also attached is an image that shows information about the riders that can be accommodated in the vehicle. At the top of the image, there is general anthropomorphic information. Below that, there is information about the largest man and smallest woman our vehicle can accommodate. Based on the information presented in the image, does our vehicle comply with rule V.2.1.1 presented in the rule document? First provide an explanation for your answer (begin it with ‘Explanation:’). Then provide just a yes/no answer (begin it with ‘Answer:’) that summarizes your response.",no,4.png,"V.2.1.1 states that the vehicle must be able to accommodate drivers of sizes ranging from 5th percentile female
+up to 95th percentile male. Based on the data presented, we can see that the weight of the largest man that can be accomodated is 100 kg, which is less than the weight of the 95th percentile man (102 kg). Therefore, the vehicle violates rule V.2.1.1.",V.2.1.1,"We are a student engineering team designing a vehicle for the FSAE competition. Below is context from the FSAE rule document which might or might not be relevant for the question: 
+
+```
+e not in a straight line.
+V.1.1 Open Wheel
+Open Wheel vehicles must satisfy all of the following criteria:
+a. The top 180° of the wheels/tires must be unobstructed when viewed from vertically
+above the wheel.
+b. The wheels/tires must be unobstructed when viewed from the side.
+c. No part of the vehicle may enter a keep out zone defined by two lines extending
+vertically from positions 75 mm in front of and 75 mm aft of, the outer diameter of the
+front and rear tires in the side view elevation of the vehicle, with tires steered straight
+ahead. This keep out zone will extend laterally from the outside plane of the wheel/tire
+to the inboard plane of the wheel/tire.
+V.1.2 Wheelbase
+The vehicle must have a minimum wheelbase of 1525 mm
+V.1.3 Vehicle Track
+V.1.3.1 The track and center of gravity must combine to provide sufficient rollover stability. See
+IN.9.2
+V.1.3.2 The smaller track of the vehicle (front or rear) must be no less than 75% of the larger track.
+Formula SAE® Rules 2024 © 2023 SAE International Page 19 of 140
+Version 1.0 1 Sep 2023
+V.1.4 Ground Clearance
+V.1.4.1 Ground clearance must be sufficient to prevent any portion of the vehicle except the tires
+from touching the ground during dynamic events
+V.1.4.2 The distance to the ground below the Lower Side Impact Structure ( F.6.4.5, F.7.5.1 ) at its
+lowest point should be 75 mm or less
+V.1.4.3 Intentional or excessive ground contact of any portion of the vehicle other than the tires will
+forfeit a run or an entire dynamic event
+The intent is that sliding skirts or other devices that by design, fabrication or as a consequence
+of moving, contact the track surface are prohibited and any unintended contact with the
+ground which causes damage, or in the opinion of the Dynamic Event Officials could result in
+damage to the track, will result in forfeit of a run or an entire dynamic event
+V.2 DRIVER
+V.2.1 Accommodation
+V.2.1.1 The vehicle must be able to accommodate drivers of sizes ranging from 5th percentile female
+up to 95th percentile male.
+• Accommodation includes driver position, driver controls, and driver equipment.
+• Anthropometric data may be found on the FSAE Online Website.
+V.2.1.2 The driver’s head and hands must not contact the ground in any rollover attitude.
+V.2.2 Visibility
+a. The driver must have sufficient visibility to the front and sides of the vehicle
+b. When seated in a normal driving position, the driver must have a minimum field of vision
+of 100° to both sides
+c. If mirrors are required for this rule, they must remain in place and adjusted to enable the
+required visibility throughout all dynamic events.
+V.3 SUSPENSION AND STEERING
+V.3.1 Suspension
+V.3.1.1 The vehicle must have a fully operational suspension system with shock absorbers, front and
+rear, with usable minimum wheel travel of 50 mm, with a driver seated.
+V.3.1.2 Officials may disqualify vehicles which do not represent a serious attempt at an operational
+suspension system, or which demonstrate handling inappropriate for an autocross circuit.
+V.3.1.3 All suspension mounting points must be visible at Technical Inspection by direct view or by
+removing any covers.
+V.3.1.4 Fasteners in the Suspension system are Critical Fasteners, see T.8.2
+V.3.1.5 All spherical rod ends and spherical bearings on the suspension and steering must be one of:
+• Mounted in double shear
+• Captured by having a screw/bolt head or washer with an outside diameter that is larger
+than spherical bearing housing inside diameter.
+V.3.2 Steering
+V.3.2.1 The Steering Wheel must be mechanically connected to the front wheels
+Formula SAE® Rules 2024 © 2023 SAE International Page 20 of 140
+Version 1.0 1 Sep 2023
+V.3.2.2 Electrically actuated steering of the front wheels is prohibited
+V.3.2.3 Steering systems must use a rigid mechanical linkage capable of tension and compression
+loads for operation
+V.3.2.4 The steering system must have positive steering stops that prevent the steering linkages from
+locking up (the inversion of a four bar linkage at one of the pivots). The stops:
+a. Must prevent the wheels and tires from contacting suspension, bodywork, or Chassis
+during the track events
+b. May be placed on the uprights or on the rack
+V.3.2.5 Allowable steering system free play is limited to seven degrees (7°) total measured at the
+steering wheel.
+V.3.2.6 The steering rack must be mechanically attached to the Chassis F.5.14
+V.3.2.7 Joints between all components attaching the Steering Wheel to the steering rack must be
+mechanical and be visible at Technical Inspection. Bonded joints without a mechanical backup
+are not permitted.
+V.3.2.8 Fasteners in the steering system are Critical Fasteners, see T.8.2
+V.3.2.9 Spherical rod ends and spherical bearings in the steering must meet V.3.1.5 above
+V.3.2.10 Rear wheel steering may be used.
+a. Rear wheel steering must incorporate mechanical stops to limit the range of angular
+movement of the rear wheels to a maximum of six degrees (6°).
+b. The team must provide the ability for the steering angle range to be verified at Technical
+Inspection with a driver in the vehicle.
+c. Rear wheel steering may be electrically actuated.
+V.3.3 Steering Wheel
+V.3.3.1 In any angular position, the Steering Wheel must meet T.1.4.4
+V.3.3.2 The Steering Wheel must be attached to the column with a quick disconnect.
+V.3.3.3 The driver must be able to operate the quick disconnect while in the normal driving position
+with gloves on.
+V.3.3.4 The Steering Wheel must have a continuous perimeter that is near circular or near oval.
+The outer perimeter profile may have some straight sections, but no concave sections. “H”,
+“Figure 8”, or cutout wheels are not allowed.
+V.4 WHEELS AND TIRES
+V.4.1 Wheel Size
+Wheels must be 203.2 mm (8.0 inches) or more in diameter.
+V.4.2 Wheel Attachment
+V.4.2.1 Any wheel mounting system that uses a single retaining nut must incorporate a device to
+retain the nut and the wheel if the nut loosens.
+A second nut (jam nut) does not meet this requirement
+V.4.2.2 Teams using modified lug bolts or custom designs must provide proof that Good Engineering
+Practices have been followed in their design.
+V.4.2.3 If used, aluminum wheel nuts must be hard anodized and in pristine condition.
+Formula SAE® Rules 2024 © 2023 SAE International Page 21 of 140
+Version 1.0 1 Sep 2023
+V.4.3 Tires
+Vehicles may have two types of tires, Dry and Wet
+V.4.3.1 Dry Tires
+a. The tires on the vehicle when it is presented for Technical Inspection.
+b. May be any size or type, slicks or treaded.
+V.4.3.2 Wet Tires
+Any size or type of treaded or grooved tire where:
+• The tread pattern or grooves were molded in by the tire manufacturer, or were cut by
+the tire manufacturer or appointed agent.
+Any grooves that have been cut must have documented proof that this rule was met
+• There is a minimum tread depth of 2.4 mm
+V.4.3.3 Tire Set
+a. All four Dry Tires and Wheels or all four Wet Tires and Wheels do not have to be
+identical.
+b. Once each tire set has been presented for Technical Inspection, any tire compound or
+size, or wheel type or size must not be changed.
+V.4.3.4 Tire Pressure
+a. Tire Pressure must be in the range allowed by the manufacturer at all times.
+b. Tire Pressure may be inspected at any time
+V.4.3.5 Requirements for All Tires
+a. Teams must not perform any hand cutting, grooving or modification of the tires.
+b. Tire warmers are not allowed.
+c. No traction enhancers may be applied to the tires at any time onsite at the competition.
+Formula SAE® Rules 2024 © 2023 SAE International Page 22 of 140
+Version 1.0 1 Sep 2023
+F - CHASSIS AND STRUCTURAL
+F.1 DEFINITIONS
+F.1.1 Chassis
+The fabricated structural assembly that supports all functional vehicle systems.
+This assembly may be a single fabricated structure, multiple fabricated structures or a
+combination of composite and welded structures.
+F.1.2 Frame Member
+A minimum representative single piece of uncut, continuous tubing.
+F.1.3 Monocoque
+A type of Chassis where loads are supported by the external panels
+F.1.4 Main Hoop
+A roll bar located alongside or immediately aft of the driver’s torso.
+F.1.5 Front Hoop
+A roll bar located above the driver’s legs, in proximity to the steering wheel.
+F.1.6 Roll Hoop(s)
+Referring to both the Front Hoop AND the Main Hoop
+F.1.7 Roll Hoop Bracing Supports
+The structure from the lower end of the Roll Hoop Bracing back to the Roll Hoop(s).
+F.1.8 Front Bulkhead
+A planar structure that provides protection for the driver’s feet.
+F.1.9 Impact Attenuator
+A deformable, energy absorbing device located forward of the Front Bulkhead.
+F.1.10 Primary Structure
+The combination of the following components:
+• Front Bulkhead and Front Bulkhead Support
+• Front Hoop, Main Hoop, Roll Hoop Braces and
+```
+
+Also attached is an image that shows information about the riders that can be accommodated in the vehicle. At the top of the image, there is general anthropomorphic information. Below that, there is information about the largest man and smallest woman our vehicle can accommodate. Based on the information presented in the image, does our vehicle comply with rule V.2.1.1 presented in the rule document? First provide an explanation for your answer (begin it with ‘Explanation:’). Then provide just a yes/no answer (begin it with ‘Answer:’) that summarizes your response."
+4,"We are a student engineering team designing a vehicle for the FSAE competition. Attached is the FSAE rules document. Also attached is an image that shows the calculated values of TS voltage over time. For Tractive System Measuring Points (TSMP), a 10 kOhm resistor could be used to limit the current. Based on this image and rule EV.5.8.4 in the rule document, can we use the resistor for TSMP? First provide an explanation for your answer (begin it with ‘Explanation:’). Then provide just a yes/no answer (begin it with ‘Answer:’) that summarizes your response.",yes,5.png,"EV.5.8.4a states that accumulator max voltage between 200 and 400 volts requires a 10kOhm resistor. The image shows the max voltage is in the 200 to 400 range, so a 10kOhm resistor will work.",EV.5.8.4,"We are a student engineering team designing a vehicle for the FSAE competition. Below is context from the FSAE rule document which might or might not be relevant for the question: 
+
+```
+st be enclosed in (an) Accumulator Container(s).
+EV.5.1.2 Each Accumulator Segment must contain:
+• Maximum static voltage of less than 120 V DC
+• Maximum energy of 6 MJ
+The contained energy of a stack is calculated by multiplying the maximum stack voltage with
+the nominal capacity of the used cell(s).
+EV.5.1.3 No further energy storage except for reasonably sized intermediate circuit capacitors are
+allowed after the Energy Meter EV.3.1
+EV.5.1.4 All Accumulator Segments and/or Accumulator Containers (including spares and replacement
+parts) must be identical to the design documented in the ESF and SES
+EV.5.2 Electrical Configuration
+EV.5.2.1 All Tractive System components must be rated for the maximum Tractive System voltage
+EV.5.2.2 If the Accumulator Container is made from an electrically conductive material:
+a. The poles of the Accumulator Segment(s) and/or cells must be isolated from the inner
+wall of the Accumulator Container with an insulating material that is rated for the
+maximum Tractive System voltage.
+b. All conductive surfaces on the outside of the Accumulator Container must have a low
+resistance connection to the GLV System Ground, see EV.6.7
+c. Any conductive penetrations, such as mounting hardware, must be protected against
+puncturing the insulating barrier.
+EV.5.2.3 Each Accumulator Segment must be electrically insulated with suitable Nonflammable
+Material (F.1.18) (not air) for the two:
+a. Between the segments in the container
+b. On top of the segment
+The intent is to prevent arc flashes caused by inter segment contact or by parts/tools
+accidentally falling into the container during maintenance for example.
+EV.5.2.4 Soldering electrical connections in the high current path is prohibited
+Soldering wires to cells for the voltage monitoring input of the AMS is allowed, these wires are
+not part of the high current path.
+EV.5.2.5 Every wire used in an Accumulator Container, whether it is part of the GLV or Tractive System,
+must be rated to the maximum Tractive System voltage.
+Formula SAE® Rules 2024 © 2023 SAE International Page 93 of 140
+Version 1.0 1 Sep 2023
+EV.5.3 Maintenance Plugs
+EV.5.3.1 Maintenance Plugs must allow electrical separation of the Accumulator Segments to meet:
+a. The separated Segments meet voltage and energy limits of EV.5.1.2
+b. The separation must affect both poles of the Segment
+EV.5.3.2 Maintenance Plugs must:
+a. Require the physical removal or separation of a component. Contactors or switches are
+not acceptable Maintenance Plugs
+b. Have access after opening the Accumulator Container and not necessary to move or
+remove any other components
+c. Not be physically possible to connect in any configuration other than the design intended
+configuration
+d. Not require tools to install or remove
+e. Include a positive locking feature which prevents the plug from unintentionally becoming
+loose
+f. Be nonconductive on surfaces that do not provide any electrical connection
+EV.5.3.3 When the Accumulator Containers are opened or Segments are removed, the Accumulator
+Segments must be separated by using the Maintenance Plugs. See EV.11.4.1
+EV.5.4 Accumulator Isolation Relays - AIR
+EV.5.4.1 Every Accumulator Container must contain minimum one fuse (EV.6.6) and two or more
+Accumulator Isolation Relays (AIR)
+EV.5.4.2 The Accumulator Isolation Relays must:
+a. Be a Normally Open type
+b. Open both poles of the Accumulator
+EV.5.4.3 When the AIRs are open, High Voltage T.9.1.1 must not be external of the Accumulator
+Container
+EV.5.4.4 The Accumulator Isolation Relays and any fuses must be separated from the rest of the
+Accumulator with an electrically insulated and Nonflammable Material (F.1.18).
+EV.5.4.5 A capacitor may be used to hold the AIRs closed for up to 250 ms after the Shutdown Circuit
+Opens EV.7.2.2
+EV.5.5 High Voltage Disconnect - HVD
+A High Voltage Disconnect (HVD) must be included to quickly disconnect one or both poles of
+the Accumulator EV.11.3.2
+EV.5.5.1 The High Voltage Disconnect (HVD) must be:
+a. A directly accessible element, fuse or connector
+b. More than 350 mm from the ground
+c. Easily visible when standing behind the vehicle
+d. Operable in 10 seconds or less by an untrained person
+e. Operable without removing any bodywork or obstruction or using tools
+f. Directly operated. Remote operation through a long handle, rope or wire is not
+acceptable.
+Formula SAE® Rules 2024 © 2023 SAE International Page 94 of 140
+Version 1.0 1 Sep 2023
+g. Clearly marked with ""HVD""
+EV.5.5.2 An Interlock EV.7.8 must Open the Shutdown Circuit EV.7.2.2 when the HVD is removed
+EV.5.5.3 A dummy connector or similar may be used to restore isolation to meet EV.6.1.2
+EV.5.6 Precharge and Discharge Circuits
+EV.5.6.1 The Accumulator must contain a Precharge Circuit. The Precharge Circuit must:
+a. Be able to charge the Intermediate Circuit to minimum 90% of the Accumulator voltage
+before closing the second AIR
+b. Be supplied from the Shutdown Circuit EV.7.1
+c. Not be fused
+EV.5.6.2 The Intermediate Circuit must precharge before closing the second AIR. The end of precharge
+must be controlled by one of the following two options:
+a. Feedback by monitoring the voltage in the Intermediate Circuit
+b. A conservative time defined by the longer of:
+• Twice the time to charge to 90%
+• The time to charge to 90% plus 500ms
+EV.5.6.3 The Tractive System must contain a Discharge Circuit. The Discharge Circuit must be:
+a. Wired in a way that it is always active when the Shutdown Circuit is open
+b. Able to discharge the Intermediate Circuit capacitors if the HVD has been opened
+c. Not be fused
+d. Designed to handle the maximum Tractive System voltage for minimum 15 seconds
+EV.5.6.4 Positive Temperature Coefficient (PTC) devices must not be used to limit current for the
+Precharge Circuit or Discharge Circuit
+EV.5.6.5 The precharge relay must be a mechanical type relay
+EV.5.7 Voltage Indicator
+Each Accumulator Container must have a prominent indicator when High Voltage T.9.1.1 is
+present at the vehicle side of the AIRs
+EV.5.7.1 The Voltage Indicator must always function, including when the Accumulator Container is
+disconnected or removed
+EV.5.7.2 The voltage being present at the connectors must directly control the Voltage Indicator using
+hard wired electronics with no software control.
+EV.5.7.3 The control signal which closes the AIRs must not control the Voltage Indicator
+EV.5.7.4 The Voltage Indicator must:
+a. Be located where it is clearly visible when connecting/disconnecting the Accumulator
+Tractive System connections
+b. Be labeled “High Voltage Present”
+EV.5.8 Tractive System Measuring Points - TSMP
+EV.5.8.1 Two Tractive System Measuring Points (TSMP) must be installed in the vehicle which are:
+a. Connected to the positive and negative motor controller/inverter supply lines
+b. Next to the Master Switches EV.7.9
+Formula SAE® Rules 2024 © 2023 SAE International Page 95 of 140
+Version 1.0 1 Sep 2023
+c. Protected by a nonconductive housing that can be opened without tools
+d. Protected from being touched with bare hands / fingers once the housing is opened
+EV.5.8.2 Two TSMPs must be installed in the Charger EV.8.2 which are:
+a. Connected to the positive and negative Charger output lines
+b. Available during charging of any Accumulator(s)
+EV.5.8.3 The TSMPs must be:
+a. 4 mm shrouded banana jacks rated to an appropriate voltage level
+b. Color: Red
+c. Marked “HV+” and “HV-“
+EV.5.8.4 Each TSMP must be secured with a current limiting resistor.
+a. The resistor must be sized per the following:
+Maximum TS Voltage (Vmax) Resistor Value
+Vmax <= 200 V DC 5 kOhm
+200 V DC < Vmax <= 400 V DC 10 kOhm
+400 V DC < Vmax <= 600 V DC 15 kOhm
+b. Resistor continuous power rating must be more than the power dissipated across the
+TSMPs if they are shorted together
+c. Direct measurement of the value of the resistor must be possible during Electrical
+Technical Inspection.
+EV.5.8.5 Any TSMP must not contain additional Overcurrent Protection.
+EV.5.9 Tractive System Active Light - TSAL
+EV.5.9.1 The vehicle must include a Tractive Systems Active Light (TSAL) that must:
+a. Illuminate when the GLV System is energized to indicate the status of the Tractive
+System
+b. Be directly controlled by the voltage present in the Tractive System using hard wired
+electronics. Software control is not permitted.
+c. Not perform any other functions.
+EV.5.9.2 The TSAL may be composed of multiple lights inside a single housing
+EV.5.9.3 When the voltage outside the Accumulator Container(s) exceeds T.9.1.1, the TSAL must:
+a. Be Color: Red
+b. Flash with a frequency between 2 Hz and 5 Hz
+EV.5.9.4 When the voltage outside the Accumulator Container(s) is below T.9.1.1, the TSAL must:
+a. Be Color: Green
+b. Stay continuously illu
+```
+
+Also attached is an image that shows the calculated values of TS voltage over time. For Tractive System Measuring Points (TSMP), a 10 kOhm resistor could be used to limit the current. Based on this image and rule EV.5.8.4 in the rule document, can we use the resistor for TSMP? First provide an explanation for your answer (begin it with ‘Explanation:’). Then provide just a yes/no answer (begin it with ‘Answer:’) that summarizes your response."
+5,"We are a student engineering team designing a vehicle for the FSAE competition. Attached is the FSAE rules document. Also attached is an image that shows the calculate values of TS voltage over time. For Tractive System Measuring Points (TSMP), a 10 kOhm resistor could be used to limit the current. Based on this image and rule EV.5.8.4 in the rule document, can we use the resistor for TSMP? First provide an explanation for your answer (begin it with ‘Explanation:’). Then provide just a yes/no answer (begin it with ‘Answer:’) that summarizes your response.",no,6.png,"EV.5.8.4a states that accumulator max voltage between 400 and 600 volts requires a 15kOhm resistor. The image shows the max voltage is in this 400 to 600 range, so a 15kOhm resistor (and not an 10 kOhm resistor) is needed.",EV.5.8.4,"We are a student engineering team designing a vehicle for the FSAE competition. Below is context from the FSAE rule document which might or might not be relevant for the question: 
+
+```
+e Accumulator must contain a Precharge Circuit. The Precharge Circuit must:
+a. Be able to charge the Intermediate Circuit to minimum 90% of the Accumulator voltage
+before closing the second AIR
+b. Be supplied from the Shutdown Circuit EV.7.1
+c. Not be fused
+EV.5.6.2 The Intermediate Circuit must precharge before closing the second AIR. The end of precharge
+must be controlled by one of the following two options:
+a. Feedback by monitoring the voltage in the Intermediate Circuit
+b. A conservative time defined by the longer of:
+• Twice the time to charge to 90%
+• The time to charge to 90% plus 500ms
+EV.5.6.3 The Tractive System must contain a Discharge Circuit. The Discharge Circuit must be:
+a. Wired in a way that it is always active when the Shutdown Circuit is open
+b. Able to discharge the Intermediate Circuit capacitors if the HVD has been opened
+c. Not be fused
+d. Designed to handle the maximum Tractive System voltage for minimum 15 seconds
+EV.5.6.4 Positive Temperature Coefficient (PTC) devices must not be used to limit current for the
+Precharge Circuit or Discharge Circuit
+EV.5.6.5 The precharge relay must be a mechanical type relay
+EV.5.7 Voltage Indicator
+Each Accumulator Container must have a prominent indicator when High Voltage T.9.1.1 is
+present at the vehicle side of the AIRs
+EV.5.7.1 The Voltage Indicator must always function, including when the Accumulator Container is
+disconnected or removed
+EV.5.7.2 The voltage being present at the connectors must directly control the Voltage Indicator using
+hard wired electronics with no software control.
+EV.5.7.3 The control signal which closes the AIRs must not control the Voltage Indicator
+EV.5.7.4 The Voltage Indicator must:
+a. Be located where it is clearly visible when connecting/disconnecting the Accumulator
+Tractive System connections
+b. Be labeled “High Voltage Present”
+EV.5.8 Tractive System Measuring Points - TSMP
+EV.5.8.1 Two Tractive System Measuring Points (TSMP) must be installed in the vehicle which are:
+a. Connected to the positive and negative motor controller/inverter supply lines
+b. Next to the Master Switches EV.7.9
+Formula SAE® Rules 2024 © 2023 SAE International Page 95 of 140
+Version 1.0 1 Sep 2023
+c. Protected by a nonconductive housing that can be opened without tools
+d. Protected from being touched with bare hands / fingers once the housing is opened
+EV.5.8.2 Two TSMPs must be installed in the Charger EV.8.2 which are:
+a. Connected to the positive and negative Charger output lines
+b. Available during charging of any Accumulator(s)
+EV.5.8.3 The TSMPs must be:
+a. 4 mm shrouded banana jacks rated to an appropriate voltage level
+b. Color: Red
+c. Marked “HV+” and “HV-“
+EV.5.8.4 Each TSMP must be secured with a current limiting resistor.
+a. The resistor must be sized per the following:
+Maximum TS Voltage (Vmax) Resistor Value
+Vmax <= 200 V DC 5 kOhm
+200 V DC < Vmax <= 400 V DC 10 kOhm
+400 V DC < Vmax <= 600 V DC 15 kOhm
+b. Resistor continuous power rating must be more than the power dissipated across the
+TSMPs if they are shorted together
+c. Direct measurement of the value of the resistor must be possible during Electrical
+Technical Inspection.
+EV.5.8.5 Any TSMP must not contain additional Overcurrent Protection.
+EV.5.9 Tractive System Active Light - TSAL
+EV.5.9.1 The vehicle must include a Tractive Systems Active Light (TSAL) that must:
+a. Illuminate when the GLV System is energized to indicate the status of the Tractive
+System
+b. Be directly controlled by the voltage present in the Tractive System using hard wired
+electronics. Software control is not permitted.
+c. Not perform any other functions.
+EV.5.9.2 The TSAL may be composed of multiple lights inside a single housing
+EV.5.9.3 When the voltage outside the Accumulator Container(s) exceeds T.9.1.1, the TSAL must:
+a. Be Color: Red
+b. Flash with a frequency between 2 Hz and 5 Hz
+EV.5.9.4 When the voltage outside the Accumulator Container(s) is below T.9.1.1, the TSAL must:
+a. Be Color: Green
+b. Stay continuously illuminated
+EV.5.9.5 The TSAL mounting location must:
+a. Be near the Main Hoop at the highest point of the vehicle.
+b. Be inside the Rollover Protection Envelope F.1.13
+c. Be no lower than 150 mm from the highest point of the Main Hoop.
+d. Not allow contact with the driver’s helmet in any circumstances.
+Formula SAE® Rules 2024 © 2023 SAE International Page 96 of 140
+Version 1.0 1 Sep 2023
+e. Not be in proximity to other lights.
+EV.5.9.6 The TSAL must be visible:
+a. From every horizontal direction, except small angles which are blocked by the Main Hoop
+b. From a point 1.6 m vertically from ground level, inside a 3 m horizontal radius from the
+TSAL
+c. In direct sunlight
+EV.5.10 Connectors
+Tractive System connectors outside of a housing must meet one of the two:
+• Contain an Interlock EV.7.8 which must Open the Shutdown Circuit EV.7.2.2
+• Be sealed at Tech Inspection IN.4.7.1
+EV.6 ELECTRICAL SYSTEM
+EV.6.1 Covers
+EV.6.1.1 Nonconductive material or covers must prevent inadvertent human contact with any Tractive
+System voltage.
+Covers must be secure and sufficiently rigid.
+Removable Bodywork is not suitable to enclose Tractive System connections.
+EV.6.1.2 Contact with any Tractive System connections with a 100 mm long, 6 mm diameter insulated
+test probe must not be possible when the Tractive System enclosures are in place.
+EV.6.1.3 Tractive System components and Accumulator Containers must be protected from moisture,
+rain or puddles.
+A rating of IP65 is recommended
+EV.6.2 Insulation
+EV.6.2.1 Insulation material must:
+a. Be appropriate for the expected surrounding temperatures
+b. Have a minimum temperature rating of 90°C
+EV.6.2.2 Insulating tape or paint may be part of the insulation, but must not be the only insulation.
+EV.6.3 Wiring
+EV.6.3.1 All wires and terminals and other conductors used in the Tractive System must be sized for the
+continuous current they will conduct
+EV.6.3.2 All Tractive System wiring must:
+a. Be marked with wire gauge, temperature rating and insulation voltage rating.
+A serial number or a norm printed on the wire is sufficient if this serial number or norm is
+clearly bound to the wire characteristics for example by a data sheet.
+b. Have temperature rating more than or equal to 90°C
+EV.6.3.3 Tractive System wiring must be:
+a. Done to professional standards with sufficient strain relief
+b. Protected from loosening due to vibration
+c. Protected against damage by rotating and / or moving parts
+Formula SAE® Rules 2024 © 2023 SAE International Page 97 of 140
+Version 1.0 1 Sep 2023
+d. Located out of the way of possible snagging or damage
+EV.6.3.4 Any Tractive System wiring that runs outside of electrical enclosures:
+a. Must meet one of:
+• Enclosed in separate orange nonconductive conduit
+• Use an orange shielded cable.
+b. Must meet one of:
+• Run in a fully enclosed container. Bodywork is not an enclosure.
+• The conduit or shielded cable is securely anchored at each end to allow it to
+withstand a force of 200 N without straining the cable end crimp
+c. Any shielded cable must have the shield grounded.
+EV.6.3.5 Wiring that is not part of the Tractive System must not use orange wiring or conduit.
+EV.6.4 Connections
+EV.6.4.1 All Tractive System connections must:
+a. Be designed to use intentional current paths through conductors designed for electrical
+current
+b. Not rely on steel bolts to be the primary conductor
+c. Not include compressible material such as plastic in the stack-up
+EV.6.4.2 If external, uninsulated heat sinks are used, they must be properly grounded to the GLV
+System Ground, see EV.6.7
+EV.6.4.3 Bolted electrical connections in the high current path of the Tractive System must include a
+positive locking feature to prevent unintentional loosening
+Lock washers or thread locking compounds (Loctite®) or adhesives are not acceptable.
+Bolts with nylon patches are allowed for blind connections into OEM components.
+EV.6.4.4 Information about the electrical connections supporting the high current path must be
+available at Electrical Technical Inspection
+EV.6.5 Voltage Separation
+EV.6.5.1 Separation of Tractive System and GLV System:
+a. The entire Tractive System and GLV System must be completely galvanically separated.
+b. The border between Tractive and GLV System is the galvanic isolation between both
+systems. Therefore, some components, such as the Motor Controller, may be part of
+both systems.
+EV.6.5.2 There must be no connection between the Chassis of the vehicle (or any other conductive
+surface that might be inadvertently touched by a person), and any part of any Tractive System
+circuits.
+EV.6.5.3 Tractive System and GLV circuits must not run through the same conduit or connector, except
+as allowed in EV.7
+```
+
+Also attached is an image that shows the calculate values of TS voltage over time. For Tractive System Measuring Points (TSMP), a 10 kOhm resistor could be used to limit the current. Based on this image and rule EV.5.8.4 in the rule document, can we use the resistor for TSMP? First provide an explanation for your answer (begin it with ‘Explanation:’). Then provide just a yes/no answer (begin it with ‘Answer:’) that summarizes your response."
+6,"We are a student engineering team designing a vehicle for the FSAE competition. Attached is the FSAE rules document. Also attached is an image that shows the force-displacement curve of the impact attenuator obtained from experiments. Assuming the impact attenuator is a standard honeycomb type, and based on this image and rule F.8.7.2 in the rule document, can we use the impact attenuator in the vehicle? First provide an explanation for your answer (begin it with ‘Explanation:’). Then provide just a yes/no answer (begin it with ‘Answer:’) that summarizes your response.",yes,7.png,"F.8.7.2 states that the peak load for a standard honeycomb impact attenuator is 60 kN. The force-displacement curve shows that the peak load is less than 60 kN, so this impact attenuator can be used.",F.8.7.2,"We are a student engineering team designing a vehicle for the FSAE competition. Below is context from the FSAE rule document which might or might not be relevant for the question: 
+
+```
+al
+• Attachment points at both ends must carry a minimum load of 30 kN in any
+direction
+b. Physical testing per F.8.8.6 and F.8.8.7 must be performed to prove that the Anti
+Intrusion Plate does not permanently deflect more than 25 mm.
+F.8.5 Impact Attenuator Attachment
+F.8.5.1 The attachment of the Impact Attenuator to the Anti Intrusion Plate or Front Bulkhead must
+be documented in the SES submission
+F.8.5.2 The Impact Attenuator must attach with an approved method:
+Impact Attenuator Type Construction Attachment Method(s):
+a. Standard or Custom Foam, Honeycomb Bonding
+b. Custom other Bonding, Welding, Bolting
+F.8.5.3 If the Impact Attenuator is attached by bonding:
+a. Bonding must meet F.5.5
+b. The shear strength of the bond must be higher than:
+• 95 kN for foam Impact Attenuators
+• 38.5 kN for honeycomb Impact Attenuators
+• The maximum compressive force for custom Impact Attenuators
+c. The entire surface of a foam Impact Attenuator must be bonded
+d. Only the pre-crushed area of a honeycomb Impact Attenuator may be used for bond
+equivalence
+F.8.5.4 If the Impact Attenuator is attached by welding:
+a. Welds may be continuous or interrupted
+Formula SAE® Rules 2024 © 2023 SAE International Page 45 of 140
+Version 1.0 1 Sep 2023
+b. If interrupted, the weld/space ratio must be 1:1 or higher
+c. All weld lengths must be more than 25 mm
+F.8.5.5 If the Impact Attenuator is attached by bolting:
+a. Must have no less than eight 8 mm or 5/16” minimum diameter Critical Fasteners, T.8.2
+b. The distance between any two bolt centers must be 50 mm minimum
+c. Each bolt attachment must have pullout, tearout and bending capabilities of 15 kN
+d. Must be bolted directly to the Primary Structure
+F.8.5.6 Impact Attenuator Position
+a. All Impact Attenuators must mount with the bottom leading edge no more than 220 mm
+above the lowest point on the top of the Lower Side Impact Structure
+b. A Custom Impact Attenuator must mount with an area of 200 mm or more long and 200
+mm or more wide that intersects a plane parallel to the ground that is no more than 220
+mm above the lowest point on the top of the Lower Side Impact Structure
+F.8.5.7 Impact Attenuator Orientation
+a. The Impact Attenuator must be centered laterally on the Front Bulkhead
+b. Standard Honeycomb must be mounted 200mm width x 100mm height
+c. Standard Foam may be mounted laterally or vertically
+F.8.6 Front Impact Objects
+F.8.6.1 The only items allowed forward of the Anti Intrusion Plate in front view are the Impact
+Attenuator, fastener heads, and light bodywork / nosecones
+Fasteners should be oriented with the nuts rearwards
+F.8.6.2 Front Wing and Bodywork Attachment
+a. The front wing and front wing mounts must be able to move completely aft of the Anti
+Intrusion Plate and not touch the front bulkhead during a frontal impact
+b. The attachment points for the front wing and bodywork mounts should be aft of the Anti
+Intrusion Plate
+c. Tabs for wing and bodywork attachment must not extend more than 25mm forward of
+the Anti Intrusion Plate
+F.8.6.3 Pedal assembly at full travel and adjustment must have a minimum 25 mm clearance to the:
+a. Rear face of the Anti Intrusion Plate
+b. All Front Bulkhead structure F.6.1, F.7.2, F.8.4.3
+c. All Non Crushable Items inside the Primary Structure
+Non Crushable Items include, but are not limited to batteries, master cylinders, hydraulic
+reservoirs
+F.8.7 Front Impact Verification
+F.8.7.1 The combination of the Impact Attenuator assembly and the force to crush or detach all other
+items forward of the Anti Intrusion plate must not exceed the peak deceleration specified in
+F.8.8.2
+Ignore light bodywork, light nosecones, and outboard wheel assemblies
+Formula SAE® Rules 2024 © 2023 SAE International Page 46 of 140
+Version 1.0 1 Sep 2023
+F.8.7.2 The peak load for the type of Impact Attenuator:
+• Standard Foam Impact Attenuator 95 kN
+• Standard Honeycomb Impact Attenuator 60 kN
+• Tested Impact Attenuator peak as measured
+F.8.7.3 Use the Test Method F.8.7.4 or the Calculation Method F.8.7.5 to prove the force requirement
+F.8.7.4 Test Method
+Get the peak force from physical testing of the Impact Attenuator and any Non Crushable
+Object(s) as one of the two:
+a. Tested together with the Impact Attenuator
+b. Tested with the Impact Attenuator not attached, and add the peak load from F.8.7.2
+F.8.7.5 Calculation Method
+a. Calculate a failure load for the mounting of the Non Crushable Object(s) from fastener
+shear, tearout, and/or link buckling
+b. Add the peak attenuator load from F.8.7.2
+F.8.8 Impact Attenuator Data - IAD
+F.8.8.1 All teams must include an Impact Attenuator Data (IAD) report as part of the SES.
+F.8.8.2 Impact Attenuator Functional Requirements
+These are not test requirements
+a. Decelerates the vehicle at a rate not exceeding 20 g average and 40 g peak
+b. Energy absorbed must be more than 7350 J
+When:
+• Total mass of Vehicle is 300 kg
+• Impact velocity is 7.0 m/s
+F.8.8.3 When using the Standard Impact Attenuator, the SES must meet the following:
+a. Test data will not be submitted
+b. All other requirements of this section must be included.
+c. Photos of the actual attenuator must be included
+d. Evidence that the Standard IA meets the design criteria provided in the Standard Impact
+Attenuator specification must be included with the SES. This may be a receipt or packing
+slip from the supplier.
+F.8.8.4 The Impact Attenuator Data Report when NOT using the Standard Impact Attenuator must
+include:
+a. Test data that proves that the Impact Attenuator Assembly meets the Functional
+Requirements F.8.8.2
+b. Calculations showing how the reported absorbed energy and decelerations have been
+derived.
+c. A schematic of the test method.
+d. Photos of the attenuator, annotated with the height of the attenuator before and after
+testing.
+Formula SAE® Rules 2024 © 2023 SAE International Page 47 of 140
+Version 1.0 1 Sep 2023
+F.8.8.5 The Impact Attenuator Test is valid for only one Competition Year
+F.8.8.6 Impact Attenuator Test Setup
+a. During any test, the Impact Attenuator must be attached to the Anti Intrusion Plate using
+the intended vehicle attachment method.
+b. The Impact Attenuator Assembly must be attached to a structurally representative
+section of the intended chassis.
+The test fixture must have equivalent strength and stiffness to a baseline front bulkhead.
+A solid block of material in the shape of the front bulkhead is not “structurally
+representative”.
+c. There must be 50 mm minimum clearance rearwards of the Anti Intrusion Plate to the
+test fixture.
+d. No part of the Anti Intrusion Plate may permanently deflect more than 25 mm beyond
+the position of the Anti Intrusion Plate before the test.
+The 25 mm spacing represents the front bulkhead support and insures that the plate does not
+intrude excessively into the cockpit.
+F.8.8.7 Test Conduct
+a. Composite Impact Attenuators must be Dynamic Tested.
+Other Impact Attenuator constructions may be Dynamic Tested or Quasi-Static Tested
+b. Dynamic Testing (sled, pendulum, drop tower, etc.) of the Impact Attenuator must be
+conducted at a dedicated test facility. This facility may be part of the University, but must
+be supervised by professional staff or the University faculty. Teams must not construct
+their own dynamic test apparatus.
+c. Quasi-Static Testing may be performed by teams using their University’s
+facilities/equipment, but teams are advised to exercise due care when performing all
+tests.
+F.8.8.8 Test Analysis
+a. When using acceleration data from the dynamic test, the average deceleration must be
+calculated based on the raw unfiltered data.
+b. If peaks above the 40 g limit are present in the data, a Channel Filter Class (CFC) 60
+(100Hz) filter per SAE Recommended Practice J211 “Instrumentation for Impact Test”, or
+a 100 Hz, 3rd order, low pass Butterworth (-3dB at 100 Hz) filter may be applied.
+F.9 FUEL SYSTEM (IC ONLY)
+Fuel System Location and Protection are subject to approval during SES review and Technical
+Inspection.
+F.9.1 Location
+F.9.1.1 Any portion of the Fuel System that is less than 350 mm above the ground, and all parts of the
+Fuel Tank, must be inside the Primary Structure (F.1.10).
+F.9.1.2 In side view, any portion of the Fuel System must not project below the lower surface of the
+chassis
+F.9.2 Protection
+All Fuel Tanks must be shielded from side or rear impact
+Formula SAE® Rules 2024 © 2023 SAE International Page 48 of 140
+Version 1.0 1 Sep 2023
+F.10 ACCUMULATOR CONTAINER (EV ONLY)
+F.10.1 General Requirements
+F.10.1.1 All Accumulator Containers must be:
+a. Designed to withstand forces from deceleration in all directions
+b. Made from a Nonflammable Material ( F.1.18 )
+F.10.1.2 Design of the Accumulator Container must be documented in the SES.
+```
+
+Also attached is an image that shows the force-displacement curve of the impact attenuator obtained from experiments. Assuming the impact attenuator is a standard honeycomb type, and based on this image and rule F.8.7.2 in the rule document, can we use the impact attenuator in the vehicle? First provide an explanation for your answer (begin it with ‘Explanation:’). Then provide just a yes/no answer (begin it with ‘Answer:’) that summarizes your response."
+7,"We are a student engineering team designing a vehicle for the FSAE competition. Attached is the FSAE rules document. Also attached is an image that shows the force-displacement curve of the impact attenuator obtained from experiments. Assuming the impact attenuator is a standard honeycomb type, and based on this image and rule F.8.7.2 in the rule document, can we use the impact attenuator in the vehicle? First provide an explanation for your answer (begin it with ‘Explanation:’). Then provide just a yes/no answer (begin it with ‘Answer:’) that summarizes your response.",no,8.png,"F.8.7.2 states that the peak load for a standard honeycomb impact attenuator is 60 kN. The force-displacement curve shows that the peak load surpasses 62.5 kN, which violates F.8.7.2. Therefore this impact attenuator should not be used.",F.8.7.2,"We are a student engineering team designing a vehicle for the FSAE competition. Below is context from the FSAE rule document which might or might not be relevant for the question: 
+
+```
+
+F.8.2.2 The outside profile requirement of the Anti Intrusion Plate depends on the method of
+attachment to the Front Bulkhead:
+a. Welded joints: the profile must align with or be more than the centerline of the Front
+Bulkhead tubes on all sides
+b. Bolted joints, bonding, laminating: the profile must align with or be more than the
+outside dimensions of the Front Bulkhead around the entire periphery
+F.8.2.3 Attachment of the Anti Intrusion Plate directly to the Front Bulkhead must be documented in
+the team’s SES submission. The accepted methods of attachment are:
+a. Welding
+• All weld lengths must be 25 mm or longer
+• If interrupted, the weld/space ratio must be 1:1 or higher
+b. Bolted joints
+• Using no less than eight 8 mm or 5/16” minimum diameter Critical Fasteners, T.8.2.
+• The distance between any two bolt centers must be 50 mm minimum.
+• Each bolt attachment must have pullout, tearout and bending capabilities of 15 kN
+c. Bonding
+• The Front Bulkhead must have no openings
+• The entire surface of the Anti Intrusion Plate must be bonded, with shear and peel
+strength higher than 120 kN
+d. Laminating
+• The Anti Intrusion Plate must be in front of the outer skin of the Front Bulkhead
+• The lamination must fully enclose the Anti Intrusion Plate and have shear capability
+higher than 120 kN
+F.8.3 Composite Anti Intrusion Plate
+F.8.3.1 Composite Anti Intrusion Plates:
+a. Must not fail in a frontal impact
+b. Must withstand a minimum static load of 120 kN distributed over the 200 mm x 100 mm
+minimum Impact Attenuator area
+F.8.3.2 Strength of the Composite Anti Intrusion Plate must be verified by one of the two methods:
+a. Physical testing of the AIP attached to a structurally representative section of the
+intended chassis
+• The test fixture must have equivalent strength and stiffness to a baseline front
+bulkhead or must be the same as the first 50 mm of the Chassis
+• Test data is valid for only one Competition Year
+b. Laminate material testing under F.4.3.2 and F.4.3.5 and calculations of 3 point bending
+and perimeter shear
+Formula SAE® Rules 2024 © 2023 SAE International Page 44 of 140
+Version 1.0 1 Sep 2023
+F.8.4 Impact Attenuator - IA
+F.8.4.1 Teams must do one of:
+• Use an approved Standard Impact Attenuator from the FSAE Online Website
+• Build and test a Custom Impact Attenuator of their own design F.8.8
+F.8.4.2 The Custom Impact Attenuator must meet the following:
+a. Length 200 mm or more, with its length oriented along the fore/aft axis of the Chassis.
+b. Minimum height 100 mm (perpendicular to the ground) and minimum width 200 mm
+(parallel to the ground) for a minimum distance of 200 mm forward of the Front
+Bulkhead.
+c. Segmented foam attenuators must have all segments bonded together to prevent sliding
+or parallelogramming.
+d. Honeycomb attenuators made of multiple segments must have a continuous panel
+between each segment.
+F.8.4.3 If the outside profile of the Front Bulkhead is more than 400 mm x 350 mm, or the team uses
+the Standard Honeycomb Impact Attenuator, and then one of the two must be met:
+a. The Front Bulkhead must include an additional support that is a diagonal or X-brace that
+meets F.3.2.1.b or Equivalent (integral or attached) for Monocoque bulkheads F.2.3.1
+• The structure must go across the entire Front Bulkhead opening on the diagonal
+• Attachment points at both ends must carry a minimum load of 30 kN in any
+direction
+b. Physical testing per F.8.8.6 and F.8.8.7 must be performed to prove that the Anti
+Intrusion Plate does not permanently deflect more than 25 mm.
+F.8.5 Impact Attenuator Attachment
+F.8.5.1 The attachment of the Impact Attenuator to the Anti Intrusion Plate or Front Bulkhead must
+be documented in the SES submission
+F.8.5.2 The Impact Attenuator must attach with an approved method:
+Impact Attenuator Type Construction Attachment Method(s):
+a. Standard or Custom Foam, Honeycomb Bonding
+b. Custom other Bonding, Welding, Bolting
+F.8.5.3 If the Impact Attenuator is attached by bonding:
+a. Bonding must meet F.5.5
+b. The shear strength of the bond must be higher than:
+• 95 kN for foam Impact Attenuators
+• 38.5 kN for honeycomb Impact Attenuators
+• The maximum compressive force for custom Impact Attenuators
+c. The entire surface of a foam Impact Attenuator must be bonded
+d. Only the pre-crushed area of a honeycomb Impact Attenuator may be used for bond
+equivalence
+F.8.5.4 If the Impact Attenuator is attached by welding:
+a. Welds may be continuous or interrupted
+Formula SAE® Rules 2024 © 2023 SAE International Page 45 of 140
+Version 1.0 1 Sep 2023
+b. If interrupted, the weld/space ratio must be 1:1 or higher
+c. All weld lengths must be more than 25 mm
+F.8.5.5 If the Impact Attenuator is attached by bolting:
+a. Must have no less than eight 8 mm or 5/16” minimum diameter Critical Fasteners, T.8.2
+b. The distance between any two bolt centers must be 50 mm minimum
+c. Each bolt attachment must have pullout, tearout and bending capabilities of 15 kN
+d. Must be bolted directly to the Primary Structure
+F.8.5.6 Impact Attenuator Position
+a. All Impact Attenuators must mount with the bottom leading edge no more than 220 mm
+above the lowest point on the top of the Lower Side Impact Structure
+b. A Custom Impact Attenuator must mount with an area of 200 mm or more long and 200
+mm or more wide that intersects a plane parallel to the ground that is no more than 220
+mm above the lowest point on the top of the Lower Side Impact Structure
+F.8.5.7 Impact Attenuator Orientation
+a. The Impact Attenuator must be centered laterally on the Front Bulkhead
+b. Standard Honeycomb must be mounted 200mm width x 100mm height
+c. Standard Foam may be mounted laterally or vertically
+F.8.6 Front Impact Objects
+F.8.6.1 The only items allowed forward of the Anti Intrusion Plate in front view are the Impact
+Attenuator, fastener heads, and light bodywork / nosecones
+Fasteners should be oriented with the nuts rearwards
+F.8.6.2 Front Wing and Bodywork Attachment
+a. The front wing and front wing mounts must be able to move completely aft of the Anti
+Intrusion Plate and not touch the front bulkhead during a frontal impact
+b. The attachment points for the front wing and bodywork mounts should be aft of the Anti
+Intrusion Plate
+c. Tabs for wing and bodywork attachment must not extend more than 25mm forward of
+the Anti Intrusion Plate
+F.8.6.3 Pedal assembly at full travel and adjustment must have a minimum 25 mm clearance to the:
+a. Rear face of the Anti Intrusion Plate
+b. All Front Bulkhead structure F.6.1, F.7.2, F.8.4.3
+c. All Non Crushable Items inside the Primary Structure
+Non Crushable Items include, but are not limited to batteries, master cylinders, hydraulic
+reservoirs
+F.8.7 Front Impact Verification
+F.8.7.1 The combination of the Impact Attenuator assembly and the force to crush or detach all other
+items forward of the Anti Intrusion plate must not exceed the peak deceleration specified in
+F.8.8.2
+Ignore light bodywork, light nosecones, and outboard wheel assemblies
+Formula SAE® Rules 2024 © 2023 SAE International Page 46 of 140
+Version 1.0 1 Sep 2023
+F.8.7.2 The peak load for the type of Impact Attenuator:
+• Standard Foam Impact Attenuator 95 kN
+• Standard Honeycomb Impact Attenuator 60 kN
+• Tested Impact Attenuator peak as measured
+F.8.7.3 Use the Test Method F.8.7.4 or the Calculation Method F.8.7.5 to prove the force requirement
+F.8.7.4 Test Method
+Get the peak force from physical testing of the Impact Attenuator and any Non Crushable
+Object(s) as one of the two:
+a. Tested together with the Impact Attenuator
+b. Tested with the Impact Attenuator not attached, and add the peak load from F.8.7.2
+F.8.7.5 Calculation Method
+a. Calculate a failure load for the mounting of the Non Crushable Object(s) from fastener
+shear, tearout, and/or link buckling
+b. Add the peak attenuator load from F.8.7.2
+F.8.8 Impact Attenuator Data - IAD
+F.8.8.1 All teams must include an Impact Attenuator Data (IAD) report as part of the SES.
+F.8.8.2 Impact Attenuator Functional Requirements
+These are not test requirements
+a. Decelerates the vehicle at a rate not exceeding 20 g average and 40 g peak
+b. Energy absorbed must be more than 7350 J
+When:
+• Total mass of Vehicle is 300 kg
+• Impact velocity is 7.0 m/s
+F.8.8.3 When using the Standard Impact Attenuator, the SES must meet the following:
+a. Test data will not be submitted
+b. All other requirements of this section must be included.
+c. Photos of the actual attenuator must be included
+d. Evidence that the Standard IA meets the design criteria provided in the Standard Impact
+Attenuator specification must be included with the SES. This may be a receipt or packing
+slip from the supplier.
+F.8.8.4 The Impact Attenuator Data Report when NOT usin
+```
+
+Also attached is an image that shows the force-displacement curve of the impact attenuator obtained from experiments. Assuming the impact attenuator is a standard honeycomb type, and based on this image and rule F.8.7.2 in the rule document, can we use the impact attenuator in the vehicle? First provide an explanation for your answer (begin it with ‘Explanation:’). Then provide just a yes/no answer (begin it with ‘Answer:’) that summarizes your response."
+8,"We are a student engineering team designing a vehicle for the FSAE competition. Attached is the FSAE rules document. Also attached is an image that shows the results from an FEA simulation performed on an assembly of frame tubes. The frame tubes are made from welded steel tubing. Based on the results presented in the image and rule F.3.4.2b in the rule document, should we use the assembly in the vehicle? First provide an explanation for your answer (begin it with ‘Explanation:’). Then provide just a yes/no answer (begin it with ‘Answer:’) that summarizes your response.",no,9.png,"F.3.4.2b states that the yield strength of welded steel is 180 MPa. The FEA shows that the maximum stress is 250 MPa, which exceeds the yield strength. Therefore this assembly should not be used.",F.3.4.2,"We are a student engineering team designing a vehicle for the FSAE competition. Below is context from the FSAE rule document which might or might not be relevant for the question: 
+
+```
+ details
+in addition to those of the Formula SAE Rules.
+F.2.1.2 The SES provides the means to:
+a. Document the Primary Structure and show compliance with the Formula SAE Rules
+b. Determine Equivalence to Formula SAE Rules using an accepted basis
+F.2.2 Structural Documentation
+F.2.2.1 All teams must submit a Structural Equivalency Spreadsheet (SES) as given in section DR -
+Document Requirements
+F.2.3 Equivalence
+F.2.3.1 Equivalency in the structural context is determined and documented with the methods in the
+SES
+F.2.3.2 Any Equivalency calculations must prove Equivalency relative to Steel Tubing in the same
+application
+F.2.3.3 The properties of tubes and laminates may be combined to prove Equivalence.
+For example, in a Side Impact Structure consisting of one tube per F.3.2.1.e and a laminate
+panel, the panel only needs to be Equivalent to two Side Impact Tubes.
+F.2.4 Tolerance
+Tolerance on dimensions given in the rules is allowed and is addressed in the SES.
+F.2.5 Fabrication
+Vehicles must be fabricated in accordance with the design, materials, and processes described
+in the SES.
+F.3 TUBING AND MATERIAL
+F.3.1 Dimensions
+Diameter and Wall Thickness values provided in this Section F.3 are based on dimensions for
+commonly available tubing.
+Formula SAE® Rules 2024 © 2023 SAE International Page 25 of 140
+Version 1.0 1 Sep 2023
+F.3.2 Tubing Requirements
+F.3.2.1 Requirements by Application
+Steel Tube Must Alternative Tubing
+Application Meet Size per Material Permitted
+F.3.4: per F.3.5 ?
+a. Front Bulkhead Size B Yes
+b. Front Bulkhead Support Size C Yes
+c. Front Hoop Size A Yes
+d. Front Hoop Bracing Size B Yes
+e. Side Impact Structure Size B Yes
+f. Bent / Multi Upper Side Impact Member Size D Yes
+g. Main Hoop Size A NO
+h. Main Hoop Bracing Size B NO
+i. Main Hoop Bracing Supports Size C Yes
+j. Driver Restraint Harness Attachment Size B Yes
+k. Shoulder Harness Mounting Bar Size A NO
+l. Shoulder Harness Mounting Bar Bracing Size C Yes
+m. Accumulator Protection Structure Size B Yes
+n. Component Protection Size C Yes
+o. Structural Tubing Size C Yes
+F.3.3 Non Structural Tubing
+F.3.3.1 Definition
+Any tubing which does NOT meet F.3.2.1.o Structural Tubing
+F.3.3.2 Applicability
+Non Structural Tubing is ignored when assessing compliance to any rule
+F.3.4 Steel Tubing and Material
+F.3.4.1 Minimum Requirements for Steel Tubing
+A tube must meet all four minimum requirements for each Size specified:
+Minimum Minimum Minimum
+Minimum
+Area Cross Outside Example Sizes of
+Tube Wall
+Moment of Sectional Diameter or Round Tube
+Thickness
+Inertia Area Square Width
+1.0” x 0.095”
+a. Size A 11320 mm4 173 mm2 25.0 mm 2.0 mm
+25 x 2.5 mm
+1.0” x 0.065”
+b. Size B 8509 mm4 114 mm2 25.0 mm 1.2 mm
+25.4 x 1.6 mm
+1.0” x 0.049”
+c. Size C 6695 mm4 91 mm2 25.0 mm 1.2 mm
+25.4 x 1.2 mm
+1.375” x 0.049”
+d. Size D 18015 mm4 126 mm2 35.0 mm 1.2 mm
+35 x 1.2 mm
+Formula SAE® Rules 2024 © 2023 SAE International Page 26 of 140
+Version 1.0 1 Sep 2023
+F.3.4.2 Properties for ANY steel material for calculations submitted in an SES must be:
+a. Non Welded Properties for continuous material calculations:
+Young’s Modulus (E) = 200 GPa (29,000 ksi)
+Yield Strength (Sy) = 305 MPa (44.2 ksi)
+Ultimate Strength (Su) = 365 MPa (52.9 ksi)
+b. Welded Properties for discontinuous material such as joint calculations:
+Yield Strength (Sy) = 180 MPa (26 ksi)
+Ultimate Strength (Su) = 300 MPa (43.5 ksi)
+F.3.4.3 Where Welded tubing reinforcements are required (such as inserts for bolt holes or material
+to support suspension cutouts), Equivalence of the Welded tube and reinforcement must be
+shown to the original Non Welded tube in the SES
+F.3.5 Alternative Tubing Materials
+F.3.5.1 Alternative Materials may be used for applications shown as permitted in F.3.2.1
+F.3.5.2 If any Alternative Materials are used, the SES must contain:
+a. Documentation of material type, (purchase receipt, shipping document or letter of
+donation) and the material properties.
+b. Calculations that show equivalent to or better than the minimum requirements for steel
+tubing in the application as listed in F.3.4.1 for yield and ultimate strengths matching the
+Non Welded Steel properties from F.3.4.2.a above in bending, buckling and tension, for
+buckling modulus and for energy dissipation
+c. Details of the manufacturing technique and process
+F.3.5.3 Aluminum Tubing
+a. Minimum Wall Thickness for Aluminum Tubing: Non Welded 2.0 mm
+Welded 3.0 mm
+b. Non Welded properties for aluminum alloy 6061-T6 for calculations in an SES must be:
+Young’s Modulus (E) 69 GPa (10,000 ksi)
+Yield Strength (Sy) 240 MPa (34.8 ksi)
+Ultimate Strength (Su) 290 MPa (42.1 ksi)
+c. Welded properties for aluminum alloy 6061-T6 for calculations in an SES must be:
+Yield Strength (Sy) 115 MPa (16.7 ksi)
+Ultimate Strength (Su) 175 MPa (25.4 ksi)
+d. If welding is used on a regulated aluminum structure, the equivalent yield strength must
+be considered in the “as welded” condition for the alloy used unless the team provides
+detailed proof that the frame or component has been properly solution heat treated,
+artificially aged, and not subject to heating during team manufacturing.
+e. If aluminum was solution heat treated and age hardened to increase its strength after
+welding, the team must supply evidence as to how the process was performed.
+This includes, but is not limited to, the heat treating facility used, the process applied,
+and the fixturing used.
+Formula SAE® Rules 2024 © 2023 SAE International Page 27 of 140
+Version 1.0 1 Sep 2023
+F.4 COMPOSITE AND OTHER MATERIALS
+F.4.1 Requirements
+If any composite or other material is used, the SES must contain:
+F.4.1.1 Documentation of material type, (purchase receipt, shipping document or letter of donation)
+and the material properties.
+F.4.1.2 Details of the manufacturing technique and/or composite layup technique as well as the
+structural material used (examples - cloth type, weight, and resin type, number of layers, core
+material, and skin material if metal).
+F.4.1.3 Calculations that show equivalence of the structure to one of similar geometry made to meet
+the minimum requirements for a structure made from steel tubing per F.3.2. Equivalency
+calculations must be submitted for energy dissipation, yield and ultimate strengths in bending,
+buckling, and tension.
+F.4.1.4 Construction dates of the test panel(s) and monocoque, and approximate age(s) of the
+materials used.
+The intent is for the test panel to use the same material batch, material age, material storage,
+and student layup quality as the monocoque.
+F.4.2 Quasi-Isotropic Layup
+A layup with equal fiber strength and stiffness along any orientation in the plane of the layup.
+a. When a layup has equal fiber properties and mass in the 0/90/+45/-45 directions, the
+layup may be considered Quasi-Isotropic
+F.4.3 Laminate and Material Testing
+F.4.3.1 Testing Requirements
+a. Any tested samples must be engraved with the construction date, sample name, and
+peak test force.
+b. The same set of test results must not be used for different monocoques in different
+years.
+The intent is for the test panel to use the same material batch, material age, material storage,
+and student layup quality as the monocoque.
+F.4.3.2 Primary Structure Laminate Testing
+Teams must build new representative test panels for each ply schedule used in the regulated
+regions of the new chassis as a flat panel and perform a 3 point bending test on these panels.
+Refer to F.4.3.4
+a. Test panels must:
+• Measure one of the two options: 138 mm x 500 mm OR 275 mm x 500 mm
+• Be supported by a span distance of 400 mm
+• Have equal surface area for the top and bottom skin
+• Have bare edges, without skin material
+b. The SES must include:
+• Data from the 3 point bending tests
+• Pictures of the test samples
+Formula SAE® Rules 2024 © 2023 SAE International Page 28 of 140
+Version 1.0 1 Sep 2023
+• A picture of the test sample and test setup showing a measurement documenting
+the supported span distance used in the SES
+c. Test panel results must be used to derive stiffness, yield strength, ultimate strength and
+absorbed energy properties by the SES formula and limits for the purpose of calculating
+laminate panels equivalency corresponding to Primary Structure regions of the chassis.
+d. Test panels must use the thickest core associated with each skin layup.
+Designs may use core thickness that is 50% - 100% of the test panel core thickness
+associated with each skin layup.
+e. Calculation of derived properties must use the part of test data where deflection is 50
+mm or less
+f. Calculation of absorbed energy must use the integral of force times displacement
+F.4.3.3 Comparison Test
+Teams must make an equivalent test that will determine any compliance in the test rig and
+es
+```
+
+Also attached is an image that shows the results from an FEA simulation performed on an assembly of frame tubes. The frame tubes are made from welded steel tubing. Based on the results presented in the image and rule F.3.4.2b in the rule document, should we use the assembly in the vehicle? First provide an explanation for your answer (begin it with ‘Explanation:’). Then provide just a yes/no answer (begin it with ‘Answer:’) that summarizes your response."
+9,"We are a student engineering team designing a vehicle for the FSAE competition. Attached is the FSAE rules document. Also attached is an image that shows the results from an FEA simulation performed on an assembly of frame tubes. The frame tubes are made from welded steel tubing. Based on the results presented in the image and rule F.3.4.2b in the rule document, should we use the assembly in the vehicle? First provide an explanation for your answer (begin it with ‘Explanation:’). Then provide just a yes/no answer (begin it with ‘Answer:’) that summarizes your response.",yes,10.png,"F.3.4.2b states that the yield strength of welded steel is 180 MPa. The FEA shows that the maximum stress is 150 MPa, which is less than the yield strength. This assembly can be used.",F.3.4.2,"We are a student engineering team designing a vehicle for the FSAE competition. Below is context from the FSAE rule document which might or might not be relevant for the question: 
+
+```
+riangulated structural
+tube, or monocoque equivalent. * see note in step F.1.13 above
+F.1.16 Buckling Modulus (EI)
+Equal to E*I, where E = modulus of Elasticity, and I = area moment of inertia about the
+weakest axis.
+F.1.17 Triangulation
+An arrangement of Frame Members where all members and segments of members between
+bends or nodes with Structural tubes form a structure composed entirely of triangles.
+a. This is generally required between an upper member and a lower member, both of
+which may have multiple segments requiring a diagonal to form multiple triangles.
+b. This is also what is meant by “properly triangulated”.
+Formula SAE® Rules 2024 © 2023 SAE International Page 24 of 140
+Version 1.0 1 Sep 2023
+F.1.18 Nonflammable Material
+Metal or a Non Metallic material which meets UL94-V0, FAR25 or approved equivalent
+F.2 DOCUMENTATION
+F.2.1 Structural Equivalency Spreadsheet - SES
+F.2.1.1 The SES is a supplement to the Formula SAE Rules and may provide guidance or further details
+in addition to those of the Formula SAE Rules.
+F.2.1.2 The SES provides the means to:
+a. Document the Primary Structure and show compliance with the Formula SAE Rules
+b. Determine Equivalence to Formula SAE Rules using an accepted basis
+F.2.2 Structural Documentation
+F.2.2.1 All teams must submit a Structural Equivalency Spreadsheet (SES) as given in section DR -
+Document Requirements
+F.2.3 Equivalence
+F.2.3.1 Equivalency in the structural context is determined and documented with the methods in the
+SES
+F.2.3.2 Any Equivalency calculations must prove Equivalency relative to Steel Tubing in the same
+application
+F.2.3.3 The properties of tubes and laminates may be combined to prove Equivalence.
+For example, in a Side Impact Structure consisting of one tube per F.3.2.1.e and a laminate
+panel, the panel only needs to be Equivalent to two Side Impact Tubes.
+F.2.4 Tolerance
+Tolerance on dimensions given in the rules is allowed and is addressed in the SES.
+F.2.5 Fabrication
+Vehicles must be fabricated in accordance with the design, materials, and processes described
+in the SES.
+F.3 TUBING AND MATERIAL
+F.3.1 Dimensions
+Diameter and Wall Thickness values provided in this Section F.3 are based on dimensions for
+commonly available tubing.
+Formula SAE® Rules 2024 © 2023 SAE International Page 25 of 140
+Version 1.0 1 Sep 2023
+F.3.2 Tubing Requirements
+F.3.2.1 Requirements by Application
+Steel Tube Must Alternative Tubing
+Application Meet Size per Material Permitted
+F.3.4: per F.3.5 ?
+a. Front Bulkhead Size B Yes
+b. Front Bulkhead Support Size C Yes
+c. Front Hoop Size A Yes
+d. Front Hoop Bracing Size B Yes
+e. Side Impact Structure Size B Yes
+f. Bent / Multi Upper Side Impact Member Size D Yes
+g. Main Hoop Size A NO
+h. Main Hoop Bracing Size B NO
+i. Main Hoop Bracing Supports Size C Yes
+j. Driver Restraint Harness Attachment Size B Yes
+k. Shoulder Harness Mounting Bar Size A NO
+l. Shoulder Harness Mounting Bar Bracing Size C Yes
+m. Accumulator Protection Structure Size B Yes
+n. Component Protection Size C Yes
+o. Structural Tubing Size C Yes
+F.3.3 Non Structural Tubing
+F.3.3.1 Definition
+Any tubing which does NOT meet F.3.2.1.o Structural Tubing
+F.3.3.2 Applicability
+Non Structural Tubing is ignored when assessing compliance to any rule
+F.3.4 Steel Tubing and Material
+F.3.4.1 Minimum Requirements for Steel Tubing
+A tube must meet all four minimum requirements for each Size specified:
+Minimum Minimum Minimum
+Minimum
+Area Cross Outside Example Sizes of
+Tube Wall
+Moment of Sectional Diameter or Round Tube
+Thickness
+Inertia Area Square Width
+1.0” x 0.095”
+a. Size A 11320 mm4 173 mm2 25.0 mm 2.0 mm
+25 x 2.5 mm
+1.0” x 0.065”
+b. Size B 8509 mm4 114 mm2 25.0 mm 1.2 mm
+25.4 x 1.6 mm
+1.0” x 0.049”
+c. Size C 6695 mm4 91 mm2 25.0 mm 1.2 mm
+25.4 x 1.2 mm
+1.375” x 0.049”
+d. Size D 18015 mm4 126 mm2 35.0 mm 1.2 mm
+35 x 1.2 mm
+Formula SAE® Rules 2024 © 2023 SAE International Page 26 of 140
+Version 1.0 1 Sep 2023
+F.3.4.2 Properties for ANY steel material for calculations submitted in an SES must be:
+a. Non Welded Properties for continuous material calculations:
+Young’s Modulus (E) = 200 GPa (29,000 ksi)
+Yield Strength (Sy) = 305 MPa (44.2 ksi)
+Ultimate Strength (Su) = 365 MPa (52.9 ksi)
+b. Welded Properties for discontinuous material such as joint calculations:
+Yield Strength (Sy) = 180 MPa (26 ksi)
+Ultimate Strength (Su) = 300 MPa (43.5 ksi)
+F.3.4.3 Where Welded tubing reinforcements are required (such as inserts for bolt holes or material
+to support suspension cutouts), Equivalence of the Welded tube and reinforcement must be
+shown to the original Non Welded tube in the SES
+F.3.5 Alternative Tubing Materials
+F.3.5.1 Alternative Materials may be used for applications shown as permitted in F.3.2.1
+F.3.5.2 If any Alternative Materials are used, the SES must contain:
+a. Documentation of material type, (purchase receipt, shipping document or letter of
+donation) and the material properties.
+b. Calculations that show equivalent to or better than the minimum requirements for steel
+tubing in the application as listed in F.3.4.1 for yield and ultimate strengths matching the
+Non Welded Steel properties from F.3.4.2.a above in bending, buckling and tension, for
+buckling modulus and for energy dissipation
+c. Details of the manufacturing technique and process
+F.3.5.3 Aluminum Tubing
+a. Minimum Wall Thickness for Aluminum Tubing: Non Welded 2.0 mm
+Welded 3.0 mm
+b. Non Welded properties for aluminum alloy 6061-T6 for calculations in an SES must be:
+Young’s Modulus (E) 69 GPa (10,000 ksi)
+Yield Strength (Sy) 240 MPa (34.8 ksi)
+Ultimate Strength (Su) 290 MPa (42.1 ksi)
+c. Welded properties for aluminum alloy 6061-T6 for calculations in an SES must be:
+Yield Strength (Sy) 115 MPa (16.7 ksi)
+Ultimate Strength (Su) 175 MPa (25.4 ksi)
+d. If welding is used on a regulated aluminum structure, the equivalent yield strength must
+be considered in the “as welded” condition for the alloy used unless the team provides
+detailed proof that the frame or component has been properly solution heat treated,
+artificially aged, and not subject to heating during team manufacturing.
+e. If aluminum was solution heat treated and age hardened to increase its strength after
+welding, the team must supply evidence as to how the process was performed.
+This includes, but is not limited to, the heat treating facility used, the process applied,
+and the fixturing used.
+Formula SAE® Rules 2024 © 2023 SAE International Page 27 of 140
+Version 1.0 1 Sep 2023
+F.4 COMPOSITE AND OTHER MATERIALS
+F.4.1 Requirements
+If any composite or other material is used, the SES must contain:
+F.4.1.1 Documentation of material type, (purchase receipt, shipping document or letter of donation)
+and the material properties.
+F.4.1.2 Details of the manufacturing technique and/or composite layup technique as well as the
+structural material used (examples - cloth type, weight, and resin type, number of layers, core
+material, and skin material if metal).
+F.4.1.3 Calculations that show equivalence of the structure to one of similar geometry made to meet
+the minimum requirements for a structure made from steel tubing per F.3.2. Equivalency
+calculations must be submitted for energy dissipation, yield and ultimate strengths in bending,
+buckling, and tension.
+F.4.1.4 Construction dates of the test panel(s) and monocoque, and approximate age(s) of the
+materials used.
+The intent is for the test panel to use the same material batch, material age, material storage,
+and student layup quality as the monocoque.
+F.4.2 Quasi-Isotropic Layup
+A layup with equal fiber strength and stiffness along any orientation in the plane of the layup.
+a. When a layup has equal fiber properties and mass in the 0/90/+45/-45 directions, the
+layup may be considered Quasi-Isotropic
+F.4.3 Laminate and Material Testing
+F.4.3.1 Testing Requirements
+a. Any tested samples must be engraved with the construction date, sample name, and
+peak test force.
+b. The same set of test results must not be used for different monocoques in different
+years.
+The intent is for the test panel to use the same material batch, material age, material storage,
+and student layup quality as the monocoque.
+F.4.3.2 Primary Structure Laminate Testing
+Teams must build new representative test panels for each ply schedule used in the regulated
+regions of the new chassis as a flat panel and perform a 3 point bending test on these panels.
+Refer to F.4.3.4
+a. Test panels must:
+• Measure one of the two options: 138 mm x 500 mm OR 275 mm x 500 mm
+• Be supported by a span distance of 400 mm
+• Have equal surface area for the top and bottom skin
+• Have bare edges, without skin material
+b. The SES must include:
+• Data from the 3 point bending tests
+• Pictures of the te
+```
+
+Also attached is an image that shows the results from an FEA simulation performed on an assembly of frame tubes. The frame tubes are made from welded steel tubing. Based on the results presented in the image and rule F.3.4.2b in the rule document, should we use the assembly in the vehicle? First provide an explanation for your answer (begin it with ‘Explanation:’). Then provide just a yes/no answer (begin it with ‘Answer:’) that summarizes your response."
+10,"We are a student engineering team designing a vehicle for the FSAE competition. Attached is the FSAE rules document. Also attached is an image that shows the calculation of the stress on the pedal slats due to a force applied on the pedal. Based on rule T.3.2.2 in the rule document, did we use correct inputs in our analysis? First provide an explanation for your answer (begin it with ‘Explanation:’). Then provide just a yes/no answer (begin it with ‘Answer:’) that summarizes your response.",yes,11.png,The input force on the brakes is over the 2000 N required in the rules.,T.3.2.2,"We are a student engineering team designing a vehicle for the FSAE competition. Below is context from the FSAE rule document which might or might not be relevant for the question: 
+
+```
+ch by one of the four:
+a. Wrap around the Shoulder Harness Mounting bar
+b. Bolt through a welded tube insert or tested monocoque attachment F.7.9
+c. Bolt or clip to a tab or bracket ( T.2.4.3 ) on the Shoulder Harness Mounting bar
+d. Wrap around physically tested hardware attached to a monocoque
+T.2.6.4 Any bolt used to attach a Shoulder Belt, directly to the chassis or to an intermediate bracket, is
+a Critical Fasteners, see T.8.2, with a minimum diameter that is the smaller of:
+• The bolt diameter specified by the manufacturer
+• 10 mm or 3/8”
+T.2.7 Anti-Submarine Belt Mounting
+T.2.7.1 The Anti-Submarine Belt of a 5 point harness must be mounted with the mounting point in
+line with or slightly forward of the driver’s Chest to Groin Line with an Anti-Submarine Belt
+Side View Angle no more than 20°
+Formula SAE® Rules 2024 © 2023 SAE International Page 60 of 140
+Version 1.0 1 Sep 2023
+T.2.7.2 The Anti-Submarine Belts of a 6 point harness must be mounted in one of the following ways:
+a. With the belts going vertically down from the groin, or with an Anti-Submarine Belt Side
+View Angle up to 20° rearwards. The Anti-Submarine Belt Mount Spacing should be
+approximately 100 mm apart.
+b. With the Anti-Submarine Belt Mounting Points on the Primary Structure at or near the
+Lap Belt anchorages, the driver sitting on the Anti-Submarine Belts, and the belts coming
+up around the groin to the release buckle.
+T.2.7.3 Installation of all Anti-Submarine Belts must go in a straight line from the Anti-Submarine Belt
+Mounting Point(s) without touching any hole in the seat or any other intermediate structure
+until they reach:
+a. The release buckle for the 5 Point Harness mounting per T.2.7.1
+b. The first point where the belt touches the driver’s body for the 6 Point Harness mounting
+per T.2.7.2
+T.2.7.4 The Anti Submarine Belts must attach by one of the three:
+a. Bolt or eyebolt through a welded tube insert or tested monocoque attachment F.7.9
+b. Bolt or clip to a tab or bracket ( T.2.4.3 ) on a tube frame
+Formula SAE® Rules 2024 © 2023 SAE International Page 61 of 140
+Version 1.0 1 Sep 2023
+c. Wrap around a tube meeting F.3.2.1.j that connects the Lower Side Impact tubes F.6.4.5.
+The belt must not be able to touch the ground.
+T.2.7.5 Any bolt used to attach an Anti-Submarine Belt, directly to the chassis or to an intermediate
+bracket, is a Critical Fasteners, see T.8.2, with a minimum diameter that is the smaller of:
+• The bolt diameter specified by the manufacturer
+• 8 mm or 5/16”
+T.2.8 Head Restraint
+T.2.8.1 A Head Restraint must be provided to limit the rearward motion of the driver’s head.
+T.2.8.2 The Head Restraint must be vertical or near vertical in side view.
+T.2.8.3 All material and structure of the Head Restraint must be inside one or both of:
+a. Rollover Protection Envelope F.1.13
+b. Head Restraint Protection (if used) F.5.10
+T.2.8.4 The Head Restraint, attachment and mounting must be strong enough to withstand a
+minimum force of:
+a. 900 N applied in a rearward direction
+b. 300 N applied in a lateral or vertical direction
+T.2.8.5 For all drivers, the Head Restraint must be located and adjusted where:
+a. The Head Restraint is no more than 25 mm away from the back of the driver’s helmet,
+with the driver in their normal driving position.
+b. The contact point of the back of the driver’s helmet on the Head Restraint is no less than
+50 mm from any edge of the Head Restraint.
+Approximately 100 mm of longitudinal adjustment should accommodate range of specified
+drivers. Several Head Restraints with different thicknesses may be used
+T.2.8.6 The Head Restraint padding must:
+a. Be an energy absorbing material that is one of the two:
+• Meets SFI Spec 45.2
+• CONFOR CF45 (Blue) or CONFOR CF45M (Blue) FIA Technical List No 17
+b. Have a minimum thickness of 38 mm
+c. Have a minimum width of 15 cm
+d. Meet one of the following:
+• minimum area of 235 cm2 AND minimum total height adjustment of 17.5 cm
+• minimum height of 28 cm
+e. Be covered with a thin, flexible material that contains a ~20 mm diameter inspection
+hole in a surface other than the front surface
+T.2.9 Roll Bar Padding
+Any portion of the roll bar, roll bar bracing or Chassis which might be contacted by the driver’s
+helmet must be covered with a minimum thickness of 12 mm of padding which meets SFI Spec
+45.1 or FIA 8857-2001.
+Formula SAE® Rules 2024 © 2023 SAE International Page 62 of 140
+Version 1.0 1 Sep 2023
+T.3 BRAKES
+T.3.1 Brake System
+T.3.1.1 The vehicle must have a Brake System
+T.3.1.2 The Brake System must:
+a. Act on all four wheels
+b. Be operated by a single control
+c. Be capable of locking all four wheels
+T.3.1.3 The Brake System must have two independent hydraulic circuits
+A leak or failure at any point in the Brake System must maintain effective brake power on
+minimum two wheels
+T.3.1.4 Each hydraulic circuit must have its own fluid reserve using separate reservoirs or an OEM
+style reservoir
+T.3.1.5 A single brake acting on a limited slip differential may be used
+T.3.1.6 “Brake by Wire” systems are prohibited
+T.3.1.7 Unarmored plastic brake lines are prohibited
+T.3.1.8 The Brake System must be protected with scatter shields from failure of the drive train (see
+T.5.2) or from minor collisions.
+T.3.1.9 In side view any portion of the Brake System that is mounted on the sprung part of the vehicle
+must not project below the lower surface of the chassis
+T.3.1.10 Fasteners in the Brake System are Critical Fasteners, see T.8.2
+T.3.2 Brake Pedal, Pedal Box and Mounting
+T.3.2.1 The Brake Pedal must be one of:
+• Fabricated from steel or aluminum
+• Machined from steel, aluminum or titanium
+T.3.2.2 The Brake Pedal and associated components design must withstand a minimum force of 2000
+N without any failure of the Brake System, pedal box, chassis mounting, or pedal adjustment
+This is not a design criteria. The Brake Pedal and Brake System may be tested by pressing the
+pedal with the maximum force that can be exerted by any official when seated normally
+T.3.2.3 Failure of non-loadbearing components in the Brake System or pedal box must not interfere
+with Brake Pedal operation or Brake System function
+T.3.2.4 (EV only) Additional requirements for Electric Vehicles:
+a. The first 90% of the Brake Pedal travel may be used to regenerate energy without
+actuating the hydraulic brake system.
+b. The remaining Brake Pedal travel must directly actuate the hydraulic brake system.
+Brake energy regeneration may stay active.
+T.3.3 Brake Over Travel Switch - BOTS
+T.3.3.1 The vehicle must have a Brake Over Travel Switch (BOTS). Brake pedal travel exceeding the
+normal range will actuate the switch
+T.3.3.2 The BOTS must be a mechanical single pole, single throw (commonly known as a two position)
+switch (push-pull or flip type).
+Formula SAE® Rules 2024 © 2023 SAE International Page 63 of 140
+Version 1.0 1 Sep 2023
+T.3.3.3 Operation of the BOTS to the OFF position must Open the Shutdown Circuit IC.9.2.2 / EV.7.2.2
+T.3.3.4 Repeated operation of the switch must not reset or restore power
+T.3.3.5 The driver must not be able to reset the BOTS.
+T.3.3.6 The BOTS must be implemented with analog components, and not using programmable logic
+controllers, engine control units, or similar functioning digital controllers.
+T.3.4 Brake Light
+T.3.4.1 The vehicle must have a Brake Light that is clearly visible from the rear in very bright sunlight.
+T.3.4.2 The Brake Light must be:
+a. Red in color on a Black background
+b. Rectangular, triangular or near round shape with a minimum shining surface of 15 cm2
+c. Mounted between the wheel centerline and driver’s shoulder level vertically and
+approximately on vehicle centerline laterally.
+T.3.4.3 When LED lights are used without a diffuser, they must not be more than 20 mm apart.
+T.3.4.4 If a single line of LEDs is used, the minimum length is 150 mm.
+T.4 ELECTRONIC THROTTLE COMPONENTS
+T.4.1 Applicability
+This section T.4 applies only for:
+• IC vehicles using Electronic Throttle Control (ETC) IC.4
+• EV vehicles
+T.4.2 Accelerator Pedal Position Sensor - APPS
+T.4.2.1 The Accelerator Pedal must actuate the APPS T.1.4.1
+a. Two springs must be used to return the foot pedal to 0% Pedal Travel
+b. Each spring must be capable of returning the pedal to 0% Pedal Travel with the other
+disconnected. The springs in the APPS are not acceptable pedal return springs.
+T.4.2.2 Two or more electrically separate sensors must be used as APPSs. A single OEM type APPS
+with two completely separate sensors in a single housing is acceptable.
+T.4.2.3 The APPS sensors must have different transfer functions which meet one of the two:
+• Each sensor has different gradients and/or offsets to the other(s). The circuit must have
+a pull-up or pull-down
+```
+
+Also attached is an image that shows the calculation of the stress on the pedal slats due to a force applied on the pedal. Based on rule T.3.2.2 in the rule document, did we use correct inputs in our analysis? First provide an explanation for your answer (begin it with ‘Explanation:’). Then provide just a yes/no answer (begin it with ‘Answer:’) that summarizes your response."
+11,"We are a student engineering team designing a vehicle for the FSAE competition. Attached is the FSAE rules document. Also attached is an image that shows the calculation of the stress on the pedal slats due to a force applied on the pedal. Based on rule T.3.2.2 in the rule document, did we use correct inputs in our analysis? First provide an explanation for your answer (begin it with ‘Explanation:’). Then provide just a yes/no answer (begin it with ‘Answer:’) that summarizes your response.",no,12.png,The input force on the brakes in the calculation is less than the 2000 N required in the rules.,T.3.2.2,"We are a student engineering team designing a vehicle for the FSAE competition. Below is context from the FSAE rule document which might or might not be relevant for the question: 
+
+```
+shields from failure of the drive train (see
+T.5.2) or from minor collisions.
+T.3.1.9 In side view any portion of the Brake System that is mounted on the sprung part of the vehicle
+must not project below the lower surface of the chassis
+T.3.1.10 Fasteners in the Brake System are Critical Fasteners, see T.8.2
+T.3.2 Brake Pedal, Pedal Box and Mounting
+T.3.2.1 The Brake Pedal must be one of:
+• Fabricated from steel or aluminum
+• Machined from steel, aluminum or titanium
+T.3.2.2 The Brake Pedal and associated components design must withstand a minimum force of 2000
+N without any failure of the Brake System, pedal box, chassis mounting, or pedal adjustment
+This is not a design criteria. The Brake Pedal and Brake System may be tested by pressing the
+pedal with the maximum force that can be exerted by any official when seated normally
+T.3.2.3 Failure of non-loadbearing components in the Brake System or pedal box must not interfere
+with Brake Pedal operation or Brake System function
+T.3.2.4 (EV only) Additional requirements for Electric Vehicles:
+a. The first 90% of the Brake Pedal travel may be used to regenerate energy without
+actuating the hydraulic brake system.
+b. The remaining Brake Pedal travel must directly actuate the hydraulic brake system.
+Brake energy regeneration may stay active.
+T.3.3 Brake Over Travel Switch - BOTS
+T.3.3.1 The vehicle must have a Brake Over Travel Switch (BOTS). Brake pedal travel exceeding the
+normal range will actuate the switch
+T.3.3.2 The BOTS must be a mechanical single pole, single throw (commonly known as a two position)
+switch (push-pull or flip type).
+Formula SAE® Rules 2024 © 2023 SAE International Page 63 of 140
+Version 1.0 1 Sep 2023
+T.3.3.3 Operation of the BOTS to the OFF position must Open the Shutdown Circuit IC.9.2.2 / EV.7.2.2
+T.3.3.4 Repeated operation of the switch must not reset or restore power
+T.3.3.5 The driver must not be able to reset the BOTS.
+T.3.3.6 The BOTS must be implemented with analog components, and not using programmable logic
+controllers, engine control units, or similar functioning digital controllers.
+T.3.4 Brake Light
+T.3.4.1 The vehicle must have a Brake Light that is clearly visible from the rear in very bright sunlight.
+T.3.4.2 The Brake Light must be:
+a. Red in color on a Black background
+b. Rectangular, triangular or near round shape with a minimum shining surface of 15 cm2
+c. Mounted between the wheel centerline and driver’s shoulder level vertically and
+approximately on vehicle centerline laterally.
+T.3.4.3 When LED lights are used without a diffuser, they must not be more than 20 mm apart.
+T.3.4.4 If a single line of LEDs is used, the minimum length is 150 mm.
+T.4 ELECTRONIC THROTTLE COMPONENTS
+T.4.1 Applicability
+This section T.4 applies only for:
+• IC vehicles using Electronic Throttle Control (ETC) IC.4
+• EV vehicles
+T.4.2 Accelerator Pedal Position Sensor - APPS
+T.4.2.1 The Accelerator Pedal must actuate the APPS T.1.4.1
+a. Two springs must be used to return the foot pedal to 0% Pedal Travel
+b. Each spring must be capable of returning the pedal to 0% Pedal Travel with the other
+disconnected. The springs in the APPS are not acceptable pedal return springs.
+T.4.2.2 Two or more electrically separate sensors must be used as APPSs. A single OEM type APPS
+with two completely separate sensors in a single housing is acceptable.
+T.4.2.3 The APPS sensors must have different transfer functions which meet one of the two:
+• Each sensor has different gradients and/or offsets to the other(s). The circuit must have
+a pull-up or pull-down resistor to bring an open circuit input to 0% Pedal Travel
+• An OEM pedal sensor with opposite slopes. Non OEM opposite slope sensor
+configurations require prior approval.
+The intent is that in a short circuit the APPSs will only agree at 0% Pedal Travel
+T.4.2.4 Implausibility is defined as a deviation of more than 10% Pedal Travel between the sensors or
+other failure as defined in this Section T.4.2. Use of values larger than 10% Pedal Travel
+require justification in the ETC Systems Form and may not be approved
+T.4.2.5 If an Implausibility occurs between the values of the APPSs and persists for more than 100
+msec, the power to the (IC) Electronic Throttle / (EV) Motor(s) must be immediately stopped
+completely.
+Formula SAE® Rules 2024 © 2023 SAE International Page 64 of 140
+Version 1.0 1 Sep 2023
+(EV only) It is not necessary to Open the Shutdown Circuit, the motor controller(s) stopping
+the power to the Motor(s) is sufficient.
+T.4.2.6 If three sensors are used, then in the case of an APPS failure, any two sensors that agree
+within 10% Pedal Travel may be used to define the (IC) throttle position / (EV) torque target
+and the 3rd APPS may be ignored.
+T.4.2.7 Each APPS must be able to be checked during Technical Inspection by having one of the two:
+• A separate detachable connector that enables a check of functions by unplugging it
+• An inline switchable breakout box available that allows disconnection of each APPS
+signal.
+T.4.2.8 The APPS signals must be sent directly to a controller using an analogue signal or via a digital
+data transmission bus such as CAN or FlexRay.
+T.4.2.9 Any failure of the APPS or APPS wiring must be detectable by the controller and must be
+treated like an Implausibility, see T.4.2.4 above
+T.4.2.10 When an analogue signal is used, the APPS will be considered to have failed when they
+achieve an open circuit or short circuit condition which generates a signal outside of the
+normal operating range, for example <0.5 V or >4.5 V.
+The circuitry used to evaluate the sensor must use pull down or pull up resistors to ensure
+that open circuit signals result in a failure being detected.
+T.4.2.11 When any kind of digital data transmission is used to transmit the APPS signal,
+a. The ETC Systems Form must contain a detailed description of all the potential failure
+modes that can occur, the strategy that is used to detect these failures and the tests that
+have been conducted to prove that the detection strategy works.
+b. The failures to be considered must include but are not limited to the failure of the APPS,
+APPS signals being out of range, corruption of the message and loss of messages and the
+associated time outs.
+T.4.2.12 The current rules are written to only apply to the APPS (pedal), but the integrity of the torque
+command signal is important in all stages.
+T.4.3 Brake System Encoder - BSE
+T.4.3.1 The vehicle must have a sensor or switch to measure brake pedal position or brake system
+pressure
+T.4.3.2 The BSE must be able to be checked during Technical Inspection by having one of:
+• A separate detachable connector(s) for any BSE signal(s) to the main ECU without
+affecting any other connections
+• An inline switchable breakout box available that allows disconnection of each BSE
+signal(s) to the main ECU without affecting any other connections
+T.4.3.3 The BSE or switch signals must be sent directly to a controller using an analogue signal or via a
+digital data transmission bus such as CAN or FlexRay
+Any failure of the BSE or BSE wiring that persists more than 100 msec must be detectable by
+the controller and treated like an implausibility and power to the (IC) electronic throttle / (EV)
+Motor(s) must be immediately stopped completely.
+(EV only) It is not necessary to completely deactivate the Tractive System, the motor
+controller(s) stopping power to the motor(s) is sufficient.
+Formula SAE® Rules 2024 © 2023 SAE International Page 65 of 140
+Version 1.0 1 Sep 2023
+T.4.3.4 When an analogue signal is used, the BSE sensors will be considered to have failed when they
+achieve an open circuit or short circuit condition which generates a signal outside of the
+normal operating range, for example <0.5 V or >4.5 V.
+The circuitry used to evaluate the sensor must use pull down or pull up resistors to ensure
+that open circuit signals result in a failure being detected.
+T.4.3.5 When any kind of digital data transmission is used to transmit the BSE signal:
+a. The ETC Systems Form must contain a detailed description of all the potential failure
+modes that can occur, the strategy that is used to detect these failures and the tests that
+have been conducted to prove that the detection strategy works.
+b. The failures modes must include but are not limited to the failure of the sensor, sensor
+signals being out of range, corruption of the message and loss of messages and the
+associated time outs.
+c. In all cases a sensor failure must immediately shutdown power to the motor(s).
+T.5 POWERTRAIN
+T.5.1 Transmission and Drive
+Any transmission and drivetrain may be used.
+T.5.2 Drivetrain Shields and Guards
+T.5.2.1 Exposed high speed final drivetrain equipment such as Continuo
+```
+
+Also attached is an image that shows the calculation of the stress on the pedal slats due to a force applied on the pedal. Based on rule T.3.2.2 in the rule document, did we use correct inputs in our analysis? First provide an explanation for your answer (begin it with ‘Explanation:’). Then provide just a yes/no answer (begin it with ‘Answer:’) that summarizes your response."
+12,"We are a student engineering team designing a vehicle for the FSAE competition. Attached is the FSAE rules document. Also attached is an image the results from an experiment where the temperature of gearbox components was measured over time. Based on rule T.1.6.1 in the rule document and assuming that the driver may come in contact with the gearbox, can we omit insulation around the gearbox?  First provide an explanation for your answer (begin it with ‘Explanation:’). Then provide just a yes/no answer (begin it with ‘Answer:’) that summarizes your response.",yes,13.png,"Rule T.1.6.1 states that sufficient heat insulation must be provided to ensure that the driver will not contact any metal or other materials which may become heated to a surface temperature above 60 degrees C. The image shows that the gearbox temperature does not surpass 60 degrees C, so insulation can be omitted.",T.1.6.1,"We are a student engineering team designing a vehicle for the FSAE competition. Below is context from the FSAE rule document which might or might not be relevant for the question: 
+
+```
+1.1.4 During this test:
+a. The steering wheel, steering column, seat and all padding may be removed
+b. The shifter, shift mechanism, or clutch mechanism must not be removed unless it is
+integral with the steering wheel and is removed with the steering wheel
+c. The firewall must not be moved or removed
+d. Cables, wires, hoses, tubes, etc. must not block movement of the template
+During inspection, the steering column, for practical purposes, will not be removed. The
+template may be maneuvered around the steering column, but not any fixed supports.
+For ease of use, the template may contain a slot at the front center that the steering column
+may pass through.
+Formula SAE® Rules 2024 © 2023 SAE International Page 54 of 140
+Version 1.0 1 Sep 2023
+T.1.2 Internal Cross Section
+T.1.2.1 Requirement:
+a. The cockpit must have a free internal cross section
+b. The template shown below must pass through the cockpit
+Template maximum thickness: 7 mm
+T.1.2.2 Conduct of the test. The template:
+a. Will be held vertically and inserted into the cockpit opening rearward of the rearmost
+portion of the steering column.
+b. Will then be passed horizontally through the cockpit to a point 100 mm rearwards of the
+face of the rearmost pedal when in the inoperative position
+c. May be moved vertically inside the cockpit
+T.1.2.3 During this test:
+a. If the pedals are adjustable, they must be in their most forward position.
+b. The steering wheel may be removed
+c. Padding may be removed if it can be easily removed without the use of tools with the
+driver in the seat
+d. The seat and any seat insert(s) that may be used must stay in the cockpit
+e. Cables, wires, hoses, tubes, etc. must not block movement of the template
+f. The steering column and associated components may pass through the 50 mm wide
+center band of the template.
+For ease of use, the template may contain a full or partial slot in the shaded area shown on the
+figure
+T.1.3 Driver Protection
+T.1.3.1 The driver’s feet and legs must be completely contained inside the Major Structure of the
+Chassis.
+Formula SAE® Rules 2024 © 2023 SAE International Page 55 of 140
+Version 1.0 1 Sep 2023
+T.1.3.2 While the driver’s feet are touching the pedals, in side and front views, any part of the driver’s
+feet or legs must not extend above or outside of the Major Structure of the Chassis.
+T.1.3.3 All moving suspension and steering components and other sharp edges inside the cockpit
+between the Front Hoop and a vertical plane 100 mm rearward of the pedals must be covered
+by a shield made of a solid material.
+Moving components include, but are not limited to springs, shock absorbers, rocker arms, anti-
+roll/sway bars, steering racks and steering column CV joints.
+T.1.3.4 Covers over suspension and steering components must be removable to allow inspection of
+the mounting points
+T.1.4 Vehicle Controls
+T.1.4.1 Accelerator Pedal
+a. An Accelerator Pedal must control the Powertrain output
+b. Pedal Travel is the percent of travel from a fully released position to a fully applied
+position. 0% is fully released and 100% is fully applied.
+c. The Accelerator Pedal must:
+• Return to 0% Pedal Travel when not pushed
+• Have a positive stop to prevent any cable, actuation system or sensor from damage
+or overstress
+T.1.4.2 Any mechanism in the throttle system that could become jammed must be covered.
+This is to prevent debris or interference and includes but is not limited to a gear mechanism
+T.1.4.3 All Vehicle Controls (steering, gear change, Cockpit Main Switch / Cockpit Shutdown Button)
+must be operated from inside the cockpit without any part of the driver, including hands, arms
+or elbows, being outside of:
+a. The Side Impact Structure defined in F.6.4 / F.7.5
+b. Two longitudinal vertical planes parallel to the centerline of the chassis touching the
+uppermost member of the Side Impact Structure
+T.1.4.4 All Vehicle Controls must stay below the top-most point of the Front Hoop in any operational
+position
+T.1.5 Driver’s Seat
+T.1.5.1 The Driver’s Seat must be protected by one of the following:
+a. In side view, the lowest point of any Driver’s Seat must be no lower than the upper
+surface of the lowest structural tube or equivalent
+b. A longitudinal tube (or tubes) that meets the requirements for Side Impact tubing
+(F.3.2.1.e), passing underneath the lowest point of the Driver Seat.
+T.1.6 Thermal Protection
+T.1.6.1 When seated in the normal driving position, sufficient heat insulation must be provided to
+ensure that the driver will not contact any metal or other materials which may become heated
+to a surface temperature above 60°C.
+T.1.6.2 Insulation may be external to the cockpit or incorporated with the Driver’s Seat or Firewall.
+Formula SAE® Rules 2024 © 2023 SAE International Page 56 of 140
+Version 1.0 1 Sep 2023
+T.1.6.3 The design must address all three types of heat transfer between the heat source (examples
+include but are not limited to: exhaust pipe, coolant hose/tube, Accumulator Container) and
+the panel that the driver could contact (seat or floor):
+a. Conduction Isolation by one of the following:
+• No direct contact between the heat source and the panel
+• A heat resistant, conduction isolation material with a minimum thickness of 8 mm
+between the heat source and the panel
+b. Convection Isolation by a minimum air gap of 25 mm between the heat source and the
+panel
+c. Radiation Isolation by one of the following:
+• A solid metal heat shield with a minimum thickness of 0.4 mm
+• Reflective foil or tape when combined with conduction insulation
+T.1.7 Floor Closeout
+T.1.7.1 All vehicles must have a Floor Closeout to prevent track debris from entering
+T.1.7.2 The Floor Closeout must extend from the foot area to the firewall
+T.1.7.3 The panel(s) must be made of a solid, non brittle material
+T.1.7.4 If multiple panels are used, gaps between panels must not exceed 3 mm
+T.1.8 Firewall(s)
+T.1.8.1 Requirement
+A Firewall(s) must separate the driver compartment and any portion of the Driver Harness
+from:
+a. All components of the Fuel System, the engine oil, the liquid cooling systems, any lithium
+batteries
+b. (EV only) All Tractive System components other than Outboard Wheel Motors EV.4.1.3
+where mounted at the wheels or on the front control arms
+T.1.8.2 Construction
+Any Firewall must:
+a. Be a non permeable surface made from a rigid, Nonflammable Material
+b. Seal completely against the passage of fluids (the Firewall itself, edges, any pass throughs
+and Floor Closeout)
+c. Be rigidly mounted
+T.1.8.3 Positioning
+The Firewall must extend sufficiently far upwards and/or rearwards and/or sideways where
+any point on the drivers body less than 100 mm above the bottom of the helmet of the tallest
+driver must not be in direct line of sight with any part given in T.1.8.1 above
+T.1.8.4 Details
+a. Firewalls composed of multiple panels must overlap and be sealed at the joints
+Sealing between firewalls must not be a stressed part of the Firewall
+b. Grommets must be used to seal any pass through for wiring, cables, etc
+Formula SAE® Rules 2024 © 2023 SAE International Page 57 of 140
+Version 1.0 1 Sep 2023
+c. Any seals or adhesives used with the Firewall must be rated for the application
+environment
+T.1.8.5 (EV only) The Accumulator Container must not be part of the Firewall
+T.1.9 Tractive System Firewalls (EV Only)
+T.1.9.1 Tractive System Firewalls must meet the requirements of T.1.8 above
+T.1.9.2 Tractive System Firewalls must be:
+a. Made of aluminum
+b. Grounded, refer to EV.6.7 Grounding
+T.2 DRIVER ACCOMMODATION
+T.2.1 Harness Definitions
+a. 5 Point Harness – consists of two Lap Belts, two Shoulder Belts and one Anti-Submarine
+Belt.
+b. 6 Point Harness – consists of two Lap Belts, two Shoulder Belts and two leg or Anti-
+Submarine Belts.
+c. 7 Point Harness – consists of two Lap Belts, two Shoulder Belts, two leg or Anti-
+Submarine Belts and a negative g or Z Belt.
+d. Upright Driving Position - with a seat back angled at 30° or less from the vertical as
+measured along the line joining the two 200 mm circles of the template of the 95th
+percentile male as defined in F.5.6.4 and positioned per F.5.6.5
+e. Reclined Driving Position - with a seat back angled at more than 30° from the vertical as
+measured along the line joining the two 200 mm circles of the template of the 95th
+percentile male as defined in F.5.6.4 and positioned per F.5.6.5
+f. Chest to Groin Line - the straight line that in side view follows the line of the Shoulder
+Belts from the chest to the release buckle.
+T.2.2 Harness Specification
+T.2.2.1 The vehicle must use a 5, 6 or 7 Point Harness meeting one or more of the following:
+a. SFI Specification 16.1
+b. SFI Specification 16.5
+c. FIA specification 8853/2016
+T.2.2.2 The belts 
+```
+
+Also attached is an image the results from an experiment where the temperature of gearbox components was measured over time. Based on rule T.1.6.1 in the rule document and assuming that the driver may come in contact with the gearbox, can we omit insulation around the gearbox?  First provide an explanation for your answer (begin it with ‘Explanation:’). Then provide just a yes/no answer (begin it with ‘Answer:’) that summarizes your response."
+13,"We are a student engineering team designing a vehicle for the FSAE competition. Attached is the FSAE rules document. Also attached is an image the results from an experiment where the temperature of gearbox components was measured over time. Based on rule T.1.6.1 in the rule document and assuming that the driver may come in contact with the gearbox, can we omit insulation around the gearbox?  First provide an explanation for your answer (begin it with ‘Explanation:’). Then provide just a yes/no answer (begin it with ‘Answer:’) that summarizes your response.",no,14.png,"Rule T.1.6.1 states that sufficient heat insulation must be provided to ensure that the driver will not contact any metal or other materials which may become heated to a surface temperature above 60 degrees C. The image shows that the gearbox temperature exceeds 60 degrees C, so insulation cannot be omitted.",T.1.6.1,"We are a student engineering team designing a vehicle for the FSAE competition. Below is context from the FSAE rule document which might or might not be relevant for the question: 
+
+```
+ay pass through the 50 mm wide
+center band of the template.
+For ease of use, the template may contain a full or partial slot in the shaded area shown on the
+figure
+T.1.3 Driver Protection
+T.1.3.1 The driver’s feet and legs must be completely contained inside the Major Structure of the
+Chassis.
+Formula SAE® Rules 2024 © 2023 SAE International Page 55 of 140
+Version 1.0 1 Sep 2023
+T.1.3.2 While the driver’s feet are touching the pedals, in side and front views, any part of the driver’s
+feet or legs must not extend above or outside of the Major Structure of the Chassis.
+T.1.3.3 All moving suspension and steering components and other sharp edges inside the cockpit
+between the Front Hoop and a vertical plane 100 mm rearward of the pedals must be covered
+by a shield made of a solid material.
+Moving components include, but are not limited to springs, shock absorbers, rocker arms, anti-
+roll/sway bars, steering racks and steering column CV joints.
+T.1.3.4 Covers over suspension and steering components must be removable to allow inspection of
+the mounting points
+T.1.4 Vehicle Controls
+T.1.4.1 Accelerator Pedal
+a. An Accelerator Pedal must control the Powertrain output
+b. Pedal Travel is the percent of travel from a fully released position to a fully applied
+position. 0% is fully released and 100% is fully applied.
+c. The Accelerator Pedal must:
+• Return to 0% Pedal Travel when not pushed
+• Have a positive stop to prevent any cable, actuation system or sensor from damage
+or overstress
+T.1.4.2 Any mechanism in the throttle system that could become jammed must be covered.
+This is to prevent debris or interference and includes but is not limited to a gear mechanism
+T.1.4.3 All Vehicle Controls (steering, gear change, Cockpit Main Switch / Cockpit Shutdown Button)
+must be operated from inside the cockpit without any part of the driver, including hands, arms
+or elbows, being outside of:
+a. The Side Impact Structure defined in F.6.4 / F.7.5
+b. Two longitudinal vertical planes parallel to the centerline of the chassis touching the
+uppermost member of the Side Impact Structure
+T.1.4.4 All Vehicle Controls must stay below the top-most point of the Front Hoop in any operational
+position
+T.1.5 Driver’s Seat
+T.1.5.1 The Driver’s Seat must be protected by one of the following:
+a. In side view, the lowest point of any Driver’s Seat must be no lower than the upper
+surface of the lowest structural tube or equivalent
+b. A longitudinal tube (or tubes) that meets the requirements for Side Impact tubing
+(F.3.2.1.e), passing underneath the lowest point of the Driver Seat.
+T.1.6 Thermal Protection
+T.1.6.1 When seated in the normal driving position, sufficient heat insulation must be provided to
+ensure that the driver will not contact any metal or other materials which may become heated
+to a surface temperature above 60°C.
+T.1.6.2 Insulation may be external to the cockpit or incorporated with the Driver’s Seat or Firewall.
+Formula SAE® Rules 2024 © 2023 SAE International Page 56 of 140
+Version 1.0 1 Sep 2023
+T.1.6.3 The design must address all three types of heat transfer between the heat source (examples
+include but are not limited to: exhaust pipe, coolant hose/tube, Accumulator Container) and
+the panel that the driver could contact (seat or floor):
+a. Conduction Isolation by one of the following:
+• No direct contact between the heat source and the panel
+• A heat resistant, conduction isolation material with a minimum thickness of 8 mm
+between the heat source and the panel
+b. Convection Isolation by a minimum air gap of 25 mm between the heat source and the
+panel
+c. Radiation Isolation by one of the following:
+• A solid metal heat shield with a minimum thickness of 0.4 mm
+• Reflective foil or tape when combined with conduction insulation
+T.1.7 Floor Closeout
+T.1.7.1 All vehicles must have a Floor Closeout to prevent track debris from entering
+T.1.7.2 The Floor Closeout must extend from the foot area to the firewall
+T.1.7.3 The panel(s) must be made of a solid, non brittle material
+T.1.7.4 If multiple panels are used, gaps between panels must not exceed 3 mm
+T.1.8 Firewall(s)
+T.1.8.1 Requirement
+A Firewall(s) must separate the driver compartment and any portion of the Driver Harness
+from:
+a. All components of the Fuel System, the engine oil, the liquid cooling systems, any lithium
+batteries
+b. (EV only) All Tractive System components other than Outboard Wheel Motors EV.4.1.3
+where mounted at the wheels or on the front control arms
+T.1.8.2 Construction
+Any Firewall must:
+a. Be a non permeable surface made from a rigid, Nonflammable Material
+b. Seal completely against the passage of fluids (the Firewall itself, edges, any pass throughs
+and Floor Closeout)
+c. Be rigidly mounted
+T.1.8.3 Positioning
+The Firewall must extend sufficiently far upwards and/or rearwards and/or sideways where
+any point on the drivers body less than 100 mm above the bottom of the helmet of the tallest
+driver must not be in direct line of sight with any part given in T.1.8.1 above
+T.1.8.4 Details
+a. Firewalls composed of multiple panels must overlap and be sealed at the joints
+Sealing between firewalls must not be a stressed part of the Firewall
+b. Grommets must be used to seal any pass through for wiring, cables, etc
+Formula SAE® Rules 2024 © 2023 SAE International Page 57 of 140
+Version 1.0 1 Sep 2023
+c. Any seals or adhesives used with the Firewall must be rated for the application
+environment
+T.1.8.5 (EV only) The Accumulator Container must not be part of the Firewall
+T.1.9 Tractive System Firewalls (EV Only)
+T.1.9.1 Tractive System Firewalls must meet the requirements of T.1.8 above
+T.1.9.2 Tractive System Firewalls must be:
+a. Made of aluminum
+b. Grounded, refer to EV.6.7 Grounding
+T.2 DRIVER ACCOMMODATION
+T.2.1 Harness Definitions
+a. 5 Point Harness – consists of two Lap Belts, two Shoulder Belts and one Anti-Submarine
+Belt.
+b. 6 Point Harness – consists of two Lap Belts, two Shoulder Belts and two leg or Anti-
+Submarine Belts.
+c. 7 Point Harness – consists of two Lap Belts, two Shoulder Belts, two leg or Anti-
+Submarine Belts and a negative g or Z Belt.
+d. Upright Driving Position - with a seat back angled at 30° or less from the vertical as
+measured along the line joining the two 200 mm circles of the template of the 95th
+percentile male as defined in F.5.6.4 and positioned per F.5.6.5
+e. Reclined Driving Position - with a seat back angled at more than 30° from the vertical as
+measured along the line joining the two 200 mm circles of the template of the 95th
+percentile male as defined in F.5.6.4 and positioned per F.5.6.5
+f. Chest to Groin Line - the straight line that in side view follows the line of the Shoulder
+Belts from the chest to the release buckle.
+T.2.2 Harness Specification
+T.2.2.1 The vehicle must use a 5, 6 or 7 Point Harness meeting one or more of the following:
+a. SFI Specification 16.1
+b. SFI Specification 16.5
+c. FIA specification 8853/2016
+T.2.2.2 The belts must have the original manufacturers labels showing the specification and
+expiration date
+T.2.2.3 The Harness must be in or before the year of expiration shown on the labels. Harnesses
+expiring on or before Dec 31 of the calendar year of the competition are permitted.
+T.2.2.4 The Harness must be in new or like new condition, with no signs of wear, cuts, chaffing or
+other issues
+T.2.2.5 All Harness hardware must be installed and threaded in accordance with manufacturer’s
+instructions
+T.2.2.6 All Harness hardware must be used as received from the manufacturer. No modification
+(including drilling, cutting, grinding, etc) is permitted.
+Formula SAE® Rules 2024 © 2023 SAE International Page 58 of 140
+Version 1.0 1 Sep 2023
+T.2.3 Harness Requirements
+T.2.3.1 Vehicles with a Reclined Driving Position must have:
+a. A 6 Point Harness or a 7 Point Harness
+b. Anti-Submarine Belts with tilt lock adjusters (“quick adjusters”) OR two sets of Anti-
+Submarine Belts installed.
+T.2.3.2 All Lap Belts must incorporate a tilt lock adjuster (“quick adjuster”).
+Lap Belts with “pull-up” adjusters are recommended over “pull-down” adjusters.
+T.2.3.3 The Shoulder Belts must be the over the shoulder type. Only separate shoulder straps are
+permitted. “Y” type shoulder straps are not allowed. The “H” type configuration is allowed.
+T.2.4 Belt, Strap and Harness Installation - General
+T.2.4.1 The Lap Belt, Shoulder Belts and Anti-Submarine Belt(s) must be securely mounted to the
+Primary Structure.
+T.2.4.2 Any guide or support for the belts must be material meeting F.3.2.1.j
+T.2.4.3 Each tab or bracket to which any part of the Harness is attached must:
+a. Support a minimum load in pullout and tearout before failure of:
+• If one belt is attached to the tab or bracke
+```
+
+Also attached is an image the results from an experiment where the temperature of gearbox components was measured over time. Based on rule T.1.6.1 in the rule document and assuming that the driver may come in contact with the gearbox, can we omit insulation around the gearbox?  First provide an explanation for your answer (begin it with ‘Explanation:’). Then provide just a yes/no answer (begin it with ‘Answer:’) that summarizes your response."
+14,"We are a student engineering team designing a vehicle for the FSAE competition. Attached is the FSAE rules document. Also attached is an image that shows the results from an FEA simulation performed on the mount that connects a motor to the structural frame. The frame is made from non-welded 6061-T6 aluminum tubing. Based on the results presented in the image and rule F.3.5.3b in the rule document, should we use the motor mount in the vehicle?  First provide an explanation for your answer (begin it with ‘Explanation:’). Then provide just a yes/no answer (begin it with ‘Answer:’) that summarizes your response.",yes,15.png,The stress on the frame does not exceed the yield stress of 240 Mpa.,F.3.5.3,"We are a student engineering team designing a vehicle for the FSAE competition. Below is context from the FSAE rule document which might or might not be relevant for the question: 
+
+```
+eadsheet (SES) as given in section DR -
+Document Requirements
+F.2.3 Equivalence
+F.2.3.1 Equivalency in the structural context is determined and documented with the methods in the
+SES
+F.2.3.2 Any Equivalency calculations must prove Equivalency relative to Steel Tubing in the same
+application
+F.2.3.3 The properties of tubes and laminates may be combined to prove Equivalence.
+For example, in a Side Impact Structure consisting of one tube per F.3.2.1.e and a laminate
+panel, the panel only needs to be Equivalent to two Side Impact Tubes.
+F.2.4 Tolerance
+Tolerance on dimensions given in the rules is allowed and is addressed in the SES.
+F.2.5 Fabrication
+Vehicles must be fabricated in accordance with the design, materials, and processes described
+in the SES.
+F.3 TUBING AND MATERIAL
+F.3.1 Dimensions
+Diameter and Wall Thickness values provided in this Section F.3 are based on dimensions for
+commonly available tubing.
+Formula SAE® Rules 2024 © 2023 SAE International Page 25 of 140
+Version 1.0 1 Sep 2023
+F.3.2 Tubing Requirements
+F.3.2.1 Requirements by Application
+Steel Tube Must Alternative Tubing
+Application Meet Size per Material Permitted
+F.3.4: per F.3.5 ?
+a. Front Bulkhead Size B Yes
+b. Front Bulkhead Support Size C Yes
+c. Front Hoop Size A Yes
+d. Front Hoop Bracing Size B Yes
+e. Side Impact Structure Size B Yes
+f. Bent / Multi Upper Side Impact Member Size D Yes
+g. Main Hoop Size A NO
+h. Main Hoop Bracing Size B NO
+i. Main Hoop Bracing Supports Size C Yes
+j. Driver Restraint Harness Attachment Size B Yes
+k. Shoulder Harness Mounting Bar Size A NO
+l. Shoulder Harness Mounting Bar Bracing Size C Yes
+m. Accumulator Protection Structure Size B Yes
+n. Component Protection Size C Yes
+o. Structural Tubing Size C Yes
+F.3.3 Non Structural Tubing
+F.3.3.1 Definition
+Any tubing which does NOT meet F.3.2.1.o Structural Tubing
+F.3.3.2 Applicability
+Non Structural Tubing is ignored when assessing compliance to any rule
+F.3.4 Steel Tubing and Material
+F.3.4.1 Minimum Requirements for Steel Tubing
+A tube must meet all four minimum requirements for each Size specified:
+Minimum Minimum Minimum
+Minimum
+Area Cross Outside Example Sizes of
+Tube Wall
+Moment of Sectional Diameter or Round Tube
+Thickness
+Inertia Area Square Width
+1.0” x 0.095”
+a. Size A 11320 mm4 173 mm2 25.0 mm 2.0 mm
+25 x 2.5 mm
+1.0” x 0.065”
+b. Size B 8509 mm4 114 mm2 25.0 mm 1.2 mm
+25.4 x 1.6 mm
+1.0” x 0.049”
+c. Size C 6695 mm4 91 mm2 25.0 mm 1.2 mm
+25.4 x 1.2 mm
+1.375” x 0.049”
+d. Size D 18015 mm4 126 mm2 35.0 mm 1.2 mm
+35 x 1.2 mm
+Formula SAE® Rules 2024 © 2023 SAE International Page 26 of 140
+Version 1.0 1 Sep 2023
+F.3.4.2 Properties for ANY steel material for calculations submitted in an SES must be:
+a. Non Welded Properties for continuous material calculations:
+Young’s Modulus (E) = 200 GPa (29,000 ksi)
+Yield Strength (Sy) = 305 MPa (44.2 ksi)
+Ultimate Strength (Su) = 365 MPa (52.9 ksi)
+b. Welded Properties for discontinuous material such as joint calculations:
+Yield Strength (Sy) = 180 MPa (26 ksi)
+Ultimate Strength (Su) = 300 MPa (43.5 ksi)
+F.3.4.3 Where Welded tubing reinforcements are required (such as inserts for bolt holes or material
+to support suspension cutouts), Equivalence of the Welded tube and reinforcement must be
+shown to the original Non Welded tube in the SES
+F.3.5 Alternative Tubing Materials
+F.3.5.1 Alternative Materials may be used for applications shown as permitted in F.3.2.1
+F.3.5.2 If any Alternative Materials are used, the SES must contain:
+a. Documentation of material type, (purchase receipt, shipping document or letter of
+donation) and the material properties.
+b. Calculations that show equivalent to or better than the minimum requirements for steel
+tubing in the application as listed in F.3.4.1 for yield and ultimate strengths matching the
+Non Welded Steel properties from F.3.4.2.a above in bending, buckling and tension, for
+buckling modulus and for energy dissipation
+c. Details of the manufacturing technique and process
+F.3.5.3 Aluminum Tubing
+a. Minimum Wall Thickness for Aluminum Tubing: Non Welded 2.0 mm
+Welded 3.0 mm
+b. Non Welded properties for aluminum alloy 6061-T6 for calculations in an SES must be:
+Young’s Modulus (E) 69 GPa (10,000 ksi)
+Yield Strength (Sy) 240 MPa (34.8 ksi)
+Ultimate Strength (Su) 290 MPa (42.1 ksi)
+c. Welded properties for aluminum alloy 6061-T6 for calculations in an SES must be:
+Yield Strength (Sy) 115 MPa (16.7 ksi)
+Ultimate Strength (Su) 175 MPa (25.4 ksi)
+d. If welding is used on a regulated aluminum structure, the equivalent yield strength must
+be considered in the “as welded” condition for the alloy used unless the team provides
+detailed proof that the frame or component has been properly solution heat treated,
+artificially aged, and not subject to heating during team manufacturing.
+e. If aluminum was solution heat treated and age hardened to increase its strength after
+welding, the team must supply evidence as to how the process was performed.
+This includes, but is not limited to, the heat treating facility used, the process applied,
+and the fixturing used.
+Formula SAE® Rules 2024 © 2023 SAE International Page 27 of 140
+Version 1.0 1 Sep 2023
+F.4 COMPOSITE AND OTHER MATERIALS
+F.4.1 Requirements
+If any composite or other material is used, the SES must contain:
+F.4.1.1 Documentation of material type, (purchase receipt, shipping document or letter of donation)
+and the material properties.
+F.4.1.2 Details of the manufacturing technique and/or composite layup technique as well as the
+structural material used (examples - cloth type, weight, and resin type, number of layers, core
+material, and skin material if metal).
+F.4.1.3 Calculations that show equivalence of the structure to one of similar geometry made to meet
+the minimum requirements for a structure made from steel tubing per F.3.2. Equivalency
+calculations must be submitted for energy dissipation, yield and ultimate strengths in bending,
+buckling, and tension.
+F.4.1.4 Construction dates of the test panel(s) and monocoque, and approximate age(s) of the
+materials used.
+The intent is for the test panel to use the same material batch, material age, material storage,
+and student layup quality as the monocoque.
+F.4.2 Quasi-Isotropic Layup
+A layup with equal fiber strength and stiffness along any orientation in the plane of the layup.
+a. When a layup has equal fiber properties and mass in the 0/90/+45/-45 directions, the
+layup may be considered Quasi-Isotropic
+F.4.3 Laminate and Material Testing
+F.4.3.1 Testing Requirements
+a. Any tested samples must be engraved with the construction date, sample name, and
+peak test force.
+b. The same set of test results must not be used for different monocoques in different
+years.
+The intent is for the test panel to use the same material batch, material age, material storage,
+and student layup quality as the monocoque.
+F.4.3.2 Primary Structure Laminate Testing
+Teams must build new representative test panels for each ply schedule used in the regulated
+regions of the new chassis as a flat panel and perform a 3 point bending test on these panels.
+Refer to F.4.3.4
+a. Test panels must:
+• Measure one of the two options: 138 mm x 500 mm OR 275 mm x 500 mm
+• Be supported by a span distance of 400 mm
+• Have equal surface area for the top and bottom skin
+• Have bare edges, without skin material
+b. The SES must include:
+• Data from the 3 point bending tests
+• Pictures of the test samples
+Formula SAE® Rules 2024 © 2023 SAE International Page 28 of 140
+Version 1.0 1 Sep 2023
+• A picture of the test sample and test setup showing a measurement documenting
+the supported span distance used in the SES
+c. Test panel results must be used to derive stiffness, yield strength, ultimate strength and
+absorbed energy properties by the SES formula and limits for the purpose of calculating
+laminate panels equivalency corresponding to Primary Structure regions of the chassis.
+d. Test panels must use the thickest core associated with each skin layup.
+Designs may use core thickness that is 50% - 100% of the test panel core thickness
+associated with each skin layup.
+e. Calculation of derived properties must use the part of test data where deflection is 50
+mm or less
+f. Calculation of absorbed energy must use the integral of force times displacement
+F.4.3.3 Comparison Test
+Teams must make an equivalent test that will determine any compliance in the test rig and
+establish an absorbed energy value of the baseline tubes.
+a. The comparison test must use two Side Impact steel tubes (F.3.2.1.e)
+b. The steel tubes must be tested to a minimum displacement of 19.0 mm
+c. The calculation of absorbed energy must use the integral of force times displacement
+from the initiation of load to a displacement of
+```
+
+Also attached is an image that shows the results from an FEA simulation performed on the mount that connects a motor to the structural frame. The frame is made from non-welded 6061-T6 aluminum tubing. Based on the results presented in the image and rule F.3.5.3b in the rule document, should we use the motor mount in the vehicle?  First provide an explanation for your answer (begin it with ‘Explanation:’). Then provide just a yes/no answer (begin it with ‘Answer:’) that summarizes your response."
+15,"We are a student engineering team designing a vehicle for the FSAE competition. Attached is the FSAE rules document. Also attached is an image that shows the results from an FEA simulation performed on the mount that connects a motor to the structural frame. The frame is made from non-welded 6061-T6 aluminum tubing. Based on the results presented in the image and rule F.3.5.3b in the rule document, should we use the motor mount in the vehicle?  First provide an explanation for your answer (begin it with ‘Explanation:’). Then provide just a yes/no answer (begin it with ‘Answer:’) that summarizes your response.",no,16.png,The stress on the frame does not exceed the yield stress of 240 Mpa.,F.3.5.3,"We are a student engineering team designing a vehicle for the FSAE competition. Below is context from the FSAE rule document which might or might not be relevant for the question: 
+
+```
+
+For example, in a Side Impact Structure consisting of one tube per F.3.2.1.e and a laminate
+panel, the panel only needs to be Equivalent to two Side Impact Tubes.
+F.2.4 Tolerance
+Tolerance on dimensions given in the rules is allowed and is addressed in the SES.
+F.2.5 Fabrication
+Vehicles must be fabricated in accordance with the design, materials, and processes described
+in the SES.
+F.3 TUBING AND MATERIAL
+F.3.1 Dimensions
+Diameter and Wall Thickness values provided in this Section F.3 are based on dimensions for
+commonly available tubing.
+Formula SAE® Rules 2024 © 2023 SAE International Page 25 of 140
+Version 1.0 1 Sep 2023
+F.3.2 Tubing Requirements
+F.3.2.1 Requirements by Application
+Steel Tube Must Alternative Tubing
+Application Meet Size per Material Permitted
+F.3.4: per F.3.5 ?
+a. Front Bulkhead Size B Yes
+b. Front Bulkhead Support Size C Yes
+c. Front Hoop Size A Yes
+d. Front Hoop Bracing Size B Yes
+e. Side Impact Structure Size B Yes
+f. Bent / Multi Upper Side Impact Member Size D Yes
+g. Main Hoop Size A NO
+h. Main Hoop Bracing Size B NO
+i. Main Hoop Bracing Supports Size C Yes
+j. Driver Restraint Harness Attachment Size B Yes
+k. Shoulder Harness Mounting Bar Size A NO
+l. Shoulder Harness Mounting Bar Bracing Size C Yes
+m. Accumulator Protection Structure Size B Yes
+n. Component Protection Size C Yes
+o. Structural Tubing Size C Yes
+F.3.3 Non Structural Tubing
+F.3.3.1 Definition
+Any tubing which does NOT meet F.3.2.1.o Structural Tubing
+F.3.3.2 Applicability
+Non Structural Tubing is ignored when assessing compliance to any rule
+F.3.4 Steel Tubing and Material
+F.3.4.1 Minimum Requirements for Steel Tubing
+A tube must meet all four minimum requirements for each Size specified:
+Minimum Minimum Minimum
+Minimum
+Area Cross Outside Example Sizes of
+Tube Wall
+Moment of Sectional Diameter or Round Tube
+Thickness
+Inertia Area Square Width
+1.0” x 0.095”
+a. Size A 11320 mm4 173 mm2 25.0 mm 2.0 mm
+25 x 2.5 mm
+1.0” x 0.065”
+b. Size B 8509 mm4 114 mm2 25.0 mm 1.2 mm
+25.4 x 1.6 mm
+1.0” x 0.049”
+c. Size C 6695 mm4 91 mm2 25.0 mm 1.2 mm
+25.4 x 1.2 mm
+1.375” x 0.049”
+d. Size D 18015 mm4 126 mm2 35.0 mm 1.2 mm
+35 x 1.2 mm
+Formula SAE® Rules 2024 © 2023 SAE International Page 26 of 140
+Version 1.0 1 Sep 2023
+F.3.4.2 Properties for ANY steel material for calculations submitted in an SES must be:
+a. Non Welded Properties for continuous material calculations:
+Young’s Modulus (E) = 200 GPa (29,000 ksi)
+Yield Strength (Sy) = 305 MPa (44.2 ksi)
+Ultimate Strength (Su) = 365 MPa (52.9 ksi)
+b. Welded Properties for discontinuous material such as joint calculations:
+Yield Strength (Sy) = 180 MPa (26 ksi)
+Ultimate Strength (Su) = 300 MPa (43.5 ksi)
+F.3.4.3 Where Welded tubing reinforcements are required (such as inserts for bolt holes or material
+to support suspension cutouts), Equivalence of the Welded tube and reinforcement must be
+shown to the original Non Welded tube in the SES
+F.3.5 Alternative Tubing Materials
+F.3.5.1 Alternative Materials may be used for applications shown as permitted in F.3.2.1
+F.3.5.2 If any Alternative Materials are used, the SES must contain:
+a. Documentation of material type, (purchase receipt, shipping document or letter of
+donation) and the material properties.
+b. Calculations that show equivalent to or better than the minimum requirements for steel
+tubing in the application as listed in F.3.4.1 for yield and ultimate strengths matching the
+Non Welded Steel properties from F.3.4.2.a above in bending, buckling and tension, for
+buckling modulus and for energy dissipation
+c. Details of the manufacturing technique and process
+F.3.5.3 Aluminum Tubing
+a. Minimum Wall Thickness for Aluminum Tubing: Non Welded 2.0 mm
+Welded 3.0 mm
+b. Non Welded properties for aluminum alloy 6061-T6 for calculations in an SES must be:
+Young’s Modulus (E) 69 GPa (10,000 ksi)
+Yield Strength (Sy) 240 MPa (34.8 ksi)
+Ultimate Strength (Su) 290 MPa (42.1 ksi)
+c. Welded properties for aluminum alloy 6061-T6 for calculations in an SES must be:
+Yield Strength (Sy) 115 MPa (16.7 ksi)
+Ultimate Strength (Su) 175 MPa (25.4 ksi)
+d. If welding is used on a regulated aluminum structure, the equivalent yield strength must
+be considered in the “as welded” condition for the alloy used unless the team provides
+detailed proof that the frame or component has been properly solution heat treated,
+artificially aged, and not subject to heating during team manufacturing.
+e. If aluminum was solution heat treated and age hardened to increase its strength after
+welding, the team must supply evidence as to how the process was performed.
+This includes, but is not limited to, the heat treating facility used, the process applied,
+and the fixturing used.
+Formula SAE® Rules 2024 © 2023 SAE International Page 27 of 140
+Version 1.0 1 Sep 2023
+F.4 COMPOSITE AND OTHER MATERIALS
+F.4.1 Requirements
+If any composite or other material is used, the SES must contain:
+F.4.1.1 Documentation of material type, (purchase receipt, shipping document or letter of donation)
+and the material properties.
+F.4.1.2 Details of the manufacturing technique and/or composite layup technique as well as the
+structural material used (examples - cloth type, weight, and resin type, number of layers, core
+material, and skin material if metal).
+F.4.1.3 Calculations that show equivalence of the structure to one of similar geometry made to meet
+the minimum requirements for a structure made from steel tubing per F.3.2. Equivalency
+calculations must be submitted for energy dissipation, yield and ultimate strengths in bending,
+buckling, and tension.
+F.4.1.4 Construction dates of the test panel(s) and monocoque, and approximate age(s) of the
+materials used.
+The intent is for the test panel to use the same material batch, material age, material storage,
+and student layup quality as the monocoque.
+F.4.2 Quasi-Isotropic Layup
+A layup with equal fiber strength and stiffness along any orientation in the plane of the layup.
+a. When a layup has equal fiber properties and mass in the 0/90/+45/-45 directions, the
+layup may be considered Quasi-Isotropic
+F.4.3 Laminate and Material Testing
+F.4.3.1 Testing Requirements
+a. Any tested samples must be engraved with the construction date, sample name, and
+peak test force.
+b. The same set of test results must not be used for different monocoques in different
+years.
+The intent is for the test panel to use the same material batch, material age, material storage,
+and student layup quality as the monocoque.
+F.4.3.2 Primary Structure Laminate Testing
+Teams must build new representative test panels for each ply schedule used in the regulated
+regions of the new chassis as a flat panel and perform a 3 point bending test on these panels.
+Refer to F.4.3.4
+a. Test panels must:
+• Measure one of the two options: 138 mm x 500 mm OR 275 mm x 500 mm
+• Be supported by a span distance of 400 mm
+• Have equal surface area for the top and bottom skin
+• Have bare edges, without skin material
+b. The SES must include:
+• Data from the 3 point bending tests
+• Pictures of the test samples
+Formula SAE® Rules 2024 © 2023 SAE International Page 28 of 140
+Version 1.0 1 Sep 2023
+• A picture of the test sample and test setup showing a measurement documenting
+the supported span distance used in the SES
+c. Test panel results must be used to derive stiffness, yield strength, ultimate strength and
+absorbed energy properties by the SES formula and limits for the purpose of calculating
+laminate panels equivalency corresponding to Primary Structure regions of the chassis.
+d. Test panels must use the thickest core associated with each skin layup.
+Designs may use core thickness that is 50% - 100% of the test panel core thickness
+associated with each skin layup.
+e. Calculation of derived properties must use the part of test data where deflection is 50
+mm or less
+f. Calculation of absorbed energy must use the integral of force times displacement
+F.4.3.3 Comparison Test
+Teams must make an equivalent test that will determine any compliance in the test rig and
+establish an absorbed energy value of the baseline tubes.
+a. The comparison test must use two Side Impact steel tubes (F.3.2.1.e)
+b. The steel tubes must be tested to a minimum displacement of 19.0 mm
+c. The calculation of absorbed energy must use the integral of force times displacement
+from the initiation of load to a displacement of 19.0 mm
+F.4.3.4 Test Conduct
+a. The Laminate test F.4.3.2 and the Comparison test F.4.3.2e must use the same fixture
+b. The load applicator used to test any panel/tubes as required in this section F.4.3 must
+be:
+• Metallic
+• Radius 50 mm
+c. The load applicator must overhang the test piece to prevent edge loading
+d. Any other material must not be placed between the load ap
+```
+
+Also attached is an image that shows the results from an FEA simulation performed on the mount that connects a motor to the structural frame. The frame is made from non-welded 6061-T6 aluminum tubing. Based on the results presented in the image and rule F.3.5.3b in the rule document, should we use the motor mount in the vehicle?  First provide an explanation for your answer (begin it with ‘Explanation:’). Then provide just a yes/no answer (begin it with ‘Answer:’) that summarizes your response."
