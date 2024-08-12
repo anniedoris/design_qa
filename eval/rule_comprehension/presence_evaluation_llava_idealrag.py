@@ -30,7 +30,7 @@ def load_output_csv(model, overwrite_answers=False):
     # if output csv does not exist, create it
     csv_name = f"presence_evaluation_{model}.csv"
     if not os.path.exists(csv_name) or overwrite_answers:
-        questions_pd = pd.read_csv("../../dataset/rule_comprehension/presence_idealrag1.csv")
+        questions_pd = pd.read_csv("../../dataset/rule_comprehension/presence_idealrag10.csv")
         questions_pd.to_csv(csv_name, index=False)
     else:
         questions_pd = pd.read_csv(csv_name)
@@ -158,7 +158,15 @@ if __name__ == '__main__':
                 context = ''
             else:
                 raise ValueError(f"Invalid model: {model}")
-            response = run_thread(model, question, image_path, context)
+            
+            try:
+                response = run_thread(model, question, image_path, context)
+            except Exception as e:
+                print(f"Error: {e}")
+                print(f"Question: {question}")
+                print(f"Index: {i}")
+                response = ' '
+
 
             # Save the response
             questions_pd.at[i, 'model_prediction'] = response
