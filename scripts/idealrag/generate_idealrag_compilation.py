@@ -3,6 +3,8 @@ import ast
 import numpy as np
 import random
 
+RAG_LIMIT = 8716
+
 # Read in the compilation question lists
 compilation_df = pd.read_csv('../../dataset/rule_extraction/rule_compilation_qa.csv')
 
@@ -57,7 +59,7 @@ for i, row in compilation_df.iterrows():
 
     # Remove rules from the list until it abides by the appropriate character count, 10895 is the average number of characters for the retrieval RAG context
     # Take the limit to be 10895 minus the number of rules in the list (so we can add \n between the different rules)
-    limit = 10895 - len(rule_list)
+    limit = RAG_LIMIT - len(rule_list)
 
     # If the rule text is too long, remove the longest rules (so we preserve the largest number of rules)
     mod_count = 0
@@ -71,7 +73,7 @@ for i, row in compilation_df.iterrows():
 
     # If we haven't hit the character limit, add in more random rules so we hit the character limit
     if mod_count == 0:
-        while total_text_length(rag_text) < 10895:
+        while total_text_length(rag_text) < RAG_LIMIT:
             random_row = gt.sample(n=1)
             random_rule_text = random_row['ground_truth'].values[0]
             random_rule_num = random_row['rule_num'].values[0]
@@ -90,7 +92,7 @@ for i, row in compilation_df.iterrows():
     # Check limit. 
     # TODO: there were cases (i'm not sure why) where we were surpassing the limit. For these, I ran this script several times and replaced
     # "bad", over the limit ideal rag sections with under the limit ideal rag sections (from a different run)
-    if len(ideal_rag) > 10895:
+    if len(ideal_rag) > RAG_LIMIT:
         print("bad")
 
     good_context.append(ideal_rag)
@@ -110,7 +112,7 @@ compilation_df['full_question'] = full_question_plus_ideal_rag
 col1 = 'question'
 col2 = 'full_question'
 compilation_df = compilation_df.rename(columns={col1: 'temp', col2: col1, 'temp': col2})
-compilation_df.to_csv('compilation_idealrag5.csv')
+compilation_df.to_csv('compilation_idealrag1.csv')
 
 print(compilation_df)
 
