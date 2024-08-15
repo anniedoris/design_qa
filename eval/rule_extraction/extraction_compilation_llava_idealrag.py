@@ -172,7 +172,7 @@ if __name__ == '__main__':
         for model in ['llava-13b+idealRAG']:
             # questions_pd, csv_name = load_output_csv(model, question_type, overwrite_answers)
             questions_pd = pd.read_csv('../../dataset/rule_extraction/compilation_idealrag1.csv')
-            csv_name = f"{question_type}_evaluation_{model}_test.csv"
+            csv_name = f"{question_type}_evaluation_{model}.csv"
 
             print("QUESTIONS")
             print(questions_pd)
