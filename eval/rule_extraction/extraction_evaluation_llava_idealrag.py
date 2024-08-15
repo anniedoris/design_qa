@@ -75,6 +75,7 @@ def run_thread(model, question, context):
 
 def add_context_to_prompt(prompt, context):
     if context == '':
+        print("Correct context")
         prompt_with_context = prompt
     elif isinstance(context, str): # if context is a string, it is the entire document
         prompt_with_context = prompt[:80] + f"Below is context from the FSAE rule document which might or might not " \
@@ -165,8 +166,8 @@ if __name__ == '__main__':
         # models available: 'gpt-4-0125-preview+RAG', 'gpt-4-0125-preview', 'llama-2-70b-chat', 'llava-13b', 'gpt-4-1106-vision-preview+RAG', 'gpt-4-1106-vision-preview'
         for model in ['llava-13b+idealRAG']:
             # questions_pd, csv_name = load_output_csv(model, question_type, overwrite_answers)
-            questions_pd = pd.read_csv('../../dataset/rule_extraction/ideal_rag_set1.csv')
-            csv_name = f"{question_type}_evaluation_{model}.csv"
+            questions_pd = pd.read_csv('../../dataset/rule_extraction/retrieval_idealrag3.csv')
+            csv_name = f"{question_type}_evaluation_{model}_3.csv"
 
             print("QUESTIONS")
             print(questions_pd)
