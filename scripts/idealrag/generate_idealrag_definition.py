@@ -3,7 +3,7 @@ import re
 import numpy as np
 import random
 
-RAG_LIMIT = 10895
+RAG_LIMIT = 8716
 
 # Read in the definition dataframe
 definition_df = pd.read_csv('../../dataset/rule_comprehension/rule_definition_qa.csv')
