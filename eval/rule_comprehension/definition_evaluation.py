@@ -6,6 +6,8 @@ from llama_index.multi_modal_llms.openai import OpenAIMultiModal
 import os
 import pandas as pd
 from tqdm import tqdm
+import sys
+sys.path.append('../metrics')
 from metrics import eval_definition_qa
 
 
@@ -30,6 +32,9 @@ def run_thread(model, question, image_path):
     elif model == 'gpt-4-1106-vision-preview' or model == 'gpt-4-1106-vision-preview+context':
         # OpenAI model
         multi_modal_llm = OpenAIMultiModal(model="gpt-4-vision-preview", max_new_tokens=100)
+    elif model in ['gpt-4o', 'gpt-4o+RAG']:
+        print("Loading gpt-4o")
+        multi_modal_llm = OpenAIMultiModal(model="gpt-4o", max_new_tokens=100)
     else:
         raise ValueError("Invalid model")
 
@@ -70,9 +75,9 @@ def retrieve_context(question):
 
 
 if __name__ == '__main__':
-    overwrite_answers = False
+    overwrite_answers = True
 
-    for model in ['gpt-4-1106-vision-preview+context', 'gpt-4-1106-vision-preview', 'llava-13b']:
+    for model in ['gpt-4o+RAG']:
         questions_pd, csv_name = load_output_csv(model, overwrite_answers=overwrite_answers)
 
         for i, row in tqdm(questions_pd.iterrows(), total=len(questions_pd), desc=f'generating responses for {model}'):
@@ -88,7 +93,7 @@ if __name__ == '__main__':
             image_path = "../../dataset/rule_comprehension/rule_definition_qa/" + row['image']
 
             # Run through model
-            if model == 'gpt-4-1106-vision-preview+context':
+            if model == 'gpt-4-1106-vision-preview+context' or model == 'gpt-4o':
                 question = retrieve_context(question)
             response = run_thread(model, question, image_path)
 
