@@ -10,6 +10,8 @@ import csv
 import os
 import pandas as pd
 from tqdm import tqdm
+import sys
+sys.path.append('../metrics')
 from metrics import eval_functional_performance_qa
 
 
@@ -48,6 +50,9 @@ def run_thread(model, question, image_path, context):
         multi_modal_llm = OpenAIMultiModal(
             model='gpt-4-vision-preview', max_new_tokens=1500
         )
+    elif model in ['gpt-4o', 'gpt-4o+RAG']:
+        print("Loading gpt-4o")
+        multi_modal_llm = OpenAIMultiModal(model="gpt-4o", max_new_tokens=1500)
     else:
         raise ValueError("Invalid model")
 
@@ -127,7 +132,7 @@ def save_results(model, macro_avg_accuracy, all_accuracies, macro_avg_bleus, all
 
 
 if __name__ == '__main__':
-    overwrite_answers = False
+    overwrite_answers = True
 
     # Index the text data
     if os.path.exists("index"):
@@ -142,7 +147,7 @@ if __name__ == '__main__':
         index.storage_context.persist("index")
 
     question_type = "functional_performance"
-    for model in ['gpt-4-1106-vision-preview', 'gpt-4-1106-vision-preview+RAG', 'llava-13b']:
+    for model in ['gpt-4o+RAG']:
         questions_pd, csv_name = load_output_csv(model, question_type, overwrite_answers)
 
         for i, row in tqdm(questions_pd.iterrows(), total=len(questions_pd), desc=f'generating responses for '
@@ -159,9 +164,9 @@ if __name__ == '__main__':
             image_path = f"../../dataset/rule_compliance/rule_{question_type}_qa/images/" + row['image']
 
             # Run through model
-            if model in ['gpt-4-1106-vision-preview+RAG', 'llava-13b']:
+            if model in ['gpt-4-1106-vision-preview+RAG', 'llava-13b', 'gpt-4o+RAG']:
                 context = retrieve_context(index, question, top_k=12)
-            elif model in ['gpt-4-1106-vision-preview']:
+            elif model in ['gpt-4-1106-vision-preview', 'gpt-4o']:
                 context = retrieve_context(index, question, top_k=0)
             else:
                 raise ValueError("Invalid model")
