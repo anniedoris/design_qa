@@ -162,7 +162,7 @@ if __name__ == '__main__':
 
     for question_type in ['compilation']:
         # models available: 'gpt-4-0125-preview+RAG', 'gpt-4-0125-preview', 'llama-2-70b-chat', 'llava-13b', 'gpt-4-1106-vision-preview+RAG', 'gpt-4-1106-vision-preview'
-        for model in ['gpt-4o+RAG']:
+        for model in ['gpt-4o']:
             questions_pd, csv_name = load_output_csv(model, question_type, overwrite_answers)
 
             for i, row in tqdm(questions_pd.iterrows(), total=len(questions_pd), desc=f'generating responses for '
@@ -182,6 +182,7 @@ if __name__ == '__main__':
                     print("Retrieving top 15 doc chunks...")
                     context = retrieve_context(index, question, top_k=15)
                 elif model in ['gpt-4-0125-preview', 'gpt-4-1106-vision-preview', 'gpt-4o']:
+                    print("Feeding full rule document...")
                     context = retrieve_context(index, question, top_k=0)
                 else:
                     raise ValueError("Invalid model")
