@@ -65,6 +65,7 @@ def save_results(model, macro_avg, definitions_avg, multi_avg, single_avg, all_a
 
 def retrieve_context(question):
     # load all context from original text document
+    print("loading full doc")
     txt_path = "../../dataset/docs/rules_pdfplumber1.txt"
     context = open(txt_path, "r", encoding="utf-8").read()
 
@@ -77,7 +78,7 @@ def retrieve_context(question):
 if __name__ == '__main__':
     overwrite_answers = True
 
-    for model in ['gpt-4o+RAG']:
+    for model in ['gpt-4o']:
         questions_pd, csv_name = load_output_csv(model, overwrite_answers=overwrite_answers)
 
         for i, row in tqdm(questions_pd.iterrows(), total=len(questions_pd), desc=f'generating responses for {model}'):
