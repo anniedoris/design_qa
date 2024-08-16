@@ -9,6 +9,8 @@ import csv
 import os
 import pandas as pd
 from tqdm import tqdm
+import sys
+sys.path.append('../metrics')
 from metrics import eval_presence_qa
 
 
@@ -45,6 +47,9 @@ def run_thread(model, question, image_path, context):
     elif model == 'gpt-4-1106-vision-preview' or model == 'gpt-4-1106-vision-preview+RAG':
         # OpenAI model
         multi_modal_llm = OpenAIMultiModal(model="gpt-4-vision-preview", max_new_tokens=100)
+    elif model in ['gpt-4o', 'gpt-4o+RAG']:
+        print("Loading gpt-4o")
+        multi_modal_llm = OpenAIMultiModal(model="gpt-4o", max_new_tokens=100)
     else:
         raise ValueError("Invalid model")
 
@@ -116,7 +121,7 @@ def save_results(model, macro_avg, definitions_avg, multi_avg, single_avg, all_a
 
 
 if __name__ == '__main__':
-    overwrite_answers = False
+    overwrite_answers = True
 
     # Index the text data
     if os.path.exists("index"):
@@ -130,7 +135,7 @@ if __name__ == '__main__':
         index = create_index()
         index.storage_context.persist("index")
 
-    for model in ['llava-13b', 'gpt-4-1106-vision-preview+RAG', 'gpt-4-1106-vision-preview']:
+    for model in ['gpt-4o+RAG']:
         questions_pd, csv_name = load_output_csv(model, overwrite_answers)
 
         for i, row in tqdm(questions_pd.iterrows(), total=len(questions_pd), desc=f'generating responses for {model}'):
@@ -146,8 +151,8 @@ if __name__ == '__main__':
             image_path = "../../dataset/rule_comprehension/rule_presence_qa/" + row['image']
 
             # Run through model
-            if model == 'llava-13b' or model == 'gpt-4-1106-vision-preview+RAG':
-                context = retrieve_context(index, question, top_k=5)
+            if model == 'llava-13b' or model == 'gpt-4-1106-vision-preview+RAG' or model == 'gpt-4o+RAG':
+                context = retrieve_context(index, question, top_k=15)
             elif model == 'gpt-4-1106-vision-preview':
                 context = retrieve_context(index, question, top_k=0)
             else:
