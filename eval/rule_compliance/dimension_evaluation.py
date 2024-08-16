@@ -152,7 +152,7 @@ if __name__ == '__main__':
         index.storage_context.persist("index")
 
     for question_type in ["detailed_context"]:
-        for model in ['gpt-4o+RAG']:
+        for model in ['gpt-4o']:
             questions_pd, csv_name = load_output_csv(model, question_type, overwrite_answers)
 
             for i, row in tqdm(questions_pd.iterrows(), total=len(questions_pd), desc=f'generating responses for '
@@ -172,6 +172,7 @@ if __name__ == '__main__':
                 if model in ['gpt-4-1106-vision-preview+RAG', 'llava-13b', 'gpt-4o+RAG']:
                     context = retrieve_context(index, question, top_k=12)
                 elif model in ['gpt-4-1106-vision-preview', 'gpt-4o']:
+                    print("Loading full rule document to model...")
                     context = retrieve_context(index, question, top_k=0)
                 else:
                     raise ValueError("Invalid model")
