@@ -6,6 +6,8 @@ from rouge import Rouge
 import pandas as pd
 from statistics import mean
 import ast
+from sentence_transformers import SentenceTransformer
+from sentence_transformers import util
 
 
 # METRICS IN LITERATURE
@@ -138,6 +140,15 @@ def bleu_score(target, prediction, gram):
 
     return bleu
 
+########################
+## SIMILARITY SCORE, taken from SciencQA evaluations.py script
+########################
+def similariry_score(str1, str2, model):
+    # compute embedding for both lists
+    embedding_1 = model.encode(str1, convert_to_tensor=True)
+    embedding_2 = model.encode(str2, convert_to_tensor=True)
+    score = util.pytorch_cos_sim(embedding_1, embedding_2).item()
+    return score
 
 ########################
 ## Rouge-L
@@ -417,6 +428,8 @@ def eval_functional_performance_qa(results_csv):
         4. all bleu-2 scores
         5. macro avg rogue-l
         6. all rogue-l scores
+        7. macro avg similarity score
+        8. all similarity scores=
     """
     results_df = pd.read_csv(results_csv)
 
@@ -424,6 +437,7 @@ def eval_functional_performance_qa(results_csv):
     accuracies = []
     bleus = []
     rogues = []
+    similarities = []
     
     for i, row in results_df.iterrows():
         ground_truth_tokens = normalize_answer(row['ground_truth']).split()
@@ -468,6 +482,7 @@ def eval_functional_performance_qa(results_csv):
         if explanation == "":
             rogues.append(0)
             bleus.append(0)
+            similarities.append(0)
         else:
             # compute bleu-2
             bleu_2 = bleu_score(row['explanation'], explanation, 2) #used bleu 2 instead of 4 because only single reference leads to lower
@@ -478,13 +493,18 @@ def eval_functional_performance_qa(results_csv):
             rouge_l = score_rouge(row['explanation'], explanation)
             rogues.append(rouge_l)
 
+            # compute similarity
+            sentence_transformer = SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2').cuda()
+            sim_score = similariry_score(row['explanation'], explanation, sentence_transformer)
+            similarities.append(sim_score)
+
     def mean_score(input_list):
         if len(input_list) < 1:
             return None
         else:
             return mean(input_list)
 
-    return mean_score(accuracies), accuracies, mean_score(bleus), bleus, mean(rogues), rogues
+    return mean_score(accuracies), accuracies, mean_score(bleus), bleus, mean(rogues), rogues, mean_score(similarities), similarities
 
 
 if __name__ == '__main__':
@@ -550,19 +570,23 @@ if __name__ == '__main__':
     # print("all_rogues")
     # print(all_rogues)
     
-    # # TEST FP QA
-    macro_avg_accuracy, all_accuracies, macro_avg_bleus, all_bleus, macro_avg_rogues, all_rogues = eval_functional_performance_qa('compliance_test_fp.csv')
-    eval_dimensions_qa('compliance_test.csv')
-    print("macro average")
-    print(macro_avg_accuracy)
-    print("all accuracies")
-    print(all_accuracies)
-    print("macro avg bleus")
-    print(macro_avg_bleus)
-    print("all_bleus")
-    print(all_bleus)
-    print("macro avg rogues")
-    print(macro_avg_rogues)
-    print("all_rogues")
-    print(all_rogues)
-    
+    # # # TEST FP QA
+    # macro_avg_accuracy, all_accuracies, macro_avg_bleus, all_bleus, macro_avg_rogues, all_rogues = eval_functional_performance_qa('compliance_test_fp.csv')
+    # eval_dimensions_qa('compliance_test.csv')
+    # print("macro average")
+    # print(macro_avg_accuracy)
+    # print("all accuracies")
+    # print(all_accuracies)
+    # print("macro avg bleus")
+    # print(macro_avg_bleus)
+    # print("all_bleus")
+    # print(all_bleus)
+    # print("macro avg rogues")
+    # print(macro_avg_rogues)
+    # print("all_rogues")
+    # print(all_rogues)
+
+    # # TEST similarity scores
+    sentence_transformer = SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2').cuda()
+    final_score = similariry_score("yayayaya", "I hate you", sentence_transformer)
+    print(final_score)
