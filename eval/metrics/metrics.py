@@ -344,6 +344,7 @@ def eval_dimensions_qa(results_csv):
     scale_bar_accuracies = []
     bleus = []
     rogues = []
+    similarities = []
     
     for i, row in results_df.iterrows():
         ground_truth_tokens = normalize_answer(row['ground_truth']).split()
@@ -397,6 +398,7 @@ def eval_dimensions_qa(results_csv):
             if explanation == "":
                 rogues.append(0)
                 bleus.append(0)
+                similarities.append(0)
             else:
                 # compute bleu-2
                 bleu_2 = bleu_score(row['explanation'], explanation, 2) #used bleu 2 instead of 4 because only single reference leads to lower
@@ -407,13 +409,18 @@ def eval_dimensions_qa(results_csv):
                 rouge_l = score_rouge(row['explanation'], explanation)
                 rogues.append(rouge_l)
 
+                # compute similarity
+                sentence_transformer = SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2').cuda()
+                sim_score = similariry_score(row['explanation'], explanation, sentence_transformer)
+                similarities.append(sim_score)
+
     def mean_score(input_list):
         if len(input_list) < 1:
             return None
         else:
             return mean(input_list)
 
-    return mean_score(accuracies), mean_score(direct_dim_accuracies), mean_score(scale_bar_accuracies), accuracies, mean_score(bleus), bleus, mean(rogues), rogues
+    return mean_score(accuracies), mean_score(direct_dim_accuracies), mean_score(scale_bar_accuracies), accuracies, mean_score(bleus), bleus, mean(rogues), rogues, mean(similarities), similarities
 
 
 def eval_functional_performance_qa(results_csv):
