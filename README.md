@@ -136,4 +136,15 @@ We have a [leaderboard](https://design-qa.github.io/)! To submit to the leaderbo
 ## Citations
 If you use our benchmark in your work, please make sure to cite us!
 
-TODO
+```
+@article{doris2025designqa,
+  title={DesignQA: A multimodal benchmark for evaluating large language models’ understanding of engineering documentation},
+  author={Doris, Anna C and Grandi, Daniele and Tomich, Ryan and Alam, Md Ferdous and Ataei, Mohammadmehdi and Cheong, Hyunmin and Ahmed, Faez},
+  journal={Journal of Computing and Information Science in Engineering},
+  volume={25},
+  number={2},
+  pages={021009},
+  year={2025},
+  publisher={American Society of Mechanical Engineers}
+}
+```
