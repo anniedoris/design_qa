@@ -200,7 +200,7 @@ def eval_compilation_qa(results_csv):
     f1_scores = []
     for i, row in results_df.iterrows():
         try:
-            prediction_tokens = row['model_prediction'].split(", ")
+            prediction_tokens = [token.strip() for token in row['model_prediction'].split(",")]
         except Exception as e:
             print(f"Error: {e}")
             print("Model output non-standard")
